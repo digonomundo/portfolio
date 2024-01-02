@@ -1,31 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.principal {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(223, 223, 223);
+}
+
+.sobre {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+}
+
+.digo {
+    font-size: 20px;
+}
+
+.digo:hover {
+    font-size: 21px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.linha {
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.linha:hover {
+    color: rgb(95, 0, 133);
+
+    font-size: 21px;
+}
+
+.img-desenho {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    height: 90%;
+}
+
+.img-linkedin {
+    position: absolute;
+    height: 17%;
+    top: 75%;
+    left: 60%;
+    cursor: pointer;
+}
+
+.img-linkedin:hover {
+    height: 18%;
+
+}
+
+.img-github {
+    position: absolute;
+    height: 17%;
+    top: 75%;
+    left: 68%;
+    cursor: pointer;
+}
+
+.img-github:hover {
+    height: 18%;
+
+}
+
+.img-instagram {
+    position: absolute;
+    height: 17%;
+    top: 75%;
+    left: 76%;
+    cursor: pointer;
+}
+
+.img-instagram:hover {
+    height: 18%;
+
+}
+
+.img-facebook {
+    position: absolute;
+    height: 17%;
+    top: 75%;
+    left: 84%;
+    cursor: pointer;
+}
+
+.img-facebook:hover {
+    height: 18%;
+
+}
+
+.img-youtube {
+    position: absolute;
+    height: 25%;
+    top: 72%;
+    left: 84%;
+    cursor: pointer;
+}
+
+.img-youtube:hover {
+    height: 26%;
+
+}
+
+.apresentacao {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+}
+
+.apresentacao h1 {
+    font-size: 80px;
+}
+
+
+
+.secao-sobre {
+    display: flex;
+    align-items: center;
+}
+
+.sobre-mim {
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(95, 0, 133);
+}
+
+.cor-sobre {
+    color: #fff;
+
+}
+
+.cor-sobre a:hover {
+    color: rgb(95, 0, 133);
+
+}
+
+.div-curriculo {
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.btn-curriculo {
+    color: white;
+    text-align: center;
+
+    background: rgb(95, 0, 133);
+    height: 40px;
+    width: 180px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+
+}
+
+.btn-curriculo:hover {
+    background-color: black;
+    border: 2px solid rgb(95, 0, 133);
+    transition: 0.5s;
+}
+
+
+
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+    width: 1000px;
+    box-sizing: border-box;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #ffffff;
+    transform: translateX(-50%);
+}
+
+.timeline ul {
+    margin: 0;
+    padding: 0;
+
+}
+
+.timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+
+}
+
+.timeline ul li:nth-child(odd) {
+    float: left;
+    text-align: right;
+    clear: both;
+    margin-top: 30px;
+
+}
+
+.content {
+    padding-bottom: 20px;
+}
+
+.timeline ul li:nth-child(odd):before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -6px;
+    width: 10px;
+    height: 10px;
+    background: rgb(95, 0, 133);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
+
+}
+
+.timeline ul li:nth-child(even) {
+    float: right;
+    text-align: left;
+    clear: both;
+
+}
+
+.timeline ul li:nth-child(even):before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    background: rgb(95, 0, 133);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
+
+}
+
+.timeline ul li h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    color: rgb(95, 0, 133);
+
+}
+
+.timeline ul li p {
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.timeline ul li .time h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.timeline ul li:nth-child(odd) .time {
+    position: absolute;
+    top: 12px;
+    right: -165px;
+    margin: 0;
+    padding: 8px 16px;
+    background: rgb(95, 0, 133);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
+}
+
+.timeline ul li:nth-child(even) .time {
+    position: absolute;
+    top: 12px;
+    left: -165px;
+    margin: 0;
+    padding: 8px 16px;
+    background: rgb(95, 0, 133);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
+}
+
+
+.projetos {
+
+    align-items: center;
+    font-size: 50px;
+
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 350px;
+    height: 550px;
+    margin: 25px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    transition: 0.2s;
+}
+
+.card-header {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.card-img {
+    min-width: 100%;
+    width: auto;
+    height: 100%;
+}
+
+.card-body {
+    height: 170px;
+    padding: 15px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.card-local {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.card-titulo {
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.card-texto {
+    font-size: 12px;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.card-footer {
+    margin-top: 10px;
+    text-align: center;
+    background-color: #000;
+}
+
+.card-footer a {
+    color: #fff;
+    display: block;
+    padding: 14px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.card-1 .card-footer {
+    background-color: rgb(95, 0, 133);
+}
+
+.card-1 .card-local {
+    color: rgb(95, 0, 133);
+}
+
+.card-2 .card-footer {
+    background-color: rgb(95, 0, 133);
+}
+
+.card-2 .card-local {
+    color: rgb(95, 0, 133);
+}
+
+.card-3 .card-footer {
+    background-color: rgb(95, 0, 133);
+}
+
+.card-3 .card-local {
+    color: rgb(95, 0, 133);
+}
+
+.card:hover {
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+
+
 ::-webkit-scrollbar {
-    width: 8px; 
+    width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #ffffff; 
+    background-color: #ffffff;
     border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #000000; 
+    background-color: #000000;
 }
 
 ::-moz-scrollbar {
-    width: 12px; 
+    width: 12px;
 }
 
 ::-moz-scrollbar-thumb {
-    background-color: #ffffff; 
-    border-radius: 6px; 
+    background-color: #ffffff;
+    border-radius: 6px;
 }
 
 ::-moz-scrollbar-track {
-    background-color: #000000; 
+    background-color: #000000;
 }
-
-.margin{
-    margin-top: 110px;
-    margin-left: 50px;
-}
-
