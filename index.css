@@ -34,6 +34,7 @@ nav {
 }
 
 nav a {
+    color: #fff;
     text-decoration: none;
 }
 
@@ -474,8 +475,6 @@ nav a {
         height: 80%;
     }
 }
-
-
 
 
 
