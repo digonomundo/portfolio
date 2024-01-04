@@ -455,6 +455,10 @@ nav a {
         font-size: 70px;     
     } 
 
+    .apresentacao h2{
+        font-size: 25px;
+    }
+
     .img-desenho {
         display: flex;
         position: absolute;
@@ -462,6 +466,55 @@ nav a {
         right: 5%;
         height: 80%;
     }
+
+
+
+    .img-linkedin {
+        position: absolute;
+        height: 17%;
+        top: 75%;
+        left: 60%;
+        cursor: pointer;
+    }
+    
+    
+    .img-github {
+        position: absolute;
+        height: 17%;
+        top: 75%;
+        left: 68%;
+        cursor: pointer;
+    }
+    
+
+    .img-instagram {
+        position: absolute;
+        height: 17%;
+        top: 75%;
+        left: 76%;
+        cursor: pointer;
+    }
+    
+    
+    .img-facebook {
+        position: absolute;
+        height: 17%;
+        top: 75%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+
+    .img-youtube {
+        position: absolute;
+        height: 25%;
+        top: 72%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+
+
 }
 
 
