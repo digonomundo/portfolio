@@ -157,7 +157,10 @@ nav a {
 
 .cor-sobre {
     color: #fff;
+}
 
+.cor-sobre a{
+    color: white;
 }
 
 .cor-sobre a:hover {
