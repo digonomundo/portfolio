@@ -295,12 +295,14 @@ nav a {
     margin: 0;
     padding: 0;
     font-weight: 600;
+    font-size: 25px;
     color: rgb(95, 0, 133);
 
 }
 
 .timeline ul li p {
     margin: 10px 0 0;
+    font-size: small;
     padding: 0;
 }
 
@@ -313,7 +315,7 @@ nav a {
 .timeline ul li:nth-child(odd) .time {
     position: absolute;
     top: 12px;
-    right: -165px;
+    right: -160px;
     margin: 0;
     padding: 8px 16px;
     background: rgb(95, 0, 133);
@@ -325,7 +327,7 @@ nav a {
 .timeline ul li:nth-child(even) .time {
     position: absolute;
     top: 12px;
-    left: -165px;
+    left: -160px;
     margin: 0;
     padding: 8px 16px;
     background: rgb(95, 0, 133);
@@ -652,30 +654,10 @@ nav a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
 .secao-sobre {
     background-color: rgb(0, 0, 0);
-    height: 50vh;
+    height: 400px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -684,7 +666,7 @@ nav a {
 
 .area-sobre{
     position: absolute;
-    margin-top: 39vh;
+    margin-top: 290px;
     right: 3%;
     left: 3%;
     height: 90%;
