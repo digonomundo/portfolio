@@ -618,9 +618,10 @@ nav a {
     }
 
     .img-desenho {
-        bottom: 0;
+       position: absolute;
         right: 10vh;
-        margin-top: 50vh;
+        bottom: 0;
+
         height: 35%;
        
     }
