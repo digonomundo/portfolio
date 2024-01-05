@@ -667,7 +667,7 @@ nav a {
     
 .secao-sobre {
     background-color: rgb(0, 0, 0);
-    height: 85vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -677,7 +677,7 @@ nav a {
 .area-sobre{
     
     position: absolute;
-    margin-top: 160px;
+  
     right: 3%;
     left: 3%;
 }
