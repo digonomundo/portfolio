@@ -620,7 +620,7 @@ nav a {
     .img-desenho {
         bottom: 0;
         right: 10vh;
-        top: 65vh;
+        margin-top: 45vh;
         height: 35%;
        
     }
