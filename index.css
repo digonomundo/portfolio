@@ -6,28 +6,22 @@
 
 body{
     background-color: rgb(223, 223, 223);
-    height: 100vh;
 }
 
 
 .navegacao{
     height: 3.5rem;
-    width: 100%;
-    
+    width: 100%;   
 }
 
-.principal {
-    
+.principal {  
     height: 100vh;
     width: 100%;
-    background-color: rgb(223, 223, 223);
-        
+    background-image: linear-gradient(to right, rgb(148, 148, 148),white);       
 }
 
-
 .digo {
-    font-size: 20px;
-    
+    font-size: 20px;  
 }
 
 .digo:hover {
@@ -60,7 +54,6 @@ nav a {
 
 .linha:hover {
     color: rgb(95, 0, 133);
-
     font-size: 21px;
 }
 
@@ -73,16 +66,14 @@ nav a {
 
 .apresentacao h1 {
     font-size: 80px;
-    display: flex;
-   
+    display: flex; 
 }
 
 
 .img-desenho {
     display: flex;
     position: absolute;
-    bottom: 0ch;
-  
+    bottom: 0vh; 
     right: 5vh;
     height: 90vh;
 }
@@ -97,7 +88,6 @@ nav a {
 
 .img-linkedin:hover {
     height: 18%;
-
 }
 
 .img-github {
@@ -110,7 +100,6 @@ nav a {
 
 .img-github:hover {
     height: 18%;
-
 }
 
 .img-instagram {
@@ -123,7 +112,6 @@ nav a {
 
 .img-instagram:hover {
     height: 18%;
-
 }
 
 .img-facebook {
@@ -136,7 +124,6 @@ nav a {
 
 .img-facebook:hover {
     height: 18%;
-
 }
 
 .img-youtube {
@@ -149,10 +136,7 @@ nav a {
 
 .img-youtube:hover {
     height: 26%;
-
 }
-
-
 
 
 .secao-sobre {
@@ -163,7 +147,6 @@ nav a {
     align-items: center;
 }
 
-
 .area-sobre{
     position: absolute;
     margin-top: 20%;
@@ -173,10 +156,8 @@ nav a {
 
 .minha-foto{
     position: absolute;
-    height: 85%;
-    
+    height: 85%;  
 }
-
 
 .sobre-mim {
     align-items: center;
@@ -195,7 +176,6 @@ nav a {
 
 .cor-sobre a:hover {
     color: rgb(95, 0, 133);
-
 }
 
 .div-curriculo {
@@ -207,7 +187,6 @@ nav a {
 .btn-curriculo {
     color: white;
     text-align: center;
-
     background: rgb(95, 0, 133);
     height: 40px;
     width: 180px;
@@ -223,11 +202,6 @@ nav a {
     border: 2px solid rgb(95, 0, 133);
     transition: 0.5s;
 }
-
-
-
-
-
 
 
 .timeline {
@@ -251,7 +225,6 @@ nav a {
 .timeline ul {
     margin: 0;
     padding: 0;
-
 }
 
 .timeline ul li {
@@ -260,7 +233,6 @@ nav a {
     width: 50%;
     padding: 20px 40px;
     box-sizing: border-box;
-
 }
 
 .timeline ul li:nth-child(odd) {
@@ -268,7 +240,6 @@ nav a {
     text-align: right;
     clear: both;
     margin-top: 30px;
-
 }
 
 .content {
@@ -285,14 +256,12 @@ nav a {
     background: rgb(95, 0, 133);
     border-radius: 50%;
     box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
-
 }
 
 .timeline ul li:nth-child(even) {
     float: right;
     text-align: left;
     clear: both;
-
 }
 
 .timeline ul li:nth-child(even):before {
@@ -305,7 +274,6 @@ nav a {
     background: rgb(95, 0, 133);
     border-radius: 50%;
     box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
-
 }
 
 .timeline ul li h3 {
@@ -314,7 +282,6 @@ nav a {
     font-weight: 600;
     font-size: 30px;
     color: rgb(95, 0, 133);
-
 }
 
 .timeline ul li p {
@@ -355,10 +322,8 @@ nav a {
 
 
 .projetos {
-
     align-items: center;
     font-size: 50px;
-
 }
 
 .container {
@@ -415,7 +380,7 @@ nav a {
 }
 
 .card-footer {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
     background-color: #000;
 }
@@ -423,7 +388,7 @@ nav a {
 .card-footer a {
     color: #fff;
     display: block;
-    padding: 14px;
+    padding: 13px;
     text-decoration: none;
     font-family: sans-serif;
     font-weight: 600;
@@ -456,7 +421,6 @@ nav a {
 .card:hover {
     transform: scale3d(1.05, 1.05, 1);
 }
-
 
 
 ::-webkit-scrollbar {
