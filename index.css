@@ -74,12 +74,12 @@ nav a {
 }
 
 .apresentacao h1 {
-    font-size: 80px;
+    font-size: 10vh;
     display: flex; 
 }
 
 .apresentacao h2{
-    font-size: 30px;
+    font-size: 3.7vh;
 }
 
 
