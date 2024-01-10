@@ -128,17 +128,6 @@ nav a {
     height: 4.7vh;
 }
 
-.img-facebook {
-    position: absolute;
-    height: 4.5vh;
-    top: 75%;
-    left: 84%;
-    cursor: pointer;
-}
-
-.img-facebook:hover {
-    height: 18%;
-}
 
 .img-youtube {
     position: absolute;
@@ -166,6 +155,7 @@ nav a {
     position: absolute;
     margin-top: 200px;
     align-items: center ;
+    margin-left: 1vw;
     right: 180px;
     height: 600px;
 }
@@ -474,19 +464,13 @@ nav a {
         width: 100%;   
     }
     
-    .principal {  
-        height: 100vh;
-        width: 100%;
-        background-image: linear-gradient(to right, rgb(148, 148, 148),white);      
-        overflow: hidden; 
-    }
     
     .digo {
-        font-size: 20px;  
+        font-size: 14px;  
     }
     
     .digo:hover {
-        font-size: 21px;
+        font-size: 15px;
     }
     
     nav {
@@ -495,8 +479,8 @@ nav a {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     
     nav a {
@@ -508,25 +492,25 @@ nav a {
         list-style: none;
         text-decoration: none;
         display: inline-block;
-        font-size: 20px;
-        margin-right: 20px;
+        font-size: 14px;
+        margin-right: 14px;
         cursor: pointer;
     }
     
     .linha:hover {
         color: rgb(95, 0, 133);
-        font-size: 21px;
+        font-size: 15px;
     }
     
     
     .apresentacao {
         position: absolute;
-        top: 40%;
+        top: 20%;
         left: 5%;
     }
     
     .apresentacao h1 {
-        font-size: 9vh;
+        font-size: 8vh;
         display: flex; 
     }
     
@@ -547,8 +531,8 @@ nav a {
     .img-linkedin {
         position: absolute;
         height: 4.5vh;
-        top: 75%;
-        left: 60%;
+        top: 85%;
+        left: 40%;
         cursor: pointer;
     }
     
@@ -559,8 +543,8 @@ nav a {
     .img-github {
         position: absolute;
         height: 4.5vh;
-        top: 75%;
-        left: 68%;
+        top: 85%;
+        left: 50%;
         cursor: pointer;
     }
     
@@ -571,8 +555,8 @@ nav a {
     .img-instagram {
         position: absolute;
         height: 4.5vh;
-        top: 75%;
-        left: 76%;
+        top: 85%;
+        left: 62%;
         cursor: pointer;
     }
     
@@ -580,23 +564,12 @@ nav a {
         height: 4.7vh;
     }
     
-    .img-facebook {
-        position: absolute;
-        height: 4.5vh;
-        top: 75%;
-        left: 84%;
-        cursor: pointer;
-    }
-    
-    .img-facebook:hover {
-        height: 18%;
-    }
     
     .img-youtube {
         position: absolute;
         height: 6.3vh;
-        top: 72%;
-        left: 84%;
+        top: 82%;
+        left: 74%;
         cursor: pointer;
     }
     
@@ -616,9 +589,9 @@ nav a {
     
     .area-sobre{
         position: absolute;
-        margin-top: 200px;
+        margin-top: 10px;
         align-items: center ;
-        right: 10vw;
+        right: 1vw;
         height: 600px;
     }
     
@@ -630,18 +603,18 @@ nav a {
     
     .sobre-mim,.projetos {
         text-align: center;
-        font-size: 3.5rem;
+        font-size: 3rem;
         color: rgb(95, 0, 133);
     }
     
     .cor-sobre{
         color: white;
-        font-size: 15px;
+        font-size: 14px;
     }
     
     .cor-sobre a {
         color: white;
-        font-size: 15px;
+        font-size: 14px;
     }
     
     .cor-sobre a:hover {
@@ -658,37 +631,75 @@ nav a {
         color: white;
         text-align: center;
         background: rgb(95, 0, 133);
-        height: 40px;
-        width: 180px;
-        font-size: 15px;
+        height: 35px;
+        width: 165px;
+        font-size: 14px;
         border: none;
         border-radius: 25px;
         cursor: pointer;
     
     }
 
+    .timeline ul li h3 {
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+        font-size: 20px;
+        color: rgb(95, 0, 133);
+    }
+    
+    .timeline ul li p {
+        margin: 10px 0 0;
+        font-size: 14px;
+        padding: 0;
+    }
+    
+    .timeline ul li .time h4 {
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+    }
+
+    .timeline ul li:nth-child(odd) .time {
+        position: absolute;
+        top: 12px;
+        right: -130px;
+        margin: 0;
+        padding: 8px 16px;
+        background: rgb(95, 0, 133);
+        color: #fff;
+        border-radius: 18px;
+        box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
+    }
+    
+    .timeline ul li:nth-child(even) .time {
+        position: absolute;
+        top: 12px;
+        left: -130px;
+        margin: 0;
+        padding: 8px 16px;
+        background: rgb(95, 0, 133);
+        color: #fff;
+        border-radius: 18px;
+        box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
+    }
+
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (max-width: 425px) {
 
     .navegacao{
         height: 3.5rem;
         width: 100%;   
     }
     
-    .principal {  
-        height: 100vh;
-        width: 100%;
-        background-image: linear-gradient(to right, rgb(148, 148, 148),white);      
-        overflow: hidden; 
-    }
     
     .digo {
-        font-size: 20px;  
+        font-size: 14px;  
     }
     
     .digo:hover {
-        font-size: 21px;
+        font-size: 15px;
     }
     
     nav {
@@ -697,8 +708,8 @@ nav a {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     
     nav a {
@@ -710,25 +721,25 @@ nav a {
         list-style: none;
         text-decoration: none;
         display: inline-block;
-        font-size: 20px;
-        margin-right: 20px;
+        font-size: 14px;
+        margin-right: 14px;
         cursor: pointer;
     }
     
     .linha:hover {
         color: rgb(95, 0, 133);
-        font-size: 21px;
+        font-size: 15px;
     }
     
     
     .apresentacao {
         position: absolute;
-        top: 40%;
+        top: 20%;
         left: 5%;
     }
     
     .apresentacao h1 {
-        font-size: 9vh;
+        font-size: 8vh;
         display: flex; 
     }
     
@@ -749,8 +760,8 @@ nav a {
     .img-linkedin {
         position: absolute;
         height: 4.5vh;
-        top: 75%;
-        left: 60%;
+        top: 40vh;
+        left: 40%;
         cursor: pointer;
     }
     
@@ -761,8 +772,8 @@ nav a {
     .img-github {
         position: absolute;
         height: 4.5vh;
-        top: 75%;
-        left: 68%;
+        top: 40vh;
+        left: 50%;
         cursor: pointer;
     }
     
@@ -773,8 +784,8 @@ nav a {
     .img-instagram {
         position: absolute;
         height: 4.5vh;
-        top: 75%;
-        left: 76%;
+        top: 40vh;
+        left: 62%;
         cursor: pointer;
     }
     
@@ -782,23 +793,12 @@ nav a {
         height: 4.7vh;
     }
     
-    .img-facebook {
-        position: absolute;
-        height: 4.5vh;
-        top: 75%;
-        left: 84%;
-        cursor: pointer;
-    }
-    
-    .img-facebook:hover {
-        height: 18%;
-    }
     
     .img-youtube {
         position: absolute;
         height: 6.3vh;
-        top: 72%;
-        left: 84%;
+        top: 39vh;
+        left: 74%;
         cursor: pointer;
     }
     
@@ -818,32 +818,32 @@ nav a {
     
     .area-sobre{
         position: absolute;
-        margin-top: 200px;
+        margin-top: 10px;
         align-items: center ;
-        right: 10vw;
+        right: 1vw;
         height: 600px;
     }
     
     .eu {
         position: relative;
-        height: 635px;  
+        height: 0;  
         bottom: 0;
     }
     
     .sobre-mim,.projetos {
         text-align: center;
-        font-size: 3.5rem;
+        font-size: 3rem;
         color: rgb(95, 0, 133);
     }
     
     .cor-sobre{
         color: white;
-        font-size: 15px;
+        font-size: 14px;
     }
     
     .cor-sobre a {
         color: white;
-        font-size: 15px;
+        font-size: 14px;
     }
     
     .cor-sobre a:hover {
@@ -860,13 +860,57 @@ nav a {
         color: white;
         text-align: center;
         background: rgb(95, 0, 133);
-        height: 40px;
-        width: 180px;
-        font-size: 15px;
+        height: 35px;
+        width: 165px;
+        font-size: 14px;
         border: none;
         border-radius: 25px;
         cursor: pointer;
     
+    }
+
+    .timeline ul li h3 {
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+        font-size: 20px;
+        color: rgb(95, 0, 133);
+    }
+    
+    .timeline ul li p {
+        margin: 10px 0 0;
+        font-size: 14px;
+        padding: 0;
+    }
+    
+    .timeline ul li .time h4 {
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+    }
+
+    .timeline ul li:nth-child(odd) .time {
+        position: absolute;
+        top: 12px;
+        right: -130px;
+        margin: 0;
+        padding: 8px 16px;
+        background: rgb(95, 0, 133);
+        color: #fff;
+        border-radius: 18px;
+        box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
+    }
+    
+    .timeline ul li:nth-child(even) .time {
+        position: absolute;
+        top: 12px;
+        left: -130px;
+        margin: 0;
+        padding: 8px 16px;
+        background: rgb(95, 0, 133);
+        color: #fff;
+        border-radius: 18px;
+        box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
     }
 
 }
@@ -882,12 +926,6 @@ nav a {
         width: 100%;   
     }
     
-    .principal {  
-        height: 100vh;
-        width: 100%;
-        background-image: linear-gradient(to right, rgb(148, 148, 148),white);      
-        overflow: hidden; 
-    }
     
     .digo {
         font-size: 20px;  
@@ -988,17 +1026,6 @@ nav a {
         height: 4.7vh;
     }
     
-    .img-facebook {
-        position: absolute;
-        height: 4.5vh;
-        top: 75%;
-        left: 84%;
-        cursor: pointer;
-    }
-    
-    .img-facebook:hover {
-        height: 18%;
-    }
     
     .img-youtube {
         position: absolute;
@@ -1026,7 +1053,8 @@ nav a {
         position: absolute;
         margin-top: 100px;
         align-items: center ;
-        left: 10vw;
+        margin-left: 1vw;
+        right: 3vw;
         height: 600px;
     }
     
@@ -1044,12 +1072,12 @@ nav a {
     
     .cor-sobre{
         color: white;
-        font-size: 15px;
+        font-size: 17px;
     }
     
     .cor-sobre a {
         color: white;
-        font-size: 15px;
+        font-size: 17px;
     }
     
     .cor-sobre a:hover {
@@ -1066,9 +1094,9 @@ nav a {
         color: white;
         text-align: center;
         background: rgb(95, 0, 133);
-        height: 40px;
-        width: 180px;
-        font-size: 15px;
+        height: 50px;
+        width: 200px;
+        font-size: 18px;
         border: none;
         border-radius: 25px;
         cursor: pointer;
@@ -1084,12 +1112,6 @@ nav a {
         width: 100%;   
     }
     
-    .principal {  
-        height: 100vh;
-        width: 100%;
-        background-image: linear-gradient(to right, rgb(148, 148, 148),white);      
-        overflow: hidden; 
-    }
     
     .digo {
         font-size: 20px;  
@@ -1149,7 +1171,7 @@ nav a {
         position: absolute;
         bottom: 0;
         right: 5vh;
-        height: 80vh;
+        height: 45vh;
         -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
         transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
     }
@@ -1188,18 +1210,6 @@ nav a {
     
     .img-instagram:hover {
         height: 4.7vh;
-    }
-    
-    .img-facebook {
-        position: absolute;
-        height: 4.5vh;
-        top: 75%;
-        left: 84%;
-        cursor: pointer;
-    }
-    
-    .img-facebook:hover {
-        height: 18%;
     }
     
     .img-youtube {
@@ -1278,18 +1288,12 @@ nav a {
     }
 }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 1525px) {
     .navegacao{
         height: 3.5rem;
         width: 100%;   
     }
     
-    .principal {  
-        height: 100vh;
-        width: 100%;
-        background-image: linear-gradient(to right, rgb(148, 148, 148),white);      
-        overflow: hidden; 
-    }
     
     .digo {
         font-size: 20px;  
@@ -1390,17 +1394,6 @@ nav a {
         height: 4.7vh;
     }
     
-    .img-facebook {
-        position: absolute;
-        height: 4.5vh;
-        top: 75%;
-        left: 84%;
-        cursor: pointer;
-    }
-    
-    .img-facebook:hover {
-        height: 18%;
-    }
     
     .img-youtube {
         position: absolute;
@@ -1485,12 +1478,6 @@ nav a {
         width: 100%;   
     }
     
-    .principal {  
-        height: 100vh;
-        width: 100%;
-        background-image: linear-gradient(to right, rgb(148, 148, 148),white);      
-        overflow: hidden; 
-    }
     
     .digo {
         font-size: 20px;  
@@ -1591,17 +1578,6 @@ nav a {
         height: 4.7vh;
     }
     
-    .img-facebook {
-        position: absolute;
-        height: 4.5vh;
-        top: 75%;
-        left: 84%;
-        cursor: pointer;
-    }
-    
-    .img-facebook:hover {
-        height: 18%;
-    }
     
     .img-youtube {
         position: absolute;
