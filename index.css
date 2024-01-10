@@ -1,39 +1,51 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}
+html,
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5
+}
 
-h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    margin: 10px 0
+}
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-color: rgb(223, 223, 223);
-    
 }
 
-
-.navegacao{
+.navegacao {
     height: 3.5rem;
-    width: 100%;   
+    width: 100%;
 }
 
-.principal {  
+.principal {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to right, rgb(148, 148, 148),white);      
+    background-image: linear-gradient(to right, rgb(148, 148, 148), white);
     overflow: hidden;
-    -webkit-transform: translateZ(0); 
+    -webkit-transform: translateZ(0);
     transform: translateZ(0)
 }
 
 .digo {
-    font-size: 20px;  
+    font-size: 20px;
 }
 
 .digo:hover {
@@ -69,7 +81,6 @@ nav a {
     font-size: 21px;
 }
 
-
 .apresentacao {
     position: absolute;
     top: 40%;
@@ -78,21 +89,22 @@ nav a {
 
 .apresentacao h1 {
     font-size: 10vh;
-    display: flex; 
+    display: flex;
 }
 
-.apresentacao h2{
+.apresentacao h2 {
     font-size: 3.7vh;
 }
-
 
 .img-desenho {
     position: absolute;
     bottom: 0;
     right: 5vw;
     height: 90vh;
-    -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
-    transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
+    -webkit-transform: translateZ(0);
+    /* Corrige problema de renderização no Safari */
+    transform: translateZ(0);
+    /* Corrige problema de renderização em outros navegadores */
 }
 
 .img-linkedin {
@@ -131,7 +143,6 @@ nav a {
     height: 4.7vh;
 }
 
-
 .img-youtube {
     position: absolute;
     height: 6.3vh;
@@ -144,20 +155,19 @@ nav a {
     height: 6.6vh
 }
 
-
 .secao-sobre {
     background-color: rgb(0, 0, 0);
     height: 635px;
     width: 100%;
     display: flex;
-    align-items: center;   
-   
+    align-items: center;
+
 }
 
-.area-sobre{
+.area-sobre {
     position: absolute;
     margin-top: 200px;
-    align-items: center ;
+    align-items: center;
     margin-left: 1vw;
     right: 180px;
     height: 600px;
@@ -165,17 +175,18 @@ nav a {
 
 .eu {
     position: relative;
-    height: 635px;  
+    height: 635px;
     bottom: 0;
 }
 
-.sobre-mim,.projetos {
+.sobre-mim,
+.projetos {
     text-align: center;
     font-size: 3.5rem;
     color: rgb(95, 0, 133);
 }
 
-.cor-sobre{
+.cor-sobre {
     color: white;
     font-size: 15px;
 }
@@ -205,7 +216,6 @@ nav a {
     border: none;
     border-radius: 25px;
     cursor: pointer;
-
 }
 
 .btn-curriculo:hover {
@@ -331,7 +341,6 @@ nav a {
     box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
 }
 
-
 .projetos {
     align-items: center;
     font-size: 50px;
@@ -433,7 +442,6 @@ nav a {
     transform: scale3d(1.05, 1.05, 1);
 }
 
-
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -460,1393 +468,1435 @@ nav a {
     background-color: #000000;
 }
 
-@media screen and (min-width: 375px) {
 
-    .navegacao{
-        height: 3.5rem;
-        width: 100%;   
-    }
-    
-    
+@media screen and (min-width: 375px) {
     .digo {
-        font-size: 14px;  
+        font-size: 14px;
     }
-    
+
     .digo:hover {
         font-size: 15px;
     }
-    
+
     nav {
-        background-color: #000;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         padding-left: 10px;
         padding-right: 10px;
     }
-    
-    nav a {
-        color: #fff;
-        text-decoration: none;
-    }
-    
+
     .linha {
-        list-style: none;
-        text-decoration: none;
-        display: inline-block;
         font-size: 14px;
         margin-right: 14px;
-        cursor: pointer;
     }
-    
+
     .linha:hover {
-        color: rgb(95, 0, 133);
         font-size: 15px;
     }
-    
-    
+
     .apresentacao {
-        position: absolute;
         top: 20%;
         left: 5%;
     }
-    
+
     .apresentacao h1 {
         font-size: 8vh;
-        display: flex; 
     }
-    
-    .apresentacao h2{
+
+    .apresentacao h2 {
         font-size: 3.4vh;
     }
-    
-    
+
     .img-desenho {
-        position: absolute;
         bottom: 0;
         right: 5vh;
         height: 30vh;
-        -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
-        transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
     }
-    
+
     .img-linkedin {
-        position: absolute;
         height: 4.5vh;
         top: 85%;
         left: 40%;
-        cursor: pointer;
     }
-    
+
     .img-linkedin:hover {
         height: 4.7vh;
     }
-    
+
     .img-github {
-        position: absolute;
         height: 4.5vh;
         top: 85%;
         left: 50%;
-        cursor: pointer;
     }
-    
+
     .img-github:hover {
         height: 4.7vh;
     }
-    
+
     .img-instagram {
-        position: absolute;
         height: 4.5vh;
         top: 85%;
         left: 62%;
-        cursor: pointer;
     }
-    
+
     .img-instagram:hover {
         height: 4.7vh;
     }
-    
-    
+
     .img-youtube {
-        position: absolute;
         height: 6.3vh;
         top: 82%;
         left: 74%;
-        cursor: pointer;
     }
-    
+
     .img-youtube:hover {
         height: 6.6vh
     }
-    
-    
+
     .secao-sobre {
-        background-color: rgb(0, 0, 0);
         height: 635px;
         width: 100%;
-        display: flex;
-        align-items: center;   
-       
     }
-    
-    .area-sobre{
-        position: absolute;
+
+    .area-sobre {
         margin-top: 10px;
-        align-items: center ;
         right: 1vw;
         height: 600px;
     }
-    
+
     .eu {
-        position: relative;
-        height: 0;  
+        height: 0;
         bottom: 0;
     }
-    
-    .sobre-mim,.projetos {
-        text-align: center;
+
+    .sobre-mim,
+    .projetos {
         font-size: 3rem;
-        color: rgb(95, 0, 133);
     }
-    
-    .cor-sobre{
-        color: white;
+
+    .cor-sobre {
         font-size: 14px;
     }
-    
+
     .cor-sobre a {
-        color: white;
         font-size: 14px;
     }
-    
-    .cor-sobre a:hover {
-        color: rgb(95, 0, 133);
-    }
-    
+
     .div-curriculo {
-        align-items: center;
-        text-align: center;
         margin-top: 15px;
     }
-    
+
     .btn-curriculo {
-        color: white;
-        text-align: center;
-        background: rgb(95, 0, 133);
         height: 35px;
         width: 165px;
         font-size: 14px;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-    
     }
 
     .timeline ul li h3 {
-        margin: 0;
-        padding: 0;
         font-weight: 600;
         font-size: 20px;
-        color: rgb(95, 0, 133);
     }
-    
+
     .timeline ul li p {
         margin: 10px 0 0;
         font-size: 14px;
         padding: 0;
     }
-    
+
     .timeline ul li .time h4 {
-        margin: 0;
-        padding: 0;
         font-size: 13px;
     }
 
     .timeline ul li:nth-child(odd) .time {
-        position: absolute;
         top: 12px;
         right: -130px;
-        margin: 0;
         padding: 8px 16px;
-        background: rgb(95, 0, 133);
-        color: #fff;
-        border-radius: 18px;
-        box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
-    }
-    
-    .timeline ul li:nth-child(even) .time {
-        position: absolute;
-        top: 12px;
-        left: -130px;
-        margin: 0;
-        padding: 8px 16px;
-        background: rgb(95, 0, 133);
-        color: #fff;
-        border-radius: 18px;
-        box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
     }
 
+    .timeline ul li:nth-child(even) .time {
+        top: 12px;
+        left: -130px;
+        padding: 8px 16px;
+    }
 }
 
 @media screen and (max-width: 425px) {
-
-    .principal {  
+    .principal {
         height: 100vh;
     }
 
-    .navegacao{
+    .navegacao {
         height: 3.5rem;
-        width: 100%;   
+        width: 100%;
     }
-    
-    
+
     .digo {
-        font-size: 14px;  
+        font-size: 14px;
     }
-    
+
     .digo:hover {
         font-size: 15px;
     }
-    
+
     nav {
-        background-color: #000;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         padding-left: 10px;
         padding-right: 10px;
     }
-    
+
     nav a {
-        color: #fff;
         text-decoration: none;
     }
-    
+
     .linha {
-        list-style: none;
-        text-decoration: none;
-        display: inline-block;
         font-size: 14px;
         margin-right: 14px;
-        cursor: pointer;
     }
-    
+
     .linha:hover {
-        color: rgb(95, 0, 133);
         font-size: 15px;
     }
-    
-    
+
     .apresentacao {
-        position: absolute;
         top: 20%;
         left: 5%;
     }
-    
+
     .apresentacao h1 {
         font-size: 8vh;
-        display: flex; 
     }
-    
-    .apresentacao h2{
+
+    .apresentacao h2 {
         font-size: 3.4vh;
     }
-    
-    
+
     .img-desenho {
-        position: absolute;
         bottom: 0;
         right: 8vh;
         height: 30vh;
-        -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
-        transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
     }
-    
+
     .img-linkedin {
-        position: absolute;
         height: 4.5vh;
         top: 40vh;
         left: 40%;
-        cursor: pointer;
     }
-    
+
     .img-linkedin:hover {
         height: 4.7vh;
     }
-    
+
     .img-github {
-        position: absolute;
         height: 4.5vh;
         top: 40vh;
         left: 50%;
-        cursor: pointer;
     }
-    
+
     .img-github:hover {
         height: 4.7vh;
     }
-    
+
     .img-instagram {
-        position: absolute;
         height: 4.5vh;
         top: 40vh;
         left: 62%;
-        cursor: pointer;
     }
-    
+
     .img-instagram:hover {
         height: 4.7vh;
     }
-    
-    
+
+
     .img-youtube {
-        position: absolute;
         height: 6.3vh;
         top: 39vh;
         left: 74%;
-        cursor: pointer;
     }
-    
+
     .img-youtube:hover {
         height: 6.6vh
     }
-    
-    
+
     .secao-sobre {
-        background-color: rgb(0, 0, 0);
         height: 635px;
         width: 100%;
-        display: flex;
-        align-items: center;   
-       
     }
-    
-    .area-sobre{
-        position: absolute;
+
+    .area-sobre {
         margin-top: 10px;
-        align-items: center ;
         right: 1vw;
         height: 600px;
     }
-    
+
     .eu {
-        position: relative;
-        height: 0;  
+        height: 0;
         bottom: 0;
     }
-    
-    .sobre-mim,.projetos {
-        text-align: center;
+
+    .sobre-mim,
+    .projetos {
         font-size: 3rem;
-        color: rgb(95, 0, 133);
     }
-    
-    .cor-sobre{
-        color: white;
+
+    .cor-sobre {
         font-size: 14px;
     }
-    
+
     .cor-sobre a {
-        color: white;
         font-size: 14px;
     }
-    
-    .cor-sobre a:hover {
-        color: rgb(95, 0, 133);
-    }
-    
+
     .div-curriculo {
-        align-items: center;
-        text-align: center;
         margin-top: 15px;
     }
-    
+
     .btn-curriculo {
-        color: white;
-        text-align: center;
-        background: rgb(95, 0, 133);
         height: 35px;
         width: 165px;
         font-size: 14px;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-    
     }
 
     .timeline ul li h3 {
-        margin: 0;
-        padding: 0;
         font-weight: 600;
         font-size: 20px;
-        color: rgb(95, 0, 133);
     }
-    
+
     .timeline ul li p {
         margin: 10px 0 0;
         font-size: 14px;
         padding: 0;
     }
-    
+
     .timeline ul li .time h4 {
-        margin: 0;
-        padding: 0;
         font-size: 13px;
     }
 
     .timeline ul li:nth-child(odd) .time {
-        position: absolute;
         top: 12px;
         right: -130px;
-        margin: 0;
         padding: 8px 16px;
-        background: rgb(95, 0, 133);
-        color: #fff;
-        border-radius: 18px;
-        box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
     }
-    
+
     .timeline ul li:nth-child(even) .time {
-        position: absolute;
         top: 12px;
         left: -130px;
-        margin: 0;
         padding: 8px 16px;
-        background: rgb(95, 0, 133);
-        color: #fff;
-        border-radius: 18px;
-        box-shadow: 0 0 0 3px rgba(188, 10, 69, 0.2);
     }
-
 }
 
-@media screen and (min-width: 768px) {
 
-    .navegacao{
+@media screen and (min-width: 688px) {
+    .navegacao {
         height: 3.5rem;
-        width: 100%;   
+        width: 100%;
     }
-    
-    
+
     .digo {
-        font-size: 20px;  
+        font-size: 20px;
     }
-    
+
     .digo:hover {
         font-size: 21px;
     }
-    
+
     nav {
-        background-color: #000;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         padding-left: 30px;
         padding-right: 30px;
     }
-    
-    nav a {
-        color: #fff;
-        text-decoration: none;
-    }
-    
+
+
     .linha {
-        list-style: none;
-        text-decoration: none;
-        display: inline-block;
         font-size: 20px;
         margin-right: 20px;
-        cursor: pointer;
     }
-    
+
     .linha:hover {
-        color: rgb(95, 0, 133);
         font-size: 21px;
     }
-    
-    
+
     .apresentacao {
-        position: absolute;
         top: 15%;
         left: 5%;
     }
-    
+
     .apresentacao h1 {
         font-size: 9vh;
-        display: flex; 
     }
-    
-    .apresentacao h2{
+
+    .apresentacao h2 {
         font-size: 3.4vh;
     }
-    
-    
+
     .img-desenho {
-        position: absolute;
         bottom: 0;
         right: 5vh;
         height: 40vh;
-        -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
-        transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
     }
-    
+
     .img-linkedin {
-        position: absolute;
         height: 4.5vh;
-        top: 75%;
-        left: 60%;
-        cursor: pointer;
+        top: 98%;
+        left: 50%;
     }
-    
+
     .img-linkedin:hover {
         height: 4.7vh;
     }
-    
+
     .img-github {
-        position: absolute;
         height: 4.5vh;
-        top: 75%;
-        left: 68%;
-        cursor: pointer;
+        top: 98%;
+        left: 60%;
     }
-    
+
     .img-github:hover {
         height: 4.7vh;
     }
-    
+
     .img-instagram {
-        position: absolute;
         height: 4.5vh;
-        top: 75%;
-        left: 76%;
-        cursor: pointer;
+        top: 98%;
+        left: 70%;
     }
-    
+
     .img-instagram:hover {
         height: 4.7vh;
     }
-    
-    
+
     .img-youtube {
-        position: absolute;
         height: 6.3vh;
-        top: 72%;
-        left: 84%;
-        cursor: pointer;
+        top: 95%;
+        left: 80%;
     }
-    
+
     .img-youtube:hover {
         height: 6.6vh
     }
-    
-    
+
     .secao-sobre {
-        background-color: rgb(0, 0, 0);
         height: 635px;
         width: 100%;
-        display: flex;
-        align-items: center;   
-       
     }
-    
-    .area-sobre{
-        position: absolute;
-        margin-top: 100px;
-        align-items: center ;
+
+    .area-sobre {
+        margin-top: 50px;
         margin-left: 1vw;
         right: 3vw;
         height: 600px;
     }
-    
+
     .eu {
-        position: relative;
-        height: 0;  
+        height: 0;
         bottom: 0;
     }
-    
-    .sobre-mim,.projetos {
-        text-align: center;
+
+    .sobre-mim,
+    .projetos {
         font-size: 3.5rem;
-        color: rgb(95, 0, 133);
     }
-    
-    .cor-sobre{
-        color: white;
-        font-size: 17px;
+
+    .cor-sobre {
+        font-size: 18px;
     }
-    
+
     .cor-sobre a {
-        color: white;
-        font-size: 17px;
+        font-size: 18px;
     }
-    
-    .cor-sobre a:hover {
-        color: rgb(95, 0, 133);
-    }
-    
+
     .div-curriculo {
-        align-items: center;
-        text-align: center;
         margin-top: 15px;
     }
-    
+
     .btn-curriculo {
-        color: white;
-        text-align: center;
-        background: rgb(95, 0, 133);
         height: 50px;
         width: 200px;
         font-size: 18px;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-    
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .navegacao {
+        height: 3.5rem;
+        width: 100%;
+    }
+
+    .digo {
+        font-size: 20px;
+    }
+
+    .digo:hover {
+        font-size: 21px;
+    }
+
+    nav {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .linha {
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+    .linha:hover {
+        font-size: 21px;
+    }
+
+    .apresentacao {
+        top: 15%;
+        left: 5%;
+    }
+
+    .apresentacao h1 {
+        font-size: 9vh;
+    }
+
+    .apresentacao h2 {
+        font-size: 3.4vh;
+    }
+
+    .img-desenho {
+        bottom: 0;
+        right: 5vh;
+        height: 40vh;
+    }
+
+    .img-linkedin {
+        height: 4.5vh;
+        top: 75%;
+        left: 60%;
+    }
+
+    .img-linkedin:hover {
+        height: 4.7vh;
+    }
+
+    .img-github {
+        height: 4.5vh;
+        top: 75%;
+        left: 68%;
+    }
+
+    .img-github:hover {
+        height: 4.7vh;
+    }
+
+    .img-instagram {
+        height: 4.5vh;
+        top: 75%;
+        left: 76%;
+    }
+
+    .img-instagram:hover {
+        height: 4.7vh;
+    }
+
+    .img-youtube {
+        height: 6.3vh;
+        top: 72%;
+        left: 84%;
+    }
+
+    .img-youtube:hover {
+        height: 6.6vh
+    }
+
+    .secao-sobre {
+        height: 635px;
+        width: 100%;
+    }
+
+    .area-sobre {
+        margin-top: 100px;
+        margin-left: 1vw;
+        right: 3vw;
+        height: 600px;
+    }
+
+    .eu {
+        height: 0;
+        bottom: 0;
+    }
+
+    .sobre-mim,
+    .projetos {
+        font-size: 3.5rem;
+    }
+
+    .cor-sobre {
+        font-size: 17px;
+    }
+
+    .cor-sobre a {
+        font-size: 17px;
+    }
+
+    .div-curriculo {
+        margin-top: 15px;
+    }
+
+    .btn-curriculo {
+        height: 50px;
+        width: 200px;
+        font-size: 18px;
+
     }
 }
 
 @media screen and (min-width: 1024px) {
-
-    .navegacao{
+    .navegacao {
         height: 3.5rem;
-        width: 100%;   
+        width: 100%;
     }
-    
-    
+
     .digo {
-        font-size: 20px;  
+        font-size: 20px;
     }
-    
+
     .digo:hover {
         font-size: 21px;
     }
-    
+
     nav {
-        background-color: #000;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         padding-left: 30px;
         padding-right: 30px;
     }
-    
-    nav a {
-        color: #fff;
-        text-decoration: none;
-    }
-    
+
     .linha {
-        list-style: none;
-        text-decoration: none;
-        display: inline-block;
         font-size: 20px;
         margin-right: 20px;
-        cursor: pointer;
     }
-    
+
     .linha:hover {
-        color: rgb(95, 0, 133);
         font-size: 21px;
     }
-    
-    
+
     .apresentacao {
-        position: absolute;
         top: 40%;
         left: 5%;
     }
-    
+
     .apresentacao h1 {
         font-size: 9vh;
-        display: flex; 
     }
-    
-    .apresentacao h2{
+
+    .apresentacao h2 {
         font-size: 3.4vh;
     }
-    
-    
+
     .img-desenho {
-        position: absolute;
         bottom: 0;
         right: 5vh;
         height: 40vh;
-        -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
-        transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
     }
-    
+
     .img-linkedin {
-        position: absolute;
         height: 4.5vh;
         top: 75%;
         left: 60%;
-        cursor: pointer;
     }
-    
+
     .img-linkedin:hover {
         height: 4.7vh;
     }
-    
+
     .img-github {
-        position: absolute;
         height: 4.5vh;
         top: 75%;
         left: 68%;
-        cursor: pointer;
     }
-    
+
     .img-github:hover {
         height: 4.7vh;
     }
-    
+
     .img-instagram {
-        position: absolute;
         height: 4.5vh;
         top: 75%;
         left: 76%;
-        cursor: pointer;
     }
-    
+
     .img-instagram:hover {
         height: 4.7vh;
     }
-    
-    
+
     .img-youtube {
-        position: absolute;
         height: 6.3vh;
         top: 72%;
         left: 84%;
-        cursor: pointer;
     }
-    
+
     .img-youtube:hover {
         height: 6.6vh
     }
-    
-    
+
     .secao-sobre {
-        background-color: rgb(0, 0, 0);
         height: 635px;
         width: 100%;
-        display: flex;
-        align-items: center;   
-       
     }
-    
-    .area-sobre{
-        position: absolute;
+
+    .area-sobre {
         margin-top: 100px;
-        align-items: center ;
         margin-left: 1vw;
         right: 3vw;
         height: 600px;
     }
-    
+
     .eu {
-        position: relative;
-        height: 0;  
+        height: 0;
         bottom: 0;
     }
-    
-    .sobre-mim,.projetos {
-        text-align: center;
+
+    .sobre-mim,
+    .projetos {
         font-size: 3.5rem;
-        color: rgb(95, 0, 133);
     }
-    
-    .cor-sobre{
-        color: white;
+
+    .cor-sobre {
         font-size: 17px;
     }
-    
+
     .cor-sobre a {
-        color: white;
         font-size: 17px;
     }
-    
-    .cor-sobre a:hover {
-        color: rgb(95, 0, 133);
-    }
-    
+
     .div-curriculo {
-        align-items: center;
-        text-align: center;
         margin-top: 15px;
     }
-    
+
     .btn-curriculo {
-        color: white;
-        text-align: center;
-        background: rgb(95, 0, 133);
         height: 50px;
         width: 200px;
         font-size: 18px;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-    
     }
-
 }
 
-@media screen and (min-width: 1440px) {
 
-    .navegacao{
+
+@media screen and (min-width: 1280px) {
+    .navegacao {
         height: 3.5rem;
-        width: 100%;   
+        width: 100%;
     }
-    
-    
+
     .digo {
-        font-size: 20px;  
+        font-size: 20px;
     }
-    
+
     .digo:hover {
         font-size: 21px;
     }
-    
+
     nav {
-        background-color: #000;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         padding-left: 30px;
         padding-right: 30px;
     }
-    
-    nav a {
-        color: #fff;
-        text-decoration: none;
-    }
-    
+
     .linha {
-        list-style: none;
-        text-decoration: none;
-        display: inline-block;
         font-size: 20px;
         margin-right: 20px;
-        cursor: pointer;
     }
-    
+
     .linha:hover {
-        color: rgb(95, 0, 133);
         font-size: 21px;
     }
-    
-    
+
     .apresentacao {
-        position: absolute;
         top: 40%;
         left: 5%;
     }
-    
+
     .apresentacao h1 {
         font-size: 9vh;
-        display: flex; 
     }
-    
-    .apresentacao h2{
+
+    .apresentacao h2 {
         font-size: 3.4vh;
     }
-    
-    
+
     .img-desenho {
-        position: absolute;
         bottom: 0;
         right: 5vh;
-        height: 45vh;
-        -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
-        transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
+        height: 50vh;
     }
-    
+
     .img-linkedin {
-        position: absolute;
         height: 4.5vh;
         top: 75%;
         left: 60%;
-        cursor: pointer;
     }
-    
+
     .img-linkedin:hover {
         height: 4.7vh;
     }
-    
+
     .img-github {
-        position: absolute;
         height: 4.5vh;
         top: 75%;
         left: 68%;
-        cursor: pointer;
     }
-    
+
     .img-github:hover {
         height: 4.7vh;
     }
-    
+
     .img-instagram {
-        position: absolute;
         height: 4.5vh;
         top: 75%;
         left: 76%;
-        cursor: pointer;
     }
-    
+
     .img-instagram:hover {
         height: 4.7vh;
     }
-    
+
     .img-youtube {
-        position: absolute;
         height: 6.3vh;
         top: 72%;
         left: 84%;
-        cursor: pointer;
     }
-    
+
     .img-youtube:hover {
         height: 6.6vh
     }
-    
-    
+
     .secao-sobre {
-        background-color: rgb(0, 0, 0);
         height: 635px;
         width: 100%;
-        display: flex;
-        align-items: center;   
-       
     }
-    
-    .area-sobre{
-        position: absolute;
+
+    .area-sobre {
         margin-top: 200px;
-        align-items: center ;
+        margin-left: 1vw;
+        right: 3vw;
+        height: 600px;
+    }
+
+    .eu {
+        height: 635px;
+        bottom: 0;
+    }
+
+    .sobre-mim,
+    .projetos {
+        font-size: 3.5rem;
+    }
+
+    .cor-sobre {
+        font-size: 15px;
+    }
+
+    .cor-sobre a {
+        font-size: 15px;
+    }
+
+    .div-curriculo {
+        margin-top: 15px;
+    }
+
+    .btn-curriculo {
+        height: 50px;
+        width: 200px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .navegacao {
+        height: 3.5rem;
+        width: 100%;
+    }
+
+    .digo {
+        font-size: 20px;
+    }
+
+    .digo:hover {
+        font-size: 21px;
+    }
+
+    nav {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+
+    .linha {
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+    .linha:hover {
+        font-size: 21px;
+    }
+
+    .apresentacao {
+        top: 40%;
+        left: 5%;
+    }
+
+    .apresentacao h1 {
+        font-size: 9vh;
+    }
+
+    .apresentacao h2 {
+        font-size: 3.4vh;
+    }
+
+    .img-desenho {
+        bottom: 0;
+        right: 5vh;
+        height: 45vh;
+    }
+
+    .img-linkedin {
+        height: 4.5vh;
+        top: 75%;
+        left: 60%;
+    }
+
+    .img-linkedin:hover {
+        height: 4.7vh;
+    }
+
+    .img-github {
+        height: 4.5vh;
+        top: 75%;
+        left: 68%;
+    }
+
+    .img-github:hover {
+        height: 4.7vh;
+    }
+
+    .img-instagram {
+        height: 4.5vh;
+        top: 75%;
+        left: 76%;
+    }
+
+    .img-instagram:hover {
+        height: 4.7vh;
+    }
+
+    .img-youtube {
+        height: 6.3vh;
+        top: 72%;
+        left: 84%;
+    }
+
+    .img-youtube:hover {
+        height: 6.6vh
+    }
+
+    .secao-sobre {
+        height: 635px;
+        width: 100%;
+
+    }
+
+    .area-sobre {
+        margin-top: 200px;
         right: 10vw;
         height: 600px;
     }
-    
+
     .eu {
-        position: relative;
-        height: 635px;  
+        height: 635px;
         bottom: 0;
     }
-    
-    .sobre-mim,.projetos {
-        text-align: center;
+
+    .sobre-mim,
+    .projetos {
         font-size: 3.5rem;
-        color: rgb(95, 0, 133);
     }
-    
-    .cor-sobre{
-        color: white;
+
+    .cor-sobre {
         font-size: 15px;
     }
-    
+
     .cor-sobre a {
-        color: white;
         font-size: 15px;
     }
-    
-    .cor-sobre a:hover {
-        color: rgb(95, 0, 133);
-    }
-    
+
     .div-curriculo {
-        align-items: center;
-        text-align: center;
         margin-top: 15px;
     }
-    
+
     .btn-curriculo {
-        color: white;
-        text-align: center;
-        background: rgb(95, 0, 133);
         height: 40px;
         width: 180px;
         font-size: 15px;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-    
+
     }
 }
 
 @media screen and (min-width: 1525px) {
-    .navegacao{
+    .navegacao {
         height: 3.5rem;
-        width: 100%;   
+        width: 100%;
     }
-    
-    
+
     .digo {
-        font-size: 20px;  
+        font-size: 20px;
     }
-    
+
     .digo:hover {
         font-size: 21px;
     }
-    
+
     nav {
-        background-color: #000;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         padding-left: 30px;
         padding-right: 30px;
     }
-    
-    nav a {
-        color: #fff;
-        text-decoration: none;
-    }
-    
+
     .linha {
-        list-style: none;
-        text-decoration: none;
-        display: inline-block;
         font-size: 20px;
         margin-right: 20px;
-        cursor: pointer;
     }
-    
+
     .linha:hover {
-        color: rgb(95, 0, 133);
         font-size: 21px;
     }
-    
-    
+
     .apresentacao {
-        position: absolute;
         top: 40%;
         left: 5%;
     }
-    
+
     .apresentacao h1 {
         font-size: 9vh;
-        display: flex; 
     }
-    
-    .apresentacao h2{
+
+    .apresentacao h2 {
         font-size: 3.4vh;
     }
-    
-    
+
     .img-desenho {
-        position: absolute;
         bottom: 0;
         right: 5vh;
         height: 80vh;
-        -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
-        transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
     }
-    
+
     .img-linkedin {
-        position: absolute;
         height: 4.5vh;
         top: 75%;
         left: 60%;
-        cursor: pointer;
     }
-    
+
     .img-linkedin:hover {
         height: 4.7vh;
     }
-    
+
     .img-github {
-        position: absolute;
         height: 4.5vh;
         top: 75%;
         left: 68%;
-        cursor: pointer;
     }
-    
+
     .img-github:hover {
         height: 4.7vh;
     }
-    
+
     .img-instagram {
-        position: absolute;
         height: 4.5vh;
         top: 75%;
         left: 76%;
-        cursor: pointer;
     }
-    
+
     .img-instagram:hover {
         height: 4.7vh;
     }
-    
-    
+
     .img-youtube {
-        position: absolute;
         height: 6.3vh;
         top: 72%;
         left: 84%;
-        cursor: pointer;
     }
-    
+
     .img-youtube:hover {
         height: 6.6vh
     }
-    
-    
+
     .secao-sobre {
-        background-color: rgb(0, 0, 0);
         height: 635px;
         width: 100%;
-        display: flex;
-        align-items: center;   
-       
     }
-    
-    .area-sobre{
-        position: absolute;
+
+    .area-sobre {
         margin-top: 200px;
-        align-items: center ;
         right: 10vw;
         height: 600px;
     }
-    
+
     .eu {
-        position: relative;
-        height: 635px;  
+        height: 635px;
         bottom: 0;
     }
-    
-    .sobre-mim,.projetos {
-        text-align: center;
+
+    .sobre-mim,
+    .projetos {
         font-size: 3.5rem;
-        color: rgb(95, 0, 133);
     }
-    
-    .cor-sobre{
-        color: white;
+
+    .cor-sobre {
         font-size: 15px;
     }
-    
+
     .cor-sobre a {
-        color: white;
         font-size: 15px;
     }
-    
-    .cor-sobre a:hover {
-        color: rgb(95, 0, 133);
-    }
-    
+
     .div-curriculo {
-        align-items: center;
-        text-align: center;
         margin-top: 15px;
     }
-    
+
     .btn-curriculo {
-        color: white;
-        text-align: center;
-        background: rgb(95, 0, 133);
         height: 40px;
         width: 180px;
         font-size: 15px;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-    
+
     }
 }
 
 @media screen and (min-width: 1920px) {
-    
-    .navegacao{
+    .navegacao {
         height: 3.5rem;
-        width: 100%;   
+        width: 100%;
     }
-    
-    
+
     .digo {
-        font-size: 20px;  
+        font-size: 20px;
     }
-    
+
     .digo:hover {
         font-size: 21px;
     }
-    
+
     nav {
-        background-color: #000;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         padding-left: 30px;
         padding-right: 30px;
     }
-    
-    nav a {
-        color: #fff;
-        text-decoration: none;
-    }
-    
+
     .linha {
-        list-style: none;
-        text-decoration: none;
-        display: inline-block;
         font-size: 20px;
         margin-right: 20px;
-        cursor: pointer;
     }
-    
+
     .linha:hover {
-        color: rgb(95, 0, 133);
         font-size: 21px;
     }
-    
-    
+
     .apresentacao {
-        position: absolute;
         top: 40%;
         left: 5%;
     }
-    
+
     .apresentacao h1 {
         font-size: 9vh;
-        display: flex; 
     }
-    
-    .apresentacao h2{
+
+    .apresentacao h2 {
         font-size: 3.4vh;
     }
-    
-    
+
     .img-desenho {
-        position: absolute;
         bottom: 0;
         right: 5vh;
         height: 90vh;
-        -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
-        transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
     }
-    
+
     .img-linkedin {
-        position: absolute;
         height: 4.5vh;
         top: 75%;
         left: 60%;
-        cursor: pointer;
     }
-    
+
     .img-linkedin:hover {
         height: 4.7vh;
     }
-    
+
     .img-github {
-        position: absolute;
         height: 4.5vh;
         top: 75%;
         left: 68%;
-        cursor: pointer;
     }
-    
+
     .img-github:hover {
         height: 4.7vh;
     }
-    
+
     .img-instagram {
-        position: absolute;
         height: 4.5vh;
         top: 75%;
         left: 76%;
-        cursor: pointer;
     }
-    
+
     .img-instagram:hover {
         height: 4.7vh;
     }
-    
-    
+
     .img-youtube {
-        position: absolute;
         height: 6.3vh;
         top: 72%;
         left: 84%;
-        cursor: pointer;
     }
-    
+
     .img-youtube:hover {
         height: 6.6vh
     }
-    
-    
+
     .secao-sobre {
-        background-color: rgb(0, 0, 0);
         height: 635px;
         width: 100%;
-        display: flex;
-        align-items: center;   
-       
     }
-    
-    .area-sobre{
-        position: absolute;
+
+    .area-sobre {
         margin-top: 200px;
-        align-items: center ;
         right: 180px;
         height: 600px;
     }
-    
+
     .eu {
-        position: relative;
-        height: 635px;  
+        height: 635px;
         bottom: 0;
     }
-    
-    .sobre-mim,.projetos {
-        text-align: center;
+
+    .sobre-mim,
+    .projetos {
         font-size: 3.5rem;
-        color: rgb(95, 0, 133);
     }
-    
-    .cor-sobre{
-        color: white;
+
+    .cor-sobre {
         font-size: 21px;
     }
-    
+
     .cor-sobre a {
-        color: white;
         font-size: 21px;
     }
-    
-    .cor-sobre a:hover {
-        color: rgb(95, 0, 133);
-    }
-    
+
     .div-curriculo {
-        align-items: center;
-        text-align: center;
         margin-top: 15px;
     }
-    
+
     .btn-curriculo {
-        color: white;
-        text-align: center;
-        background: rgb(95, 0, 133);
         height: 40px;
         width: 180px;
         font-size: 15px;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-    
+
+    }
+}
+
+@media screen and (min-width: 2550px) {
+    .navegacao {
+        height: 3.5rem;
+        width: 100%;
+    }
+
+    .digo {
+        font-size: 20px;
+    }
+
+    .digo:hover {
+        font-size: 21px;
+    }
+
+    nav {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .linha {
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+    .linha:hover {
+        font-size: 21px;
+    }
+
+    .apresentacao {
+        top: 40%;
+        left: 5%;
+    }
+
+    .apresentacao h1 {
+        font-size: 11vh;
+    }
+
+    .apresentacao h2 {
+        font-size: 5.4vh;
+    }
+
+    .img-desenho {
+        bottom: 0;
+        right: 5vh;
+        height: 90vh;
+    }
+
+    .img-linkedin {
+        height: 4.5vh;
+        top: 75%;
+        left: 80%;
+    }
+
+    .img-linkedin:hover {
+        height: 4.7vh;
+    }
+
+    .img-github {
+        height: 4.5vh;
+        top: 75%;
+        left: 85%;
+    }
+
+    .img-github:hover {
+        height: 4.7vh;
+    }
+
+    .img-instagram {
+        height: 4.5vh;
+        top: 75%;
+        left: 90%;
+    }
+
+    .img-instagram:hover {
+        height: 4.7vh;
+    }
+
+    .img-youtube {
+        height: 6.3vh;
+        top: 72%;
+        left: 95%;
+    }
+
+    .img-youtube:hover {
+        height: 6.6vh
+    }
+
+    .secao-sobre {
+        height: 800px;
+        width: 100%;
+    }
+
+    .area-sobre {
+        margin-top: 200px;
+        right: 300px;
+        height: 600px;
+    }
+
+    .eu {
+        height: 800px;
+        bottom: 0;
+    }
+
+    .sobre-mim,
+    .projetos {
+        font-size: 3.5rem;
+    }
+
+    .cor-sobre {
+        font-size: 25px;
+    }
+
+    .cor-sobre a {
+        font-size: 25px;
+    }
+
+    .div-curriculo {
+        margin-top: 15px;
+    }
+
+    .btn-curriculo {
+        height: 55px;
+        width: 300px;
+        font-size: 25px;
     }
 
 
-}
+    .timeline ul li h3 {
+        font-weight: 600;
+        font-size: 25px;
+    }
 
-@media screen and (min-width: 2560px) {
-   
-}
+    .timeline ul li p {
+        margin: 10px 0 0;
+        font-size: 22px;
+        padding: 0;
+    }
 
-    
+    .timeline ul li .time h4 {
+        font-size: 25px;
+    }
+
+    .timeline ul li:nth-child(odd) .time {
+        top: 12px;
+        right: -200px;
+        padding: 8px 16px;
+    }
+
+    .timeline ul li:nth-child(even) .time {
+        top: 12px;
+        left: -200px;
+        padding: 8px 16px;
+    }
+
+    .card {
+        width: 500px;
+        height: 800px;
+        margin: 25px;
+        background-color: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+        transition: 0.2s;
+    }
+
+    .card-header {
+        width: 100%;
+        height: 480px;
+        overflow: hidden;
+    }
+
+    .card-img {
+        min-width: 100%;
+        width: auto;
+        height: 100%;
+    }
+
+    .card-body {
+        height: 170px;
+        padding: 15px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .card-local {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .card-titulo {
+        font-size: 40px;
+        margin: 15px 0;
+    }
+
+    .card-texto {
+        font-size: 17px;
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    .card-footer {
+        margin-top: 90px;
+        text-align: center;
+        background-color: #000;
+    }
+
+    .card-footer a {
+        color: #fff;
+        display: block;
+        padding: 13px;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-weight: 600;
+    }
+}
