@@ -1685,7 +1685,7 @@ nav a {
     }
 }
 
-@media screen and (min-width: 2550px) {
+@media screen and (max-width: 2565px) {
     .navegacao {
         height: 3.5rem;
         width: 100%;
