@@ -84,52 +84,53 @@ nav a {
 
 
 .img-desenho {
-    display: flex;
     position: absolute;
-    bottom: 0vh; 
-   
+    bottom: 0;
+    right: 5vw;
     height: 90vh;
+    -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
+    transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
 }
 
 .img-linkedin {
     position: absolute;
-    height: 17%;
+    height: 4.5vh;
     top: 75%;
     left: 60%;
     cursor: pointer;
 }
 
 .img-linkedin:hover {
-    height: 18%;
+    height: 4.7vh;
 }
 
 .img-github {
     position: absolute;
-    height: 17%;
+    height: 4.5vh;
     top: 75%;
     left: 68%;
     cursor: pointer;
 }
 
 .img-github:hover {
-    height: 18%;
+    height: 4.7vh;
 }
 
 .img-instagram {
     position: absolute;
-    height: 17%;
+    height: 4.5vh;
     top: 75%;
     left: 76%;
     cursor: pointer;
 }
 
 .img-instagram:hover {
-    height: 18%;
+    height: 4.7vh;
 }
 
 .img-facebook {
     position: absolute;
-    height: 17%;
+    height: 4.5vh;
     top: 75%;
     left: 84%;
     cursor: pointer;
@@ -141,14 +142,14 @@ nav a {
 
 .img-youtube {
     position: absolute;
-    height: 25%;
+    height: 6.3vh;
     top: 72%;
     left: 84%;
     cursor: pointer;
 }
 
 .img-youtube:hover {
-    height: 26%;
+    height: 6.6vh
 }
 
 
@@ -157,20 +158,22 @@ nav a {
     height: 635px;
     width: 100%;
     display: flex;
-    align-items: center;
-    
+    align-items: center;   
+   
 }
 
 .area-sobre{
     position: absolute;
-    margin-top: 20%;
-    right: 10%;
-    height: 90%;
+    margin-top: 200px;
+    align-items: center ;
+    right: 180px;
+    height: 600px;
 }
 
-.minha-foto{
-    position: absolute;
-    height: 85%;  
+.eu {
+    position: relative;
+    height: 635px;  
+    bottom: 0;
 }
 
 .sobre-mim,.projetos {
@@ -179,13 +182,14 @@ nav a {
     color: rgb(95, 0, 133);
 }
 
-.cor-sobre {
-    color: #fff;
+.cor-sobre{
+    color: white;
+    font-size: 15px;
 }
 
-.cor-sobre a{
+.cor-sobre a {
     color: white;
-    font-size: 2vh;
+    font-size: 15px;
 }
 
 .cor-sobre a:hover {
@@ -462,3 +466,1223 @@ nav a {
 ::-moz-scrollbar-track {
     background-color: #000000;
 }
+
+@media screen and (max-width: 375px) {
+
+    .navegacao{
+        height: 3.5rem;
+        width: 100%;   
+    }
+    
+    .principal {  
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(to right, rgb(148, 148, 148),white);      
+        overflow: hidden; 
+    }
+    
+    .digo {
+        font-size: 20px;  
+    }
+    
+    .digo:hover {
+        font-size: 21px;
+    }
+    
+    nav {
+        background-color: #000;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .linha {
+        list-style: none;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    
+    .linha:hover {
+        color: rgb(95, 0, 133);
+        font-size: 21px;
+    }
+    
+    
+    .apresentacao {
+        position: absolute;
+        top: 40%;
+        left: 5%;
+    }
+    
+    .apresentacao h1 {
+        font-size: 9vh;
+        display: flex; 
+    }
+    
+    .apresentacao h2{
+        font-size: 3.4vh;
+    }
+    
+    
+    .img-desenho {
+        position: absolute;
+        bottom: 0;
+        right: 5vh;
+        height: 30vh;
+        -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
+        transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
+    }
+    
+    .img-linkedin {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 60%;
+        cursor: pointer;
+    }
+    
+    .img-linkedin:hover {
+        height: 4.7vh;
+    }
+    
+    .img-github {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 68%;
+        cursor: pointer;
+    }
+    
+    .img-github:hover {
+        height: 4.7vh;
+    }
+    
+    .img-instagram {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 76%;
+        cursor: pointer;
+    }
+    
+    .img-instagram:hover {
+        height: 4.7vh;
+    }
+    
+    .img-facebook {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+    .img-facebook:hover {
+        height: 18%;
+    }
+    
+    .img-youtube {
+        position: absolute;
+        height: 6.3vh;
+        top: 72%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+    .img-youtube:hover {
+        height: 6.6vh
+    }
+    
+    
+    .secao-sobre {
+        background-color: rgb(0, 0, 0);
+        height: 635px;
+        width: 100%;
+        display: flex;
+        align-items: center;   
+       
+    }
+    
+    .area-sobre{
+        position: absolute;
+        margin-top: 200px;
+        align-items: center ;
+        right: 10vw;
+        height: 600px;
+    }
+    
+    .eu {
+        position: relative;
+        height: 0;  
+        bottom: 0;
+    }
+    
+    .sobre-mim,.projetos {
+        text-align: center;
+        font-size: 3.5rem;
+        color: rgb(95, 0, 133);
+    }
+    
+    .cor-sobre{
+        color: white;
+        font-size: 15px;
+    }
+    
+    .cor-sobre a {
+        color: white;
+        font-size: 15px;
+    }
+    
+    .cor-sobre a:hover {
+        color: rgb(95, 0, 133);
+    }
+    
+    .div-curriculo {
+        align-items: center;
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    .btn-curriculo {
+        color: white;
+        text-align: center;
+        background: rgb(95, 0, 133);
+        height: 40px;
+        width: 180px;
+        font-size: 15px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+    
+    }
+
+}
+
+@media screen and (min-width: 425px) {
+
+    .navegacao{
+        height: 3.5rem;
+        width: 100%;   
+    }
+    
+    .principal {  
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(to right, rgb(148, 148, 148),white);      
+        overflow: hidden; 
+    }
+    
+    .digo {
+        font-size: 20px;  
+    }
+    
+    .digo:hover {
+        font-size: 21px;
+    }
+    
+    nav {
+        background-color: #000;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .linha {
+        list-style: none;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    
+    .linha:hover {
+        color: rgb(95, 0, 133);
+        font-size: 21px;
+    }
+    
+    
+    .apresentacao {
+        position: absolute;
+        top: 40%;
+        left: 5%;
+    }
+    
+    .apresentacao h1 {
+        font-size: 9vh;
+        display: flex; 
+    }
+    
+    .apresentacao h2{
+        font-size: 3.4vh;
+    }
+    
+    
+    .img-desenho {
+        position: absolute;
+        bottom: 0;
+        right: 5vh;
+        height: 30vh;
+        -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
+        transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
+    }
+    
+    .img-linkedin {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 60%;
+        cursor: pointer;
+    }
+    
+    .img-linkedin:hover {
+        height: 4.7vh;
+    }
+    
+    .img-github {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 68%;
+        cursor: pointer;
+    }
+    
+    .img-github:hover {
+        height: 4.7vh;
+    }
+    
+    .img-instagram {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 76%;
+        cursor: pointer;
+    }
+    
+    .img-instagram:hover {
+        height: 4.7vh;
+    }
+    
+    .img-facebook {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+    .img-facebook:hover {
+        height: 18%;
+    }
+    
+    .img-youtube {
+        position: absolute;
+        height: 6.3vh;
+        top: 72%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+    .img-youtube:hover {
+        height: 6.6vh
+    }
+    
+    
+    .secao-sobre {
+        background-color: rgb(0, 0, 0);
+        height: 635px;
+        width: 100%;
+        display: flex;
+        align-items: center;   
+       
+    }
+    
+    .area-sobre{
+        position: absolute;
+        margin-top: 200px;
+        align-items: center ;
+        right: 10vw;
+        height: 600px;
+    }
+    
+    .eu {
+        position: relative;
+        height: 635px;  
+        bottom: 0;
+    }
+    
+    .sobre-mim,.projetos {
+        text-align: center;
+        font-size: 3.5rem;
+        color: rgb(95, 0, 133);
+    }
+    
+    .cor-sobre{
+        color: white;
+        font-size: 15px;
+    }
+    
+    .cor-sobre a {
+        color: white;
+        font-size: 15px;
+    }
+    
+    .cor-sobre a:hover {
+        color: rgb(95, 0, 133);
+    }
+    
+    .div-curriculo {
+        align-items: center;
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    .btn-curriculo {
+        color: white;
+        text-align: center;
+        background: rgb(95, 0, 133);
+        height: 40px;
+        width: 180px;
+        font-size: 15px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+    
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+   
+}
+
+@media screen and (min-width: 1024px) {
+
+    .navegacao{
+        height: 3.5rem;
+        width: 100%;   
+    }
+    
+    .principal {  
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(to right, rgb(148, 148, 148),white);      
+        overflow: hidden; 
+    }
+    
+    .digo {
+        font-size: 20px;  
+    }
+    
+    .digo:hover {
+        font-size: 21px;
+    }
+    
+    nav {
+        background-color: #000;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .linha {
+        list-style: none;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    
+    .linha:hover {
+        color: rgb(95, 0, 133);
+        font-size: 21px;
+    }
+    
+    
+    .apresentacao {
+        position: absolute;
+        top: 40%;
+        left: 5%;
+    }
+    
+    .apresentacao h1 {
+        font-size: 9vh;
+        display: flex; 
+    }
+    
+    .apresentacao h2{
+        font-size: 3.4vh;
+    }
+    
+    
+    .img-desenho {
+        position: absolute;
+        bottom: 0;
+        right: 5vh;
+        height: 40vh;
+        -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
+        transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
+    }
+    
+    .img-linkedin {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 60%;
+        cursor: pointer;
+    }
+    
+    .img-linkedin:hover {
+        height: 4.7vh;
+    }
+    
+    .img-github {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 68%;
+        cursor: pointer;
+    }
+    
+    .img-github:hover {
+        height: 4.7vh;
+    }
+    
+    .img-instagram {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 76%;
+        cursor: pointer;
+    }
+    
+    .img-instagram:hover {
+        height: 4.7vh;
+    }
+    
+    .img-facebook {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+    .img-facebook:hover {
+        height: 18%;
+    }
+    
+    .img-youtube {
+        position: absolute;
+        height: 6.3vh;
+        top: 72%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+    .img-youtube:hover {
+        height: 6.6vh
+    }
+    
+    
+    .secao-sobre {
+        background-color: rgb(0, 0, 0);
+        height: 635px;
+        width: 100%;
+        display: flex;
+        align-items: center;   
+       
+    }
+    
+    .area-sobre{
+        position: absolute;
+        margin-top: 100px;
+        align-items: center ;
+        left: 10vw;
+        height: 600px;
+    }
+    
+    .eu {
+        position: relative;
+        height: 0;  
+        bottom: 0;
+    }
+    
+    .sobre-mim,.projetos {
+        text-align: center;
+        font-size: 3.5rem;
+        color: rgb(95, 0, 133);
+    }
+    
+    .cor-sobre{
+        color: white;
+        font-size: 15px;
+    }
+    
+    .cor-sobre a {
+        color: white;
+        font-size: 15px;
+    }
+    
+    .cor-sobre a:hover {
+        color: rgb(95, 0, 133);
+    }
+    
+    .div-curriculo {
+        align-items: center;
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    .btn-curriculo {
+        color: white;
+        text-align: center;
+        background: rgb(95, 0, 133);
+        height: 40px;
+        width: 180px;
+        font-size: 15px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+    
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    .navegacao{
+        height: 3.5rem;
+        width: 100%;   
+    }
+    
+    .principal {  
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(to right, rgb(148, 148, 148),white);      
+        overflow: hidden; 
+    }
+    
+    .digo {
+        font-size: 20px;  
+    }
+    
+    .digo:hover {
+        font-size: 21px;
+    }
+    
+    nav {
+        background-color: #000;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .linha {
+        list-style: none;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    
+    .linha:hover {
+        color: rgb(95, 0, 133);
+        font-size: 21px;
+    }
+    
+    
+    .apresentacao {
+        position: absolute;
+        top: 40%;
+        left: 5%;
+    }
+    
+    .apresentacao h1 {
+        font-size: 9vh;
+        display: flex; 
+    }
+    
+    .apresentacao h2{
+        font-size: 3.4vh;
+    }
+    
+    
+    .img-desenho {
+        position: absolute;
+        bottom: 0;
+        right: 5vh;
+        height: 80vh;
+        -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
+        transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
+    }
+    
+    .img-linkedin {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 60%;
+        cursor: pointer;
+    }
+    
+    .img-linkedin:hover {
+        height: 4.7vh;
+    }
+    
+    .img-github {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 68%;
+        cursor: pointer;
+    }
+    
+    .img-github:hover {
+        height: 4.7vh;
+    }
+    
+    .img-instagram {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 76%;
+        cursor: pointer;
+    }
+    
+    .img-instagram:hover {
+        height: 4.7vh;
+    }
+    
+    .img-facebook {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+    .img-facebook:hover {
+        height: 18%;
+    }
+    
+    .img-youtube {
+        position: absolute;
+        height: 6.3vh;
+        top: 72%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+    .img-youtube:hover {
+        height: 6.6vh
+    }
+    
+    
+    .secao-sobre {
+        background-color: rgb(0, 0, 0);
+        height: 635px;
+        width: 100%;
+        display: flex;
+        align-items: center;   
+       
+    }
+    
+    .area-sobre{
+        position: absolute;
+        margin-top: 200px;
+        align-items: center ;
+        right: 10vw;
+        height: 600px;
+    }
+    
+    .eu {
+        position: relative;
+        height: 635px;  
+        bottom: 0;
+    }
+    
+    .sobre-mim,.projetos {
+        text-align: center;
+        font-size: 3.5rem;
+        color: rgb(95, 0, 133);
+    }
+    
+    .cor-sobre{
+        color: white;
+        font-size: 15px;
+    }
+    
+    .cor-sobre a {
+        color: white;
+        font-size: 15px;
+    }
+    
+    .cor-sobre a:hover {
+        color: rgb(95, 0, 133);
+    }
+    
+    .div-curriculo {
+        align-items: center;
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    .btn-curriculo {
+        color: white;
+        text-align: center;
+        background: rgb(95, 0, 133);
+        height: 40px;
+        width: 180px;
+        font-size: 15px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+    
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .navegacao{
+        height: 3.5rem;
+        width: 100%;   
+    }
+    
+    .principal {  
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(to right, rgb(148, 148, 148),white);      
+        overflow: hidden; 
+    }
+    
+    .digo {
+        font-size: 20px;  
+    }
+    
+    .digo:hover {
+        font-size: 21px;
+    }
+    
+    nav {
+        background-color: #000;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .linha {
+        list-style: none;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    
+    .linha:hover {
+        color: rgb(95, 0, 133);
+        font-size: 21px;
+    }
+    
+    
+    .apresentacao {
+        position: absolute;
+        top: 40%;
+        left: 5%;
+    }
+    
+    .apresentacao h1 {
+        font-size: 9vh;
+        display: flex; 
+    }
+    
+    .apresentacao h2{
+        font-size: 3.4vh;
+    }
+    
+    
+    .img-desenho {
+        position: absolute;
+        bottom: 0;
+        right: 5vh;
+        height: 80vh;
+        -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
+        transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
+    }
+    
+    .img-linkedin {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 60%;
+        cursor: pointer;
+    }
+    
+    .img-linkedin:hover {
+        height: 4.7vh;
+    }
+    
+    .img-github {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 68%;
+        cursor: pointer;
+    }
+    
+    .img-github:hover {
+        height: 4.7vh;
+    }
+    
+    .img-instagram {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 76%;
+        cursor: pointer;
+    }
+    
+    .img-instagram:hover {
+        height: 4.7vh;
+    }
+    
+    .img-facebook {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+    .img-facebook:hover {
+        height: 18%;
+    }
+    
+    .img-youtube {
+        position: absolute;
+        height: 6.3vh;
+        top: 72%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+    .img-youtube:hover {
+        height: 6.6vh
+    }
+    
+    
+    .secao-sobre {
+        background-color: rgb(0, 0, 0);
+        height: 635px;
+        width: 100%;
+        display: flex;
+        align-items: center;   
+       
+    }
+    
+    .area-sobre{
+        position: absolute;
+        margin-top: 200px;
+        align-items: center ;
+        right: 10vw;
+        height: 600px;
+    }
+    
+    .eu {
+        position: relative;
+        height: 635px;  
+        bottom: 0;
+    }
+    
+    .sobre-mim,.projetos {
+        text-align: center;
+        font-size: 3.5rem;
+        color: rgb(95, 0, 133);
+    }
+    
+    .cor-sobre{
+        color: white;
+        font-size: 15px;
+    }
+    
+    .cor-sobre a {
+        color: white;
+        font-size: 15px;
+    }
+    
+    .cor-sobre a:hover {
+        color: rgb(95, 0, 133);
+    }
+    
+    .div-curriculo {
+        align-items: center;
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    .btn-curriculo {
+        color: white;
+        text-align: center;
+        background: rgb(95, 0, 133);
+        height: 40px;
+        width: 180px;
+        font-size: 15px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+    
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    
+    .navegacao{
+        height: 3.5rem;
+        width: 100%;   
+    }
+    
+    .principal {  
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(to right, rgb(148, 148, 148),white);      
+        overflow: hidden; 
+    }
+    
+    .digo {
+        font-size: 20px;  
+    }
+    
+    .digo:hover {
+        font-size: 21px;
+    }
+    
+    nav {
+        background-color: #000;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .linha {
+        list-style: none;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    
+    .linha:hover {
+        color: rgb(95, 0, 133);
+        font-size: 21px;
+    }
+    
+    
+    .apresentacao {
+        position: absolute;
+        top: 40%;
+        left: 5%;
+    }
+    
+    .apresentacao h1 {
+        font-size: 9vh;
+        display: flex; 
+    }
+    
+    .apresentacao h2{
+        font-size: 3.4vh;
+    }
+    
+    
+    .img-desenho {
+        position: absolute;
+        bottom: 0;
+        right: 5vh;
+        height: 90vh;
+        -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
+        transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
+    }
+    
+    .img-linkedin {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 60%;
+        cursor: pointer;
+    }
+    
+    .img-linkedin:hover {
+        height: 4.7vh;
+    }
+    
+    .img-github {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 68%;
+        cursor: pointer;
+    }
+    
+    .img-github:hover {
+        height: 4.7vh;
+    }
+    
+    .img-instagram {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 76%;
+        cursor: pointer;
+    }
+    
+    .img-instagram:hover {
+        height: 4.7vh;
+    }
+    
+    .img-facebook {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+    .img-facebook:hover {
+        height: 18%;
+    }
+    
+    .img-youtube {
+        position: absolute;
+        height: 6.3vh;
+        top: 72%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+    .img-youtube:hover {
+        height: 6.6vh
+    }
+    
+    
+    .secao-sobre {
+        background-color: rgb(0, 0, 0);
+        height: 635px;
+        width: 100%;
+        display: flex;
+        align-items: center;   
+       
+    }
+    
+    .area-sobre{
+        position: absolute;
+        margin-top: 200px;
+        align-items: center ;
+        right: 180px;
+        height: 600px;
+    }
+    
+    .eu {
+        position: relative;
+        height: 635px;  
+        bottom: 0;
+    }
+    
+    .sobre-mim,.projetos {
+        text-align: center;
+        font-size: 3.5rem;
+        color: rgb(95, 0, 133);
+    }
+    
+    .cor-sobre{
+        color: white;
+        font-size: 21px;
+    }
+    
+    .cor-sobre a {
+        color: white;
+        font-size: 21px;
+    }
+    
+    .cor-sobre a:hover {
+        color: rgb(95, 0, 133);
+    }
+    
+    .div-curriculo {
+        align-items: center;
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    .btn-curriculo {
+        color: white;
+        text-align: center;
+        background: rgb(95, 0, 133);
+        height: 40px;
+        width: 180px;
+        font-size: 15px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+    
+    }
+
+
+}
+
+@media screen and (min-width: 2560px) {
+   
+}
+
+    
