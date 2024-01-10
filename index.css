@@ -457,7 +457,7 @@ nav a {
     background-color: #000000;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) {
 
     .navegacao{
         height: 3.5rem;
@@ -688,6 +688,10 @@ nav a {
 
 @media screen and (max-width: 425px) {
 
+    .principal {  
+        height: 100vh;
+    }
+
     .navegacao{
         height: 3.5rem;
         width: 100%;   
@@ -751,7 +755,7 @@ nav a {
     .img-desenho {
         position: absolute;
         bottom: 0;
-        right: 5vh;
+        right: 8vh;
         height: 30vh;
         -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
         transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
@@ -916,6 +920,190 @@ nav a {
 }
 
 @media screen and (min-width: 768px) {
+
+    .navegacao{
+        height: 3.5rem;
+        width: 100%;   
+    }
+    
+    
+    .digo {
+        font-size: 20px;  
+    }
+    
+    .digo:hover {
+        font-size: 21px;
+    }
+    
+    nav {
+        background-color: #000;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .linha {
+        list-style: none;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    
+    .linha:hover {
+        color: rgb(95, 0, 133);
+        font-size: 21px;
+    }
+    
+    
+    .apresentacao {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+    }
+    
+    .apresentacao h1 {
+        font-size: 9vh;
+        display: flex; 
+    }
+    
+    .apresentacao h2{
+        font-size: 3.4vh;
+    }
+    
+    
+    .img-desenho {
+        position: absolute;
+        bottom: 0;
+        right: 5vh;
+        height: 40vh;
+        -webkit-transform: translateZ(0); /* Corrige problema de renderização no Safari */
+        transform: translateZ(0); /* Corrige problema de renderização em outros navegadores */
+    }
+    
+    .img-linkedin {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 60%;
+        cursor: pointer;
+    }
+    
+    .img-linkedin:hover {
+        height: 4.7vh;
+    }
+    
+    .img-github {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 68%;
+        cursor: pointer;
+    }
+    
+    .img-github:hover {
+        height: 4.7vh;
+    }
+    
+    .img-instagram {
+        position: absolute;
+        height: 4.5vh;
+        top: 75%;
+        left: 76%;
+        cursor: pointer;
+    }
+    
+    .img-instagram:hover {
+        height: 4.7vh;
+    }
+    
+    
+    .img-youtube {
+        position: absolute;
+        height: 6.3vh;
+        top: 72%;
+        left: 84%;
+        cursor: pointer;
+    }
+    
+    .img-youtube:hover {
+        height: 6.6vh
+    }
+    
+    
+    .secao-sobre {
+        background-color: rgb(0, 0, 0);
+        height: 635px;
+        width: 100%;
+        display: flex;
+        align-items: center;   
+       
+    }
+    
+    .area-sobre{
+        position: absolute;
+        margin-top: 100px;
+        align-items: center ;
+        margin-left: 1vw;
+        right: 3vw;
+        height: 600px;
+    }
+    
+    .eu {
+        position: relative;
+        height: 0;  
+        bottom: 0;
+    }
+    
+    .sobre-mim,.projetos {
+        text-align: center;
+        font-size: 3.5rem;
+        color: rgb(95, 0, 133);
+    }
+    
+    .cor-sobre{
+        color: white;
+        font-size: 17px;
+    }
+    
+    .cor-sobre a {
+        color: white;
+        font-size: 17px;
+    }
+    
+    .cor-sobre a:hover {
+        color: rgb(95, 0, 133);
+    }
+    
+    .div-curriculo {
+        align-items: center;
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    .btn-curriculo {
+        color: white;
+        text-align: center;
+        background: rgb(95, 0, 133);
+        height: 50px;
+        width: 200px;
+        font-size: 18px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+    
+    }
+
+
    
 }
 
