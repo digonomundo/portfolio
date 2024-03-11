@@ -173,6 +173,10 @@ nav a {
     height: 600px;
 }
 
+.recuo {
+    text-indent: 2rem;
+}
+
 .eu {
     position: relative;
     height: 635px;
