@@ -42,7 +42,7 @@ export function HeaderPage() {
 
   return (
     <header
-      className={`p-6 flex items-center justify-between mb-28 sticky top-0 transition-all duration-200 border-b border-transparent ${
+      className={`p-6 flex items-center justify-between mb-0 sticky top-0 transition-all duration-200 border-b border-transparent ${
         hasScrolledDown
           ? "bg-white/[1%] border-white/5 z-50 backdrop-blur-3xl"
           : "bg-transparent"
