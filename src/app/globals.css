@@ -7,6 +7,33 @@ body {
 }
 
 @layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground leading-loose;
+  }
+
+  .h1 {
+    @apply text-[48px] xl:text-[60px] largaco:text-[80px] leading-[1.1] font-semibold;
+  }
+
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+
+  .h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
+
+  .bv {
+    @apply text-[30px] md:text-[35px] lg:text-[40px] xl:text-[45px] largao:text-[48px] largaco:text-[68px] leading-[1.1] font-semibold;
+  }
+
+  .comeco {
+    @apply text-[25px] md:text-[30px] lg:text-[35px] xl:text-[40px] largao:text-[45px] largaco:text-[63px] leading-[1.1] font-semibold;
+  }
+
   :root {
     --background: 0 0% 0%;
     --foreground: 0 0% 80%;
@@ -59,14 +86,5 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }
