@@ -42,7 +42,7 @@ export function HeaderPage() {
 
   return (
     <header
-      className={`p-6 flex items-center justify-between mb-0 sticky top-0 transition-all duration-200 border-b border-transparent ${
+      className=  {`p-6 flex items-center justify-between mb-0 sticky top-0 transition-all duration-200 border-b border-transparent ${
         hasScrolledDown
           ? "bg-white/[1%] border-white/5 z-50 backdrop-blur-3xl"
           : "bg-transparent"
@@ -59,7 +59,7 @@ export function HeaderPage() {
           quality={100}
           className="max-xs:hidden size-12 object-contain"
         />
-        <h1 className="text-2xl font-light flex items-center gap-2 tracking-widest">
+        <h1 className="text-2xl font-light flex items-center gap-2 tracking-widest text-white">
           DIGO
         </h1>
       </Link>
@@ -75,7 +75,7 @@ export function HeaderPage() {
             key={`layout_navbar_${path}-${label}`}
             href={path}
             data-active={path === pathname}
-            className={path === pathname ? "text-white" : ""}
+            className={path === pathname ? "text-white" : " "}
           >
             {label}
           </Link>
