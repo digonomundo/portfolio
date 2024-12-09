@@ -42,9 +42,9 @@ export function HeaderPage() {
 
   return (
     <header
-      className=  {`p-6 flex items-center justify-between mb-0 sticky top-0 transition-all duration-200 border-b border-transparent ${
+      className=  {`p-4 flex items-center justify-between mb-0 sticky top-0 transition-all duration-200 border-b border-transparent ${
         hasScrolledDown
-          ? "bg-white/[1%] border-white/5 z-50 backdrop-blur-3xl"
+          ? "bg-white/[1%] z-50"
           : "bg-transparent"
       }`}
     >
@@ -66,7 +66,7 @@ export function HeaderPage() {
 
       {/* Navegação */}
       <nav
-        className={`px-5 py-2.5 rounded-2xl bg-white/10 flex items-center gap-5 prose-a:text-white/60 hover:prose-a:text-white/70 active:prose-a:text-white/80 ${
+        className={`px-5 py-2 rounded-2xl bg-white/10 flex items-center gap-8 prose-a:text-white/60 hover:prose-a:text-white/70 active:prose-a:text-white/80 ${
           "data-[active=true]:prose-a:text-white prose-a:transition-all prose-a:duration-100 prose-a:text-sm prose-a:cursor-default prose-a:font-medium max-xs:w-full max-xs:prose-a:flex-1 max-xs:prose-a:text-center max-xs:hover:prose-a:bg-white/5 max-xs:prose-a:px-5 max-xs:prose-a:py-2.5 max-xs:p-0 max-xs:gap-0 max-xs:overflow-hidden"
         }`}
       >
@@ -75,7 +75,7 @@ export function HeaderPage() {
             key={`layout_navbar_${path}-${label}`}
             href={path}
             data-active={path === pathname}
-            className={path === pathname ? "text-white" : " "}
+            className={path === pathname ? "text-white border-b-2 border-azul" : "text-white"}
           >
             {label}
           </Link>
@@ -92,10 +92,10 @@ export function HeaderPage() {
             className="flex items-center justify-center"
           >
             <Image
-              src={isPlaying ? "/assets/som.gif" : "/assets/semsom.png"}
+              src={isPlaying ? "/assets/music.gif" : "/assets/semsom.png"}
               alt={isPlaying ? "Pause" : "Play"}
-              width={32}
-              height={32}
+              width={isPlaying ? 22 : 21}
+              height={isPlaying ? 22 : 21}
               unoptimized
               className="object-contain"
             />

@@ -87,4 +87,31 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #0C95E2;
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #000000;
+  }
+
+  ::-moz-scrollbar {
+    width: 12px;
+  }
+
+  ::-moz-scrollbar-thumb {
+    background-color: #0C95E2;
+    border-radius: 6px;
+  }
+
+  ::-moz-scrollbar-track {
+    background-color: #000000;
+  }
 }
+
