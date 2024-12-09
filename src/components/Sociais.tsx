@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FaLinkedinIn, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 type SocialItem = {
   icon: React.ReactNode;
@@ -17,7 +17,7 @@ const sociais: SocialItem[] = [
   { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/digonomundo" },
   { icon: <FaGithub />, path: "https://github.com/digonomundo" },
   { icon: <FaInstagram />, path: "https://www.instagram.com/digonomundo" },
-  { icon: <FaYoutube />, path: "https://www.youtube.com/@digonomundo" },
+  { icon: <FaWhatsapp />, path: "https://wa.me/5517992017318" },
 ];
 
 const Sociais: React.FC<SociaisProps> = ({ containerStyles, iconSyles }) => {
