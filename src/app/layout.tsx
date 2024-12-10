@@ -4,6 +4,8 @@ import React from "react";
 import "./globals.css";
 import { HeaderPage } from "@/components/Header";
 import Starfield from "@/components/BackgroundStars";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -29,6 +31,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <head>
         <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" sizes="any" />
+        <meta property="og:site_name" content="Meu Portfolio"></meta>
         <meta property="og:title" content="Meu Portfolio" />
         <meta property="og:description" content="Meu portfólio, falando um pouco sobre mim e meus projetos" />
         <meta property="og:image" content="https://www.digonomundo.com/assets/logo.svg" />
@@ -50,6 +53,8 @@ export default function RootLayout({
       />
         <HeaderPage />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
