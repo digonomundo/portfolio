@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import React from "react";
 
 const buscarPeriodo = (): string => {
 
@@ -20,16 +21,16 @@ const buscarPeriodo = (): string => {
 
   // Mapeia combinações de dia e período para arquivos de áudio
   const audioMap: Record<number, Record<string, string>> = {
-    0: { manha: "/assets/domingo-manha.mp3", tarde: "/assets/domingo-tarde.mp3", noite: "/assets/domingo-noite.mp3" },
-    1: { manha: "/assets/segunda-manha.mp3", tarde: "/assets/segunda-tarde.mp3", noite: "/assets/segunda-noite.mp3" },
-    2: { manha: "/assets/terca-manha.mp3", tarde: "/assets/terca-tarde.mp3", noite: "/assets/terca-noite.mp3" },
-    3: { manha: "/assets/quarta-manha.mp3", tarde: "/assets/quarta-tarde.mp3", noite: "/assets/quarta-noite.mp3" },
-    4: { manha: "/assets/quinta-manha.mp3", tarde: "/assets/quinta-tarde.mp3", noite: "/assets/quinta-noite.mp3" },
-    5: { manha: "/assets/sexta-manha.mp3", tarde: "/assets/sexta-tarde.mp3", noite: "/assets/sexta-noite.mp3" },
-    6: { manha: "/assets/sabado-manha.mp3", tarde: "/assets/sabado-tarde.mp3", noite: "/assets/sabado-noite.mp3" },
+    0: { manha: "/assets/dom/domingo-manha.mp3", tarde: "/assets/dom/domingo-tarde.mp3", noite: "/assets/dom/domingo-noite.mp3" },
+    1: { manha: "/assets/seg/segunda-manha.mp3", tarde: "/assets/seg/segunda-tarde.mp3", noite: "/assets/seg/segunda-noite.mp3" },
+    2: { manha: "/assets/ter/terca-manha.mp3", tarde: "/assets/ter/terca-tarde.mp3", noite: "/assets/ter/terca-noite.mp3" },
+    3: { manha: "/assets/qua/quarta-manha.mp3", tarde: "/assets/qua/quarta-tarde.mp3", noite: "/assets/qua/quarta-noite.mp3" },
+    4: { manha: "/assets/qui/quinta-manha.mp3", tarde: "/assets/qui/quinta-tarde.mp3", noite: "/assets/qui/quinta-noite.mp3" },
+    5: { manha: "/assets/sex/sexta-manha.mp3", tarde: "/assets/sex/sexta-tarde.mp3", noite: "/assets/sex/sexta-noite.mp3" },
+    6: { manha: "/assets/sab/sabado-manha.mp3", tarde: "/assets/sab/sabado-tarde.mp3", noite: "/assets/sab/sabado-noite.mp3" },
   };
 
-  return audioMap[day]?.[period] || "/assets/default.mp3";
+  return audioMap[day]?.[period] || "/assets/snowfall.mp3";
 };
 
 const Audio: React.FC = () => {
@@ -84,8 +85,8 @@ const Audio: React.FC = () => {
         <Image
           src={isPlaying ? "/assets/voz.gif" : "/assets/semsom.png"}
           alt={isPlaying ? "Pause" : "Play"}
-          width={isPlaying ? 80 : 40}
-          height={isPlaying ? 80 : 40}
+          width={isPlaying ? 70 : 35}
+          height={isPlaying ? 70 : 35}
           unoptimized
           className="object-contain"
         />
