@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Sociais from "@/components/Sociais";
 import Fotoapr from "@/components/Foto"; 
+import Audio from "@/components/Audio";
 
 const Home: React.FC = () => {
   return (
@@ -10,10 +11,10 @@ const Home: React.FC = () => {
         <div className="xl:container mx-auto flex flex-col xl:flex-row items-center justify-around">
           {/* Texto de apresentação */}
           <div className="text-center xl:text-left flex flex-col items-center xl:items-start order-2 xl:order-none mt-4 xl:mt-0">
-            <h1 className="h1 mb-3 text-white">
+            <h1 className="h1 mb-3 text-white ">
               Olá, eu sou o
               <br />
-              <span className="text-azul">Rodrigo!</span>
+              <span className="text-azul flex gap-6 larcaco:gap-10 xl:gap-10">Rodrigo! <Audio /></span> 
             </h1>
             <span className="text-lg largaco:text-xl text-white">Um desenvolvedor de software jr.</span>
 
