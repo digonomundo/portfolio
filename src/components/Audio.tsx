@@ -7,9 +7,9 @@ import React from "react";
 const buscarPeriodo = (): string => {
 
   const date = new Date();
-  const day = date.getDay();
-  const hour = date.getHours();
-
+  const dia = new Date(date.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" })).getDay();
+  const hora = new Date(date.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" })).getHours();
+  
   const periodos = {
     manha: "manha", // 0h–11h
     tarde: "tarde", // 12h–17h
@@ -17,7 +17,7 @@ const buscarPeriodo = (): string => {
   };
 
   // Determina o período do dia
-  const period = hour < 12 ? periodos.manha : hour < 18 ? periodos.tarde : periodos.noite;
+  const period = hora < 12 ? periodos.manha : hora < 18 ? periodos.tarde : periodos.noite;
 
   // Mapeia combinações de dia e período para arquivos de áudio
   const audioMap: Record<number, Record<string, string>> = {
@@ -30,7 +30,7 @@ const buscarPeriodo = (): string => {
     6: { manha: "/assets/sab/sabado-manha.mp3", tarde: "/assets/sab/sabado-tarde.mp3", noite: "/assets/sab/sabado-noite.mp3" },
   };
 
-  return audioMap[day]?.[period] || "/assets/snowfall.mp3";
+  return audioMap[dia]?.[period] || "/assets/snowfall.mp3";
 };
 
 const Audio: React.FC = () => {
@@ -52,13 +52,13 @@ const Audio: React.FC = () => {
   useEffect(() => {
     setAudioSrc(buscarPeriodo());
     if (audioRef.current) {
-      audioRef.current.load(); // Recarrega o novo áudio    
+      audioRef.current.load(); // carrega o novo áudio    
     }
   }, []);
 
   useEffect(() => {
     const handleAudioEnded = () => {
-      setIsPlaying(false); // Atualiza o estado para "parado" quando o áudio terminar
+      setIsPlaying(false); // estado para "parado" quando o áudio terminar
     };
 
     const audioElement = audioRef.current;
