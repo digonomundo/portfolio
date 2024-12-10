@@ -22,9 +22,22 @@ export function HeaderPage() {
       setHasScrolledDown(window.scrollY > 0);
     };
 
+    const handleAudioEnded = () => {
+      setIsPlaying(false); // Atualiza o estado para "parado" quando o áudio terminar
+    };
+
+    const audioElement = audioRef.current;
+
+    if (audioElement) {
+      audioElement.addEventListener("ended", handleAudioEnded);
+    }
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
+      if (audioElement) {
+        audioElement.removeEventListener("ended", handleAudioEnded);
+      }
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -42,10 +55,8 @@ export function HeaderPage() {
 
   return (
     <header
-      className=  {`p-4 flex items-center justify-between mb-0 sticky top-0 transition-all duration-200 border-b border-transparent ${
-        hasScrolledDown
-          ? "bg-white/[1%] z-50"
-          : "bg-transparent"
+      className={`p-4 flex items-center justify-between mb-0 sticky top-0 transition-all duration-200 border-b border-transparent ${
+        hasScrolledDown ? "bg-white/[1%] z-50" : "bg-transparent"
       }`}
     >
       {/* Logo */}
@@ -75,7 +86,11 @@ export function HeaderPage() {
             key={`layout_navbar_${path}-${label}`}
             href={path}
             data-active={path === pathname}
-            className={path === pathname ? "text-white border-b-2 border-azul" : "text-white"}
+            className={
+              path === pathname
+                ? "text-white border-b-2 border-azul"
+                : "text-white"
+            }
           >
             {label}
           </Link>
@@ -84,7 +99,7 @@ export function HeaderPage() {
         {/* Controle de áudio */}
         <div className="flex items-center">
           <audio ref={audioRef}>
-            <source src="/assets/coffe.mp3" type="audio/mp3" />
+            <source src="/assets/snowfall.mp3" type="audio/mp3" />
             Seu navegador não suporta o elemento de áudio.
           </audio>
           <button
