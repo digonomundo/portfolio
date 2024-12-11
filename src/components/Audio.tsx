@@ -1,4 +1,4 @@
-"use client"
+"use client";
 export const revalidate = 0;
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
@@ -6,11 +6,6 @@ import React from "react";
 
 const getSaoPauloDate = () => {
   const now = new Date();
-  const formatter = new Intl.DateTimeFormat("en-US", {
-    timeZone: "America/Sao_Paulo",
-    hour: "numeric",
-    hour12: false,
-  });
 
   // Obtém a data no fuso horário de São Paulo
   const saoPauloDate = new Date(
@@ -24,9 +19,8 @@ const getSaoPauloDate = () => {
 };
 
 const buscarPeriodo = (): string => {
- 
   const { hour, day } = getSaoPauloDate();
-  
+
   const periodos = {
     manha: "manha", // 0h–11h
     tarde: "tarde", // 12h–17h
@@ -46,6 +40,7 @@ const buscarPeriodo = (): string => {
     5: { manha: "/assets/sex/sexta-manha.mp3", tarde: "/assets/sex/sexta-tarde.mp3", noite: "/assets/sex/sexta-noite.mp3" },
     6: { manha: "/assets/sab/sabado-manha.mp3", tarde: "/assets/sab/sabado-tarde.mp3", noite: "/assets/sab/sabado-noite.mp3" },
   };
+
   console.log("Data calculada:", getSaoPauloDate());
 
   return audioMap[day]?.[periodo] || "/assets/snowfall.mp3";
@@ -70,7 +65,7 @@ const Audio: React.FC = () => {
   useEffect(() => {
     setAudioSrc(buscarPeriodo());
     if (audioRef.current) {
-      audioRef.current.load(); // carrega o novo áudio    
+      audioRef.current.load(); // carrega o novo áudio
     }
   }, []);
 
