@@ -34,14 +34,14 @@ export default function RootLayout({
         <meta property="og:site_name" content="Meu Portfolio"></meta>
         <meta property="og:title" content="Meu Portfolio" />
         <meta property="og:description" content="Meu portfólio, falando um pouco sobre mim e meus projetos" />
-        <meta property="og:image" content="https://www.digonomundo.com/assets/logo.svg" />
+        <meta property="og:image" content="/assets/logo.svg" />
         <meta property="og:url" content="https://www.digonomundo.com" />
         <meta property="og:type" content="website" />
         <meta name="keywords" content="web site, Rodrigo, Rodrigo Dias, Digo, Rodrigo Marques Dias, Digonomundo, Rodrigodias, Rodrigomarquesdias, digolar, portfolio, desenvolvedor web, desenvolvedor, etec, utfpr, barretos, engenheiro de software, software, jr, digonomundo" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Meu Portfolio" />
         <meta name="twitter:description" content="Meu portfólio, falando um pouco sobre mim e meus projetos" />
-        <meta name="twitter:image" content="https://www.digonomundo.com/assets/logo.svg" />
+        <meta name="twitter:image" content="/assets/logo.svg" />
       </head>
       <body
         className={`${poppins.variable} + "antialiased bg-background min-h-full h-full `}
