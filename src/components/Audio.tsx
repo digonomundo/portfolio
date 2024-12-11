@@ -1,4 +1,5 @@
-"use client";
+'use client';
+
 export const revalidate = 0;
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
