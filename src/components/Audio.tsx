@@ -1,14 +1,31 @@
 "use client"
-
+export const revalidate = 0;
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import React from "react";
 
-const buscarPeriodo = (): string => {
+const getSaoPauloDate = () => {
+  const now = new Date();
+  const formatter = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Sao_Paulo",
+    hour: "numeric",
+    hour12: false,
+  });
 
-  const date = new Date();
-  const dia = new Date(date.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" })).getDay();
-  const hora = new Date(date.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" })).getHours();
+  // Obtém a data no fuso horário de São Paulo
+  const saoPauloDate = new Date(
+    now.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" })
+  );
+
+  const hour = saoPauloDate.getHours();
+  const day = saoPauloDate.getDay(); // Retorna 0 (domingo) a 6 (sábado)
+
+  return { hour, day };
+};
+
+const buscarPeriodo = (): string => {
+ 
+  const { hour, day } = getSaoPauloDate();
   
   const periodos = {
     manha: "manha", // 0h–11h
@@ -17,7 +34,7 @@ const buscarPeriodo = (): string => {
   };
 
   // Determina o período do dia
-  const period = hora < 12 ? periodos.manha : hora < 18 ? periodos.tarde : periodos.noite;
+  const periodo = hour < 12 ? periodos.manha : hour < 18 ? periodos.tarde : periodos.noite;
 
   // Mapeia combinações de dia e período para arquivos de áudio
   const audioMap: Record<number, Record<string, string>> = {
@@ -29,8 +46,9 @@ const buscarPeriodo = (): string => {
     5: { manha: "/assets/sex/sexta-manha.mp3", tarde: "/assets/sex/sexta-tarde.mp3", noite: "/assets/sex/sexta-noite.mp3" },
     6: { manha: "/assets/sab/sabado-manha.mp3", tarde: "/assets/sab/sabado-tarde.mp3", noite: "/assets/sab/sabado-noite.mp3" },
   };
+  console.log("Data calculada:", getSaoPauloDate());
 
-  return audioMap[dia]?.[period] || "/assets/snowfall.mp3";
+  return audioMap[day]?.[periodo] || "/assets/snowfall.mp3";
 };
 
 const Audio: React.FC = () => {
