@@ -8,7 +8,7 @@ import React from "react";
 const getSaoPauloDate = () => {
   const now = new Date();
 
-  // Obtém a data no fuso horário de São Paulo
+  // Pega a data no fuso horário de São Paulo
   const saoPauloDate = new Date(
     now.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" })
   );
@@ -42,8 +42,6 @@ const buscarPeriodo = (): string => {
     6: { manha: "/assets/sab/sabado-manha.mp3", tarde: "/assets/sab/sabado-tarde.mp3", noite: "/assets/sab/sabado-noite.mp3" },
   };
 
-  console.log("Data calculada:", getSaoPauloDate());
-
   return audioMap[day]?.[periodo] || "/assets/snowfall.mp3";
 };
 
@@ -52,6 +50,28 @@ const Audio: React.FC = () => {
   const [audioSrc, setAudioSrc] = useState<string>(buscarPeriodo());
   const audioRef = useRef<HTMLAudioElement>(null);
 
+  useEffect(() => {
+    setAudioSrc(buscarPeriodo());
+    if (audioRef.current) {
+      audioRef.current.load(); // carrega o novo áudio
+    }
+  }, []);
+
+  useEffect(() => {
+    const atualizarAudio = () => {
+      const novoAudio = buscarPeriodo();
+      setAudioSrc(novoAudio);
+      if (audioRef.current) {
+        audioRef.current.load();
+      }
+    };
+  
+    //atualizar o áudio 10ms
+    const timeout = setTimeout(atualizarAudio, 10);
+    // Limpa o timeout
+    return () => clearTimeout(timeout);
+  }, []);
+  
   const toggleAudio = () => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -62,13 +82,6 @@ const Audio: React.FC = () => {
       setIsPlaying(!isPlaying);
     }
   };
-
-  useEffect(() => {
-    setAudioSrc(buscarPeriodo());
-    if (audioRef.current) {
-      audioRef.current.load(); // carrega o novo áudio
-    }
-  }, []);
 
   useEffect(() => {
     const handleAudioEnded = () => {
