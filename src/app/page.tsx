@@ -1,10 +1,11 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Sociais from "@/components/Sociais";
 import Fotoapr from "@/components/Foto"; 
 import Audio from "@/components/Audio";
 
-const Home: React.FC = () => {
+export default function Home (){
   return (
     <main className="flex-1 mx-auto flex flex-col justify-center ">
       <section className="items-center">
@@ -44,5 +45,3 @@ const Home: React.FC = () => {
     </main>
   );
 };
-
-export default Home;
