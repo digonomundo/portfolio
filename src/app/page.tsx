@@ -7,11 +7,11 @@ import Audio from "@/components/Audio";
 
 export default function Home (){
   return (
-    <main className="flex-1 mx-auto flex flex-col justify-center ">
-      <section className="items-center">
-        <div className="xl:container mx-auto flex flex-col xl:flex-row items-center justify-around">
+    <main className="mx-auto flex flex-col justify-center items-center">
+      
+        <div className="xl:container mx-auto flex flex-col xl:flex-row items-center justify-center gap-x-80">
           {/* Texto de apresentação */}
-          <div className="text-center xl:text-left flex flex-col items-center xl:items-start order-2 xl:order-none mt-4 xl:mt-0">
+          <div className="text-center xl:text-left flex flex-col items-center xl:items-start order-2 xl:order-none">
             <h1 className="h1 mb-3 text-white ">
               Olá, eu sou o
               <br />
@@ -41,7 +41,7 @@ export default function Home (){
             <Fotoapr />
           </div>
         </div>
-      </section>
+ 
     </main>
   );
 };
