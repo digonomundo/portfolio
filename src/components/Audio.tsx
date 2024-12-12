@@ -29,7 +29,7 @@ const buscarPeriodo = (): string => {
   };
 
   // Determina o período do dia
-  const periodo = hour < 12 ? periodos.manha : hour < 15 ? periodos.tarde : periodos.noite;
+  const periodo = hour < 12 ? periodos.manha : hour < 18 ? periodos.tarde : periodos.noite;
 
   // Mapeia combinações de dia e período para arquivos de áudio
   const audioMap: Record<number, Record<string, string>> = {
@@ -50,28 +50,14 @@ const Audio: React.FC = () => {
   const [audioSrc, setAudioSrc] = useState<string>(buscarPeriodo());
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  useEffect(() => {
-    setAudioSrc(buscarPeriodo());
+  const atualizarAudio = () => {
+    const novoAudio = buscarPeriodo();
+    setAudioSrc(novoAudio);
     if (audioRef.current) {
-      audioRef.current.load(); // carrega o novo áudio
+      audioRef.current.load();
     }
-  }, []);
+  };
 
-  useEffect(() => {
-    const atualizarAudio = () => {
-      const novoAudio = buscarPeriodo();
-      setAudioSrc(novoAudio);
-      if (audioRef.current) {
-        audioRef.current.load();
-      }
-    };
-  
-    //atualizar o áudio 10ms
-    const timeout = setTimeout(atualizarAudio, 10);
-    // Limpa o timeout
-    return () => clearTimeout(timeout);
-  }, []);
-  
   const toggleAudio = () => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -82,6 +68,16 @@ const Audio: React.FC = () => {
       setIsPlaying(!isPlaying);
     }
   };
+
+  useEffect(() => {
+    const atualizarAudioAutomaticamente = () => {
+      atualizarAudio();
+    };
+
+    const intervalo = setInterval(atualizarAudioAutomaticamente, 10 * 60 * 1000); // Atualiza a cada 10 minutos
+
+    return () => clearInterval(intervalo);
+  }, []);
 
   useEffect(() => {
     const handleAudioEnded = () => {
@@ -102,13 +98,20 @@ const Audio: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex items-center">
+    <div className="flex flex-col items-center">
       {/* Controle de áudio */}
       <audio ref={audioRef}>
         <source src={audioSrc} type="audio/mp3" />
         Seu navegador não suporta o elemento de áudio.
       </audio>
-      <button onClick={toggleAudio} className="flex items-center justify-center">
+
+      <button
+        onClick={() => {
+          atualizarAudio();
+          toggleAudio();
+        }}
+        className="flex items-center justify-center mb-2"
+      >
         <Image
           src={isPlaying ? "/assets/voz.gif" : "/assets/semsom.png"}
           alt={isPlaying ? "Pause" : "Play"}
