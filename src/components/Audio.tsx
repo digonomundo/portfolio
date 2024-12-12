@@ -29,7 +29,7 @@ const buscarPeriodo = (): string => {
   };
 
   // Determina o período do dia
-  const periodo = hour < 12 ? periodos.manha : hour < 18 ? periodos.tarde : periodos.noite;
+  let periodo = hour < 12 ? periodos.manha : hour < 15 ? periodos.tarde : periodos.noite;
 
   // Mapeia combinações de dia e período para arquivos de áudio
   const audioMap: Record<number, Record<string, string>> = {
