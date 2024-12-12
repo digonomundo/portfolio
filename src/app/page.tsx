@@ -9,7 +9,7 @@ export default function Home (){
   return (
     <main className="mx-auto flex flex-col justify-center items-center">
       
-        <div className="xl:container mx-auto flex flex-col xl:flex-row items-center justify-center gap-x-80">
+        <div className="xl:container mx-auto flex flex-col xl:flex-row items-center justify-center gap-x-56">
           {/* Texto de apresentação */}
           <div className="text-center xl:text-left flex flex-col items-center xl:items-start order-2 xl:order-none">
             <h1 className="h1 mb-3 text-white ">
