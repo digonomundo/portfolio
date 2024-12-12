@@ -29,7 +29,7 @@ const buscarPeriodo = (): string => {
   };
 
   // Determina o período do dia
-  const periodo = hour < 12 ? periodos.manha : hour < 18 ? periodos.tarde : periodos.noite;
+  const periodo = hour < 12 ? periodos.manha : hour < 17 ? periodos.tarde : periodos.noite;
 
   // Mapeia combinações de dia e período para arquivos de áudio
   const audioMap: Record<number, Record<string, string>> = {
@@ -98,7 +98,7 @@ const Audio: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex items-center">
       {/* Controle de áudio */}
       <audio ref={audioRef}>
         <source src={audioSrc} type="audio/mp3" />
@@ -110,7 +110,7 @@ const Audio: React.FC = () => {
           atualizarAudio();
           toggleAudio();
         }}
-        className="flex items-center justify-center mb-2"
+        className="flex items-center justify-center"
       >
         <Image
           src={isPlaying ? "/assets/voz.gif" : "/assets/semsom.png"}
