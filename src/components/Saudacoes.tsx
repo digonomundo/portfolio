@@ -42,7 +42,7 @@ export function Saudacoes() {
       noite: "noite",
     };
 
-    const periodo = hora < 12 ? periodos.manha : hora < 15 ? periodos.tarde : periodos.noite;
+    const periodo = hora < 12 ? periodos.manha : hora < 18 ? periodos.tarde : periodos.noite;
 
     const audioMap: Record<number, Record<string, string>> = {
       0: { manha: "/assets/dom/domingo-manha.mp3", tarde: "/assets/dom/domingo-tarde.mp3", noite: "/assets/dom/domingo-noite.mp3" },
