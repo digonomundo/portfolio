@@ -1,11 +1,10 @@
 'use client';
 
-export const revalidate = 0;
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import React from "react";
 
-const getSaoPauloDate = () => {
+function getSaoPauloDate() {
   const now = new Date();
 
   // Pega a data no fuso horário de São Paulo
@@ -17,9 +16,9 @@ const getSaoPauloDate = () => {
   const day = saoPauloDate.getDay(); // Retorna 0 (domingo) a 6 (sábado)
 
   return { hour, day };
-};
+}
 
-const buscarPeriodo = (): string => {
+function buscarPeriodo() {
   const { hour, day } = getSaoPauloDate();
 
   const periodos = {
@@ -43,22 +42,22 @@ const buscarPeriodo = (): string => {
   };
 
   return audioMap[day]?.[periodo] || "/assets/snowfall.mp3";
-};
+}
 
-const Audio: React.FC = () => {
+export function Saudacoes() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [audioSrc, setAudioSrc] = useState<string>(buscarPeriodo());
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  const atualizarAudio = () => {
+  function atualizarAudio() {
     const novoAudio = buscarPeriodo();
     setAudioSrc(novoAudio);
     if (audioRef.current) {
       audioRef.current.load();
     }
-  };
+  }
 
-  const toggleAudio = () => {
+  function alternarAudio() {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
@@ -67,22 +66,12 @@ const Audio: React.FC = () => {
       }
       setIsPlaying(!isPlaying);
     }
-  };
+  }
 
   useEffect(() => {
-    const atualizarAudioAutomaticamente = () => {
-      atualizarAudio();
-    };
-
-    const intervalo = setInterval(atualizarAudioAutomaticamente, 10 * 60 * 1000); // Atualiza a cada 10 minutos
-
-    return () => clearInterval(intervalo);
-  }, []);
-
-  useEffect(() => {
-    const handleAudioEnded = () => {
+    function handleAudioEnded() {
       setIsPlaying(false); // estado para "parado" quando o áudio terminar
-    };
+    }
 
     const audioElement = audioRef.current;
 
@@ -100,18 +89,17 @@ const Audio: React.FC = () => {
   return (
     <div className="flex items-center">
       {/* Controle de áudio */}
-      <audio ref={audioRef}>
-        <source src={audioSrc} type="audio/mp3" />
-        Seu navegador não suporta o elemento de áudio.
-      </audio>
-
       <button
         onClick={() => {
           atualizarAudio();
-          toggleAudio();
+          alternarAudio();
         }}
         className="flex items-center justify-center"
       >
+        <audio ref={audioRef}>
+          <source src={audioSrc} type="audio/mp3" />
+          Seu navegador não suporta o elemento de áudio.
+        </audio>
         <Image
           src={isPlaying ? "/assets/voz.gif" : "/assets/semsom.png"}
           alt={isPlaying ? "Pause" : "Play"}
@@ -123,6 +111,4 @@ const Audio: React.FC = () => {
       </button>
     </div>
   );
-};
-
-export default Audio;
+}

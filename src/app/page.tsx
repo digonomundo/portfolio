@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Sociais from "@/components/Sociais";
 import Fotoapr from "@/components/Foto"; 
-import Audio from "@/components/Audio";
+import { Saudacoes } from "@/components/Saudacoes";
 
 export default function Home (){
   return (
@@ -15,7 +15,7 @@ export default function Home (){
             <h1 className="h1 mb-3 text-white ">
               Olá, eu sou o
               <br />
-              <span className="text-azul flex gap-6 larcaco:gap-10 xl:gap-10">Rodrigo! <Audio /></span> 
+              <span className="text-azul flex gap-6 larcaco:gap-10 xl:gap-10">Rodrigo! <Saudacoes /></span> 
             </h1>
             <span className="text-lg largaco:text-xl text-white">Um desenvolvedor de software jr.</span>
 
