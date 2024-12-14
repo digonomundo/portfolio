@@ -3,7 +3,6 @@ import { FiDownload } from "react-icons/fi";
 import Sociais from "@/components/Sociais";
 import Fotoapr from "@/components/Foto";
 import { Saudacoes } from "@/components/Saudacoes";
-import { Footer } from "@/components/Footer";
 
 export default function Home() {
     return (
@@ -33,7 +32,6 @@ export default function Home() {
             <div className="order-1 xl:order-none mb-8 xl:mb-0">
                 <Fotoapr />
             </div>
-            <Footer />
         </main>
     );
 };
