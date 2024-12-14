@@ -1,10 +1,11 @@
 import { Poppins } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
-import { HeaderPage } from "@/components/Header";
+
 import Starfield from "@/components/BackgroundStars";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import HeaderPage from "@/components/Header";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -46,11 +47,11 @@ export default function RootLayout({
         className={`${poppins.variable} + "antialiased bg-background min-h-full h-full `}
       >
         <Starfield
-        starCount={1000}
-        starColor={[255, 255, 255]}
-        speedFactor={0.05}
-        backgroundColor="black"
-      />
+          starCount={1000}
+          starColor={[255, 255, 255]}
+          speedFactor={0.05}
+          backgroundColor="black"
+        />
         <HeaderPage />
         {children}
         <Analytics />
