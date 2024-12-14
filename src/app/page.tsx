@@ -1,15 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Sociais from "@/components/Sociais";
-import Fotoapr from "@/components/Foto"; 
+import Fotoapr from "@/components/Foto";
 import { Saudacoes } from "@/components/Saudacoes";
+import { Footer } from "@/components/Footer";
 
-export default function Home (){
+export default function Home() {
     return (
         <main className="xl:container mx-auto flex flex-col justify-center items-center xl:flex-row items-center gap-x-56">
             <div className="text-center xl:text-left items-center xl:items-start order-2 xl:order-none">
                 <h1 className="h1 mb-3 text-white ">
-                    Olá, eu sou o <br /><span className="text-azul flex gap-6 larcaco:gap-10 xl:gap-10">Rodrigo!<Saudacoes /></span> 
+                    Olá, eu sou o <br /><span className="text-azul flex gap-6 larcaco:gap-10 xl:gap-10">Rodrigo!<Saudacoes /></span>
                 </h1>
                 <p className="text-lg largaco:text-xl text-white">Um desenvolvedor de software jr.</p>
 
@@ -22,16 +23,17 @@ export default function Home (){
                         </Button>
                     </a>
                     <div className="mb-8 xl:mb-0">
-                    <Sociais containerStyles="flex gap-6"
-                        iconSyles="largaco:w-20 w-10 h-10 border border-azul rounded-full flex justify-center items-center text-white text-base hover-azul hover:text-white hover:bg-azul hover:transition-all duration-500" />
+                        <Sociais containerStyles="flex gap-6"
+                            iconSyles="largaco:w-20 w-10 h-10 border border-azul rounded-full flex justify-center items-center text-white text-base hover-azul hover:text-white hover:bg-azul hover:transition-all duration-500" />
                     </div>
                 </div>
             </div>
-            
+
             {/* Foto de apresentação */}
             <div className="order-1 xl:order-none mb-8 xl:mb-0">
-            <Fotoapr />
+                <Fotoapr />
             </div>
+            <Footer />
         </main>
     );
 };
