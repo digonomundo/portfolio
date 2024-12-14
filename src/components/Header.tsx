@@ -54,11 +54,10 @@ export function HeaderPage() {
   };
 
   return (
-    <header
-      className={`p-4 flex items-center justify-between mb-0 sticky top-0 transition-all duration-200 border-b border-transparent ${
-        hasScrolledDown ? "bg-white/[1%] z-50" : "bg-transparent"
-      }`}
-    >
+      	<header className={`p-4 flex items-center justify-between mb-0 transition-all duration-200 border-b border-transparent 
+          ${ pathname === "/" || pathname === "/projetos" ? "sticky top-0" : "fixed top-0 left-0 right-0 z-50"}
+          ${hasScrolledDown ? "bg-white/[1%]" : "bg-transparent"}`}>
+
       {/* Logo */}
       <Link href="/" className="flex items-center sticky justify-between">
         <Image
