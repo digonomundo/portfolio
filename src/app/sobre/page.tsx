@@ -1,28 +1,32 @@
-import { FaMouse } from "react-icons/fa";
+import { FaMouse , FaArrowCircleUp} from "react-icons/fa";
 
 export default function Sobre() {
 	return (
 		<main>
 			<section className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden">
 				<div className="flex flex-col items-center justify-center gap-4 text-balance">
-					<h1 className="text-center text-4xl font-bold text-indigo-50 xsm:px-2 sm:text-5xl md:text-6xl lg:text-7xl xl:px-0 xl:text-[68px] 3xl:text-9xl 4xl:text-[112px]"> Sobre mim</h1>
+					<h1 className="text-center text-3xl font-bold text-indigo-50 xsm:px-2 sm:text-4xl md:text-5xl lg:text-6xl xl:px-0 xl:text-[60px] 3xl:text-8xl 4xl:text-[100px]"> Sobre mim</h1>
 					<p className="text-md largaco:text-xl text-center">
-						Sou o Rodrigo, também conhecido como Digo. Tenho 20 anos, sou
+						Sou o Rodrigo, também conhecido como Digo. Tenho 20 anos, sou desenvolvedor,
 						<a href="https://www.etecbarretos.com.br/ensino-medio-integrado/desenvolvimento-de-sistemas-2" className="text-azul hover:underline" target='_blank'> Técnico em Desenvolvimento de Sistemas</a> formado pela
-						<a href="https://www.etecbarretos.com.br/" className="text-azul hover:underline" target='_blank'> ETEC</a> e atualmente estou cursando <a href="https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/campo-mourao/cm-ciencia-da-computacao/apresentacao" className="text-azul hover:underline" target='_blank'> Ciência da Computação </a>
-						pela <a href="https://www.utfpr.edu.br" className="text-azul hover:underline" target='_blank'>UTFPR-CM</a>. Seja você um colega cientista, engenheiro, entusiasta da tecnologia ou simplesmente interessado em uma boa conversa, estou sempre aberto a conexões e troca de insights.
+						<a href="https://www.etecbarretos.com.br/" className="text-azul hover:underline" target='_blank'> ETEC </a> 
+						e atualmente estou cursando <a href="https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/campo-mourao/cm-ciencia-da-computacao/apresentacao" className="text-azul hover:underline" target='_blank'> Ciência da Computação </a>
+						pela <a href="https://www.utfpr.edu.br" className="text-azul hover:underline" target='_blank'>UTFPR</a>. 
+						Tenho experiência com o desenvolvimento de aplicações web com Next.js, PHP, TypeScript e React.js, além de saber utilizar ferramentas no-code como o WordPress {"(Elementor)"} e Wix. Também possuo uma breve experiência com desenvolvimento nativo de aplicativos móveis em Kotlin e Java.
 					</p >
 				</div>
 				<div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 flex-col items-center justify-center gap-4 text-indigo-50">
-					<FaMouse className="h-6 w-6 animate-bounce" />
+					<FaArrowCircleUp className="h-5 w-5 animate-bounce" />
 					<span>Role para baixo</span>
 				</div>
 			</section>
 
-			<section className="bg-black text-white py-8 container mx-auto flex flex-col items-start md:flex-row ">
+			<section >
+			<h1 className="text-center text-2xl font-bold text-indigo-50 xsm:px-2 sm:text-3xl md:text-4xl lg:text-5xl xl:px-0 xl:text-[50px] 3xl:text-7xl 4xl:text-[80px]">Minha trajetória</h1>
+				<div className="bg-black text-white py-8 container mx-auto flex flex-col items-start md:flex-row ">
 				<div className="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
 					<p className="text-azul text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">Quer saber como tudo começou?</p>
-					<p className="md:text-base mb-4">Senta que lá vem história, seja bem vindo ao meu mundo!</p>
+					<p className="md:text-base mb-4">Senta que lá vem história! Seja você um colega cientista, engenheiro, entusiasta da tecnologia ou simplesmente interessado em uma boa conversa, estou sempre aberto a conexões e troca de insights. Seja bem vindo ao meu mundo!</p>
 					<a href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&id=K1166553U8"
 						className="bg-transparent font-bold mr-auto hover:bg-azul text-azul hover:text-white rounded-xl duration-500 shadow hover:shadow-lg py-2 px-4 border border-azul hover:border-transparent" target="_blank">
 						Veja meu currículo lattes!</a>
@@ -82,6 +86,7 @@ export default function Sobre() {
 							</div>
 						</div>
 					</div>
+				</div>
 				</div>
 			</section>
 			<footer className="absolute bottom flex flex-col items-center gap-4 text-indigo-50 p-6">
