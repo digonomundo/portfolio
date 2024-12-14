@@ -14,7 +14,7 @@ export default function Sobre() {
 					</p >
 				</div>
 				<div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 flex-col items-center justify-center gap-4 text-indigo-50">
-					<FaMouse className="h-6 w-6 animate-bounce"/>
+					<FaMouse className="h-6 w-6 animate-bounce" />
 					<span>Role para baixo</span>
 				</div>
 			</section>
