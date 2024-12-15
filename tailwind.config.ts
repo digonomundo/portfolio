@@ -18,6 +18,14 @@ export default {
 					DEFAULT: '#775fb2',
 					hover: '#775fb2'
 				},
+				dourado: {
+					DEFAULT: '#e9e6b9',
+					hover: '#e9e6b9'
+				},
+				azulao: {
+					DEFAULT: '#0b3c4a',
+					hover: '#0b3c4a'
+				},
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				card: {
