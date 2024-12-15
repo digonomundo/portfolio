@@ -1,7 +1,6 @@
 import { Poppins } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
-
 import Starfield from "@/components/BackgroundStars";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -17,9 +16,31 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Meu portfolio",
-  keywords: "Rodrigo, Rodrigo Dias, Digo, Rodrigo Marques Dias, Digonomundo, Rodrigodias, Rodrigomarquesdias, digolar, portfolio, desenvolvedor web, desenvolvedor, etec, utfpr, barretos, engenheiro de software, software, jr, digonomundo",
-  description: "Meu portfólio, falando um pouco sobre mim e meus projetos",
+  title: "Rodrigo Dias - Desenvolvedor",
+  keywords: [
+    "Rodrigo Dias",
+    "Digo",
+    "Rodrigo Marques Dias",
+    "Digonomundo",
+    "portfolio",
+    "desenvolvedor web",
+    "web developer",
+    "engenheiro de software",
+    "UTFPR",
+    "ETEC",
+    "Barretos",
+    "projetos",
+    "tecnologia",
+    "web site",
+    "Rodrigodias",
+    "Rodrigomarquesdias",
+    "digolar",
+    "desenvolvedor",
+    "software",
+    "jr",
+  ].join(", "),
+  description:
+    "Conheça Rodrigo Dias, desenvolvedor. Explore meu portfólio, projetos e trajetória profissional.",
 };
 
 export default function RootLayout({
@@ -30,21 +51,36 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <head>
-        <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" sizes="any" />
-        <meta property="og:site_name" content="Meu Portfolio"></meta>
-        <meta property="og:title" content="Meu Portfolio" />
-        <meta property="og:description" content="Meu portfólio, falando um pouco sobre mim e meus projetos" />
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
+
+        {/* Meta Tags Essenciais */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="UTF-8" />
+        <meta name="description" content={metadata.description ?? "Conheça Rodrigo Dias, desenvolvedor. Explore meu portfólio, projetos e trajetória profissional."} />
+        <meta name="keywords" content={typeof metadata.keywords === "string" ? metadata.keywords : "Rodrigo Dias, Digo, Rodrigo Marques Dias, Digonomundo, portfolio, desenvolvedor web, web developer, engenheiro de software, UTFPR, ETEC, Barretos, projetos, tecnologia, web site, Rodrigodias, Rodrigomarquesdias, digolar, desenvolvedor, software, jr"} />
+        <meta name="author" content="Rodrigo Marques Dias" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:site_name" content="Rodrigo Dias Portfolio" />
+        <meta property="og:title" content={typeof metadata.title === 'string' ? metadata.title : "Rodrigo Dias - Desenvolvedor"} />
+        <meta property="og:description" content={metadata.description ?? "Conheça Rodrigo Dias, desenvolvedor. Explore meu portfólio, projetos e trajetória profissional."} />
         <meta property="og:image" content="/assets/logo.svg" />
         <meta property="og:url" content="https://www.digonomundo.com" />
         <meta property="og:type" content="website" />
-        <meta name="keywords" content="web site, Rodrigo, Rodrigo Dias, Digo, Rodrigo Marques Dias, Digonomundo, Rodrigodias, Rodrigomarquesdias, digolar, portfolio, desenvolvedor web, desenvolvedor, etec, utfpr, barretos, engenheiro de software, software, jr, digonomundo" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Meu Portfolio" />
-        <meta name="twitter:description" content="Meu portfólio, falando um pouco sobre mim e meus projetos" />
+        <meta name="twitter:title" content={typeof metadata.title === 'string' ? metadata.title : "Rodrigo Dias - Desenvolvedor"} />
+        <meta name="twitter:description" content={metadata.description ?? "Conheça Rodrigo Dias, desenvolvedor. Explore meu portfólio, projetos e trajetória profissional."} />
         <meta name="twitter:image" content="/assets/logo.svg" />
+
+        {/* Links Relacionados */}
+        <link rel="canonical" href="https://www.digonomundo.com" />
       </head>
       <body
-        className={`${poppins.variable} + "antialiased bg-background min-h-full h-full `}
+        className={`${poppins.variable} antialiased bg-background min-h-full h-full`}
       >
         <Starfield
           starCount={1000}
