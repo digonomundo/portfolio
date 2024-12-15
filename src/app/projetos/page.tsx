@@ -23,7 +23,7 @@ export default function Projetos() {
   <div
     className="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
     
-    <img className="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="/assets/meuTreino.svg" alt="billboard image" />
+    <Image className="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="/assets/meuTreino.svg" alt="billboard image" />
 
     <div className="md:w-[50%] w-full dark:text-gray-400 md:p-4 p-0 rounded-md flex flex-col justify-center">
       <h2 className="text-3xl font-bold text-roxo">Meu treino</h2>
