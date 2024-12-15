@@ -52,12 +52,12 @@ const HeaderPage = () => {
 
   return (
     <header className={`py-3 xl:py-5 text-white z-50
-        ${pathname === "/" || pathname === "/projetos" ? "sticky top-0" : "fixed top-0 left-0 right-0 z-50"}`}>
+        ${pathname === "/" ? "sticky top-0" : "fixed top-0 left-0 right-0 z-50"}`}>
 
       <div className={`container mx-auto flex justify-between items-center transition-all rounded-2xl p-1.5 xl:p-2.5 ${hasScrolledDown ? "bg-white/[10%]" : "bg-transparent"}`}>
         {/* Logo */}
         <Link href="/">
-          <h1 className="text-4xl font-semibold">
+          <h1 className="text-3xl font-semibold">
             Digo<span className="text-blue-500">.</span>
           </h1>
         </Link>
