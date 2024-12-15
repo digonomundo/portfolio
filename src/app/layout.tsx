@@ -17,6 +17,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Rodrigo Dias - Desenvolvedor",
+  
   keywords: [
     "Rodrigo Dias",
     "Digo",
@@ -52,7 +53,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <head>
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
+        <link rel="icon" href="https://www.digonomundo.com/favicon.ico" type="image/x-icon" sizes="any" />
 
         {/* Meta Tags Essenciais */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -66,7 +67,7 @@ export default function RootLayout({
         <meta property="og:site_name" content="Rodrigo Dias Portfolio" />
         <meta property="og:title" content={typeof metadata.title === 'string' ? metadata.title : "Rodrigo Dias - Desenvolvedor"} />
         <meta property="og:description" content={metadata.description ?? "Conheça Rodrigo Dias, desenvolvedor. Explore meu portfólio, projetos e trajetória profissional."} />
-        <meta property="og:image" content="/assets/logo.svg" />
+        <meta property="og:image" content="https://www.digonomundo.com/assets/logo.svg" />
         <meta property="og:url" content="https://www.digonomundo.com" />
         <meta property="og:type" content="website" />
 
@@ -74,7 +75,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={typeof metadata.title === 'string' ? metadata.title : "Rodrigo Dias - Desenvolvedor"} />
         <meta name="twitter:description" content={metadata.description ?? "Conheça Rodrigo Dias, desenvolvedor. Explore meu portfólio, projetos e trajetória profissional."} />
-        <meta name="twitter:image" content="/assets/logo.svg" />
+        <meta name="twitter:image" content="https://www.digonomundo.com/assets/logo.svg" />
 
         {/* Links Relacionados */}
         <link rel="canonical" href="https://www.digonomundo.com" />
