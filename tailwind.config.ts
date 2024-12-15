@@ -14,6 +14,10 @@ export default {
 					DEFAULT: '#0C95E2',
 					hover: '#0a95f2'
 				},
+				roxo: {
+					DEFAULT: '#775fb2',
+					hover: '#775fb2'
+				},
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				card: {
