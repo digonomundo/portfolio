@@ -14,7 +14,7 @@ export default function Projetos() {
                 <p className="text-lg md:text-2lg lg:text-3lg xl:text-xl mb-12">Aqui estão meus projetos favoritos, espero que goste!</p>
               </div>
               <div className="w-1/2 pl-1 xl:pl-16 ">
-                <Image src="/assets/video-bg.gif" className="h-64 xl:h-full w-full object-cover rounded-3xl" width={100} height={100} alt="Layout Image" />
+                <Image src="/assets/video-bg.gif" className="h-64 xl:h-full w-full object-cover rounded-3xl" width={100} height={100} unoptimized alt="Layout Image" />
               </div>
             </div>
           </div>
