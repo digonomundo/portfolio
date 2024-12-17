@@ -9,7 +9,7 @@ export default function Projetos() {
         <div className="bg-cover bg-center py-32 px-2 w-full" >
           <div className="container mx-auto text-left text-white">
             <div className="flex flex-col xl:flex-row items-center">
-              <div className="w-1/2">
+              <div className="w-1/2 pl-4">
                 <h1 className="text-xl md:text-2xl lg:text-3xl xl:text-5xl font-medium mb-6 text-azul">Que bom que você está aqui!</h1>
                 <p className="text-lg md:text-2lg lg:text-3lg xl:text-xl mb-12">Aqui estão meus projetos favoritos, espero que goste!</p>
               </div>
