@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Meu Portfólio Pessoal
 
-## Getting Started
+Este é um projeto de portfólio pessoal desenvolvido em **Next.js** e **TailwindCss**. Ele possui informações sobre mim, apresentação dos meus projetos, links para contato e a possibilidade de baixar o meu currículo.
 
-First, run the development server:
+## Objetivo do Projeto
+O objetivo deste projeto é disponibilizar um portfólio online, organizado e responsivo, onde visitantes possam conhecer mais sobre mim, meus trabalhos e encontrar facilmente informações de contato. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Funcionalidades
+- **Home**: Página inicial com apresentação e destaques.
+- **Sobre Mim**: Informações pessoais e detalhes sobre minha trajetória.
+- **Projetos**: Exibição dos projetos desenvolvidos com descrições e links.
+- **Contato**: Links para redes sociais e opção de download do currículo.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias Utilizadas
+- **Next.js** - Framework React para aplicações web.
+- **React** - Biblioteca principal para construção de interfaces.
+- **TailwindCss** - Estilização do layout
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Como Rodar o Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Requisitos Prévios
+Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+- [Node.js](https://nodejs.org/) (v14 ou superior)
+- [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/) ou [pnpm](https://pnpm.io/)
 
-## Learn More
+### Passos para Execução
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   cd seu-repositorio
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Instale as dependências**
+   - Usando npm:
+     ```bash
+     npm install
+     ```
+   - Usando yarn:
+     ```bash
+     yarn install
+     ```
+   - Usando pnpm:
+     ```bash
+     pnpm install
+     ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Inicie o servidor de desenvolvimento**
+   - Usando npm:
+     ```bash
+     npm run dev
+     ```
+   - Usando yarn:
+     ```bash
+     yarn dev
+     ```
+   - Usando pnpm:
+     ```bash
+     pnpm dev
+     ```
 
-## Deploy on Vercel
+4. **Acesse o projeto no navegador**
+   Abra o navegador e acesse [http://localhost:3000](http://localhost:3000)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Build para Produção
+Caso queira gerar uma versão pronta para produção:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Usando npm:
+  ```bash
+  npm run build
+  npm start
+  ```
+- Usando yarn:
+  ```bash
+  yarn build
+  yarn start
+  ```
+- Usando pnpm:
+  ```bash
+  pnpm build
+  pnpm start
+  ```
+
+## Rodando em Diferentes Plataformas
+
+- **Windows**:
+   Execute os comandos descritos acima no terminal do Windows (cmd, PowerShell ou WSL).
+
+- **Linux/MacOS**:
+   Utilize o terminal padrão. Os comandos são os mesmos.
+
+
+## Licença
+Este projeto está licenciado sob a **Licença MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## Contato
+Para mais informações, entre em contato através dos seguintes canais:
+- **LinkedIn**: [https://www.linkedin.com/in/digonomundo/](https://www.linkedin.com/in/digonomundo/)
+- **Email**: rodrigo.dias@digonomundo.com
+
+---
+Obrigado por visitar o meu portfólio!
