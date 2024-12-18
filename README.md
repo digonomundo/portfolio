@@ -91,7 +91,7 @@ Caso queira gerar uma versão pronta para produção:
 
 
 ## Licença
-Este projeto está licenciado sob a **Licença MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está licenciado sob a **Licença MIT**. Veja o arquivo [LICENSE](/LICENCE) para mais detalhes.
 
 ## Contato
 Para mais informações, entre em contato através dos seguintes canais:
