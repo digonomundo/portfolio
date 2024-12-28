@@ -56,7 +56,7 @@ const HeaderPage = () => {
 
       <div className={`container mx-auto flex justify-between items-center transition-all rounded-2xl p-1.5 xl:p-2.5 ${hasScrolledDown ? "bg-white/[10%]" : "bg-transparent"}`}>
         {/* Logo */}
-        <Link href="/">
+        <Link href="#home">
           <h1 className="text-3xl font-semibold">
             Digo<span className="text-blue-500">.</span>
           </h1>

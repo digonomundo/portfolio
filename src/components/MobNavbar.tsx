@@ -10,15 +10,15 @@ import { DialogTitle } from '@radix-ui/react-dialog';
 const links = [
     {
         name: 'Home',
-        path: '/',
+        path: '#home',
     },
     {
         name: 'Sobre',
-        path: '/sobre',
+        path: '#sobre',
     },
     {
         name: 'Projetos',
-        path: '/projetos',
+        path: '#projetos',
     },
 ];
 

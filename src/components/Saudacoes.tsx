@@ -18,21 +18,8 @@ export function Saudacoes() {
     return () => clearInterval(interval); // Cleanup do intervalo
   }, []);
 
-  const formatarDataHora = (data: Date) => {
-    const dia = data.toLocaleDateString('pt-BR', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-
-    const hora = data.toLocaleTimeString('pt-BR');
-
-    return `${dia}, ${hora}`;
-  };
-
   const buscarPeriodo = () => {
-    if (!dataHora) return null; // Garante que `dataHora` esteja definido
+    if (!dataHora) return null; // `dataHora` definido
     const hora = dataHora.getHours();
     const dia = dataHora.getDay(); // 0 = domingo, 6 = sábado
 
@@ -57,20 +44,17 @@ export function Saudacoes() {
     return audioMap[dia]?.[periodo] || "/assets/snowfall.mp3";
   };
 
-  const atualizarAudio = () => {
-    const novoAudio = buscarPeriodo();
-    if (audioRef.current) {
-      audioRef.current.src = novoAudio || "";
-      audioRef.current.load();
-    }
-  };
-
   const alternarAudio = () => {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
-        audioRef.current.play();
+        const novoAudio = buscarPeriodo();
+        if (novoAudio) {
+          audioRef.current.src = novoAudio;
+          audioRef.current.load();
+          audioRef.current.play();
+        }
       }
       setIsPlaying(!isPlaying);
     }
@@ -95,15 +79,12 @@ export function Saudacoes() {
   return (
     <div className="flex items-center justify-center">
       <button
-        onClick={() => {
-          if (!isPlaying) atualizarAudio(); // Atualiza o áudio apenas ao iniciar a reprodução
-          alternarAudio();
-        }}
+        onClick={() => alternarAudio()}
         className="flex items-center justify-center"
       >
         <audio ref={audioRef}>
           <source type="audio/mp3" />
-          Seu navegador não suporta o elemento de áudio. {dataHora ? formatarDataHora(dataHora) : "Carregando..."}
+          Seu navegador não suporta o elemento de áudio.
         </audio>
         <Image
           src={isPlaying ? "/assets/voz.gif" : "/assets/semsom.png"}
