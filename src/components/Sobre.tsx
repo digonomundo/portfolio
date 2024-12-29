@@ -20,18 +20,19 @@ const TextParallaxContent = ({
         offset: ["start end", "end start"],
     });
 
-    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
-    const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+    const escala = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
+    const opacidadeCard = useTransform(scrollYProgress, [0, 1], [1, 0]);
+    const opacidadeTexto = useTransform(scrollYProgress, [0, 5], [5, 0]);
     const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
 
     return (
         <div ref={ref} className="relative h-[150vh] px-3">
             <motion.div
-                style={{ backgroundImage: `url(${imgUrl})`, scale, opacity }}
+                style={{ backgroundImage: `url(${imgUrl})`, scale: escala, opacity: opacidadeCard }}
                 className="sticky top-3 z-0 h-[calc(100vh-24px)] bg-cover bg-center rounded-3xl "
             />
             <motion.div
-                style={{ y, opacity, scale }}
+                style={{ y, opacity: opacidadeTexto, scale: escala }}
                 className="absolute inset-0 flex flex-col items-center justify-center text-white"
             >
                 <p className="mb-2 text-xl md:mb-4 md:text-3xl text-center">{subheading}</p>

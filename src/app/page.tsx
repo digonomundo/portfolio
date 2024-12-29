@@ -11,7 +11,6 @@ export default function Home() {
     return (
         <main >
             <section id="home" className="relative mx-auto flex flex-col xl:flex-row h-screen w-full items-center justify-center overflow-hidden gap-x-56">
-
                 <div className="text-center xl:text-left items-center xl:items-start order-2 xl:order-none">
                     <h1 className="h1 mb-3 text-white ">
                         Olá, eu sou o <br /><span className="text-azul flex gap-6 xl:justify-start justify-center larcaco:gap-10 xl:gap-10">Rodrigo!<Saudacoes /></span>
@@ -47,43 +46,21 @@ export default function Home() {
                 <div>
                     <section className="bg-black pt-6">
                         <TextParallaxContent
-                            imgUrl="/assets/apresenta.jpg"
-                            heading="Sobre Mim"
-                            subheading=""
+                            imgUrl="/assets/apresenta.jpg" heading="Sobre Mim" subheading=""
                             content={
                                 <p className="text-xl md:text-2xl text-center text-balance text-white"> <a href="http://" target="_blank" rel="noopener noreferrer"></a>
                                     Sou o Rodrigo, também conhecido como Digo. Tenho 20 anos, sou desenvolvedor,{" "}
-                                    <a
-                                        href="https://www.etecbarretos.com.br/ensino-medio-integrado/desenvolvimento-de-sistemas-2"
-                                        className="text-azul hover:underline"
-                                        target="_blank" rel="noopener noreferrer"
-                                    >
+                                    <a href="https://www.etecbarretos.com.br/ensino-medio-integrado/desenvolvimento-de-sistemas-2" className="text-azul hover:underline" target="_blank" rel="noopener noreferrer">
                                         Técnico em Desenvolvimento de Sistemas
-                                    </a>{" "}
-                                    formado pela{" "}
-                                    <a
-                                        href="https://www.etecbarretos.com.br/"
-                                        className="text-azul hover:underline"
-                                        target="_blank" rel="noopener noreferrer"
-                                    >
+                                    </a>{" "} formado pela{" "}
+                                    <a href="https://www.etecbarretos.com.br/" className="text-azul hover:underline" target="_blank" rel="noopener noreferrer">
                                         ETEC
-                                    </a>{" "}
-                                    e atualmente estou cursando{" "}
-                                    <a
-                                        href="https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/campo-mourao/cm-ciencia-da-computacao/apresentacao"
-                                        className="text-azul hover:underline"
-                                        target="_blank" rel="noopener noreferrer"
-                                    >
+                                    </a>{" "} e atualmente estou cursando{" "}
+                                    <a href="https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/campo-mourao/cm-ciencia-da-computacao/apresentacao" className="text-azul hover:underline" target="_blank" rel="noopener noreferrer">
                                         Ciência da Computação
-                                    </a>{" "}
-                                    pela{" "}
-                                    <a
-                                        href="https://www.utfpr.edu.br"
-                                        className="text-azul hover:underline"
-                                        target="_blank" rel="noopener noreferrer"
-                                    >
-                                        UTFPR
-                                    </a>. Tenho experiência com desenvolvimento de aplicações web com Next.js, PHP, TypeScript e React.js, além de saber utilizar ferramentas no-code como WordPress (Elementor) e Wix. Também possuo experiência com desenvolvimento nativo de aplicativos móveis em Kotlin e Java.
+                                    </a>{" "} pela{" "}
+                                    <a href="https://www.utfpr.edu.br" className="text-azul hover:underline" target="_blank" rel="noopener noreferrer">UTFPR</a>
+                                    . Tenho experiência com desenvolvimento de aplicações web com Next.js, PHP, TypeScript e React.js, além de saber utilizar ferramentas no-code como WordPress (Elementor) e Wix. Também possuo experiência com desenvolvimento nativo de aplicativos móveis em Kotlin e Java.
                                 </p>
                             }
                         />
@@ -172,30 +149,34 @@ export default function Home() {
                         <TextParallaxContent
                             imgUrl="/assets/eu.jpg"
                             heading="Projetos"
-                            subheading="Um pouco sobre meus"
-                        />
+                            subheading="Um pouco sobre meus"/>
                     </section>
                 </div>
             </section>
 
             <section >
-                <article className="sticky top-0 h-screen flex flex-col items-center justify-center bg-roxo ">
-                    <div className="w-full mx-auto py-10  ">
+                <article className="sticky top-0 h-screen flex flex-col items-center justify-center bg-roxo rounded-3xl m-6">
+                    <div className="w-full mx-auto py-10">
                         <div className="w-full h-full flex flex-col items-center md:py-4 py-10">
-                            <div className="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4 ">
-                                <Image className="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="/assets/meuTreino.svg" alt="Logo do app Meu treino" width={100} height={100} />
+                            <div className="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
+                                <a href="https://github.com/digonomundo/MeuTreino-TCC" target="_blank" rel="noopener noreferrer" className="md:w-[50%] w-full md:rounded-t-lg rounded-sm">
+                                    <Image className="w-full h-auto" src="/assets/meuTreino.svg" alt="Logo do app Meu treino" width={100} height={100} />
+                                </a>
                                 <div className="md:w-[50%] w-full dark:text-gray-400 md:p-4 p-0 rounded-md flex flex-col justify-center">
-                                    <h2 className="text-3xl font-bold text-white"><a href="https://www.etecbarretos.com.br/ensino-medio-integrado/desenvolvimento-de-sistemas-2"
-                                        className="hover:underline hover:text-black " target="_blank" rel="noopener noreferrer">Meu treino - TCC </a></h2>
-                                    <p className="text-md font-semibold mt-4 text-black">Um Aplicativo para dispositivos móveis android, focado no gerenciamento e instrução de treinos de musculação, desenvolvido como trabalho de conclusão de curso na ETEC.
-                                        Utiliza tecnologias como o Kotlin para desenvolvimento nativo, o Google Cloud Firestore (Firebase) como banco de dados não relacional (NoSQL) e o Firebase Auth para a autenticação dos usuários, garantindo uma experiência eficiente e escalável para os usuários.</p>
+                                    <h2 className="text-3xl font-bold text-white">
+                                        <a href="https://github.com/digonomundo/MeuTreino-TCC" className="hover:underline hover:text-black" target="_blank" rel="noopener noreferrer">Meu treino - TCC</a>
+                                    </h2>
+                                    <p className="text-md font-semibold mt-4 text-black">
+                                        Um Aplicativo para dispositivos móveis android, focado no gerenciamento e instrução de treinos de musculação, desenvolvido como trabalho de conclusão de curso na ETEC. Utiliza tecnologias
+                                        como o Kotlin para desenvolvimento nativo, o Google Cloud Firestore (Firebase) como banco de dados não relacional (NoSQL) e o Firebase Auth para a autenticação dos usuários, garantindo uma experiência eficiente e escalável para os usuários.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </article>
 
-                <article className="sticky top-0 h-screen flex flex-col items-center justify-center bg-red-500">
+                <article className="sticky top-0 h-screen flex flex-col items-center justify-center bg-red-500 rounded-3xl m-6">
                     <div className="w-full mx-auto py-10  ">
                         <div className="w-full h-full flex flex-col items-center md:py-4 py-10">
                             <div className="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
