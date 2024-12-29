@@ -84,9 +84,9 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased bg-background min-h-full h-full`}
       >
-        <Starfield/>
+        <Starfield />
         <HeaderPage />
-        <Lentinho/>
+        <Lentinho />
         {children}
         <Analytics />
         <SpeedInsights />
