@@ -92,6 +92,7 @@ export function Saudacoes() {
           width={isPlaying ? 70 : 35}
           height={isPlaying ? 70 : 35}
           className="object-contain"
+          unoptimized
         />
       </button>
     </div>
