@@ -54,7 +54,7 @@ const HeaderPage = () => {
     <header className={`py-3 xl:py-5 text-white z-50 
         ${pathname === "/teste" ? "sticky top-0" : "fixed top-0 left-0 right-0 z-50"}`}>
 
-      <div className={`container mx-auto flex justify-between items-center transition-all rounded-2xl p-1.5 xl:p-2.5 ${hasScrolledDown ? "bg-white/[10%]" : "bg-transparent"}`}>
+      <div className={`mx-auto mx-4 xl:mx-6 flex justify-between items-center transition-all rounded-2xl p-1.5 xl:p-2.5 ${hasScrolledDown ? "bg-white/[10%]" : "bg-transparent"}`}>
         {/* Logo */}
         <Link href="#home">
           <h1 className="text-3xl font-semibold">
@@ -77,10 +77,10 @@ const HeaderPage = () => {
               <Image
                 src={isPlaying ? "/assets/music.gif" : "/assets/semsom.png"}
                 alt={isPlaying ? "Pause" : "Play"}
-                width={isPlaying ? 22 : 21}
-                height={isPlaying ? 22 : 21}
+                width={isPlaying ? 22 : 23}
+                height={isPlaying ? 22 : 23}
                 unoptimized
-                className="object-contain" />
+                className={`"object-contain" ${isPlaying ? "" : "animate-pulse"}`} />
             </button>
           </div>
 
