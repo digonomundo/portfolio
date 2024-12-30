@@ -9,133 +9,103 @@ interface Props {
 	starCount?: number;
 }
 
-export default function Starfield(props: Props) {
-	const { speedFactor = 0.05, backgroundColor = 'black', starColor = [255, 255, 255], starCount = 3000 } = props;
-
+export default function Starfield({
+	speedFactor = 0.05,
+	backgroundColor = 'black',
+	starColor = [255, 255, 255],
+	starCount = 3000,
+}: Props) {
 	useEffect(() => {
-		const canvas = document.getElementById('starfield') as HTMLCanvasElement;
+		const canvas = document.getElementById('starfield') as HTMLCanvasElement | null;
 
-		if (canvas) {
-			const c = canvas.getContext('2d');
-
-			if (c) {
-				let w = window.innerWidth;
-				let h = window.innerHeight;
-
-				const setCanvasExtents = () => {
-					canvas.width = w;
-					canvas.height = h;
-				};
-
-				setCanvasExtents();
-
-				window.onresize = () => {
-					setCanvasExtents();
-				};
-
-				const makeStars = (count: number) => {
-					const out = [];
-					for (let i = 0; i < count; i++) {
-						const s = {
-							x: Math.random() * 1600 - 800,
-							y: Math.random() * 900 - 450,
-							z: Math.random() * 1000,
-						};
-						out.push(s);
-					}
-					return out;
-				};
-
-				const stars = makeStars(starCount);
-
-				const clear = () => {
-					c.fillStyle = backgroundColor;
-					c.fillRect(0, 0, canvas.width, canvas.height);
-				};
-
-				const putPixel = (x: number, y: number, brightness: number) => {
-					const rgb =
-						'rgba(' + starColor[0] + ',' + starColor[1] + ',' + starColor[2] + ',' + brightness + ')';
-					c.fillStyle = rgb;
-					c.fillRect(x, y, 1, 1);
-				};
-
-				const moveStars = (distance: number) => {
-					for (const star of stars) {
-						star.z -= distance;
-						if (star.z <= 1) star.z += 1000;
-					}
-				};
-
-				let prevTime: number;
-				const init = (time: number) => {
-					prevTime = time;
-					requestAnimationFrame(tick);
-				};
-
-				const tick = (time: number) => {
-					const elapsed = time - prevTime;
-					prevTime = time;
-
-					moveStars(elapsed * speedFactor);
-
-					clear();
-
-					const cx = w / 2;
-					const cy = h / 2;
-
-					const count = stars.length;
-					for (let i = 0; i < count; i++) {
-						const star = stars[i];
-
-						const x = cx + star.x / (star.z * 0.001);
-						const y = cy + star.y / (star.z * 0.001);
-
-						if (x < 0 || x >= w || y < 0 || y >= h) {
-							continue;
-						}
-
-						const d = star.z / 1000.0;
-						const b = 1 - d * d;
-
-						putPixel(x, y, b);
-					}
-
-					requestAnimationFrame(tick);
-				};
-
-				requestAnimationFrame(init);
-
-				window.addEventListener('resize', function () {
-					w = window.innerWidth;
-					h = window.innerHeight;
-					setCanvasExtents();
-				});
-			} else {
-				console.error('Não foi possível obter o contexto 2D do elemento canvas');
-			}
-		} else {
-			console.error('Não foi possível encontrar o elemento canvas com id "starfield"');
+		if (!canvas) {
+			console.error('Canvas element with id "starfield" not found');
+			return;
 		}
 
-		return () => {
-			window.onresize = null;
+		const context = canvas.getContext('2d');
+		if (!context) {
+			console.error('Failed to get 2D context for the canvas');
+			return;
+		}
+
+		// tamanho da tela dinamicamente
+		const resizeCanvas = () => {
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
 		};
-	}, [starColor, backgroundColor, speedFactor, starCount]);
+
+		resizeCanvas();
+		window.addEventListener('resize', resizeCanvas);
+
+		// gera as estrelas
+		const stars = Array.from({ length: starCount }, () => ({
+			x: Math.random() * 1600 - 800,
+			y: Math.random() * 900 - 450,
+			z: Math.random() * 1000,
+		}));
+
+		const clearCanvas = () => {
+			context.fillStyle = backgroundColor;
+			context.fillRect(0, 0, canvas.width, canvas.height);
+		};
+
+		const drawStar = (x: number, y: number, brightness: number) => {
+			context.fillStyle = `rgba(${starColor[0]}, ${starColor[1]}, ${starColor[2]}, ${brightness})`;
+			context.fillRect(x, y, 1, 1);
+		};
+
+		// Atualiza a posição das estrelas
+		const updateStars = (distance: number) => {
+			for (const star of stars) {
+				star.z -= distance;
+				if (star.z <= 1) star.z += 1000;
+			}
+		};
+
+		let prevTime = performance.now();
+		const animate = (time: number) => {
+			const elapsed = time - prevTime;
+			prevTime = time;
+
+			updateStars(elapsed * speedFactor);
+			clearCanvas();
+
+			const centerX = canvas.width / 2;
+			const centerY = canvas.height / 2;
+
+			for (const star of stars) {
+				const screenX = centerX + star.x / (star.z * 0.001);
+				const screenY = centerY + star.y / (star.z * 0.001);
+
+				if (screenX < 0 || screenX >= canvas.width || screenY < 0 || screenY >= canvas.height) {
+					continue;
+				}
+
+				const brightness = 1 - Math.pow(star.z / 1000, 2);
+				drawStar(screenX, screenY, brightness);
+			}
+
+			requestAnimationFrame(animate);
+		};
+
+		requestAnimationFrame(animate);
+
+		return () => {
+			window.removeEventListener('resize', resizeCanvas);
+		};
+	}, [speedFactor, backgroundColor, starColor, starCount]);
 
 	return (
 		<canvas
 			id="starfield"
 			style={{
-				padding: 0,
-				margin: 0,
 				position: 'fixed',
 				top: 0,
-				right: 0,
-				bottom: 0,
 				left: 0,
+				width: '100%',
+				height: '100%',
 				zIndex: -10,
-				opacity: 1,
 				pointerEvents: 'none',
 				mixBlendMode: 'screen',
 			}}
