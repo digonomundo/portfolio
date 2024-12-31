@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Sociais from "@/components/Sociais";
-import Fotoapr from "@/components/Foto";
 import { Saudacoes } from "@/components/Saudacoes";
 import { FaArrowCircleUp } from "react-icons/fa";
 import Image from "next/image";
@@ -10,14 +9,16 @@ import TextParallaxContent from "@/components/Sobre";
 export default function Home() {
     return (
         <main >
-            <section id="home" className="relative mx-auto flex flex-col xl:flex-row h-screen w-full items-center justify-center overflow-hidden gap-x-56">
+            <section id="home" className="flex flex-col xl:flex-row h-screen w-full items-center justify-center overflow-hidden gap-x-56">
                 <div className="text-center xl:text-left items-center xl:items-start order-2 xl:order-none">
-                    <h1 className="h1 mb-3 text-white ">
-                        Olá, eu sou o <br /><span className="text-azul flex gap-5 xl:justify-start justify-center larcaco:gap-8 xl:gap-8">Rodrigo!<Saudacoes /></span>
+                    <h1 className="h1 mb-3 text-white">
+                        Olá, eu sou o <br />
+                        <span className="text-azul flex gap-5 xl:justify-start justify-center larcaco:gap-8 xl:gap-8">
+                            Rodrigo!<Saudacoes />
+                        </span>
                     </h1>
                     <p className="text-lg largaco:text-xl text-white">Um desenvolvedor de software jr.</p>
 
-                    {/* Botões */}
                     <div className="flex flex-col xl:flex-row items-center gap-8 mt-6">
                         <a href="/assets/Curriculo Rodrigo.pdf" download="Rodrigo Dias">
                             <Button variant="outline" size="md" className="items-center gap-2">
@@ -25,18 +26,20 @@ export default function Home() {
                                 <FiDownload className="text-xl text-white mb-1" />
                             </Button>
                         </a>
-                        <div className="mb-8 xl:mb-0">
-                            <Sociais containerStyles="flex gap-6"
-                                iconSyles="largaco:w-20 w-10 h-10 border border-azul rounded-full flex justify-center items-center text-white text-base hover-azul hover:text-white hover:bg-azul hover:transition-all duration-500" />
-                        </div>
+                        <Sociais
+                            containerStyles="flex gap-6"
+                            iconSyles="largaco:w-20 w-10 h-10 border border-azul rounded-full flex justify-center items-center text-white text-base hover-azul hover:text-white hover:bg-azul hover:transition-all duration-500"
+                        />
                     </div>
                 </div>
 
-                {/* Foto de apresentação */}
                 <figure className="order-1 xl:order-none mb-8 xl:mb-0">
-                    <Fotoapr />
+                    <div className="w-[298px] h-[298px] xl:w-[500px] xl:h-[498px] largaco:w-[650px] largaco:h-[650px] relative">
+                        <Image src="/assets/eu.svg" priority quality={100} fill alt="minha foto" className="object-contain" />
+                    </div>
                 </figure>
-                <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 flex-col items-center justify-center gap-4 text-indigo-50 ">
+
+                <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 flex-col items-center justify-center gap-4 text-indigo-50">
                     <FaArrowCircleUp className="h-5 w-5 animate-bounce text-azul" />
                     <span>Role para baixo</span>
                 </div>
@@ -149,7 +152,7 @@ export default function Home() {
                         <TextParallaxContent
                             imgUrl="/assets/eu.jpg"
                             heading="Projetos"
-                            subheading="Um pouco sobre meus"/>
+                            subheading="Um pouco sobre meus" />
                     </section>
                 </div>
             </section>

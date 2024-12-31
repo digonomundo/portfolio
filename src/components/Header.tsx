@@ -1,60 +1,45 @@
-'use client'
+'use client';
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import Navbar from "./Navbar";
 import MobNavbar from "./MobNavbar";
 
 const HeaderPage = () => {
   const [hasScrolledDown, setHasScrolledDown] = useState(false);
-  const pathname = usePathname();
-  const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setHasScrolledDown(window.scrollY > 0);
+      const scrolled = window.scrollY > 0;
+      if (scrolled !== hasScrolledDown) setHasScrolledDown(scrolled);
     };
-
-    const handleAudioEnded = () => {
-      setIsPlaying(false); // Atualiza o estado para "parado" quando o áudio terminar
-    };
-
-    const audioElement = audioRef.current;
-
-    if (audioElement) {
-      audioElement.addEventListener("ended", handleAudioEnded);
-    }
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
-      if (audioElement) {
-        audioElement.removeEventListener("ended", handleAudioEnded);
-      }
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [hasScrolledDown]);
 
-  const toggleAudio = () => {
+  const toggleAudio = useCallback(() => {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
         audioRef.current.play();
       }
-      setIsPlaying(!isPlaying);
+      setIsPlaying((prev) => !prev);
     }
-  };
-
+  }, [isPlaying]);
 
   return (
-    <header className={`py-3 xl:py-5 text-white z-50 
-        ${pathname === "/teste" ? "sticky top-0" : "fixed top-0 left-0 right-0 z-50"}`}>
-
-      <div className={`mx-auto mx-3 xl:mx-6 flex justify-between items-center transition-all rounded-2xl p-1.5 xl:p-2.5 ${hasScrolledDown ? "bg-white/[10%]" : "bg-transparent"}`}>
+    <header className="py-3 xl:py-5 text-white fixed top-0 left-0 right-0 z-50">
+      <div
+        className={`mx-4 xl:mx-6 flex justify-between items-center transition-all rounded-2xl p-1.5 xl:p-2.5 ${hasScrolledDown ? "bg-white/[10%]" : "bg-transparent"
+          }`}
+      >
         {/* Logo */}
         <Link href="#home">
           <h1 className="text-3xl font-semibold">
@@ -62,36 +47,34 @@ const HeaderPage = () => {
           </h1>
         </Link>
 
-        {/* Navbar pc */}
+        {/* Navbar para PC */}
         <div className="hidden xl:flex items-center gap-8">
           <Navbar />
-
-          {/* Controle de áudio */}
           <div className="flex items-center">
             <audio ref={audioRef}>
               <source src="/assets/snowfall.mp3" type="audio/mp3" />
               Seu navegador não suporta o elemento de áudio.
             </audio>
-            <button
-              onClick={toggleAudio} className="flex items-center justify-center">
+            <button onClick={toggleAudio} className="flex items-center justify-center">
               <Image
                 src={isPlaying ? "/assets/music.gif" : "/assets/semsom.png"}
                 alt={isPlaying ? "Pause" : "Play"}
-                width={isPlaying ? 22 : 23}
-                height={isPlaying ? 22 : 23}
-                unoptimized
-                className={`"object-contain" ${isPlaying ? "" : "animate-pulse"}`} />
+                width={24}
+                height={24}
+                priority
+                className={`object-contain ${!isPlaying ? "animate-pulse" : ""}`}
+              />
             </button>
           </div>
-
         </div>
 
-        {/* Navbar mobile */}
-        <div className="xl:hidden ">
+        {/* Navbar para mobile */}
+        <div className="xl:hidden">
           <MobNavbar />
         </div>
       </div>
     </header>
   );
 };
-export default HeaderPage
+
+export default HeaderPage;
