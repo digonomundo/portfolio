@@ -25,10 +25,8 @@ const LinksNavBar = () => {
 
 const Navbar = () => {
     useEffect(() => {
-        
         const lenis = new Lenis({
             lerp: 0.05,
-            syncTouch: true,
         });
 
         const raf = (time: number) => {

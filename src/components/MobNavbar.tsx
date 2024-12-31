@@ -17,12 +17,11 @@ const links = [
 const MobNavbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
-    const lenisRef = useRef<Lenis | null>(null); 
+    const lenisRef = useRef<Lenis | null>(null);
 
     useEffect(() => {
         const lenis = new Lenis({
             lerp: 0.05,
-            syncTouch: true,
         });
         lenisRef.current = lenis;
 
@@ -43,10 +42,10 @@ const MobNavbar = () => {
             const targetElement = document.querySelector(targetHash);
 
             if (targetElement instanceof HTMLElement) {
-                lenisRef.current?.scrollTo(targetElement); 
+                lenisRef.current?.scrollTo(targetElement);
             }
 
-            setTimeout(() => setIsOpen(false), 30); 
+            setTimeout(() => setIsOpen(false), 30);
         }
     };
 
@@ -75,10 +74,9 @@ const MobNavbar = () => {
                         <Link
                             href={link.path}
                             key={index}
-                            className={`${
-                                link.path === pathname &&
+                            className={`${link.path === pathname &&
                                 "text-white border-b-2 border-azul"
-                            } capitalize text-xl hover:text-azul transition-all`}
+                                } capitalize text-xl hover:text-azul transition-all`}
                             onClick={(e) => handleLinkClick(e, link.path)}
                         >
                             {link.name}

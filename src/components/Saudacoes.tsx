@@ -87,10 +87,9 @@ export function Saudacoes() {
           Seu navegador não suporta o elemento de áudio.
         </audio>
         <Image
-          src={isPlaying ? "/assets/voz.gif" : "/assets/mute1.gif"}
-          alt={isPlaying ? "Pause" : "Play"}
-          width={isPlaying ? 65 : 60}
-          height={isPlaying ? 65 : 60}
+          src={isPlaying ? "/assets/voz.gif" : "/assets/mute1.gif"} alt={isPlaying ? "Pause" : "Play"}
+          width={60} height={60}
+          style={{ width: "10vw", height: "10vw", maxWidth: "60px", maxHeight: "60px" }}
           className="object-contain"
           unoptimized
         />
