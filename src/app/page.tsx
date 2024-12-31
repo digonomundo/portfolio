@@ -13,7 +13,7 @@ export default function Home() {
             <section id="home" className="relative mx-auto flex flex-col xl:flex-row h-screen w-full items-center justify-center overflow-hidden gap-x-56">
                 <div className="text-center xl:text-left items-center xl:items-start order-2 xl:order-none">
                     <h1 className="h1 mb-3 text-white ">
-                        Olá, eu sou o <br /><span className="text-azul flex gap-6 xl:justify-start justify-center larcaco:gap-10 xl:gap-10">Rodrigo!<Saudacoes /></span>
+                        Olá, eu sou o <br /><span className="text-azul flex gap-5 xl:justify-start justify-center larcaco:gap-8 xl:gap-8">Rodrigo!<Saudacoes /></span>
                     </h1>
                     <p className="text-lg largaco:text-xl text-white">Um desenvolvedor de software jr.</p>
 

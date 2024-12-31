@@ -88,8 +88,8 @@ export function Saudacoes() {
         </audio>
         <Image
           src={isPlaying ? "/assets/voz.gif" : "/assets/mute1.gif"} alt={isPlaying ? "Pause" : "Play"}
-          width={60} height={60}
-          style={{ width: "10vw", height: "10vw", maxWidth: "60px", maxHeight: "60px" }}
+          width={50} height={50}
+          style={{ width: "10vw", height: "10vw", maxWidth: "50px", maxHeight: "50px" }}
           className="object-contain"
           unoptimized
         />
