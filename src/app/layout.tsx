@@ -5,6 +5,7 @@ import HeaderPage from "@/components/Header";
 import Starfield from "@/components/ui/BackgroundStars";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import TransitionPage from "@/components/TransitionPage";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -83,6 +84,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased bg-background min-h-full h-full`}
       >
+        <TransitionPage/>
         <Starfield />
         <HeaderPage />
         {children}
