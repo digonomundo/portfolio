@@ -57,7 +57,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
         <link rel="icon" href="/assets/logo/favicon-16x16.png" sizes="16x16" type="image/png" />
         <link rel="icon" href="/assets/logo/favicon-32x32.png" sizes="32x32" type="image/png" />
-        <link rel="icon" href="/assets/logo/android-chrome-192x192.png" sizes="192x192" type="image/png" />
+        <link rel="icon" href="/assets/logo/android-chrome-192x192.png" sizes="200x200" type="image/png" />
         <link rel="icon" href="/assets/logo/android-chrome-512x512.png" sizes="512x512" type="image/png" />
         <link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png" />
         
