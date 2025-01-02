@@ -62,7 +62,6 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png" />
         
         {/* Meta Tags Essenciais */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={metadata.description ?? "Rodrigo Dias, técnico e desenvolvedor. Conheça meu portfólio e trajetória profissional."} />
         <meta name="keywords" content={typeof metadata.keywords === "string" ? metadata.keywords : "Rodrigo Dias, Digo, Rodrigo Marques Dias, Digonomundo, portfolio, desenvolvedor web, web developer, engenheiro de software, UTFPR, ETEC, Barretos, projetos, tecnologia, web site, Rodrigodias, Rodrigomarquesdias, digolar, desenvolvedor, software, jr"} />
         <meta name="author" content="Rodrigo Marques Dias" />
