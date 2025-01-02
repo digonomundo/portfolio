@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "jr",
   ].join(", "),
   description:
-    "Conheça Rodrigo Dias, desenvolvedor. Explore meu portfólio, projetos e trajetória profissional.",
+    "Rodrigo Dias, técnico e desenvolvedor. Conheça meu portfólio e trajetória profissional.",
 };
 
 export default function RootLayout({
@@ -51,32 +51,38 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" dir="ltr">
       <head>
         {/* Favicon */}
-        <link rel="icon" href="https://www.digonomundo.com/favicon.ico" type="image/x-icon" sizes="any" />
-
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
+        <link rel="icon" href="/assets/logo/favicon-16x16.png" sizes="16x16" type="image/png" />
+        <link rel="icon" href="/assets/logo/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/assets/logo/android-chrome-192x192.png" sizes="192x192" type="image/png" />
+        <link rel="icon" href="/assets/logo/android-chrome-512x512.png" sizes="512x512" type="image/png" />
+        <link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png" />
+        
         {/* Meta Tags Essenciais */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charSet="UTF-8" />
-        <meta name="description" content={metadata.description ?? "Conheça Rodrigo Dias, desenvolvedor. Explore meu portfólio, projetos e trajetória profissional."} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={metadata.description ?? "Rodrigo Dias, técnico e desenvolvedor. Conheça meu portfólio e trajetória profissional."} />
         <meta name="keywords" content={typeof metadata.keywords === "string" ? metadata.keywords : "Rodrigo Dias, Digo, Rodrigo Marques Dias, Digonomundo, portfolio, desenvolvedor web, web developer, engenheiro de software, UTFPR, ETEC, Barretos, projetos, tecnologia, web site, Rodrigodias, Rodrigomarquesdias, digolar, desenvolvedor, software, jr"} />
         <meta name="author" content="Rodrigo Marques Dias" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
         {/* Open Graph / Facebook */}
-        <meta property="og:site_name" content="Rodrigo Dias Portfolio" />
+        <meta property="fb:app_id" content="1672796953651442" />
+        <meta property="og:site_name" content="Rodrigo Marques Dias - Portfolio" />
         <meta property="og:title" content={typeof metadata.title === 'string' ? metadata.title : "Rodrigo Dias - Desenvolvedor"} />
-        <meta property="og:description" content={metadata.description ?? "Conheça Rodrigo Dias, desenvolvedor. Explore meu portfólio, projetos e trajetória profissional."} />
-        <meta property="og:image" content="https://www.digonomundo.com/assets/logo.svg" />
+        <meta property="og:description" content={metadata.description ?? "Rodrigo Dias, técnico e desenvolvedor. Conheça meu portfólio e trajetória profissional."} />
+        <meta property="og:image" content="https://www.digonomundo.com/assets/logo/android-chrome-192x192.png" />
         <meta property="og:url" content="https://www.digonomundo.com" />
         <meta property="og:type" content="website" />
+        <meta property="og:image:alt" content="Minha logo" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={typeof metadata.title === 'string' ? metadata.title : "Rodrigo Dias - Desenvolvedor"} />
-        <meta name="twitter:description" content={metadata.description ?? "Conheça Rodrigo Dias, desenvolvedor. Explore meu portfólio, projetos e trajetória profissional."} />
-        <meta name="twitter:image" content="https://www.digonomundo.com/assets/logo.svg" />
+        <meta name="twitter:description" content={metadata.description ?? "Rodrigo Dias, técnico e desenvolvedor. Conheça meu portfólio e trajetória profissional."} />
+        <meta name="twitter:image" content="https://www.digonomundo.com/assets/logo/android-chrome-512x512.png" />
 
         {/* Links Relacionados */}
         <link rel="canonical" href="https://www.digonomundo.com" />
