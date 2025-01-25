@@ -53,16 +53,16 @@ export default function Home() {
                             content={
                                 <p className="text-xl md:text-2xl text-center text-balance text-white"> <a href="http://" target="_blank" rel="noopener noreferrer"></a>
                                     Sou o Rodrigo, também conhecido como Digo. Tenho 20 anos, sou desenvolvedor,{" "}
-                                    <a href="https://www.etecbarretos.com.br/ensino-medio-integrado/desenvolvimento-de-sistemas-2" className="text-azul hover:underline" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://www.etecbarretos.com.br/ensino-medio-integrado/desenvolvimento-de-sistemas-2" className="hover:text-white hover:underline text-azul font-bold" target="_blank" rel="noopener noreferrer">
                                         Técnico em Desenvolvimento de Sistemas
                                     </a>{" "} formado pela{" "}
-                                    <a href="https://www.etecbarretos.com.br/" className="text-azul hover:underline" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://www.etecbarretos.com.br/" className="hover:text-white hover:underline text-azul font-bold" target="_blank" rel="noopener noreferrer">
                                         ETEC
                                     </a>{" "} e atualmente estou cursando{" "}
-                                    <a href="https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/campo-mourao/cm-ciencia-da-computacao/apresentacao" className="text-azul hover:underline" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/campo-mourao/cm-ciencia-da-computacao/apresentacao" className="hover:text-white hover:underline text-azul font-bold" target="_blank" rel="noopener noreferrer">
                                         Ciência da Computação
                                     </a>{" "} pela{" "}
-                                    <a href="https://www.utfpr.edu.br" className="text-azul hover:underline" target="_blank" rel="noopener noreferrer">UTFPR</a>
+                                    <a href="https://www.utfpr.edu.br" className="hover:text-white hover:underline text-azul font-bold" target="_blank" rel="noopener noreferrer">UTFPR</a>
                                     . Tenho experiência com desenvolvimento de aplicações web com Next.js, PHP, TypeScript e React.js, além de saber utilizar ferramentas no-code como WordPress (Elementor) e Wix. Também possuo experiência com desenvolvimento nativo de aplicativos móveis em Kotlin e Java.
                                 </p>
                             }
