@@ -32,16 +32,16 @@ export function Saudacoes() {
     const periodo = hora < 12 ? periodos.manha : hora < 18 ? periodos.tarde : periodos.noite;
 
     const audioMap: Record<number, Record<string, string>> = {
-      0: { manha: "/assets/dom/domingo-manha.mp3", tarde: "/assets/dom/domingo-tarde.mp3", noite: "/assets/dom/domingo-noite.mp3" },
-      1: { manha: "/assets/seg/segunda-manha.mp3", tarde: "/assets/seg/segunda-tarde.mp3", noite: "/assets/seg/segunda-noite.mp3" },
-      2: { manha: "/assets/ter/terca-manha.mp3", tarde: "/assets/ter/terca-tarde.mp3", noite: "/assets/ter/terca-noite.mp3" },
-      3: { manha: "/assets/qua/quarta-manha.mp3", tarde: "/assets/qua/quarta-tarde.mp3", noite: "/assets/qua/quarta-noite.mp3" },
-      4: { manha: "/assets/qui/quinta-manha.mp3", tarde: "/assets/qui/quinta-tarde.mp3", noite: "/assets/qui/quinta-noite.mp3" },
-      5: { manha: "/assets/sex/sexta-manha.mp3", tarde: "/assets/sex/sexta-tarde.mp3", noite: "/assets/sex/sexta-noite.mp3" },
-      6: { manha: "/assets/sab/sabado-manha.mp3", tarde: "/assets/sab/sabado-tarde.mp3", noite: "/assets/sab/sabado-noite.mp3" },
+      0: { manha: "/assets/audios/days/dom/domingo-manha.mp3", tarde: "/assets/audios/days/dom/domingo-tarde.mp3", noite: "/assets/audios/days/dom/domingo-noite.mp3" },
+      1: { manha: "/assets/audios/days/seg/segunda-manha.mp3", tarde: "/assets/audios/days/seg/segunda-tarde.mp3", noite: "/assets/audios/days/seg/segunda-noite.mp3" },
+      2: { manha: "/assets/audios/days/ter/terca-manha.mp3", tarde: "/assets/audios/days/ter/terca-tarde.mp3", noite: "/assets/audios/days/ter/terca-noite.mp3" },
+      3: { manha: "/assets/audios/days/qua/quarta-manha.mp3", tarde: "/assets/audios/days/qua/quarta-tarde.mp3", noite: "/assets/audios/days/qua/quarta-noite.mp3" },
+      4: { manha: "/assets/audios/days/qui/quinta-manha.mp3", tarde: "/assets/audios/days/qui/quinta-tarde.mp3", noite: "/assets/audios/days/qui/quinta-noite.mp3" },
+      5: { manha: "/assets/audios/days/sex/sexta-manha.mp3", tarde: "/assets/audios/days/sex/sexta-tarde.mp3", noite: "/assets/audios/days/sex/sexta-noite.mp3" },
+      6: { manha: "/assets/audios/days/sab/sabado-manha.mp3", tarde: "/assets/audios/days/sab/sabado-tarde.mp3", noite: "/assets/audios/days/sab/sabado-noite.mp3" },
     };
 
-    return audioMap[dia]?.[periodo] || "/assets/snowfall.mp3";
+    return audioMap[dia]?.[periodo] || "/assets/audios/music/snowfall.mp3";
   };
 
   const alternarAudio = () => {
@@ -87,7 +87,7 @@ export function Saudacoes() {
           Seu navegador não suporta o elemento de áudio.
         </audio>
         <Image
-          src={isPlaying ? "/assets/voz.gif" : "/assets/mute1.gif"} alt={isPlaying ? "Pause" : "Play"}
+          src={isPlaying ? "/assets/images/site/buttons/pause/pauseSaudacao.gif" : "/assets/images/site/buttons/play/playSaudacao.gif"} alt={isPlaying ? "Pause" : "Play"}
           width={50} height={50}
           style={{ width: "10vw", height: "10vw", maxWidth: "50px", maxHeight: "50px" }}
           className="object-contain"
