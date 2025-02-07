@@ -21,7 +21,7 @@ const TransitionPage: React.FC = () => {
         <div className="h-screen w-screen fixed z-[9999] pointer-events-none" aria-hidden="true">
             <div className="loading-page absolute top-0 left-0 flex h-full w-full flex-col items-center justify-center gap-6 bg-black">
                 <Image
-                    src={"/assets/transicao.gif"}
+                    src={"/assets/images/site/transition/transicao.gif"}
                     alt={"Play"}
                     width={200}
                     height={200}
