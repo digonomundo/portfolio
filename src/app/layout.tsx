@@ -55,11 +55,11 @@ export default function RootLayout({
       <head>
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
-        <link rel="icon" href="/assets/logo/favicon-16x16.png" sizes="16x16" type="image/png" />
-        <link rel="icon" href="/assets/logo/favicon-32x32.png" sizes="32x32" type="image/png" />
-        <link rel="icon" href="/assets/logo/android-chrome-192x192.png" sizes="200x200" type="image/png" />
-        <link rel="icon" href="/assets/logo/android-chrome-512x512.png" sizes="512x512" type="image/png" />
-        <link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png" />
+        <link rel="icon" href="/assets/images/logo/favicon-16x16.png" sizes="16x16" type="image/png" />
+        <link rel="icon" href="/assets/images/logo/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/assets/images/logo/android-chrome-192x192.png" sizes="200x200" type="image/png" />
+        <link rel="icon" href="/assets/images/logo/android-chrome-512x512.png" sizes="512x512" type="image/png" />
+        <link rel="apple-touch-icon" href="/assets/images/logo/apple-touch-icon.png" />
         
         {/* Meta Tags Essenciais */}
         <meta name="description" content={metadata.description ?? "Rodrigo Dias, técnico e desenvolvedor. Conheça meu portfólio e trajetória profissional."} />
@@ -72,7 +72,7 @@ export default function RootLayout({
         <meta property="og:site_name" content="Rodrigo Marques Dias - Portfolio" />
         <meta property="og:title" content={typeof metadata.title === 'string' ? metadata.title : "Rodrigo Dias - Desenvolvedor"} />
         <meta property="og:description" content={metadata.description ?? "Rodrigo Dias, técnico e desenvolvedor. Conheça meu portfólio e trajetória profissional."} />
-        <meta property="og:image" content="https://www.digonomundo.com/assets/logo/android-chrome-192x192.png" />
+        <meta property="og:image" content="https://www.digonomundo.com/assets/images/logo/android-chrome-192x192.png" />
         <meta property="og:url" content="https://www.digonomundo.com" />
         <meta property="og:type" content="website" />
         <meta property="og:image:alt" content="Minha logo" />
@@ -81,7 +81,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={typeof metadata.title === 'string' ? metadata.title : "Rodrigo Dias - Desenvolvedor"} />
         <meta name="twitter:description" content={metadata.description ?? "Rodrigo Dias, técnico e desenvolvedor. Conheça meu portfólio e trajetória profissional."} />
-        <meta name="twitter:image" content="https://www.digonomundo.com/assets/logo/android-chrome-512x512.png" />
+        <meta name="twitter:image" content="https://www.digonomundo.com/assets/images/logo/android-chrome-512x512.png" />
 
         {/* Links Relacionados */}
         <link rel="canonical" href="https://www.digonomundo.com" />
