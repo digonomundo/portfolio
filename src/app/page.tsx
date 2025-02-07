@@ -20,7 +20,7 @@ export default function Home() {
                     <p className="text-lg largaco:text-xl text-white">Um desenvolvedor de software jr.</p>
 
                     <div className="flex flex-col xl:flex-row items-center gap-8 mt-6">
-                        <a href="/assets/Curriculo Rodrigo.pdf" download="Rodrigo Dias">
+                        <a href="/assets/cv/Rodrigo Marques Dias.pdf" download="Rodrigo Dias">
                             <Button variant="outline" size="md" className="items-center gap-2">
                                 <p className="text-white font-semibold">Baixe meu currículo!</p>
                                 <FiDownload className="text-xl text-white mb-1" />
@@ -35,7 +35,7 @@ export default function Home() {
 
                 <figure className="order-1 xl:order-none mb-8 xl:mb-0">
                     <div className="w-[298px] h-[298px] xl:w-[500px] xl:h-[498px] largaco:w-[650px] largaco:h-[650px] relative">
-                        <Image src="/assets/eu.svg" priority quality={100} fill alt="minha foto" className="object-contain" />
+                        <Image src="/assets/images/site/eu/euPrincipal.svg" priority quality={100} fill alt="minha foto" className="object-contain" />
                     </div>
                 </figure>
 
@@ -49,7 +49,7 @@ export default function Home() {
                 <div>
                     <section className="bg-black pt-6">
                         <TextParallaxContent
-                            imgUrl="/assets/apresenta.jpg" heading="Sobre Mim" subheading=""
+                            imgUrl="/assets/images/site/eu/euApresentando.jpg" heading="Sobre Mim" subheading=""
                             content={
                                 <p className="text-xl md:text-2xl text-center text-balance text-white"> <a href="http://" target="_blank" rel="noopener noreferrer"></a>
                                     Sou o Rodrigo, também conhecido como Digo. Tenho 20 anos, sou desenvolvedor,{" "}
@@ -150,7 +150,7 @@ export default function Home() {
 
                     <section id="projetos" className="bg-black">
                         <TextParallaxContent
-                            imgUrl="/assets/eu.jpg"
+                            imgUrl="/assets/images/site/eu/euMej.jpg"
                             heading="Projetos"
                             subheading="Um pouco sobre meus" />
                     </section>
@@ -163,7 +163,7 @@ export default function Home() {
                         <div className="w-full h-full flex flex-col items-center md:py-4 py-10">
                             <div className="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
                                 <a href="https://github.com/digonomundo/MeuTreino-TCC" target="_blank" rel="noopener noreferrer" className="md:w-[50%] w-full md:rounded-t-lg rounded-sm">
-                                    <Image className="w-full h-auto" src="/assets/meuTreino.svg" alt="Logo do app Meu treino" width={100} height={100} />
+                                    <Image className="w-full h-auto" src="/assets/images/site/projects/meuTreino/meuTreino.svg" alt="Logo do app Meu treino" width={100} height={100} />
                                 </a>
                                 <div className="md:w-[50%] w-full dark:text-gray-400 md:p-4 p-0 rounded-md flex flex-col justify-center">
                                     <h2 className="text-3xl font-bold text-white">
@@ -183,7 +183,7 @@ export default function Home() {
                     <div className="w-full mx-auto py-10  ">
                         <div className="w-full h-full flex flex-col items-center md:py-4 py-10">
                             <div className="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
-                                <Image className="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="/assets/inovaChat.svg" alt="Logo da solução, inova chat" width={100} height={100} />
+                                <Image className="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="/assets/images/site/projects/inovaChat/inovaChat.svg" alt="Logo da solução, inova chat" width={100} height={100} />
                                 <div className="md:w-[50%] w-full dark:text-gray-400 md:p-4 p-0 rounded-md flex flex-col justify-center">
                                     <h2 className="text-3xl font-bold text-dourado">Inova Chat</h2>
                                     <p className="text-md font-semibold mt-4 text-white">Solução: Um sistema de chatbot voltado para filtrar e selecionar feedbacks e comunicações dos funcionários da <a href="https://minervafoods.com/" target="_blank" rel="noopener noreferrer" className="text-dourado hover:text-azulao hover:transition duration-500">Minerva Foods</a>, com o objetivo de tornar a comunicação empresarial mais assertiva e eficiente.
