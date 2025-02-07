@@ -52,16 +52,17 @@ const HeaderPage = () => {
           <Navbar />
           <div className="flex items-center">
             <audio ref={audioRef}>
-              <source src="/assets/snowfall.mp3" type="audio/mp3" />
+              <source src="/assets/audios/music/snowfall.mp3" type="audio/mp3" />
               Seu navegador não suporta o elemento de áudio.
             </audio>
             <button onClick={toggleAudio} className="flex items-center justify-center">
               <Image
-                src={isPlaying ? "/assets/music.gif" : "/assets/semsom.png"}
+                src={isPlaying ? "/assets/images/site/buttons/pause/pauseMusica.gif" : "/assets/images/site/buttons/play/playMusica.png"}
                 alt={isPlaying ? "Pause" : "Play"}
                 width={24}
                 height={24}
                 priority
+                unoptimized={isPlaying}
                 className={`object-contain ${!isPlaying ? "animate-pulse" : ""}`}
               />
             </button>
