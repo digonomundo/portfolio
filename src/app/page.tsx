@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Sociais from "@/components/Sociais";
 import { Saudacoes } from "@/components/Saudacoes";
-import { FaArrowCircleUp } from "react-icons/fa";
 import Image from "next/image";
 import TextParallaxContent from "@/components/Sobre";
 
@@ -38,11 +37,6 @@ export default function Home() {
                         <Image src="/assets/images/site/eu/euPrincipal.svg" priority quality={100} fill alt="minha foto" className="object-contain" />
                     </div>
                 </figure>
-
-                <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 flex-col items-center justify-center gap-4 text-indigo-50">
-                    <FaArrowCircleUp className="h-5 w-5 animate-bounce text-azul" />
-                    <span>Role para baixo</span>
-                </div>
             </section>
 
             <section id="sobre">
