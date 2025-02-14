@@ -34,6 +34,21 @@ const HeaderPage = () => {
     }
   }, [isPlaying]);
 
+  useEffect(() => {
+    const audioElement = audioRef.current;
+    const handleAudioEnded = () => setIsPlaying(false);
+
+    if (audioElement) {
+      audioElement.addEventListener("ended", handleAudioEnded);
+    }
+
+    return () => {
+      if (audioElement) {
+        audioElement.removeEventListener("ended", handleAudioEnded);
+      }
+    };
+  }, []);
+
   return (
     <header className="py-3 xl:py-5 text-white fixed top-0 left-0 right-0 z-50">
       <div
@@ -47,7 +62,7 @@ const HeaderPage = () => {
           </h1>
         </Link>
 
-        {/* Navbar para PC */}
+        {/* Navbar PC */}
         <div className="hidden xl:flex items-center gap-8">
           <Navbar />
           <div className="flex items-center">
@@ -69,7 +84,7 @@ const HeaderPage = () => {
           </div>
         </div>
 
-        {/* Navbar para mobile */}
+        {/* Navbar mobile */}
         <div className="xl:hidden">
           <MobNavbar />
         </div>
