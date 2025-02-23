@@ -53,10 +53,10 @@ export default function Home() {
                                     <a href="https://www.etecbarretos.com.br/" className="hover:text-white hover:underline text-azul font-bold" target="_blank" rel="noopener noreferrer">
                                         ETEC
                                     </a>{" "} e atualmente estou cursando{" "}
-                                    <a href="https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/campo-mourao/cm-ciencia-da-computacao/apresentacao" className="hover:text-white hover:underline text-azul font-bold" target="_blank" rel="noopener noreferrer">
-                                        Ciência da Computação
+                                    <a href="https://www.comvest.unicamp.br/cursos/curso-engenharia-de-telecomunicacoes/" className="hover:text-white hover:underline text-azul font-bold" target="_blank" rel="noopener noreferrer">
+                                        Engenharia de Telecomunicações
                                     </a>{" "} pela{" "}
-                                    <a href="https://www.utfpr.edu.br" className="hover:text-white hover:underline text-azul font-bold" target="_blank" rel="noopener noreferrer">UTFPR</a>
+                                    <a href="https://unicamp.br/historia/" className="hover:text-white hover:underline text-azul font-bold" target="_blank" rel="noopener noreferrer">UNICAMP</a>
                                     . Tenho experiência com desenvolvimento de aplicações web com Next.js, PHP, TypeScript e React.js, além de saber utilizar ferramentas no-code como WordPress (Elementor) e Wix. Também possuo experiência com desenvolvimento nativo de aplicativos móveis em Kotlin e Java.
                                 </p>
                             }
@@ -131,8 +131,21 @@ export default function Home() {
                                                 <p className="mb-3 text-base font-bold text-azul">2024</p>
                                                 <h4 className="mb-3 font-bold  text-lg md:text-2xl text-left">A UTFPR</h4>
                                                 <p className="md:text-base leading-snug text-opacity-100 text-balance">
-                                                    Optei por me mudar de cidade para o meu ensino superior, e atualmente fui aprovado para cursar Ciência da Computação na UTFPR, onde posso me aprofundar integralmente de forma mais ampla nas áreas da tecnologia em geral. <br />
+                                                    Optei por me mudar de cidade para o meu ensino superior. Fui aprovado em S.I na UFU, BCC na UTFPR e ADS na Fatec. Acabei escolhendo ir cursar Ciência da Computação na UTFPR, onde pude me aprofundar integralmente de forma mais ampla nas áreas da tecnologia em geral. <br />
                                                     Já neste ano, pude participar do ideathon promovido pelo Sistema Faep/Senar, onde obtive a premiação de 3º lugar entre as equipes, além 1º lugar obtido no Hackathon em PHP da Rem Soft Sistemas.
+                                                </p>
+                                            </div>
+                                        </div>
+
+
+                                        <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                                            <div className="order-1 w-5/12"></div>
+                                            <div className="order-1 w-5/12 px-1 py-4 text-right">
+                                                <p className="mb-3 text-base font-bold text-azul">2025</p>
+                                                <h4 className="mb-3 font-bold text-lg md:text-2xl">A UNICAMP</h4>
+                                                <p className="md:text-base leading-snug text-opacity-100 text-balance">
+                                                    Após enfrentar a escassez de estágios no interior enquanto estudava na UTFPR, decidi mudar de faculdade e retornar ao estado onde as oportunidades acontecem. <br />
+                                                    Fui aprovado em Engenharia de Telecomunicações na UNICAMP e em Ciência e Tecnologia na UFABC. No fim, optei pela UNICAMP.
                                                 </p>
                                             </div>
                                         </div>
