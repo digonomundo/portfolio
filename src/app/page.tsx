@@ -108,9 +108,9 @@ export default function Home() {
                                                 <p className="mb-3 text-base font-bold text-azul">2022</p>
                                                 <h4 className="mb-3 font-bold text-lg md:text-2xl">Meu Segundo ano</h4>
                                                 <p className="md:text-base leading-snug text-opacity-100 text-balance">
-                                                    Nesse meio tempo, além de adquirir uma sólida afinidade com lógica, técnicas de programação e algorítmos, pude me dedicar como atleta de JIU JÍTSU
-                                                    onde pude participar de algumas competições e sagrar-se atleta destaque do ano pela CIJJ.
-                                                </p>
+                                                Nesse período, além de desenvolver uma sólida afinidade com lógica, técnicas de programação e algoritmos, dediquei-me ao Jiu-Jítsu, competindo em diversos torneios e conquistando múltiplos títulos. Meu desempenho me rendeu o reconhecimento como atleta destaque do ano pela CIJJ. 
+                                                <br /><br />
+                                                Além disso, participei da minha segunda OBMEP, sendo premiado com uma menção honrosa pelo meu desempenho, concedida pelo Instituto de Matemática Pura e Aplicada (IMPA).                                                </p>
                                             </div>
                                         </div>
                                         <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
@@ -144,8 +144,7 @@ export default function Home() {
                                                 <p className="mb-3 text-base font-bold text-azul">2025</p>
                                                 <h4 className="mb-3 font-bold text-lg md:text-2xl">A UNICAMP</h4>
                                                 <p className="md:text-base leading-snug text-opacity-100 text-balance">
-                                                    Após enfrentar a escassez de estágios no interior enquanto estudava na UTFPR, decidi mudar de faculdade e retornar ao estado onde as oportunidades acontecem. <br />
-                                                    Fui aprovado em Engenharia de Telecomunicações na UNICAMP e em Ciência e Tecnologia na UFABC. No fim, optei pela UNICAMP.
+                                                Após enfrentar a escassez de estágios no interior enquanto estudava na UTFPR, decidi mudar de faculdade e retornar ao estado com mais oportunidades. Fui aprovado em Engenharia de Telecomunicações na UNICAMP e em Ciência e Tecnologia na UFABC. No fim, escolhi a UNICAMP pelo seu grande renome e excelência acadêmica.
                                                 </p>
                                             </div>
                                         </div>
