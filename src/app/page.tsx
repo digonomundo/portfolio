@@ -119,7 +119,7 @@ export default function Home() {
                                                 <p className="mb-3 text-base font-bold text-azul">2023</p>
                                                 <h4 className="mb-3 font-bold text-lg md:text-2xl">Meu Terceiro ano</h4>
                                                 <p className="md:text-base leading-snug text-opacity-100 text-balance">
-                                                    Meu último ano do ensino médio, COM TODA CERTEZA foi um ano de grandes desafios e mudanças. Tendo que conciliar os estudos para vestibulares, os treinos e o tão temido TCC da etec. <br />
+                                                    Meu último ano do ensino médio, COM TODA CERTEZA foi um ano de grandes desafios e mudanças. Tendo que conciliar os estudos para vestibulares, os treinos e o tão temido TCC da etec. <br /><br />
                                                     Também pude participar de algumas maratonas de resolução de problemas, como o HACKATHON promovido pela empresa MINERVA FOODS, Obtendo a premiação de 3º lugar, em 8 equipes
                                                 </p>
                                             </div>
@@ -131,7 +131,9 @@ export default function Home() {
                                                 <p className="mb-3 text-base font-bold text-azul">2024</p>
                                                 <h4 className="mb-3 font-bold  text-lg md:text-2xl text-left">A UTFPR</h4>
                                                 <p className="md:text-base leading-snug text-opacity-100 text-balance">
-                                                    Optei por me mudar de cidade para o meu ensino superior. Fui aprovado em S.I na UFU, BCC na UTFPR e ADS na Fatec. Acabei escolhendo ir cursar Ciência da Computação na UTFPR, onde pude me aprofundar integralmente de forma mais ampla nas áreas da tecnologia em geral. <br />
+                                                    Optei por me mudar de cidade para cursar o meu ensino superior. <br /><br />
+                                                    
+                                                    Fui aprovado em Sistemas de Informação (BSI) na UFU, Bacharelado em Ciência da computação (BCC) na UTFPR e Análise e Desenvolvimento de Sistemas (TADS) na Fatec. Acabei escolhendo ir cursar o BCC na UTFPR, onde pude me aprofundar integralmente de forma mais ampla nas áreas da tecnologia em geral. <br /><br />
                                                     Já neste ano, pude participar do ideathon promovido pelo Sistema Faep/Senar, onde obtive a premiação de 3º lugar entre as equipes, além 1º lugar obtido no Hackathon em PHP da Rem Soft Sistemas.
                                                 </p>
                                             </div>
