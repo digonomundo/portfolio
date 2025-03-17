@@ -146,7 +146,9 @@ export default function Home() {
                                                 <p className="mb-3 text-base font-bold text-azul">2025</p>
                                                 <h4 className="mb-3 font-bold text-lg md:text-2xl">A UNICAMP</h4>
                                                 <p className="md:text-base leading-snug text-opacity-100 text-balance">
-                                                Após enfrentar a escassez de estágios no interior enquanto estudava na UTFPR, decidi mudar de faculdade e retornar ao meu estado, com mais oportunidades. Fui aprovado em Física Computacional na UNESP, Engenharia de Telecomunicações na UNICAMP e em Ciência e Tecnologia na UFABC. No fim, escolhi a UNICAMP pelo seu grande renome e excelência acadêmica.
+                                                Após enfrentar a escassez de estágios no interior enquanto estudava na UTFPR, decidi mudar de faculdade e retornar ao meu estado, com mais oportunidades. Fui aprovado em Engenharia de Telecomunicações na UNICAMP, Física Computacional na UNESP e em Ciência e Tecnologia na UFABC. <br /><br />
+                                                
+                                                No fim, escolhi a engenharia na UNICAMP, pelo seu grande renome e excelência acadêmica.
                                                 </p>
                                             </div>
                                         </div>
