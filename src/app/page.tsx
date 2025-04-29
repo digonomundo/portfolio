@@ -129,12 +129,11 @@ export default function Home() {
                                             <div className="order-1 w-5/12"></div>
                                             <div className="order-1  w-5/12 px-1 py-4">
                                                 <p className="mb-3 text-base font-bold text-azul">2024</p>
-                                                <h4 className="mb-3 font-bold  text-lg md:text-2xl text-left">A UTFPR</h4>
+                                                <h4 className="mb-3 font-bold  text-lg md:text-2xl text-left">O Paraná</h4>
                                                 <p className="md:text-base leading-snug text-opacity-100 text-balance">
-                                                    Optei por me mudar de cidade para cursar o meu ensino superior. <br /><br />
-                                                    
-                                                    Fui aprovado em Sistemas de Informação (BSI) na UFU, Bacharelado em Ciência da computação (BCC) na UTFPR e Análise e Desenvolvimento de Sistemas (TADS) na Fatec. Acabei escolhendo ir cursar o BCC na UTFPR, onde pude me aprofundar integralmente de forma mais ampla nas áreas da tecnologia em geral. <br /><br />
-                                                    Já neste ano, pude participar do ideathon promovido pelo Sistema Faep/Senar, onde obtive a premiação de 3º lugar entre as equipes, além 1º lugar obtido no Hackathon em PHP da Rem Soft Sistemas.
+                                                    Cheguei a me mudar com um amigo para o estado do Paraná e participei do ideathon, uma competição de resolução de problemas promovido pelo Sistema Faep/Senar, representando minha formação técncica, onde obtive a premiação de 3º lugar entre as equipes, além 1º lugar obtido no Hackathon em PHP da Rem Soft Sistemas.
+                                                    <br /><br />
+                                                    Fui aprovado para cursar Sistemas de Informação (BSI) na UFU, Ciência da computação (BCC) na UTFPR e Análise e Desenvolvimento de Sistemas (TADS) na Fatec, mas não prossegui com a matrícula em nenhum dos cursos.
                                                 </p>
                                             </div>
                                         </div>
@@ -146,9 +145,11 @@ export default function Home() {
                                                 <p className="mb-3 text-base font-bold text-azul">2025</p>
                                                 <h4 className="mb-3 font-bold text-lg md:text-2xl">A UNICAMP</h4>
                                                 <p className="md:text-base leading-snug text-opacity-100 text-balance">
-                                                Após enfrentar a escassez de estágios no interior enquanto estudava na UTFPR, decidi mudar de faculdade e retornar ao meu estado, com mais oportunidades. Fui aprovado em Engenharia de Telecomunicações na UNICAMP, Física Computacional na UNESP e em Ciência e Tecnologia na UFABC. <br /><br />
+                                                Decidi entrar na faculdade e retornar ao meu estado, com mais oportunidades. Fui aprovado em Engenharia de Telecomunicações na UNICAMP, Física Computacional na UNESP e em Ciência e Tecnologia na UFABC. <br /><br />
                                                 
-                                                No fim, escolhi a engenharia na UNICAMP, pelo seu grande renome e excelência acadêmica.
+                                                No fim, escolhi a engenharia na UNICAMP, pelo seu grande renome e excelência acadêmica. <br /><br />
+
+                                                Já no primeiro ano, fui aprovado para realizar um projeto de pesquisa e construção de uma biclicleta semi-autônoma, para deficientes visuais, sendo orientado pelo Diretor da Faculdade de Tecnologia da Unicamp, Prof. Dr. Leonardo Lorenzo Bravo Roger.
                                                 </p>
                                             </div>
                                         </div>
