@@ -98,7 +98,9 @@ export default function Home() {
                                                     Morava em uma fazenda, no interior do estado de SP.
                                                     Mas, como nada na vida é simples... por
                                                     problemas de locomoção para a escola,
-                                                    tive que se mudar SOZINHO aos 16 anos para a cidade
+                                                    tive que se mudar SOZINHO aos 16 anos para a cidade, em Barretos. <br /><br />
+
+                                                    Nesse período, tive meu primeiro contato com programação, desenvolvimento web, algoritmos e banco de dados.
                                                 </p>
                                             </div>
                                         </div>
@@ -108,9 +110,10 @@ export default function Home() {
                                                 <p className="mb-3 text-base font-bold text-azul">2022</p>
                                                 <h4 className="mb-3 font-bold text-lg md:text-2xl">Meu Segundo ano</h4>
                                                 <p className="md:text-base leading-snug text-opacity-100 text-balance">
-                                                Nesse período, além de desenvolver uma sólida afinidade com lógica, técnicas de programação e algoritmos, dediquei-me ao Jiu-Jítsu, competindo em diversos torneios e conquistando múltiplos títulos. Meu desempenho me rendeu o reconhecimento como atleta destaque do ano pela CIJJ. 
+                                                Nesse período, além de desenvolver uma sólida afinidade com lógica, mais técnicas de programação e algoritmos, dediquei-me ao Jiu-Jítsu, competindo em diversos torneios e conquistando múltiplos títulos. Meu desempenho me rendeu o reconhecimento como atleta destaque do ano pela CIJJ. 
                                                 <br /><br />
-                                                Além disso, participei da minha segunda OBMEP, sendo premiado com uma menção honrosa pelo meu desempenho, concedida pelo Instituto de Matemática Pura e Aplicada (IMPA).                                                </p>
+                                                Além disso, participei da minha segunda OBMEP, sendo premiado com uma menção honrosa pelo meu desempenho, concedida pelo Instituto de Matemática Pura e Aplicada (IMPA).
+                                                </p>
                                             </div>
                                         </div>
                                         <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
@@ -119,7 +122,8 @@ export default function Home() {
                                                 <p className="mb-3 text-base font-bold text-azul">2023</p>
                                                 <h4 className="mb-3 font-bold text-lg md:text-2xl">Meu Terceiro ano</h4>
                                                 <p className="md:text-base leading-snug text-opacity-100 text-balance">
-                                                    Meu último ano do ensino médio, COM TODA CERTEZA foi um ano de grandes desafios e mudanças. Tendo que conciliar os estudos para vestibulares, os treinos e o tão temido TCC da etec. <br /><br />
+                                                    Meu último ano do ensino médio, COM TODA CERTEZA foi um ano de grandes desafios e mudanças. Tendo que conciliar os estudos para vestibulares, os treinos e o tão temido TCC da etec. 
+                                                    <br /><br />
                                                     Também pude participar de algumas maratonas de resolução de problemas, como o HACKATHON promovido pela empresa MINERVA FOODS, Obtendo a premiação de 3º lugar, em 8 equipes
                                                 </p>
                                             </div>
@@ -131,7 +135,7 @@ export default function Home() {
                                                 <p className="mb-3 text-base font-bold text-azul">2024</p>
                                                 <h4 className="mb-3 font-bold  text-lg md:text-2xl text-left">O Paraná</h4>
                                                 <p className="md:text-base leading-snug text-opacity-100 text-balance">
-                                                    Cheguei a me mudar com um amigo para o estado do Paraná e participei do ideathon, uma competição de resolução de problemas promovido pelo Sistema Faep/Senar, representando minha formação técncica, onde obtive a premiação de 3º lugar entre as equipes, além 1º lugar obtido no Hackathon em PHP da Rem Soft Sistemas.
+                                                    Cheguei a me mudar com um amigo para o estado do Paraná e participei do ideathon, uma competição de resolução de problemas promovido pelo Sistema Faep/Senar, representando minha formação técnica, onde obtive a premiação de 3º lugar entre as equipes, além 1º lugar obtido no Hackathon em PHP da Rem Soft Sistemas.
                                                     <br /><br />
                                                     Fui aprovado para cursar Sistemas de Informação (BSI) na UFU, Ciência da computação (BCC) na UTFPR e Análise e Desenvolvimento de Sistemas (TADS) na Fatec, mas não prossegui com a matrícula em nenhum dos cursos.
                                                 </p>
@@ -145,10 +149,10 @@ export default function Home() {
                                                 <p className="mb-3 text-base font-bold text-azul">2025</p>
                                                 <h4 className="mb-3 font-bold text-lg md:text-2xl">A UNICAMP</h4>
                                                 <p className="md:text-base leading-snug text-opacity-100 text-balance">
-                                                Decidi entrar na faculdade e retornar ao meu estado, com mais oportunidades. Fui aprovado em Engenharia de Telecomunicações na UNICAMP, Física Computacional na UNESP e em Ciência e Tecnologia na UFABC. <br /><br />
-                                                
-                                                No fim, escolhi a engenharia na UNICAMP, pelo seu grande renome e excelência acadêmica. <br /><br />
-
+                                                Decidi entrar na faculdade e retornar ao meu estado, com mais oportunidades. Fui aprovado em Engenharia de Telecomunicações na UNICAMP, Física Computacional na UNESP e em Ciência e Tecnologia na UFABC. 
+                                                <br /><br />                                                
+                                                No fim, escolhi a engenharia na UNICAMP, pelo seu grande renome e excelência acadêmica. 
+                                                <br /><br />
                                                 Já no primeiro ano, fui aprovado para realizar um projeto de pesquisa e construção de uma biclicleta semi-autônoma, para deficientes visuais, sendo orientado pelo Diretor da Faculdade de Tecnologia da Unicamp, Prof. Dr. Leonardo Lorenzo Bravo Roger.
                                                 </p>
                                             </div>
