@@ -142,6 +142,8 @@ export function Projects() {
               {/* CONTAINER DA IMAGEM: Foco da interação de Hover com Link Embutido */}
               <a 
                 href={project.link}
+                target="_blank" 
+                rel="noopener noreferrer" 
                 className={styles.imageInteractiveWrapper}
                 aria-label={`${t('projects.viewProject')} ${project.title}`}
               >
@@ -200,6 +202,8 @@ export function Projects() {
                   <a 
                     href={project.link} 
                     className={styles.textLinkCta}
+                    target="_blank" 
+                    rel="noopener noreferrer" 
                     aria-label={`${t('projects.viewProject')} ${project.title}`}
                   >
                     <span className={styles.linkText}>{t('projects.ctaText')}</span>
