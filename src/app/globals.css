@@ -1,0 +1,178 @@
+@import "tailwindcss";
+:root {
+  --bg-main: #fcfcfc;
+  --bg-panel: #ffffff;
+  --bg-hover: #f1f5f9;
+  --bg-dark: #fcfcfc;
+  --bg-elevated: rgba(255, 255, 255, 0.9);
+  --bg-elevated-strong: rgba(255, 255, 255, 0.95);
+  --bg-elevated-soft: rgba(255, 255, 255, 0.72);
+  --bg-overlay: rgba(17, 17, 17, 0.34);
+
+  --text-main: #111111;
+  --text-muted: #666666;
+  --text-inverse: #ffffff;
+
+  --primary: #111111;
+  --primary-hover: #333333;
+  --secondary: #444444;
+  --secondary-hover: #5a5a5a;
+  --success: #10b981;
+  --accent: #111111;
+
+  --border-subtle: rgba(0, 0, 0, 0.05);
+  --border-default: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.16);
+  --glass-panel: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --tag-bg: rgba(17, 17, 17, 0.06);
+  --timeline-ring: rgba(14, 165, 233, 0.2);
+  --dot-muted: rgba(0, 0, 0, 0.14);
+  --dot-active: rgba(0, 0, 0, 0.52);
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 12px 30px rgba(15, 23, 42, 0.06);
+  --shadow-strong: 0 18px 44px rgba(15, 23, 42, 0.08);
+  --shadow-button: 0 10px 24px rgba(0, 0, 0, 0.12);
+  
+  /* Typography */
+  --font-sans: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+  
+  /* Spacing */
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+  
+  /* Border Radius - Muito arredondado conforme design pill */
+  --radius-tag: 999px;
+  --radius-btn: 999px; /* Botão estilo pill totalmente arredondado */
+  --radius-card: 24px;
+  --radius-pill: 999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html[data-theme='dark'] {
+  --bg-main: #020202;
+  --bg-panel: #0a0a0a;
+  --bg-hover: #141414;
+  --bg-dark: #020202;
+  --bg-elevated: rgba(10, 10, 10, 0.9);
+  --bg-elevated-strong: rgba(14, 14, 14, 0.96);
+  --bg-elevated-soft: rgba(10, 10, 10, 0.8);
+  --bg-overlay: rgba(0, 0, 0, 0.68);
+
+  --text-main: #f5f5f5;
+  --text-muted: #9a9a9a;
+  --text-inverse: #050505;
+
+  --primary: #f5f5f5;
+  --primary-hover: #d8d8d8;
+  --secondary: #7f7f7f;
+  --secondary-hover: #979797;
+  --accent: #f5f5f5;
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --glass-panel: rgba(8, 8, 8, 0.84);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --tag-bg: rgba(255, 255, 255, 0.08);
+  --timeline-ring: rgba(158, 193, 255, 0.2);
+  --dot-muted: rgba(255, 255, 255, 0.22);
+  --dot-active: rgba(255, 255, 255, 0.72);
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.38);
+  --shadow-medium: 0 12px 30px rgba(0, 0, 0, 0.42);
+  --shadow-strong: 0 18px 44px rgba(0, 0, 0, 0.48);
+  --shadow-button: 0 10px 24px rgba(0, 0, 0, 0.32);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+section[id],
+footer[id] {
+  scroll-margin-top: 120px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em; /* Deixa o texto titulo mais compacto / moderno */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Glassmorphism/Panel minimalista */
+.glass-panel {
+  background: var(--glass-panel);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-card);
+}
+
+.mono-text {
+  font-family: var(--font-mono);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: var(--space-6) var(--space-6);
+  }
+}
+
+/* Utility Animations */
+@keyframes pulse-success {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}

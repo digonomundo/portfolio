@@ -1,0 +1,190 @@
+.footerContainer {
+  width: 100%;
+  background-color: transparent;
+  border-top: 1px solid var(--border-subtle);
+  padding: 46px 20px 6px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.footerContent {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 54px;
+  margin-bottom: 60px;
+}
+
+.brandColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brandTitle {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.heartAnimation {
+  display: inline-block;
+  color: #ff3b30; /* Red Apple Standard */
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.brandDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  font-weight: 400;
+  max-width: 440px;
+}
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.linksColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Estilização Premium do LinkItem */
+.linkItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: transform var(--transition-fast) ease;
+}
+
+.iconWrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  color: var(--text-muted);
+  transition: 
+    background-color var(--transition-fast), 
+    border-color var(--transition-fast), 
+    color var(--transition-fast);
+}
+
+.linkLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+/* Efeito Hover Unificado (Apple Ecosystem Feeling) */
+.linkItem:hover {
+  transform: translateX(4px);
+}
+
+.linkItem:hover .iconWrapper {
+  background-color: var(--text-main);
+  border-color: var(--text-main);
+  color: var(--bg-elevated);
+}
+
+.linkItem:hover .linkLabel {
+  color: var(--text-main);
+}
+
+/* Barra Inferior */
+.bottomBar {
+  padding-top: 22px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.copyright {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.techStack {
+  display: flex;
+  gap: 16px;
+}
+
+.techBadge {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+  cursor: default;
+}
+
+.techBadge:hover {
+  color: var(--text-main);
+}
+
+/* Animação de Pulsação do Coração */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+/* Responsividade de Alta Performance */
+@media (max-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-bottom: 46px;
+  }
+
+  .brandDescription {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .footerContainer {
+    padding: 64px 16px 32px 16px;
+  }
+
+  .linksGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 440px) {
+  .linksGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

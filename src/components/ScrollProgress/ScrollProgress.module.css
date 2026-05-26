@@ -1,0 +1,40 @@
+.progressWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: transparent;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.progressBar {
+  height: 100%;
+  background: var(--accent); /* Color reference from image 2 - light blue/cyan gradient? We will use a solid vibrant color */
+  transform-origin: left;
+}
+
+.progressLabelWrapper {
+  position: absolute;
+  top: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progressDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.progressText {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+}

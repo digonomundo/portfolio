@@ -1,0 +1,268 @@
+.navbarContainer {
+  position: fixed;
+  top: 24px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  pointer-events: none; 
+}
+
+.navbar {
+  pointer-events: auto; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-elevated);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-subtle);
+  width: 95%;
+  max-width: 1100px;
+}
+
+.themeDock {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.leftBadge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background-color: transparent;
+  padding: 4px 14px 4px 4px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-default);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.homeLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-main);
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.homeLink:hover {
+  opacity: 0.8;
+  transform: translateY(-0.5px);
+}
+
+.avatar {
+  width: 32px;       
+  height: auto;        
+  flex-shrink: 0;      
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--border-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.locationButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  padding: 0;
+}
+
+.locationButton:hover {
+  color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+.navLinks {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navLinks {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+}
+
+.navLink {
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 14px;
+  transition: color var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--text-muted);
+}
+
+.rightControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rightButton {
+  background-color: var(--primary);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rightButton:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (max-width: 767px) {
+  .navbarContainer {
+    gap: 8px;
+  }
+
+  .navbar {
+    gap: 10px;
+    width: calc(100% - 74px);
+  }
+
+  .rightControls {
+    margin-left: auto;
+  }
+
+  .leftBadge {
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding: 4px 12px 4px 4px;
+  }
+
+  .locationButton {
+    font-size: 11px;
+    gap: 4px;
+  }
+
+  .rightButton {
+    padding: 10px 18px;
+  }
+  .homeLink {
+    gap: 8px; 
+  }
+}
+
+.mobileOnlyLink {
+  display: none !important;
+}
+
+.menuToggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .mobileOnlyLink {
+    display: flex !important;
+    color: var(--primary) !important;
+    font-weight: 700 !important;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .menuToggle {
+    display: flex;
+  }
+
+  .navLinks {
+    display: none;
+    position: fixed;
+    top: 90px;
+    left: 20px;
+    right: 20px;
+    background-color: var(--bg-elevated-strong);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-card);
+    flex-direction: column;
+    padding: var(--space-4);
+    gap: var(--space-4);
+    box-shadow: var(--shadow-strong);
+    pointer-events: auto;
+    z-index: 1000;
+  }
+
+  .navLinksOpen {
+    display: flex;
+    animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .navLink {
+    font-size: 18px;
+    width: 100%;
+    padding: 12px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .navLink:last-child {
+    border-bottom: none;
+  }
+
+  .rightButton {
+    display: none; /* Hide on tablet/mobile navbar, show maybe in menu toggle or keep simple */
+  }
+}
+
+@media (max-width: 640px) {
+  .leftBadge span {
+    display: none; /* Hide name on very small screens to save space */
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

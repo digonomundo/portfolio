@@ -1,0 +1,257 @@
+.experienceSection {
+  padding: 80px 24px 80px 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 700px;
+}
+
+.sectionTagline {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.sectionTitle {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.sectionSubtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.dualTrackGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.trackColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.trackHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.iconCircle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+}
+
+.iconCircleBlue {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.trackTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+.trackSubtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.streamList {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-left: 1px solid var(--border-subtle);
+  padding-left: 24px;
+  margin-left: 19px;
+}
+
+.experienceItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -29.6px;
+  top: 4px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: var(--bg-elevated);
+  border: 2px solid var(--text-main);
+  z-index: 2;
+  transition: transform var(--transition-fast);
+}
+
+.experienceItem:hover .timelineDot {
+  border-color: var(--primary);
+  transform: scale(1.3);
+  background-color: var(--text-main);
+}
+
+.itemMeta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+
+.itemLocation {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.itemRole {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.companyDivider {
+  color: var(--border-strong);
+  font-weight: 400;
+}
+
+.companyLink {
+  color: var(--primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity var(--transition-fast) ease;
+}
+
+.companyLink:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.companyStatic {
+  color: var(--text-main);
+  opacity: 0.9;
+}
+
+.itemDescription {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.bulletList {
+  margin: 0;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bulletList li {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.premiumBullet {
+  list-style-type: none;
+  position: relative;
+  margin-left: -16px;
+  padding-left: 18px;
+  color: var(--text-main) !important;
+}
+
+.bulletIcon {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  color: var(--primary);
+}
+
+.projectBadge {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 6px 12px;
+  border-radius: 4px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 960px) {
+  .dualTrackGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .streamList {
+    margin-left: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 28px;
+  }
+}

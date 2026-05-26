@@ -1,0 +1,357 @@
+.sectionContainer {
+  width: 100%;
+  padding: 60px 0 100px 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contentWrapper {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+@media (min-width: 2000px) {
+  .contentWrapper {
+    max-width: 1600px;
+    gap: 96px;
+  }
+}
+
+/* Cabeçalho da Seção */
+.headerRow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 32px;
+  width: 100%;
+}
+
+.sectionIndex {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.titleMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 720px;
+}
+
+.sectionTitle {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.sectionSubtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+.projectsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 80px; 
+  width: 100%;
+}
+
+.projectCard {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 56px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.projectCard:nth-child(even) .imageInteractiveWrapper {
+  order: 2;
+}
+.projectCard:nth-child(even) .projectDetails {
+  order: 1;
+}
+
+.imageInteractiveWrapper {
+  display: block;
+  width: 100%;
+  position: relative;
+  text-decoration: none;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.01);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.imageAspectRatioBox {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* Proporção Widescreen Premium 16:9 */
+  overflow: hidden;
+}
+
+.projectImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.hoverOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom, 
+    rgba(0, 0, 0, 0.2), 
+    rgba(0, 0, 0, 0.5)
+  );
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+  z-index: 2;
+}
+
+.overlayGlassButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px 24px;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transform: translateY(12px) scale(0.95);
+  transition: 
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+    background-color 0.3s ease, 
+    border-color 0.3s ease;
+}
+
+.imageInteractiveWrapper:hover .projectImage {
+  transform: scale(1.04); 
+}
+
+.imageInteractiveWrapper:hover .hoverOverlay {
+  opacity: 1; 
+}
+
+.imageInteractiveWrapper:hover .overlayGlassButton {
+  transform: translateY(0) scale(1); /* Slide-up sutil do botão */
+}
+
+.imageInteractiveWrapper:hover .overlayGlassButton:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+.overlayIcon {
+  transition: transform 0.3s ease;
+}
+.overlayGlassButton:hover .overlayIcon {
+  transform: translate(2px, -2px);
+}
+
+.projectDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  justify-content: center;
+}
+
+.cardHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.categoryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.iconBox {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  opacity: 0.85;
+}
+
+.categoryText {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.awardBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(220, 100, 50, 0.08);
+  border: 1px solid rgba(220, 100, 50, 0.18);
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.projectTitle {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.projectDescription {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Rodapé do Card */
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  padding-top: 20px;
+}
+
+.techStack {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.techTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+
+.textLinkCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.5;
+  align-self: flex-start;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.textLinkCta:hover {
+  opacity: 1;
+  color: var(--primary);
+}
+
+.textLinkIcon {
+  transition: transform 0.3s ease;
+}
+.textLinkCta:hover .textLinkIcon {
+  transform: translateX(2px);
+}
+
+@media (max-width: 1024px) {
+  .projectCard {
+    grid-template-columns: 1fr; /* Empilha os blocos verticalmente */
+    gap: 32px;
+  }
+
+  .projectCard:nth-child(even) .imageInteractiveWrapper {
+    order: 0; /* Desfaz o zigue-zague no mobile para manter consistência */
+  }
+  .projectCard:nth-child(even) .projectDetails {
+    order: 0;
+  }
+  
+  .projectTitle {
+    font-size: 26px;
+  }
+  
+  .projectsGrid {
+    gap: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionContainer {
+    padding: 60px 0;
+  }
+
+  .contentWrapper {
+    gap: 48px;
+  }
+
+  .sectionTitle {
+    font-size: 34px;
+  }
+
+  .projectCard {
+    gap: 24px;
+  }
+
+  .projectTitle {
+    font-size: 24px;
+  }
+
+  .hoverOverlay {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .overlayGlassButton {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}

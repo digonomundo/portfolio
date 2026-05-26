@@ -1,0 +1,25 @@
+.loadingContainer {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-main);
+  z-index: 9999;
+}
+
+.counter {
+  font-family: var(--font-mono);
+  font-size: 8vw;
+  font-weight: 700;
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+.brand {
+  position: absolute;
+  bottom: 40px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-size: 14px;
+}

@@ -1,0 +1,42 @@
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  
+  /* Máscara de opacidade: mantém o topo 100% visível e esmaece os 35% finais da imagem */
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
+}
+
+.profileImage {
+  object-fit: contain !important;
+  object-position: bottom center;
+  z-index: 2;
+  transform: scale(1.02); /* Ajuste fino caso queira aproximar um pouquinho */
+}
+
+/* Aura de desfoque suave atrás da foto que herda a cor primária do seu tema */
+.ambientGlow {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+  filter: blur(60px);
+  top: 15%;
+  z-index: 1;
+  opacity: 0.12; /* Ajuste aqui para mais ou menos brilho atrás de você */
+  pointer-events: none;
+}

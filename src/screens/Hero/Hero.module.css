@@ -1,0 +1,302 @@
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: visible; 
+  padding-top: var(--space-8);
+  margin-top: -80px; 
+}
+
+.bgTypography {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 100%; 
+  text-align: center;
+  font-size: 9.5vw;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+  z-index: 0;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5vw;
+  letter-spacing: -0.02em;
+}
+
+.outlineText {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--text-main);
+}
+
+.solidText {
+  color: var(--text-main);
+}
+
+.frontContent {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 60vh;
+  margin-top: 10vh;
+}
+
+.globeOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%); 
+  z-index: 5;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+
+.sideColumns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 40px;
+  pointer-events: none; 
+}
+
+.leftCol, .rightCol {
+  pointer-events: auto;
+  z-index: 20;
+}
+
+.leftCol {
+  max-width: 350px;
+}
+
+.jobTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.summary {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primaryCta,
+.secondaryCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.primaryCta {
+  background-color: var(--primary);
+  color: var(--text-inverse);
+  box-shadow: var(--shadow-button);
+}
+
+.primaryCta:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.secondaryCta {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-default);
+  color: var(--text-main);
+}
+
+.secondaryCta:hover {
+  background-color: var(--bg-hover);
+  transform: translateY(-2px);
+}
+
+/* Right Side - Pills */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.socialPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-pill);
+  color: var(--text-main);
+  font-size: 14px;
+  font-weight: 500;
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+  background-color: var(--bg-panel);
+}
+
+.socialPill:hover {
+  background-color: var(--bg-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (max-width: 1024px) {
+  .heroSection {
+    padding-top: var(--space-8);
+  }
+
+  .sideColumns {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 80px;
+    margin-top: 350px;
+  }
+  
+  .leftCol {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+  }
+
+  .ctaRow {
+    justify-content: center;
+  }
+  
+  .rightCol {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bgTypography {
+    flex-direction: column;
+    gap: 0;
+    top: 25%;
+    font-size: 14vw;
+  }
+
+  .globeOverlay {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding-top: 120px;
+    height: auto;
+    min-height: 100vh;
+    justify-content: flex-start;
+  }
+
+  .bgTypography {
+    font-size: 18vw; 
+    top: 220px; 
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .frontContent {
+    margin-top: 200px; 
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .globeOverlay {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 280px;
+    height: 280px;
+    margin: 40px auto; 
+    pointer-events: none; 
+  }
+
+  .sideColumns {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px;
+    position: relative;
+    z-index: 25;
+  }
+
+  .jobTitle {
+    font-size: 28px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .summary {
+    font-size: 15px;
+    padding: 0 20px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .ctaRow {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    padding: 0 20px;
+  }
+
+  .primaryCta, .secondaryCta {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .rightCol {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 12px;
+  }
+
+  .socialPill {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+  }
+}

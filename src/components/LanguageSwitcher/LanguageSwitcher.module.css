@@ -1,0 +1,94 @@
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Copia fiel do estilo do ThemeToggle */
+.toggle {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-default);
+  background: var(--bg-elevated-soft);
+  color: var(--text-main);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+/* Efeito Hover sincronizado com o container */
+.container:hover .toggle {
+  transform: translateY(-1px);
+  background: var(--bg-elevated);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-soft);
+}
+
+/* O Menu Retrátil Vertical */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  min-width: 64px;
+  padding: 6px 0;
+  border-radius: 12px;
+  border: 1px solid var(--border-default);
+  background: var(--bg-elevated-soft);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 100;
+  
+  /* Estado inicial escondido */
+  opacity: 0;
+  visibility: hidden;
+  transition: 
+    opacity var(--transition-fast), 
+    visibility var(--transition-fast), 
+    transform var(--transition-fast);
+}
+
+/* Comportamento de gatilho ao passar o mouse */
+.container:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(6px);
+}
+
+/* Botões internos das opções de idiomas */
+.langButton {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 8px 12px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.langButton:hover {
+  background: var(--bg-elevated);
+  color: var(--text-main);
+}
+
+/* Estilo para destacar o idioma selecionado atualmente */
+.active {
+  background-color: var(--primary);
+  color: var(--text-inverse);
+}
