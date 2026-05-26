@@ -45,6 +45,10 @@ export default function TutoringPage() {
     );
   };
 
+  if (!mounted) {
+    return <div className={`${isDarkMode ? styles.darkMode : styles.lightMode}`} />;
+  }
+  
   const courseData = t('tutoring.courseData', { returnObjects: true }) as CourseModule[];
 
   const filteredModules = Array.isArray(courseData) ? courseData.filter(module =>
