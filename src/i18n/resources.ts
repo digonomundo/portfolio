@@ -198,7 +198,7 @@ export const resources = {
         disclaimer: 'Este portfólio não é apenas uma vitrine de códigos. Ele foi desenhado pixel a pixel com um objetivo singular: demonstrar minha paixão, minhas skills e minha vontade genuína de integrar o Apple Developer Academy. É a materialização do meu objetivo..',
         designedIn: 'Designed in Brazil 🇧🇷'
       },
-tutoring: {
+      tutoring: {
         navbarTitle: 'Monitoria SI100',
         backToPortfolio: 'Ir para o Portfólio',
         locationCampinas: 'Campinas - SP',
@@ -276,9 +276,6 @@ tutoring: {
           { id: 16, date: "17/07", type: "Avaliação", highlight: true, title: "EXAME FINAL", description: "Para alunos com média >= 2.5 e < 5.0 e Frequência >= 75%.", lessons: [] }
         ]
       }
-
-
-
     }
   },
   en: {
@@ -296,7 +293,8 @@ tutoring: {
         experience: 'Experience',
         projects: 'Projects',
         contact: 'Contact',
-        tutoring: 'Tutoring'
+        tutoring: 'Tutoring',
+        portfolio: 'Go to portfolio'
       },
       hero: {
         titleLine1: 'Future',
@@ -465,6 +463,84 @@ tutoring: {
         andPurpose: 'and purpose.',
         disclaimer: 'This portfolio is not just a showcase of code. It was designed pixel by pixel with a singular goal: to demonstrate my passion, my skills, and my genuine desire to join the Apple Developer Academy. It is the materialization of my goal..',
         designedIn: 'Designed in Brazil 🇧🇷'
+      },
+      tutoring: {
+        navbarTitle: 'SI100 Tutoring',
+        backToPortfolio: 'Back to Portfolio',
+        locationCampinas: 'Campinas - SP',
+        heroBadge: '2026/1 • SI100',
+        heroTitle: 'Algorithms and Computer Programming I',
+        heroSubtitle: 'Welcome to the tutoring hub. Here you\'ll find the schedule, classes, support materials, and exercises.',
+        professor: 'Prof. Dr. Ieda Geriberto Hidalgo',
+        monitor: 'Monitor: Rodrigo Marques Dias',
+        searchPlaceholder: 'Search for content (e.g., Pointers, Exam, Arrays)...',
+        emptyLessons: 'Content will be released soon.',
+        noResults: 'No results found for',
+        criteria: {
+          title: 'Assessment Criteria',
+          formula: 'MP = (P1 + P2 + Activities Average) / 3',
+          p1: 'Exam 1 (P1):',
+          p2: 'Exam 2 (P2):',
+          ml: 'Lab Average (ML):',
+          notes: '*Direct pass: MP ≥ 6.0 and Attendance ≥ 75%\n*Pass with Final Exam: MF ≥ 5.0 and Attendance ≥ 75%\n*Final Calculation: MF = (MP + Exam Grade) / 2'
+        },
+        syllabus: {
+          title: 'Syllabus & Objective',
+          ementaLabel: 'Syllabus:',
+          ementaText: 'Algorithms: representations and construction techniques. Data and control structures. Modularization, Dynamic allocation, and C implementation.',
+          objectiveLabel: 'Objective:',
+          objectiveText: 'Provide learning of an efficient high-level language. Enable the student to represent real-world problems in algorithms and convert them to C language.',
+          methodologyTitle: 'Methodology',
+          methodologyText: 'Each class is divided into theoretical and practical laboratory parts. The first part is theoretical; in the second, the practical activity is developed and must be submitted by the end of class to compose the assessment.'
+        },
+        skills: {
+          title: 'Developed Competencies',
+          text: '(1) Deductive logical reasoning oriented towards creating computer programs;\n(2) Ability to recognize different programming structures, establish relationships between problems with similar structures, and implement computationally efficient algorithms for real-world problems.\nThrough group activities, it is expected to develop the student\'s social and communication skills.'
+        },
+        bibliography: {
+          title: 'Bibliography',
+          basicTitle: 'Basic',
+          complementaryTitle: 'Complementary'
+        },
+        absences: {
+          title: 'Remarks on Absences (Art. 72 of the General Undergraduate Regulations)',
+          subtitle: 'Absence justification must be requested by submitting documents to the Academic Directorate within 15 days after the occurrence. The foreseen cases are:',
+          item1: 'Student representation duties (meeting times).',
+          item2: 'Services required by law.',
+          item3: 'Bereavement (3 days): Spouse, parents, children, siblings, grandparents.',
+          item4: 'Bereavement (2 days): Stepfather, stepmother, in-laws, brothers/sisters-in-law.',
+          item5: 'Competitions/Congresses (Request 15 days in advance. Max 5 days national / 10 days international).',
+          item6: 'Paternity Leave (5 days).',
+          note: 'Single paragraph: Absence justification does not grant the right to content replacement by the instructor.'
+        },
+        contact: {
+          title: 'Questions or suggestions?',
+          text: 'Send an email to:',
+          subject: 'with subject "SI100"'
+        },
+        footer: {
+          builtWith: 'Built with',
+          purpose: 'and purpose.',
+          disclaimer: 'This is a personal page and not an official university page. Its content is of my authorship and responsibility. It was developed to assist students in the Algorithms and Computer Programming I course, taught at FT - Unicamp.'
+        },
+        courseData: [
+          { id: 1, date: "27/02", type: "Teoria", title: "Class 01: Presentation & Introduction", description: "Course presentation, assessment criteria, and introduction to algorithms.", lessons: [{ title: "Teaching Plan and Criteria", type: "doc", document: "planoEnsino.pdf" }, { title: "Concept of Algorithm", type: "slide", document: "planoEnsino.pdf" }, { title: "Environment Setup (VS Code + GCC)", type: "video" }] },
+          { id: 2, date: "06/03", type: "Laboratório", title: "Class 02: Basic Concepts", description: "Constants, variables, primitive types, and input/output commands.", lessons: [{ title: "Data types in C (int, float, char)", type: "slide" }, { title: "List 1", type: "doc", document: "lista 1.pdf" }] },
+          { id: 3, date: "13/03", type: "Teoria", title: "Class 03: Assignments and Operators", description: "Arithmetic expressions, precedence, and relational operators.", lessons: [{ title: "Arithmetic and Relational Operators", type: "slide" }, { title: "List 2", type: "doc", document: "lista 2.pdf" }] },
+          { id: 4, date: "20/03", type: "Laboratório", title: "Class 04: Sequential and Conditional Structure", description: "Simple and compound decision commands (if/else).", lessons: [{ title: "Boolean logic in C", type: "video" }, { title: "Structures if and else", type: "code" }, { title: "Lab Activity 02", type: "code" }] },
+          { id: 5, date: "27/03", type: "Teoria", title: "Class 05: Multiple Selection & Logical Operators", description: "Switch-case command and logical operators (AND, OR, NOT).", lessons: [{ title: "The switch command", type: "code" }, { title: "Truth table and operators &&, ||, !", type: "slide" }, { title: "Practice exercises", type: "doc" }] },
+          { id: 6, date: "10/04", type: "Laboratório", title: "Class 06: Repetition (Test at Beginning/End)", description: "Repetition structures while and do-while.", lessons: [{ title: "While loop: Syntax and usage", type: "video" }, { title: "Do-While loop: Differences", type: "code" }, { title: "Lab Activity 03", type: "code" }] },
+          { id: 7, date: "17/04", type: "Teoria", title: "Class 07: Repetition (Control Variable)", description: "For repetition structure and nested loops.", lessons: [{ title: "The For loop", type: "slide" }, { title: "Loops inside loops", type: "code" }, { title: "Repetition list", type: "doc" }] },
+          { id: 8, date: "24/04", type: "Avaliação", highlight: true, title: "P1 - THEORETICAL EXAM 1", description: "Exam covering content from classes 1 to 7.", lessons: [{ title: "General Review P1", type: "video" }] },
+          { id: 9, date: "08/05", type: "Laboratório", title: "Class 08: Arrays (One-dimensional)", description: "Declaration, initialization, and manipulation of arrays.", lessons: [{ title: "Array Concept", type: "slide" }, { title: "Traversing arrays with loops", type: "code" }, { title: "Lab Activity 04", type: "code" }] },
+          { id: 10, date: "15/05", type: "Teoria", title: "Class 09: Matrices and Strings", description: "Multidimensional arrays and string manipulation.", lessons: [{ title: "Matrices in C", type: "slide" }, { title: "Strings: Character arrays", type: "code" }, { title: "string.h library", type: "doc" }] },
+          { id: 11, date: "22/05", type: "Laboratório", title: "Class 10: Modularization (Functions)", description: "Functions, variable scope, and parameter passing.", lessons: [{ title: "Creating your own functions", type: "video" }, { title: "Parameters by value vs reference", type: "code" }, { title: "Lab Activity 05", type: "code" }] },
+          { id: 12, date: "29/05", type: "Teoria", title: "Class 11: Pointers", description: "Memory address concept, pointers, and pointer arithmetic.", lessons: [{ title: "What is a pointer?", type: "slide" }, { title: "Operators & and *", type: "code" }, { title: "Pointers and Arrays", type: "doc" }] },
+          { id: 13, date: "12/06", type: "Laboratório", title: "Class 12: Dynamic Allocation & Structs", description: "Malloc, free, and heterogeneous data structures (records).", lessons: [{ title: "Dynamic Memory Allocation", type: "video" }, { title: "Structs (Records)", type: "code" }, { title: "Lab Activity 06", type: "code" }] },
+          { id: 14, date: "19/06", type: "Avaliação", highlight: true, title: "P2 - THEORETICAL EXAM 2", description: "Cumulative exam (focus classes 8 to 13).", lessons: [{ title: "Review P2", type: "video" }] },
+          { id: 15, date: "26/06", type: "Encerramento", title: "Class 13: Review and Grades", description: "Grade delivery and absence review.", lessons: [] },
+          { id: 16, date: "17/07", type: "Avaliação", highlight: true, title: "FINAL EXAM", description: "For students with average >= 2.5 and < 5.0 and Attendance >= 75%.", lessons: [] }
+        ]
       }
     }
   },
@@ -483,7 +559,8 @@ tutoring: {
         experience: 'Experiencia',
         projects: 'Proyectos',
         contact: 'Contacto',
-        tutoring: 'Tutoría'
+        tutoring: 'Tutoría',
+        portfolio: 'Ir al portafolio'
       },
       hero: {
         titleLine1: 'Futuro',
@@ -652,6 +729,84 @@ tutoring: {
         andPurpose: 'y propósito.',
         disclaimer: 'Este portafolio no es solo un escaparate de códigos. Fue diseñado píxel a píxel con un objetivo singular: demostrar mi pasión, mis habilidades y mi deseo genuino de integrar la Apple Developer Academy. Es la materialización de mi objetivo..',
         designedIn: 'Designed in Brazil 🇧🇷'
+      },
+      tutoring: {
+        navbarTitle: 'Tutoría SI100',
+        backToPortfolio: 'Volver al Portafolio',
+        locationCampinas: 'Campinas - SP',
+        heroBadge: '2026/1 • SI100',
+        heroTitle: 'Algoritmos y Programación de Computadoras I',
+        heroSubtitle: 'Bienvenido al centro de tutoría. Aquí encuentras el cronograma, clases, materiales de apoyo y ejercicios.',
+        professor: 'Profª Drª Ieda Geriberto Hidalgo',
+        monitor: 'Monitor: Rodrigo Marques Dias',
+        searchPlaceholder: 'Buscar contenido (ej: Punteros, Examen, Vectores)...',
+        emptyLessons: 'El contenido se publicará pronto.',
+        noResults: 'No se encontraron resultados para',
+        criteria: {
+          title: 'Criterios de Evaluación',
+          formula: 'MP = (P1 + P2 + Promedio actividades) / 3',
+          p1: 'Examen 1 (P1):',
+          p2: 'Examen 2 (P2):',
+          ml: 'Promedio Labs (ML):',
+          notes: '*Aprobación directa: MP ≥ 6.0 y Asistencia ≥ 75%\n*Aprobación con Examen Final: MF ≥ 5.0 y Asistencia ≥ 75%\n*Cálculo Final: MF = (MP + Nota Examen) / 2'
+        },
+        syllabus: {
+          title: 'Plan de Estudios & Objetivo',
+          ementaLabel: 'Plan:',
+          ementaText: 'Algoritmos: representaciones y técnicas de construcción. Estructura de datos y de control de programas. Modularización, Asignación dinámica e Implementación en C.',
+          objectiveLabel: 'Objetivo:',
+          objectiveText: 'Propiciar el aprendizaje de un lenguaje de alto nivel eficiente. Capacitar al alumno para representar problemas del mundo real en algoritmos y convertirlos al lenguaje C.',
+          methodologyTitle: 'Metodología',
+          methodologyText: 'Cada clase se divide en partes teóricas y prácticas de laboratorio. La primera parte es teórica; en la segunda, se desarrolla la actividad práctica, que debe entregarse al final de la clase para componer la evaluación.'
+        },
+        skills: {
+          title: 'Competencias Desarrolladas',
+          text: '(1) Raciocinio lógico deductivo orientado a la creación de programas computacionales;\n(2) Capacidad de reconocer diferentes estructuras de programación, establecer relaciones entre problemas con estructuras similares e implementar algoritmos computacionalmente eficientes para problemas del mundo real.\nMediante las actividades realizadas en grupo, se espera desarrollar las habilidades sociales y de comunicación del estudiante.'
+        },
+        bibliography: {
+          title: 'Bibliografía',
+          basicTitle: 'Básica',
+          complementaryTitle: 'Complementaria'
+        },
+        absences: {
+          title: 'Observaciones sobre Faltas (Art. 72 del Reglamento General de Graduación)',
+          subtitle: 'La justificación de faltas debe solicitarse presentando documentos a la Dirección Académica dentro de los 15 días posteriores a la ocurrencia. Los casos previstos son:',
+          item1: 'Ejercicio de representación estudiantil (horario de reuniones).',
+          item2: 'Servicios obligatorios por ley.',
+          item3: 'Fallecimiento (3 días): Cónyuge, padres, hijos, hermanos, abuelos.',
+          item4: 'Fallecimiento (2 días): Padrastro, madrastra, suegros, cuñados.',
+          item5: 'Competiciones/Congresos (Solicitar 15 días antes. Máx. 5 días nacional / 10 días internacional).',
+          item6: 'Licencia de Paternidad (5 días).',
+          note: 'Párrafo único: La justificación de falta no concede el derecho a la reposición de contenido por parte del docente.'
+        },
+        contact: {
+          title: '¿Dudas o sugerencias?',
+          text: 'Envía un correo a:',
+          subject: 'con el asunto "SI100"'
+        },
+        footer: {
+          builtWith: 'Construido con',
+          purpose: 'y propósito.',
+          disclaimer: 'Esta es una página personal y no una página oficial de la universidad. Su contenido es de mi autoría y responsabilidad. Fue desarrollada para ayudar a los estudiantes en la asignatura de Algoritmos y Programación de Computadoras I, dictada en FT - Unicamp.'
+        },
+        courseData: [
+          { id: 1, date: "27/02", type: "Teoria", title: "Clase 01: Presentación e Introducción", description: "Presentación de la asignatura, criterios de evaluación e introducción a los algoritmos.", lessons: [{ title: "Plan de Enseñanza y Criterios", type: "doc", document: "planoEnsino.pdf" }, { title: "Concepto de Algoritmo", type: "slide", document: "planoEnsino.pdf" }, { title: "Configuración del Entorno (VS Code + GCC)", type: "video" }] },
+          { id: 2, date: "06/03", type: "Laboratório", title: "Clase 02: Conceptos Básicos", description: "Constantes, variables, tipos primitivos y comandos de entrada/salida.", lessons: [{ title: "Tipos de datos en C (int, float, char)", type: "slide" }, { title: "Lista 1", type: "doc", document: "lista 1.pdf" }] },
+          { id: 3, date: "13/03", type: "Teoria", title: "Clase 03: Asignaciones y Operadores", description: "Expresiones aritméticas, precedencia y operadores relacionales.", lessons: [{ title: "Operadores Aritméticos y Relacionales", type: "slide" }, { title: "Lista 2", type: "doc", document: "lista 2.pdf" }] },
+          { id: 4, date: "20/03", type: "Laboratório", title: "Clase 04: Estructura Secuencial y Condicional", description: "Comandos de decisión simple y compuesta (if/else).", lessons: [{ title: "Lógica booleana en C", type: "video" }, { title: "Estructuras if y else", type: "code" }, { title: "Actividad de Lab 02", type: "code" }] },
+          { id: 5, date: "27/03", type: "Teoria", title: "Clase 05: Selección Múltiple y Op. Lógicos", description: "Comando switch-case y operadores lógicos (AND, OR, NOT).", lessons: [{ title: "El comando switch", type: "code" }, { title: "Tabla de verdad y operadores &&, ||, !", type: "slide" }, { title: "Ejercicios de fijación", type: "doc" }] },
+          { id: 6, date: "10/04", type: "Laboratório", title: "Clase 06: Repetición (Prueba al Inicio/Fin)", description: "Estructuras de repetición while y do-while.", lessons: [{ title: "Lazo While: Sintaxis y uso", type: "video" }, { title: "Lazo Do-While: Diferencias", type: "code" }, { title: "Actividad de Lab 03", type: "code" }] },
+          { id: 7, date: "17/04", type: "Teoria", title: "Clase 07: Repetición (Variable de Control)", description: "Estructura de repetición for y lazos anidados.", lessons: [{ title: "El lazo For", type: "slide" }, { title: "Bucles dentro de bucles", type: "code" }, { title: "Lista de repetición", type: "doc" }] },
+          { id: 8, date: "24/04", type: "Avaliação", highlight: true, title: "P1 - EXAMEN TEÓRICO 1", description: "Evaluación referente al contenido impartido en las clases 1 a 7.", lessons: [{ title: "Revisión General P1", type: "video" }] },
+          { id: 9, date: "08/05", type: "Laboratório", title: "Clase 08: Vectores (Arrays Unidimensionales)", description: "Declaración, inicialización y manipulación de vectores.", lessons: [{ title: "Concepto de Array", type: "slide" }, { title: "Recorriendo vectores con lazos", type: "code" }, { title: "Actividad de Lab 04", type: "code" }] },
+          { id: 10, date: "15/05", type: "Teoria", title: "Clase 09: Matrices y Strings", description: "Arrays multidimensionales y manipulación de cadenas de caracteres.", lessons: [{ title: "Matrices en C", type: "slide" }, { title: "Strings: Vectores de char", type: "code" }, { title: "Biblioteca string.h", type: "doc" }] },
+          { id: 11, date: "22/05", type: "Laboratório", title: "Clase 10: Modularización (Funciones)", description: "Funciones, ámbito de variables y paso de parámetros.", lessons: [{ title: "Creando sus propias funciones", type: "video" }, { title: "Parámetros por valor vs referencia", type: "code" }, { title: "Actividad de Lab 05", type: "code" }] },
+          { id: 12, date: "29/05", type: "Teoria", title: "Clase 11: Punteros", description: "Concepto de dirección de memoria, punteros y aritmética de punteros.", lessons: [{ title: "¿Qué es un puntero?", type: "slide" }, { title: "Operadores & y *", type: "code" }, { title: "Punteros y Vectores", type: "doc" }] },
+          { id: 13, date: "12/06", type: "Laboratório", title: "Clase 12: Asignación Dinámica y Structs", description: "Malloc, free y estructuras de datos heterogéneas (registros).", lessons: [{ title: "Asignación Dinámica de Memoria", type: "video" }, { title: "Structs (Registros)", type: "code" }, { title: "Actividad de Lab 06", type: "code" }] },
+          { id: 14, date: "19/06", type: "Avaliação", highlight: true, title: "P2 - EXAMEN TEÓRICO 2", description: "Evaluación acumulativa (enfoque clases 8 a 13).", lessons: [{ title: "Revisión P2", type: "video" }] },
+          { id: 15, date: "26/06", type: "Encerramento", title: "Clase 13: Revisión y Promedios", description: "Entrega de notas y revisión de faltas.", lessons: [] },
+          { id: 16, date: "17/07", type: "Avaliação", highlight: true, title: "EXAMEN FINAL", description: "Para alumnos con promedio >= 2.5 y < 5.0 y Asistencia >= 75%.", lessons: [] }
+        ]
       }
     }
   },
@@ -670,7 +825,8 @@ tutoring: {
         experience: 'Esperienza',
         projects: 'Progetti',
         contact: 'Contatti',
-        tutoring: 'Tutoraggio'
+        tutoring: 'Tutoraggio',
+        portfolio: 'Vai al portfolio'
       },
       hero: {
         titleLine1: 'Futuro',
@@ -839,6 +995,84 @@ tutoring: {
         andPurpose: 'e scopo.',
         disclaimer: 'Questo portfolio non è solo una vetrina di codici. È stato disegnato pixel per pixel con un unico obiettivo: dimostrare la mia passione, le mie competenze e il mio desiderio genuino di entrare a far parte dell\'Apple Developer Academy. È la materializzazione del mio obiettivo..',
         designedIn: 'Designed in Brazil 🇧🇷'
+      },
+      tutoring: {
+        navbarTitle: 'Tutoraggio SI100',
+        backToPortfolio: 'Torna al Portfolio',
+        locationCampinas: 'Campinas - SP',
+        heroBadge: '2026/1 • SI100',
+        heroTitle: 'Algoritmi e Programmazione di Computer I',
+        heroSubtitle: 'Benvenuto nel centro di tutoraggio. Qui trovi il calendario, le lezioni, i materiali di supporto e gli esercizi.',
+        professor: 'Prof.ssa Dr.ssa Ieda Geriberto Hidalgo',
+        monitor: 'Tutor: Rodrigo Marques Dias',
+        searchPlaceholder: 'Cerca contenuti (es: Puntatori, Esame, Array)...',
+        emptyLessons: 'I contenuti saranno pubblicati a breve.',
+        noResults: 'Nessun risultato trovato per',
+        criteria: {
+          title: 'Criteri di Valutazione',
+          formula: 'MP = (P1 + P2 + Media attività) / 3',
+          p1: 'Prova 1 (P1):',
+          p2: 'Prova 2 (P2):',
+          ml: 'Media Laboratori (ML):',
+          notes: '*Approvazione diretta: MP ≥ 6.0 e Frequenza ≥ 75%\n*Approvazione con Esame: MF ≥ 5.0 e Frequenza ≥ 75%\n*Calcolo Finale: MF = (MP + Voto Esame) / 2'
+        },
+        syllabus: {
+          title: 'Programma & Obiettivo',
+          ementaLabel: 'Programma:',
+          ementaText: 'Algoritmi: rappresentazioni e tecniche di costruzione. Struttura dati e controllo dei programmi. Modularizzazione, Allocazione dinamica e Implementazione in C.',
+          objectiveLabel: 'Obiettivo:',
+          objectiveText: 'Fornire l\'apprendimento di un linguaggio di alto livello efficiente. Abilitare lo studente a rappresentare problemi del mondo reale in algoritmi e convertirli in linguaggio C.',
+          methodologyTitle: 'Metodologia',
+          methodologyText: 'Ogni lezione è divisa in parti teoriche e pratiche di laboratorio. La prima parte è teorica; nella seconda si sviluppa l\'attività pratica, che deve essere consegnata al termine della lezione per comporre la valutazione.'
+        },
+        skills: {
+          title: 'Competenze Sviluppate',
+          text: '(1) Ragionamento logico deduttivo orientato alla creazione di programmi informatici;\n(2) Capacità di riconoscere diverse strutture di programmazione, stabilire relazioni tra problemi con strutture simili e implementare algoritmi computazionalmente efficienti per problemi del mondo reale.\nAttraverso le attività di gruppo, si prevede di sviluppare le abilità sociali e comunicative dello studente.'
+        },
+        bibliography: {
+          title: 'Bibliografia',
+          basicTitle: 'Di base',
+          complementaryTitle: 'Complementare'
+        },
+        absences: {
+          title: 'Osservazioni sulle Assenze (Art. 72 del Regolamento Generale di Laurea)',
+          subtitle: 'La giustificazione delle assenze deve essere richiesta presentando documenti alla Direzione Accademica entro 15 giorni dall\'evento. I casi previsti sono:',
+          item1: 'Esercizio di rappresentanza studentesca (orario delle riunioni).',
+          item2: 'Servizi obbligatori per legge.',
+          item3: 'Lutto (3 giorni): Coniuge, genitori, figli, fratelli, nonni.',
+          item4: 'Lutto (2 giorni): Patrigno, matrigna, suoceri, cognati.',
+          item5: 'Competizioni/Congressi (Richiedere 15 giorni prima. Max 5 giorni nazionali / 10 giorni internazionali).',
+          item6: 'Congedo di Paternità (5 giorni).',
+          note: 'Comma unico: La giustificazione dell\'assenza non dà diritto al recupero dei contenuti da parte del docente.'
+        },
+        contact: {
+          title: 'Domande o suggerimenti?',
+          text: 'Invia una email a:',
+          subject: 'con oggetto "SI100"'
+        },
+        footer: {
+          builtWith: 'Costruito con',
+          purpose: 'e scopo.',
+          disclaimer: 'Questa è una pagina personale e non una pagina ufficiale dell\'università. Il suo contenuto è di mia paternità e responsabilità. È stata sviluppata per assistere gli studenti nel corso di Algoritmi e Programmazione di Computer I, tenuto presso FT - Unicamp.'
+        },
+        courseData: [
+          { id: 1, date: "27/02", type: "Teoria", title: "Lezione 01: Presentazione e Introduzione", description: "Presentazione del corso, criteri di valutazione e introduzione agli algoritmi.", lessons: [{ title: "Piano di Insegnamento e Criteri", type: "doc", document: "planoEnsino.pdf" }, { title: "Concetto di Algoritmo", type: "slide", document: "planoEnsino.pdf" }, { title: "Configurazione dell'Ambiente (VS Code + GCC)", type: "video" }] },
+          { id: 2, date: "06/03", type: "Laboratório", title: "Lezione 02: Concetti di Base", description: "Costanti, variabili, tipi primitivi e comandi di input/output.", lessons: [{ title: "Tipi di dati in C (int, float, char)", type: "slide" }, { title: "Lista 1", type: "doc", document: "lista 1.pdf" }] },
+          { id: 3, date: "13/03", type: "Teoria", title: "Lezione 03: Assegnazioni e Operatori", description: "Espressioni aritmetiche, precedenza e operatori relazionali.", lessons: [{ title: "Operatori Aritmetici e Relazionali", type: "slide" }, { title: "Lista 2", type: "doc", document: "lista 2.pdf" }] },
+          { id: 4, date: "20/03", type: "Laboratório", title: "Lezione 04: Struttura Sequenziale e Condizionale", description: "Comandi di decisione semplici e composti (if/else).", lessons: [{ title: "Logica booleana in C", type: "video" }, { title: "Strutture if e else", type: "code" }, { title: "Attività di Lab 02", type: "code" }] },
+          { id: 5, date: "27/03", type: "Teoria", title: "Lezione 05: Selezione Multipla e Op. Logici", description: "Comando switch-case e operatori logici (AND, OR, NOT).", lessons: [{ title: "Il comando switch", type: "code" }, { title: "Tabella di verità e operatori &&, ||, !", type: "slide" }, { title: "Esercizi di consolidamento", type: "doc" }] },
+          { id: 6, date: "10/04", type: "Laboratório", title: "Lezione 06: Ripetizione (Test all'Inizio/Fine)", description: "Strutture di ripetizione while e do-while.", lessons: [{ title: "Ciclo While: Sintassi e uso", type: "video" }, { title: "Ciclo Do-While: Differenze", type: "code" }, { title: "Attività di Lab 03", type: "code" }] },
+          { id: 7, date: "17/04", type: "Teoria", title: "Lezione 07: Ripetizione (Variabile di Controllo)", description: "Struttura di ripetizione for e cicli annidati.", lessons: [{ title: "Il ciclo For", type: "slide" }, { title: "Cicli dentro cicli", type: "code" }, { title: "Lista di ripetizione", type: "doc" }] },
+          { id: 8, date: "24/04", type: "Avaliação", highlight: true, title: "P1 - PROVA TEORICA 1", description: "Valutazione relativa al contenuto delle lezioni 1-7.", lessons: [{ title: "Ripasso Generale P1", type: "video" }] },
+          { id: 9, date: "08/05", type: "Laboratório", title: "Lezione 08: Vettori (Array Monodimensionali)", description: "Dichiarazione, inizializzazione e manipolazione di vettori.", lessons: [{ title: "Concetto di Array", type: "slide" }, { title: "Scorrere vettori con cicli", type: "code" }, { title: "Attività di Lab 04", type: "code" }] },
+          { id: 10, date: "15/05", type: "Teoria", title: "Lezione 09: Matrici e Stringhe", description: "Array multidimensionali e manipolazione di stringhe.", lessons: [{ title: "Matrici in C", type: "slide" }, { title: "Stringhe: Vettori di char", type: "code" }, { title: "Libreria string.h", type: "doc" }] },
+          { id: 11, date: "22/05", type: "Laboratório", title: "Lezione 10: Modularizzazione (Funzioni)", description: "Funzioni, ambito delle variabili e passaggio di parametri.", lessons: [{ title: "Creare le proprie funzioni", type: "video" }, { title: "Parametri per valore vs riferimento", type: "code" }, { title: "Attività di Lab 05", type: "code" }] },
+          { id: 12, date: "29/05", type: "Teoria", title: "Lezione 11: Puntatori", description: "Concetto di indirizzo di memoria, puntatori e aritmetica dei puntatori.", lessons: [{ title: "Cos'è un puntatore?", type: "slide" }, { title: "Operatori & e *", type: "code" }, { title: "Puntatori e Vettori", type: "doc" }] },
+          { id: 13, date: "12/06", type: "Laboratório", title: "Lezione 12: Allocazione Dinamica e Struct", description: "Malloc, free e strutture dati eterogenee (record).", lessons: [{ title: "Allocazione Dinamica della Memoria", type: "video" }, { title: "Struct (Record)", type: "code" }, { title: "Attività di Lab 06", type: "code" }] },
+          { id: 14, date: "19/06", type: "Avaliação", highlight: true, title: "P2 - PROVA TEORICA 2", description: "Valutazione cumulativa (focus lezioni 8-13).", lessons: [{ title: "Ripasso P2", type: "video" }] },
+          { id: 15, date: "26/06", type: "Encerramento", title: "Lezione 13: Revisione e Medie", description: "Consegna voti e revisione assenze.", lessons: [] },
+          { id: 16, date: "17/07", type: "Avaliação", highlight: true, title: "ESAME FINALE", description: "Per studenti con media >= 2.5 e < 5.0 e Frequenza >= 75%.", lessons: [] }
+        ]
       }
     }
   }
