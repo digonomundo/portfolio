@@ -6,6 +6,8 @@ import { ScrollProgress } from '@/components/ScrollProgress/ScrollProgress';
 import { I18nProvider } from '@/i18n/I18nProvider';
 import { ThemeProvider } from '@/theme/ThemeProvider';
 import { THEME_STORAGE_KEY } from '@/theme/theme';
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -53,6 +55,8 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <ThemeProvider>
           <I18nProvider>
+            <SpeedInsights />
+            <Analytics />
             <ScrollProgress />
             <Navbar />
             <main className="container">
