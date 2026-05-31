@@ -90,7 +90,7 @@
 .imageFrame {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5; /* Proporção cinematográfica vertical */
+  aspect-ratio: 4 / 5; 
   overflow: hidden;
   border-radius: var(--radius-card, 16px);
   background-color: var(--bg-elevated-soft);
@@ -135,7 +135,7 @@
 
 @media (min-width: 1600px) {
   .bioParagraph p {
-    font-size: 19px; /* Aumenta a legibilidade em telas massivas */
+    font-size: 19px; 
   }
 }
 
@@ -145,32 +145,50 @@
   font-weight: 600;
 }
 
-/* Métricas limpas sem caixas */
-.metricsRow {
+/* Action Row Minimalista para o Link */
+.actionRow {
   display: flex;
-  gap: 48px;
-  margin-top: 24px;
+  margin-top: 16px;
   padding-top: 32px;
   border-top: 1px solid var(--border-subtle);
 }
 
-.metricNode {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+.aboutLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  group: hover;
 }
 
-.metricNumber {
-  font-size: 32px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+.linkText {
+  font-size: 15px;
+  font-weight: 600;
   color: var(--text-main);
-  line-height: 1;
+  letter-spacing: 0.02em;
+  transition: opacity var(--transition-fast, 0.2s ease);
 }
 
-.metricLabel {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--text-muted);
-  letter-spacing: 0.02em;
+.linkIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-elevated-soft);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  transition: transform var(--transition-fast, 0.2s ease), background var(--transition-fast, 0.2s ease);
+}
+
+/* Interações do Link */
+.aboutLink:hover .linkText {
+  opacity: 0.8;
+}
+
+.aboutLink:hover .linkIconWrapper {
+  transform: translateX(4px);
+  background: var(--text-main);
+  color: var(--bg-elevated);
 }
