@@ -10,7 +10,8 @@ import {
   ExternalLink, 
   Code,
   Medal,
-  Award
+  Award,
+  BookMarked
 } from 'lucide-react';
 import styles from './Education.module.css';
 
@@ -174,29 +175,63 @@ export function Education() {
           </motion.div>
         </div>
 
-        {/* Gancho Largo para o Lattes */}
+{/* Banner Inferior Expandido: Lattes (Esq) + Timeline Lateral Cursos (Dir) */}
         <motion.div 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className={styles.lattesBanner}
+          className={styles.extendedBanner}
         >
-          <div className={styles.lattesContent}>
-            <GraduationCap className={styles.lattesIcon} />
-            <div className={styles.lattesText}>
-              <h3>{t('education.lattes.title')}</h3>
-              <p>{t('education.lattes.description')}</p>
+          {/* Lado Esquerdo: Timeline Lateral de Cursos Extras */}
+          <div className={styles.lateralTimeline}>
+            <div className={styles.lateralHeader}>
+              <BookMarked size={18} />
+              <h4>{t('education.languages2.title')}</h4>
+            </div>
+            <div className={styles.miniTrack}>
+              <div className={styles.miniItem}>
+                <div className={styles.miniDot} />
+                <div className={styles.miniContent}>
+                  <span className={styles.miniDate}>{t('education.languages2.wizard.date')}</span>
+                  <h5 className={styles.miniTitle}>{t('education.languages2.wizard.title')}</h5>
+                  <p className={styles.miniDesc}>{t('education.languages2.wizard.desc')}</p>
+                </div>
+              </div>
+              <div className={styles.miniItem}>
+                <div className={styles.miniDot} />
+                <div className={styles.miniContent}>
+                  <span className={styles.miniDate}>{t('education.languages2.cel.date')}</span>
+                  <h5 className={styles.miniTitle}>{t('education.languages2.cel.title')}</h5>
+                  <p className={styles.miniDesc}>{t('education.languages2.cel.desc')}</p>
+                </div>
+              </div>
+              <div className={styles.miniItem}>
+                <div className={styles.miniDot} />
+                <div className={styles.miniContent}>
+                  <span className={styles.miniDate}>{t('education.languages2.usp.date')}</span>
+                  <h5 className={styles.miniTitle}>{t('education.languages2.usp.title')}</h5>
+                  <p className={styles.miniDesc}>{t('education.languages2.usp.desc')}</p>
+                </div>
+              </div>
             </div>
           </div>
-          <a 
-            href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&id=K1166553U8" 
-            target="_blank" 
-            rel="noreferrer" 
-            className={styles.lattesButton}
-          >
-            {t('education.lattes.button')} <ExternalLink size={16} />
-          </a>
+
+          {/* Lado Direito: Chamada Lattes */}
+          <div className={styles.bannerInfo}>
+            <div className={styles.lattesBrand}>
+              <GraduationCap className={styles.lattesIcon}/>
+              <div className={styles.lattesMeta}>
+                <h3>{t('education.lattes.title')}</h3>
+                <p>{t('education.lattes.description')}</p>
+              </div>
+            </div>
+            <div className={styles.lattesAction}>
+              <a href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&id=K1166553U8" target="_blank" rel="noreferrer" className={styles.primaryButton}>
+                {t('education.lattes.button')} <ExternalLink size={16} />
+              </a>
+            </div>
+          </div>
         </motion.div>
 
       </div>

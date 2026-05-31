@@ -276,24 +276,169 @@
   font-weight: 500;
 }
 
-/* --- LATTES BANNER --- */
-.lattesBanner {
-  margin-top: 24px;
-  width: 100%;
-  background-color: var(--bg-elevated);
+
+/* Banner Inferior Estendido */
+.extendedBanner {
+  display: grid;
+  /* Damos um pouco mais de espaço para a esquerda (timeline) e compactamos a direita */
+  grid-template-columns: 1.3fr 1fr; 
+  background: var(--bg-elevated-soft);
   border: 1px solid var(--border-default);
   border-radius: var(--radius-card);
-  padding: 32px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  transition: border-color var(--transition-fast);
+  overflow: hidden;
 }
 
-.lattesBanner:hover {
-  border-color: var(--border-strong);
+/* --- Timeline Lateral de Cursos (Esquerda) --- */
+.lateralTimeline { 
+  padding: 40px; 
+  background: rgba(255,255,255, 0.02); 
 }
+
+.lateralHeader { 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  margin-bottom: 32px; /* Um pouco mais de respiro */
+  color: var(--text-main); 
+}
+
+.lateralHeader h4 { 
+  font-size: 16px; 
+  font-weight: 700; 
+  text-transform: uppercase; 
+  letter-spacing: 0.05em; /* Toque mais sofisticado */
+}
+
+.miniTrack { 
+  border-left: 1px solid var(--border-subtle); 
+  padding-left: 24px; /* Aumentado de 20 para 24 */
+  display: flex; 
+  flex-direction: column; 
+  gap: 32px; /* Mais espaço entre os cursos */
+}
+
+.miniItem { position: relative; }
+
+.miniDot { 
+  position: absolute; 
+  left: -28px; /* Ajustado pelo novo padding */
+  top: 6px; 
+  width: 8px; 
+  height: 8px; 
+  border-radius: 50%; 
+  background: var(--primary); 
+  /* Cria um "anel" em volta do ponto da cor do fundo, dando aspecto de recorte */
+  box-shadow: 0 0 0 4px var(--bg-elevated-soft); 
+}
+
+.miniDate { 
+  font-size: 11px; 
+  font-weight: 800; 
+  color: var(--primary); 
+  text-transform: uppercase; 
+  letter-spacing: 0.05em;
+}
+
+.miniTitle { 
+  font-size: 16px; 
+  font-weight: 700; 
+  color: var(--text-main); 
+  margin: 4px 0; 
+}
+
+.miniDesc { 
+  font-size: 14px; 
+  color: var(--text-muted); 
+  line-height: 1.5; 
+}
+
+/* --- Lado Direito: Chamada Lattes --- */
+.bannerInfo {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* RESOLVE O BURACO: Centraliza tudo verticalmente */
+  gap: 32px;
+  /* Corrigido: a borda deve ficar na ESQUERDA deste container para separar as colunas, não na direita */
+  border-left: 1px solid var(--border-subtle); 
+  background: linear-gradient(135deg, transparent, rgba(255,255,255,0.02));
+}
+
+.lattesBrand { 
+  display: flex; 
+  gap: 16px; 
+  align-items: flex-start; 
+}
+
+.lattesIcon {
+  color: var(--text-main);
+  opacity: 0.8;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.lattesMeta h3 { 
+  font-size: 24px; /* Levemente maior para hierarquia */
+  font-weight: 700; 
+  margin-bottom: 12px; 
+  letter-spacing: -0.02em;
+}
+
+.lattesMeta p { 
+  font-size: 15px; 
+  color: var(--text-muted); 
+  line-height: 1.6; 
+}
+
+/* Transformando a ação num 'Sub-card' interno para ficar mais preenchido e elegante */
+.lattesAction { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 16px; 
+  background: var(--bg-elevated); 
+  padding: 24px;
+  border-radius: 16px;
+  
+}
+
+.lattesAction span { 
+  font-size: 14px; 
+  font-weight: 600; 
+  color: var(--text-main); 
+}
+
+.primaryButton {
+  background: var(--text-main);
+  color: var(--bg-elevated);
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%; /* O botão estica ocupando a área do mini-card, dando mais presença */
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.primaryButton:hover { 
+  transform: translateY(-2px); /* Substituído o scale por translateY para não distorcer o texto */
+  opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .lattesContent {
   display: flex;
@@ -302,8 +447,8 @@
 }
 
 .lattesIcon {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   color: var(--text-main);
   opacity: 0.8;
 }
@@ -326,41 +471,22 @@
   max-width: 400px;
 }
 
-.lattesButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: var(--text-main);
-  color: var(--bg-elevated);
-  padding: 12px 24px;
-  border-radius: var(--radius-pill);
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: transform var(--transition-fast), opacity var(--transition-fast);
-}
-
-.lattesButton:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
-}
-
 /* Responsividade */
 @media (max-width: 900px) {
   .gridContainer {
     grid-template-columns: 1fr;
   }
-  
-  .lattesBanner {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 24px;
+
+  .extendedBanner {
+    grid-template-columns: 1fr;
   }
-  
-  .lattesButton {
-    width: 100%;
-    justify-content: center;
+  .bannerInfo {
+    border-left: none;
+    border-top: 1px solid var(--border-subtle);
+    padding: 32px 24px;
+  }
+  .lateralTimeline {
+    padding: 32px 24px;
   }
 }
 

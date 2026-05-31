@@ -40,9 +40,10 @@ export const resources = {
       },
       about: {
         title: 'Sobre Mim',
-        paragraph1: 'Em resumo, eu tenho 21 anos, sou Técnico em Desenvolvimento de Sistemas e atualmente estudo Engenharia de Telecomunicações na Unicamp.',
+        paragraph1: 'Em resumo, eu tenho 21 anos, sou Técnico em Desenvolvimento de Sistemas pela Etec e atualmente estudo Engenharia de Telecomunicações na Unicamp.',
         paragraph2: 'Tenho experiência com desenvolvimento de aplicações web com Next.js, TypeScript e React.js, além de saber utilizar ferramentas no-code como WordPress (Elementor) e Wix. Também possuo experiência com desenvolvimento nativo de aplicativos móveis em Kotlin e Java.',
         paragraph3: 'Seja desenvolvendo ou explorando novas tecnologias, meu foco está sempre na performance e na experiência do usuário. Acredito que o design não é apenas como parece, mas como funciona. Atualmente, também estou aprofundando meus estudos em programação competitiva e Data Science.',
+        paragraph4: 'Além do amor por tecnologia, também tenho uma paixão por competições, esportes, músicas e histórias. Você pode conhecer mais desse meu lado aqui: ',
         yearsExperience: 'Anos de Idade',
       },
       education: {
@@ -87,6 +88,24 @@ export const resources = {
           ideathon: '3º Lugar IDEATHON (FAEP/SENAR) - 2024',
           hackatonMinerva: '3º Lugar Hackathon Bruto Hacka & InovAgro (Minerva Foods) - 2023',
           obmep: 'Menção Honrosa 16ª OBMEP - 2021'
+        },
+        languages2:{
+          title: 'Cursos extras',
+          wizard: {
+            date: 'FEV 2026 - Atualmente',
+            title: 'Wizard By Pearson',
+            desc: 'Curso de Inglês com foco em vocabulário e conversação.'
+          },
+          cel: {
+            date: 'FEV 2026 - Atualmente',
+            title: 'Centro de Ensino de Línguas da Unicamp',
+            desc: 'Inglês com foco na fala, escrita, compreensão oral e leitura. Com temas acadêmicos.'
+          },
+          usp: {
+            date: 'Concluído',
+            title: 'USP (Universidade de São Paulo)',
+            desc: 'Curso de extensão universitária, em língua inglesa com foco na reading e writing.'
+          }
         },
         lattes: {
           title: 'Histórico Completo',
