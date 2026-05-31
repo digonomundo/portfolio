@@ -40,11 +40,11 @@ export const resources = {
       },
       about: {
         title: 'Sobre Mim',
-        paragraph1: 'Em resumo, eu tenho 21 anos, sou Técnico em Desenvolvimento de Sistemas pela Etec e atualmente estudo Engenharia de Telecomunicações na Unicamp.',
-        paragraph2: 'Tenho experiência com desenvolvimento de aplicações web com Next.js, TypeScript e React.js, além de saber utilizar ferramentas no-code como WordPress (Elementor) e Wix. Também possuo experiência com desenvolvimento nativo de aplicativos móveis em Kotlin e Java.',
-        paragraph3: 'Seja desenvolvendo ou explorando novas tecnologias, meu foco está sempre na performance e na experiência do usuário. Acredito que o design não é apenas como parece, mas como funciona. Atualmente, também estou aprofundando meus estudos em programação competitiva e Data Science.',
-        paragraph4: 'Além do amor por tecnologia, também tenho uma paixão por competições, esportes, músicas e histórias. Você pode conhecer mais desse meu lado aqui: ',
-        yearsExperience: 'Anos de Idade',
+        paragraph1: 'Também conhecido como <highlight>Digo</highlight>, sou Técnico em Desenvolvimento de Sistemas pela Etec e atualmente estudo Engenharia de Telecomunicações na Unicamp.',
+        paragraph2: 'Tenho experiência com desenvolvimento de <highlight>aplicações web</highlight> com <highlight>Next.js, TypeScript</highlight> e <highlight>React.js</highlight>, além de saber utilizar <highlight>ferramentas no-code</highlight> como <highlight>WordPress (Elementor)</highlight> e <highlight>Wix</highlight>. Também possuo experiência com desenvolvimento de <highlight>aplicativos móveis nativos</highlight> em <highlight>Kotlin</highlight> e <highlight>Java</highlight>.',
+        paragraph3: 'Para mim, o código vai muito além da sintaxe; é sobre <highlight>resolver problemas reais</highlight>. Por isso, busco constantemente expandir meus limites, explorando desde a precisão lógica da programação com <highlight>C/C++</highlight>, até a análise de dados.',
+        paragraph4: 'A tecnologia é o meu ofício, mas são as <highlight>histórias e as pessoas</highlight> que me movem. Quando não estou codando, você provavelmente vai me encontrar imerso em esportes, ouvindo música, tocando instrumentos ou até participando de competições.',
+        readMore: 'Você pode saber mais sobre mim clicando aqui! ; )',
       },
       education: {
         title: 'Formações & Títulos',
@@ -109,7 +109,7 @@ export const resources = {
         },
         lattes: {
           title: 'Histórico Completo',
-          description: 'Você pode acessar meu Currículo Lattes para visualizar a lista integral de premiações, medalhas, projetos de pesquisa e cursos complementares.',
+          description: 'Você também pode acessar meu Currículo Lattes para visualizar a lista integral de premiações, medalhas, projetos de pesquisa e cursos complementares.',
           button: 'Acessar Lattes'
         }
       },
