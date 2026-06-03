@@ -28,7 +28,8 @@ export const resources = {
         projects: 'Projetos',
         contact: 'Contato',
         tutoring: 'Monitoria',
-        portfolio: 'Ir para o portfólio'
+        portfolio: 'Ir para o portfólio',
+        portfolio2: 'Voltar ao portfólio'
       },
       hero: {
         titleLine1: 'Futuro',
@@ -299,7 +300,7 @@ export const resources = {
         audio: {
           playing: 'Trilha Sonora Ativa',
           paused: 'Trilha Sonora Pausada',
-          ariaLabel: 'Controlar música de fundo', 
+          ariaLabel: 'Controlar música de fundo',
         },
         hero: {
           badge: 'RETROSPECTIVA DOS ANOS',
@@ -449,7 +450,7 @@ export const resources = {
         description: 'Portfolio of Rodrigo Dias, Full Stack Developer'
       },
       navbar: {
-        location: 'Limeira - SP',
+        location: 'Campinas-SP',
         themeToggle: 'Toggle light and dark theme',
         home: 'Home',
         about: 'About',
@@ -458,7 +459,8 @@ export const resources = {
         projects: 'Projects',
         contact: 'Contact',
         tutoring: 'Tutoring',
-        portfolio: 'Go to portfolio'
+        portfolio: 'Go to portfolio',
+        portfolio2: 'Back to portfolio'
       },
       hero: {
         titleLine1: 'Future',
@@ -470,10 +472,11 @@ export const resources = {
       },
       about: {
         title: 'About Me',
-        paragraph1: 'In short, I am 21 years old, a Systems Development Technician, and I am currently studying Telecommunications Engineering at Unicamp.',
-        paragraph2: 'I have experience developing web applications with Next.js, TypeScript, and React.js, as well as using no-code tools like WordPress (Elementor) and Wix. I also have experience with native mobile app development in Kotlin and Java.',
-        paragraph3: 'Whether developing or exploring new technologies, my focus is always on performance and user experience. I believe that design is not just how it looks, but how it works. Currently, I am also deepening my studies in competitive programming and Data Science.',
-        yearsExperience: 'Years Old',
+        paragraph1: 'Also known as <highlight>Digo</highlight>, I am a Systems Development Technician from Etec and I am currently studying Telecommunications Engineering at Unicamp.',
+        paragraph2: 'I have experience developing <highlight>web applications</highlight> with <highlight>Next.js, TypeScript</highlight> and <highlight>React.js</highlight>, as well as using <highlight>no-code tools</highlight> like <highlight>WordPress (Elementor)</highlight> and <highlight>Wix</highlight>. I also have experience developing <highlight>native mobile applications</highlight> in <highlight>Kotlin</highlight> and <highlight>Java</highlight>.',
+        paragraph3: 'For me, code goes far beyond syntax; it is about <highlight>solving real problems</highlight>. Therefore, I constantly seek to expand my limits, exploring from the logical precision of programming with <highlight>C/C++</highlight>, to data analysis.',
+        paragraph4: 'Technology is my craft, but it is the <highlight>stories and people</highlight> that move me. When I am not coding, you will probably find me immersed in sports, listening to music, playing instruments, or even participating in competitions.',
+        readMore: 'You can learn more about me by clicking here! ; )',
       },
       education: {
         title: 'Education & Achievements',
@@ -518,9 +521,27 @@ export const resources = {
           hackatonMinerva: '3rd Place Hackathon Bruto Hacka & InovAgro (Minerva Foods) - 2023',
           obmep: 'Honorable Mention 16th OBMEP - 2021'
         },
+        languages2: {
+          title: 'Extra courses',
+          wizard: {
+            date: 'FEB 2026 - Currently',
+            title: 'Wizard By Pearson',
+            desc: 'English course focused on vocabulary and conversation.'
+          },
+          cel: {
+            date: 'FEB 2026 - Currently',
+            title: 'Unicamp Language Teaching Center',
+            desc: 'English focused on speaking, writing, listening, and reading, with academic themes.'
+          },
+          usp: {
+            date: 'Completed',
+            title: 'USP (University of São Paulo)',
+            desc: 'University extension course in English, focusing on reading and writing.'
+          }
+        },
         lattes: {
           title: 'Full History',
-          description: 'Access my Lattes Curriculum to view the full list of awards, dozens of sports medals, research projects, and additional courses.',
+          description: 'You can also access my Lattes Curriculum to view the full list of awards, medals, research projects, and additional courses.',
           button: 'Access Lattes'
         }
       },
@@ -688,23 +709,168 @@ export const resources = {
           disclaimer: 'This is a personal page and not an official university page. Its content is of my authorship and responsibility. It was developed to assist students in the Algorithms and Computer Programming I course, taught at FT - Unicamp.'
         },
         courseData: [
-          { id: 1, date: "27/02", type: "theory", title: "Class 01: Presentation & Introduction", description: "Course presentation, assessment criteria, and introduction to algorithms.", lessons: [{ title: "Teaching Plan and Criteria", type: "doc", document: "planoEnsino.pdf" }, { title: "Concept of Algorithm", type: "slide", document: "planoEnsino.pdf" }, { title: "Environment Setup (VS Code + GCC)", type: "video" }] },
-          { id: 2, date: "06/03", type: "laboratory", title: "Class 02: Basic Concepts", description: "Constants, variables, primitive types, and input/output commands.", lessons: [{ title: "Data types in C (int, float, char)", type: "slide" }, { title: "List 1", type: "doc", document: "Lista01.pdf" }] },
-          { id: 3, date: "13/03", type: "Theory", title: "Class 03: Assignments and Operators", description: "Arithmetic expressions, precedence, and relational operators.", lessons: [{ title: "Arithmetic and Relational Operators", type: "slide" }, { title: "List 2", type: "doc", document: "Lista02.pdf" }] },
-          { id: 4, date: "20/03", type: "laboratory", title: "Class 04: Sequential and Conditional Structure", description: "Simple and compound decision commands (if/else).", lessons: [{ title: "Boolean logic in C", type: "video" }, { title: "Structures if and else", type: "code" }, { title: "List 3", type: "doc", document: "Lista03.pdf" }] },
-          { id: 5, date: "27/03", type: "Theory", title: "Class 05: Multiple Selection & Logical Operators", description: "Switch-case command and logical operators (AND, OR, NOT).", lessons: [{ title: "The switch command", type: "code" }, { title: "Truth table and operators &&, ||, !", type: "slide" }, { title: "Practice exercises", type: "doc" }] },
-          { id: 6, date: "10/04", type: "laboratory", title: "Class 06: Repetition (Test at Beginning/End)", description: "Repetition structures while and do-while.", lessons: [{ title: "While loop: Syntax and usage", type: "video" }, { title: "Do-While loop: Differences", type: "code" }, { title: "List 4", type: "doc", document: "list 4.pdf" }] },
-          { id: 7, date: "17/04", type: "Theory", title: "Class 07: Repetition (Control Variable)", description: "For repetition structure and nested loops.", lessons: [{ title: "The For loop", type: "slide" }, { title: "Loops inside loops", type: "code" }, { title: "List 5", type: "doc", document: "list 5.pdf" }] },
+          { id: 1, date: "27/02", type: "Teoria", title: "Class 01: Presentation & Introduction", description: "Course presentation, assessment criteria, and introduction to algorithms.", lessons: [{ title: "Teaching Plan and Criteria", type: "doc", document: "planoEnsino.pdf" }, { title: "Concept of Algorithm", type: "slide", document: "planoEnsino.pdf" }, { title: "Environment Setup (VS Code + GCC)", type: "video" }] },
+          { id: 2, date: "06/03", type: "Laboratório", title: "Class 02: Basic Concepts", description: "Constants, variables, primitive types, and input/output commands.", lessons: [{ title: "Data types in C (int, float, char)", type: "slide" }, { title: "List 1", type: "doc", document: "Lista01.pdf" }] },
+          { id: 3, date: "13/03", type: "Teoria", title: "Class 03: Assignments and Operators", description: "Arithmetic expressions, precedence, and relational operators.", lessons: [{ title: "Arithmetic and Relational Operators", type: "slide" }, { title: "List 2", type: "doc", document: "Lista02.pdf" }] },
+          { id: 4, date: "20/03", type: "Laboratório", title: "Class 04: Sequential and Conditional Structure", description: "Simple and compound decision commands (if/else).", lessons: [{ title: "Boolean logic in C", type: "video" }, { title: "Structures if and else", type: "code" }, { title: "List 3", type: "doc", document: "Lista03.pdf" }] },
+          { id: 5, date: "27/03", type: "Teoria", title: "Class 05: Multiple Selection & Logical Operators", description: "Switch-case command and logical operators (AND, OR, NOT).", lessons: [{ title: "The switch command", type: "code" }, { title: "Truth table and operators &&, ||, !", type: "slide" }, { title: "Practice exercises", type: "doc" }] },
+          { id: 6, date: "10/04", type: "Laboratório", title: "Class 06: Repetition (Test at Beginning/End)", description: "While and do-while repetition structures.", lessons: [{ title: "While loop: Syntax and usage", type: "video" }, { title: "Do-While loop: Differences", type: "code" }, { title: "Lab Activity 03", type: "code" }] },
+          { id: 7, date: "17/04", type: "Teoria", title: "Class 07: Repetition (Control Variable)", description: "For repetition structure and nested loops.", lessons: [{ title: "The For loop", type: "slide" }, { title: "Loops inside loops", type: "code" }, { title: "Repetition list", type: "doc" }] },
           { id: 8, date: "24/04", type: "Avaliação", highlight: true, title: "P1 - THEORETICAL EXAM 1", description: "Exam covering content from classes 1 to 7.", lessons: [{ title: "General Review P1", type: "video" }] },
-          { id: 9, date: "08/05", type: "laboratory", title: "Class 08: Arrays (One-dimensional)", description: "Declaration, initialization, and manipulation of arrays.", lessons: [{ title: "Array Concept", type: "slide" }, { title: "Traversing arrays with loops", type: "code" }, { title: "Lab Activity 04", type: "code" }] },
-          { id: 10, date: "15/05", type: "Theory", title: "Class 09: Matrices and Strings", description: "Multidimensional arrays and string manipulation.", lessons: [{ title: "Matrices in C", type: "slide" }, { title: "Strings: Character arrays", type: "code" }, { title: "string.h library", type: "doc" }] },
-          { id: 11, date: "22/05", type: "laboratory", title: "Class 10: Modularization (Functions)", description: "Functions, variable scope, and parameter passing.", lessons: [{ title: "Creating your own functions", type: "video" }, { title: "Parameters by value vs reference", type: "code" }, { title: "Lab Activity 05", type: "code" }] },
-          { id: 12, date: "29/05", type: "Theory", title: "Class 11: Pointers", description: "Memory address concept, pointers, and pointer arithmetic.", lessons: [{ title: "What is a pointer?", type: "slide" }, { title: "Operators & and *", type: "code" }, { title: "Pointers and Arrays", type: "doc" }] },
-          { id: 13, date: "12/06", type: "laboratory", title: "Class 12: Dynamic Allocation & Structs", description: "Malloc, free, and heterogeneous data structures (records).", lessons: [{ title: "Dynamic Memory Allocation", type: "video" }, { title: "Structs (Records)", type: "code" }, { title: "Lab Activity 06", type: "code" }] },
+          { id: 9, date: "08/05", type: "Laboratório", title: "Class 08: Arrays (One-dimensional)", description: "Declaration, initialization, and manipulation of arrays.", lessons: [{ title: "Array Concept", type: "slide" }, { title: "Traversing arrays with loops", type: "code" }, { title: "Lab Activity 04", type: "code" }] },
+          { id: 10, date: "15/05", type: "Teoria", title: "Class 09: Matrices and Strings", description: "Multidimensional arrays and string manipulation.", lessons: [{ title: "Matrices in C", type: "slide" }, { title: "Strings: Character arrays", type: "code" }, { title: "string.h library", type: "doc" }] },
+          { id: 11, date: "22/05", type: "Laboratório", title: "Class 10: Modularization (Functions)", description: "Functions, variable scope, and parameter passing.", lessons: [{ title: "Creating your own functions", type: "video" }, { title: "Parameters by value vs reference", type: "code" }, { title: "Lab Activity 05", type: "code" }] },
+          { id: 12, date: "29/05", type: "Teoria", title: "Class 11: Pointers", description: "Memory address concept, pointers, and pointer arithmetic.", lessons: [{ title: "What is a pointer?", type: "slide" }, { title: "Operators & and *", type: "code" }, { title: "Pointers and Arrays", type: "doc" }] },
+          { id: 13, date: "12/06", type: "Laboratório", title: "Class 12: Dynamic Allocation & Structs", description: "Malloc, free, and heterogeneous data structures (records).", lessons: [{ title: "Dynamic Memory Allocation", type: "video" }, { title: "Structs (Records)", type: "code" }, { title: "Lab Activity 06", type: "code" }] },
           { id: 14, date: "19/06", type: "Avaliação", highlight: true, title: "P2 - THEORETICAL EXAM 2", description: "Cumulative exam (focus classes 8 to 13).", lessons: [{ title: "Review P2", type: "video" }] },
           { id: 15, date: "26/06", type: "Encerramento", title: "Class 13: Review and Grades", description: "Grade delivery and absence review.", lessons: [] },
           { id: 16, date: "17/07", type: "Avaliação", highlight: true, title: "FINAL EXAM", description: "For students with average >= 2.5 and < 5.0 and Attendance >= 75%.", lessons: [] }
         ]
+      },
+      aboutPage: {
+        audio: {
+          playing: 'Soundtrack Playing',
+          paused: 'Soundtrack Paused',
+          ariaLabel: 'Control background music',
+        },
+        hero: {
+          badge: 'YEARS RETROSPECTIVE',
+          title: 'Who is Digo?',
+          subtitle: 'This is not a simple "About Me" page. It\'s an unfiltered collection of memories, chords, sports, and some funny situations that brought me here. Grab a coffee, press play on the soundtrack, and enjoy the journey.',
+        },
+        chapters: {
+          origins: {
+            num: '01',
+            title: 'The mischievous and curious kid',
+            p1: 'If you see me focused on VS Code today, you might not imagine that my journey began by taking things apart as a child. I was that kid who liked to see what was inside things, and it didn\'t take long before I started disassembling and reassembling toys, computers, video games, and even a fan (which never worked again).',
+            p2: 'Raised on a farm, one of my most unforgettable (and perhaps hilarious) moments was when my parents raised pigs in the backyard, and I, with all my genius, decided to grab a piglet to show it to my dad. The result? The little pig got so scared it started squealing and its mother ran after me (spoiler: she bit me, and that\'s the reason for the scar on my chin).',
+          },
+          math: {
+            num: '02',
+            title: 'Math and school',
+            p1: 'In childhood, I confess I didn\'t like to study, but besides taking things apart, I also had a curiosity for numbers. Math was one of my favorite subjects, and I loved solving problems and challenges, which led me to participate in regional knowledge competitions, where I won some prizes.',
+            p2: 'My first medal was related to that!',
+          },
+          soccer: {
+            num: '03',
+            title: 'My first sport: Soccer',
+            text: {
+              desc1: 'My relationship with sports started early, and curiously, with soccer, thanks to my dad, who took me to the games of the team he coached.',
+              desc2: 'Unfortunately, my skill with the ball wasn\'t the best, so this part of life didn\'t last long.',
+              descImg: 'United team pre-game.'
+            }
+          },
+          martial1: {
+            num: '04',
+            title: 'Martial arts: Kung Fu',
+            p1: 'During my childhood, I had the opportunity to practice my first martial art, in a project at my school at the time. It was there that I got to know Kung Fu.',
+            p2: 'The brief passage through Kung Fu taught me discipline, focus, and the importance of doing everything with excellence (or at least trying). It was an incredible experience that deeply marked me, and to this day I carry some teachings from that time.',
+          },
+          martial2: {
+            num: '05',
+            title: 'Martial arts: Muay Thai',
+            p1: 'In my early adolescence, I had the opportunity to practice another martial art, Muay Thai, in a social project of a local church in my city.',
+            p2: 'Over time, I became one of the most dedicated students and received a scholarship from teacher Júnior Shaolin to train at his gym.',
+            descImg: 'Muay Thai training with teacher Júnior Shaolin'
+          },
+          surprise: {
+            num: '06',
+            title: 'The day they threw me a surprise party at school',
+            p1: 'I never gave much importance to my birthdays, but one day, still during my middle school, my friends got together, without me knowing anything, and threw me a surprise birthday party at school.',
+            p2: 'It was such a remarkable moment that even today, when I remember it, I feel very grateful for having such incredible friends. And of course, the party was amazing, with cake, brigadeiro, and lots of fun. Special thanks to my 9th-grade class, who made that day so special for me.',
+            descImg: 'Cutting the cake for friends'
+          },
+          formatura1: {
+            num: '07',
+            title: 'My middle school graduation',
+            p1: 'And perhaps the most awaited moment for kids came for me, the graduation. It was certainly one of the most rewarding things I\'ve ever experienced. Together with some teachers, we organized fairs, raffles, and other activities to raise funds for the graduation party.',
+            p2: 'When the big day arrived, it was simply incredible. Thanks to teacher Paulo Bernardo, I wrote the first excerpts of a book, which was also written by each of my classmates, printed and given to each of us as a memento of that so important phase. And of course, the party was incredible.',
+            descImg: 'Receiving the book and graduation diploma from teacher Paulo Bernardo'
+          },
+          etec1: {
+            num: '08',
+            title: 'I was approved to attend High School and Technical at Etec!',
+            diary: {
+              title: 'My first embedded systems classes',
+              desc: 'A record of the day when we had a challenge to assemble a traffic light circuit using Arduino.'
+            },
+            tests: {
+              title: 'My first programming tests',
+              desc: 'And the tests were like this, with a bunch of handwritten codes, and me trying to understand what was happening. It was a challenge, but also part of the set of triggers for my love of programming.'
+            },
+            first: {
+              title: 'My first day of class at ETEC',
+              desc: 'I remember arriving, and everything was new, new teachers, new classmates, new rooms and laboratories, everything was magical!',
+            },
+            codes: {
+              title: 'My first written codes',
+              desc: 'Here my journey with codes began. Everything very ambiguous and new for a 15-year-old boy. It was a process of trial and error, but each line of code written was a small victory.',
+            }
+          },
+          coral: {
+            num: '9',
+            title: 'First chords',
+            music: {
+              desc1: 'During the covid-19 pandemic, staying months at home, the curiosity to learn new things emerged again. Among them, playing musical instruments. And that\'s how I started learning guitar and ukulele.',
+              desc2: 'I had YouTube, an old guitar, and the will to learn. After a while, posting some videos playing, I was invited to play in the Etec Choir, where I had the opportunity to play at some performances.',
+              descImg: 'A record of the day of my first performance playing guitar, in the choir I participated in at Etec.'
+            }
+          },
+          martial3: {
+            num: '10',
+            title: 'Martial arts: Jiu-Jitsu',
+            p1: 'Here began my relationship with Jiu-Jitsu, which is the sport that most marked me and taught me the most throughout my life. I started practicing as a hobby, but within less than a month, my teacher, Huelder Motta, had already signed me up to compete. Without expecting it, I was champion in all the championships I fought at white belt. That\'s when it all started.',
+            p2: 'Being an atypical case, I was promoted to blue belt in 3 months, even without really knowing what I was doing. Even so, I kept improving, winning the competitions I participated in, and in a short time, I started receiving sponsorships, scholarships, and invitations to train at other gyms.',
+            descImg: 'First Jiu-Jitsu Experience.'
+          },
+          firstHacka: {
+            num: '11',
+            title: '1st Inovagro Congress & Bruto Hacka',
+            text: {
+              desc1: 'In the photo, Maria Eduarda Ayres, Leona do Nascimento, and I, preparing the project for the final presentation of the Hackathon.',
+              desc2: 'Without any doubt, this was definitely the watershed moment for my career choice. It was the first time I participated in a hackathon, and amidst so many uncertainties, nervousness, and inexperience, it was here that I realized I was really on the right track. I saw that I could really solve real problems of society, doing what I loved to do, even with little experience at the time.',
+              descImg: 'We received the 3rd place award, with the Inova Chat project, an intelligent chatbot system developed to filter and select feedback and reports from Minerva Foods employees, making corporate communication highly assertive. Solution integrated with OpenAI APIs.',
+              descImg2: '3rd Place Winners'
+            }
+          },
+          diary: {
+            num: '12',
+            title: 'First newspaper article',
+            diary: {
+              title: 'The beginning of a legacy',
+              desc: 'A record of the day of my first newspaper article, where one of my first Jiu-Jitsu titles was documented.'
+            },
+            tv: {
+              title: 'First programming tests',
+              desc: 'Over several events, I had the opportunity to appear on television programs.'
+            },
+            teach: {
+              title: 'Magazine appearances',
+              desc: 'I have always been a very shy person. Exposing myself, as a model in adolescence, was one of the ways I found to overcome that. Without expecting it, I received some awards, some contracts, and gradually I lost my fear of the public.'
+            }
+          },
+          utfpr: {
+            num: '13',
+            title: 'First college entrance exam approval',
+            p1: 'And one of the most pressured moments in a high school student\'s life came, the choice of college. And for me, it was a very difficult process, full of doubts and uncertainties. At the time, I had been accepted at several universities, but I ended up choosing to study Computer Science at UTFPR.',
+            p2: 'Obviously, everything was magical, the joy of passing, the anxiety of starting, the change of state, the expectation of what college would be like, all of this was a mix of emotions that, when I see others going through it, reminds me of how it was for me, and I feel genuinely happy.',
+            descImg: 'First Jiu-Jitsu Experience.'
+          },
+          ideathon: {
+            num: '14',
+            title: 'Ideathon FAEP/SENAR System',
+            text: {
+              desc1: 'Already in college, but still in the context of technical education, I had the opportunity to participate in the Ideathon of the FAEP/SENAR System, a hackathon where I could develop, in a group, a business model for the agricultural sector.',
+              desc2: 'The solution earned us the 3rd place award, and more importantly than that, the certainty that I was on the right path, and that I could really make a difference.',
+              descImg: 'Receiving the award from Ricardo Ost and Jefrey kleine Albers',
+              descImg2: 'Presenting the project'
+            }
+          },
+        },
+        labels: {
+          liveChildhood: 'Vivid Childhood',
+          mediaHighlight: 'Media Spotlight',
+        }
       }
     }
   },
@@ -715,7 +881,7 @@ export const resources = {
         description: 'Portafolio de Rodrigo Dias, Desarrollador Full Stack'
       },
       navbar: {
-        location: 'Limeira - SP',
+        location: 'Campinas-SP',
         themeToggle: 'Alternar tema claro y oscuro',
         home: 'Inicio',
         about: 'Sobre mí',
@@ -724,7 +890,8 @@ export const resources = {
         projects: 'Proyectos',
         contact: 'Contacto',
         tutoring: 'Tutoría',
-        portfolio: 'Ir al portafolio'
+        portfolio: 'Ir al portafolio',
+        portfolio2: 'Volver al portafolio'
       },
       hero: {
         titleLine1: 'Futuro',
@@ -736,10 +903,11 @@ export const resources = {
       },
       about: {
         title: 'Sobre Mí',
-        paragraph1: 'En resumen, tengo 21 años, soy Técnico en Desarrollo de Sistemas y actualmente estudio Ingeniería de Telecomunicaciones en la Unicamp.',
-        paragraph2: 'Tengo experiencia en el desarrollo de aplicaciones web con Next.js, TypeScript y React.js, además de saber utilizar herramientas no-code como WordPress (Elementor) y Wix. También tengo experiencia en el desarrollo nativo de aplicaciones móviles en Kotlin y Java.',
-        paragraph3: 'Ya sea desarrollando o explorando nuevas tecnologías, mi enfoque siempre está en el rendimiento y la experiencia del usuario. Creo que el diseño no es solo cómo se ve, sino cómo funciona. Actualmente, también estoy profundizando mis estudios en programación competitiva y Ciencia de Datos.',
-        yearsExperience: 'Años de Edad',
+        paragraph1: 'También conocido como <highlight>Digo</highlight>, soy Técnico en Desarrollo de Sistemas por Etec y actualmente estudio Ingeniería de Telecomunicaciones en la Unicamp.',
+        paragraph2: 'Tengo experiencia en el desarrollo de <highlight>aplicaciones web</highlight> con <highlight>Next.js, TypeScript</highlight> y <highlight>React.js</highlight>, además de saber utilizar <highlight>herramientas sin código</highlight> como <highlight>WordPress (Elementor)</highlight> y <highlight>Wix</highlight>. También tengo experiencia en el desarrollo de <highlight>aplicaciones móviles nativas</highlight> en <highlight>Kotlin</highlight> y <highlight>Java</highlight>.',
+        paragraph3: 'Para mí, el código va mucho más allá de la sintaxis; se trata de <highlight>resolver problemas reales</highlight>. Por eso, busco constantemente expandir mis límites, explorando desde la precisión lógica de la programación con <highlight>C/C++</highlight>, hasta el análisis de datos.',
+        paragraph4: 'La tecnología es mi oficio, pero son las <highlight>historias y las personas</highlight> las que me mueven. Cuando no estoy programando, probablemente me encontrarás inmerso en deportes, escuchando música, tocando instrumentos o incluso participando en competiciones.',
+        readMore: '¡Puedes saber más sobre mí haciendo clic aquí! ; )',
       },
       education: {
         title: 'Formación y Títulos',
@@ -784,9 +952,27 @@ export const resources = {
           hackatonMinerva: '3er Lugar Hackathon Bruto Hacka & InovAgro (Minerva Foods) - 2023',
           obmep: 'Mención Honrosa 16ª OBMEP - 2021'
         },
+        languages2: {
+          title: 'Cursos extras',
+          wizard: {
+            date: 'FEB 2026 - Actualmente',
+            title: 'Wizard By Pearson',
+            desc: 'Curso de inglés enfocado en vocabulario y conversación.'
+          },
+          cel: {
+            date: 'FEB 2026 - Actualmente',
+            title: 'Centro de Enseñanza de Lenguas de la Unicamp',
+            desc: 'Inglés con enfoque en habla, escritura, comprensión oral y lectura, con temas académicos.'
+          },
+          usp: {
+            date: 'Completado',
+            title: 'USP (Universidad de São Paulo)',
+            desc: 'Curso de extensión universitaria en inglés, enfocado en lectura y escritura.'
+          }
+        },
         lattes: {
           title: 'Historial Completo',
-          description: 'Accede a mi Currículo Lattes para ver la lista completa de premios, decenas de medallas deportivas, proyectos de investigación y cursos complementarios.',
+          description: 'También puedes acceder a mi Currículo Lattes para ver la lista completa de premios, medallas, proyectos de investigación y cursos complementarios.',
           button: 'Acceder a Lattes'
         }
       },
@@ -959,7 +1145,7 @@ export const resources = {
           { id: 3, date: "13/03", type: "Teoria", title: "Clase 03: Asignaciones y Operadores", description: "Expresiones aritméticas, precedencia y operadores relacionales.", lessons: [{ title: "Operadores Aritméticos y Relacionales", type: "slide" }, { title: "Lista 2", type: "doc", document: "Lista02.pdf" }] },
           { id: 4, date: "20/03", type: "Laboratório", title: "Clase 04: Estructura Secuencial y Condicional", description: "Comandos de decisión simple y compuesta (if/else).", lessons: [{ title: "Lógica booleana en C", type: "video" }, { title: "Estructuras if y else", type: "code" }, { title: "Lista 3", type: "doc", document: "Lista03.pdf" }] },
           { id: 5, date: "27/03", type: "Teoria", title: "Clase 05: Selección Múltiple y Op. Lógicos", description: "Comando switch-case y operadores lógicos (AND, OR, NOT).", lessons: [{ title: "El comando switch", type: "code" }, { title: "Tabla de verdad y operadores &&, ||, !", type: "slide" }, { title: "Ejercicios de fijación", type: "doc" }] },
-          { id: 6, date: "10/04", type: "Laboratório", title: "Clase 06: Repetición (Prueba al Inicio/Fin)", description: "Estructuras de repetición while y do-while.", lessons: [{ title: "Lazo While: Sintaxis y uso", type: "video" }, { title: "Lazo Do-While: Diferencias", type: "code" }, { title: "Lista 4", type: "doc", document: "Lista04.pdf" }] },
+          { id: 6, date: "10/04", type: "Laboratório", title: "Clase 06: Repetición (Prueba al Inicio/Fin)", description: "Estructuras de repetición while y do-while.", lessons: [{ title: "Lazo While: Sintaxis y uso", type: "video" }, { title: "Lazo Do-While: Diferencias", type: "code" }, { title: "Actividad de Lab 03", type: "code" }] },
           { id: 7, date: "17/04", type: "Teoria", title: "Clase 07: Repetición (Variable de Control)", description: "Estructura de repetición for y lazos anidados.", lessons: [{ title: "El lazo For", type: "slide" }, { title: "Bucles dentro de bucles", type: "code" }, { title: "Lista de repetición", type: "doc" }] },
           { id: 8, date: "24/04", type: "Avaliação", highlight: true, title: "P1 - EXAMEN TEÓRICO 1", description: "Evaluación referente al contenido impartido en las clases 1 a 7.", lessons: [{ title: "Revisión General P1", type: "video" }] },
           { id: 9, date: "08/05", type: "Laboratório", title: "Clase 08: Vectores (Arrays Unidimensionales)", description: "Declaración, inicialización y manipulación de vectores.", lessons: [{ title: "Concepto de Array", type: "slide" }, { title: "Recorriendo vectores con lazos", type: "code" }, { title: "Actividad de Lab 04", type: "code" }] },
@@ -971,6 +1157,151 @@ export const resources = {
           { id: 15, date: "26/06", type: "Encerramento", title: "Clase 13: Revisión y Promedios", description: "Entrega de notas y revisión de faltas.", lessons: [] },
           { id: 16, date: "17/07", type: "Avaliação", highlight: true, title: "EXAMEN FINAL", description: "Para alumnos con promedio >= 2.5 y < 5.0 y Asistencia >= 75%.", lessons: [] }
         ]
+      },
+      aboutPage: {
+        audio: {
+          playing: 'Banda Sonora Reproduciendo',
+          paused: 'Banda Sonora Pausada',
+          ariaLabel: 'Controlar música de fondo',
+        },
+        hero: {
+          badge: 'RETROSPECTIVA DE AÑOS',
+          title: '¿Quién es Digo?',
+          subtitle: 'Esta no es una simple página "Sobre Mí". Es una colección sin filtrar de recuerdos, acordes, deportes y algunas situaciones divertidas que me trajeron hasta aquí. Toma un café, reproduce la banda sonora y disfruta del viaje.',
+        },
+        chapters: {
+          origins: {
+            num: '01',
+            title: 'El niño travieso y curioso',
+            p1: 'Si me ves concentrado en VS Code hoy, quizás no imagines que mi viaje comenzó desmontando cosas cuando era niño. Fui ese niño al que le gustaba ver qué había dentro de las cosas, y no tardó mucho en empezar a desmontar y montar juguetes, computadoras, videojuegos e incluso un ventilador (que nunca más funcionó).',
+            p2: 'Criado en una granja, uno de mis momentos más inolvidables (y quizás graciosos) fue cuando mis padres criaban cerdos en el patio y yo, con toda mi genialidad, decidí agarrar un lechón para mostrárselo a mi papá. ¿El resultado? El cerdito se asustó tanto que empezó a chillar y su madre corrió detrás de mí (spoiler: me mordió, y esa es la razón de la cicatriz en mi barbilla).',
+          },
+          math: {
+            num: '02',
+            title: 'Matemáticas y la escuela',
+            p1: 'En la infancia, confieso que no me gustaba estudiar, pero además de desmontar cosas, también tenía curiosidad por los números. Las matemáticas fueron una de mis materias favoritas y me encantaba resolver problemas y desafíos, lo que me llevó a participar en competencias de conocimiento de la región, donde gané algunos premios.',
+            p2: '¡Mi primera medalla estuvo relacionada con eso!',
+          },
+          soccer: {
+            num: '03',
+            title: 'Mi primer deporte: El Fútbol',
+            text: {
+              desc1: 'Mi relación con los deportes comenzó temprano, y curiosamente, con el fútbol, gracias a mi papá, que me llevaba a los partidos del equipo que él entrenaba.',
+              desc2: 'Lamentablemente, mi habilidad con el balón no era de las mejores, así que esta parte de la vida no duró mucho.',
+              descImg: 'Equipo unido antes del partido.'
+            }
+          },
+          martial1: {
+            num: '04',
+            title: 'Las artes marciales: Kung Fu',
+            p1: 'Durante mi infancia, tuve la oportunidad de practicar mi primer arte marcial, en un proyecto de mi escuela en ese entonces. Fue allí donde conocí el Kung Fu.',
+            p2: 'El breve paso por el Kung Fu me enseñó disciplina, enfoque y la importancia de hacer todo con excelencia (o al menos intentarlo). Fue una experiencia increíble que me marcó profundamente, y hasta hoy llevo algunas enseñanzas de esa época.',
+          },
+          martial2: {
+            num: '05',
+            title: 'Las artes marciales: Muay Thai',
+            p1: 'En mi preadolescencia, tuve la oportunidad de practicar otro arte marcial, el Muay Thai, en un proyecto social de una iglesia local de mi ciudad.',
+            p2: 'Con el tiempo, me convertí en uno de los alumnos más dedicados y recibí una beca del profesor Júnior Shaolin para entrenar en su academia.',
+            descImg: 'Entrenamiento de Muay Thai con el profesor Júnior Shaolin'
+          },
+          surprise: {
+            num: '06',
+            title: 'El día que me hicieron una fiesta sorpresa en la escuela',
+            p1: 'Nunca le di mucha importancia a mis cumpleaños, pero un día, aún en la primaria, mis amigos se unieron, sin que yo supiera nada, y me hicieron una fiesta de cumpleaños sorpresa en la escuela.',
+            p2: 'Fue un momento tan marcante que hasta hoy, cuando lo recuerdo, me siento muy agradecido por tener amigos tan increíbles. Y claro, la fiesta fue increíble, con pastel, brigadeiro y mucha diversión. Agradecimientos especiales a mi clase de 9º grado, que hizo ese día tan especial para mí.',
+            descImg: 'Cortando el pastel para los amigos'
+          },
+          formatura1: {
+            num: '07',
+            title: 'Mi graduación de la primaria',
+            p1: 'Y quizás el momento más esperado por los niños llegó para mí, la graduación. Fue sin duda una de las cosas más gratificantes que he vivido. Junto con algunos profesores, organizamos quermeses, rifas y otras actividades para recaudar fondos para la fiesta de graduación.',
+            p2: 'Cuando llegó el gran día, fue simplemente increíble. Gracias al profesor Paulo Bernardo, escribí los primeros fragmentos de un libro, que también fue escrito por cada uno de mis compañeros de clase, impreso y entregado a cada uno de nosotros como un recuerdo de esa fase tan importante. Y claro, la fiesta fue increíble.',
+            descImg: 'Recibiendo el libro y el diploma de graduación de manos del profesor Paulo Bernardo'
+          },
+          etec1: {
+            num: '08',
+            title: '¡Fui aprobado para estudiar la Enseñanza Media y Técnica en Etec!',
+            diary: {
+              title: 'Mis primeras clases de sistemas embebidos',
+              desc: 'Un registro del día en que tuvimos el desafío de montar un circuito de semáforo utilizando Arduino.'
+            },
+            tests: {
+              title: 'Mis primeros exámenes de programación',
+              desc: 'Y los exámenes eran así, con un montón de códigos escritos a mano, y yo tratando de entender qué estaba pasando. Fue un desafío, pero también parte del conjunto de detonantes para mi amor por la programación.'
+            },
+            first: {
+              title: 'Mi primer día de clases en ETEC',
+              desc: 'Recuerdo que llegué y todo era nuevo, nuevos profesores, nuevos compañeros, nuevas salas y laboratorios, ¡todo fue mágico!',
+            },
+            codes: {
+              title: 'Mis primeros códigos escritos',
+              desc: 'Aquí comenzó mi viaje con los códigos. Todo muy ambiguo y nuevo para un chico de 15 años. Fue un proceso de ensayo y error, pero cada línea de código escrita era una pequeña victoria.',
+            }
+          },
+          coral: {
+            num: '9',
+            title: 'Primeros acordes',
+            music: {
+              desc1: 'Durante la pandemia de covid-19, al quedarme meses en casa, surgió nuevamente la curiosidad por aprender cosas nuevas. Entre ellas, tocar instrumentos musicales. Y así fue como empecé a aprender guitarra y ukelele.',
+              desc2: 'Tenía YouTube, una guitarra vieja y las ganas de aprender. Después de un tiempo, publicando algunos videos tocando, fui invitado a tocar en el Coro de Etec, donde tuve la oportunidad de tocar en algunas presentaciones.',
+              descImg: 'Un registro del día de mi primera presentación tocando la guitarra, en el coro del que participaba en Etec.'
+            }
+          },
+          martial3: {
+            num: '10',
+            title: 'Las artes marciales: El Jiu-Jitsu',
+            p1: 'Aquí comenzó mi relación con el Jiu-Jitsu, que es el deporte que más me marcó y que más me enseñó a lo largo de mi vida. Empecé a practicarlo como hobby, pero en menos de un mes, mi profesor, Huelder Motta, ya me inscribió para competir. Sin esperarlo, fui campeón en todos los campeonatos que peleé en la categoría de cinturón blanco. Ahí fue donde todo comenzó.',
+            p2: 'Siendo un caso atípico, fui promovido a cinturón azul en 3 meses, incluso sin saber realmente lo que estaba haciendo. Aun así, fui mejorando, ganando las competiciones en las que participaba, y en poco tiempo empecé a recibir patrocinios, becas e invitaciones para entrenar en otras academias.',
+            descImg: 'Primera Experiencia de Jiu-Jitsu.'
+          },
+          firstHacka: {
+            num: '11',
+            title: '1º Congreso Inovagro & Bruto Hacka',
+            text: {
+              desc1: 'En la foto, Maria Eduarda Ayres, Leona do Nascimento y yo, elaborando el proyecto para la presentación final del Hackathon.',
+              desc2: 'Sin lugar a dudas, este fue definitivamente el punto de inflexión para la elección de mi carrera. Fue la primera vez que participé en un hackathon, y en medio de tantas incertidumbres, nerviosismo e inexperiencia, fue aquí donde me di cuenta de que realmente estaba en el camino correcto. Vi que podía realmente resolver problemas reales de la sociedad, haciendo lo que amaba hacer, incluso con poca experiencia en ese momento.',
+              descImg: 'Recibimos el premio del 3º lugar, con el proyecto Inova Chat, un sistema de chatbot inteligente desarrollado para filtrar y seleccionar comentarios y reportes de los empleados de Minerva Foods, haciendo la comunicación empresarial altamente asertiva. Solución integrada con las APIs de OpenAI.',
+              descImg2: 'Ganadores del 3º Lugar'
+            }
+          },
+          diary: {
+            num: '12',
+            title: 'Primera nota en un periódico',
+            diary: {
+              title: 'El comienzo de un legado',
+              desc: 'Un registro del día de mi primera nota en un periódico, donde quedó documentado uno de mis primeros títulos en Jiu-Jitsu.'
+            },
+            tv: {
+              title: 'Primeras pruebas de programación',
+              desc: 'A lo largo de varios acontecimientos, tuve la oportunidad de aparecer en programas de televisión.'
+            },
+            teach: {
+              title: 'Apariciones en revistas',
+              desc: 'Siempre he sido una persona muy tímida. Exponerme, como modelo en la adolescencia, fue una de las formas que encontré para superarlo. Sin esperarlo, recibí algunos premios, algunos contratos, y poco a poco fui perdiendo el miedo al público.'
+            }
+          },
+          utfpr: {
+            num: '13',
+            title: 'Primera aprobación en un examen de ingreso a la universidad',
+            p1: 'Y llegó uno de los momentos más presionados en la vida de un joven de secundaria, la elección de la universidad. Y para mí, fue un proceso muy difícil, lleno de dudas e incertidumbres. En ese momento, había sido aceptado en varias universidades, pero terminé eligiendo estudiar Ciencias de la Computación en la UTFPR.',
+            p2: 'Obviamente, todo fue mágico, la alegría de aprobar, la ansiedad de empezar, el cambio de estado, la expectativa de cómo sería la universidad, todo eso fue una mezcla de emociones que, cuando veo a otros pasar por ello, me recuerda cómo fue para mí, y me alegro genuinamente.',
+            descImg: 'Primera Experiencia de Jiu-Jitsu.'
+          },
+          ideathon: {
+            num: '14',
+            title: 'Ideathon Sistema FAEP/SENAR',
+            text: {
+              desc1: 'Ya en la universidad, pero aún en el contexto de la formación técnica, tuve la oportunidad de participar en el Ideathon del Sistema FAEP/SENAR, un hackathon donde pude desarrollar en grupo un modelo de negocio para el sector agropecuario.',
+              desc2: 'La solución nos valió el premio del 3º lugar, y más importante que eso, la certeza de que estaba en el camino correcto y que realmente podía hacer la diferencia.',
+              descImg: 'Recibiendo el premio de manos de Ricardo Ost y Jefrey kleine Albers',
+              descImg2: 'Presentando el proyecto'
+            }
+          },
+        },
+        labels: {
+          liveChildhood: 'Infancia Viva',
+          mediaHighlight: 'Destacado en los Medios',
+        }
       }
     }
   },
@@ -981,7 +1312,7 @@ export const resources = {
         description: 'Portfolio di Rodrigo Dias, Sviluppatore Full Stack'
       },
       navbar: {
-        location: 'Limeira - SP',
+        location: 'Campinas-SP',
         themeToggle: 'Alterna tema chiaro e scuro',
         home: 'Inizio',
         about: 'Su di me',
@@ -990,7 +1321,8 @@ export const resources = {
         projects: 'Progetti',
         contact: 'Contatti',
         tutoring: 'Tutoraggio',
-        portfolio: 'Vai al portfolio'
+        portfolio: 'Vai al portfolio',
+        portfolio2: 'Torna al portfolio'
       },
       hero: {
         titleLine1: 'Futuro',
@@ -1002,10 +1334,11 @@ export const resources = {
       },
       about: {
         title: 'Su di Me',
-        paragraph1: 'In sintesi, ho 21 anni, sono un Tecnico in Sviluppo di Sistemi e attualmente studio Ingegneria delle Telecomunicazioni presso l\'Unicamp.',
-        paragraph2: 'Ho esperienza nello sviluppo di applicazioni web con Next.js, TypeScript e React.js, oltre a saper utilizzare strumenti no-code come WordPress (Elementor) e Wix. Ho anche esperienza nello sviluppo nativo di app mobili in Kotlin e Java.',
-        paragraph3: 'Che si tratti di sviluppare o esplorare nuove tecnologie, il mio focus è sempre sulle prestazioni e sull\'esperienza utente. Credo che il design non sia solo come appare, ma come funziona. Attualmente, sto anche approfondendo i miei studi in programmazione competitiva e Data Science.',
-        yearsExperience: 'Anni di Età',
+        paragraph1: 'Conosciuto anche come <highlight>Digo</highlight>, sono un Tecnico in Sviluppo di Sistemi presso Etec e attualmente studio Ingegneria delle Telecomunicazioni all\'Unicamp.',
+        paragraph2: 'Ho esperienza nello sviluppo di <highlight>applicazioni web</highlight> con <highlight>Next.js, TypeScript</highlight> e <highlight>React.js</highlight>, oltre a saper utilizzare <highlight>strumenti no-code</highlight> come <highlight>WordPress (Elementor)</highlight> e <highlight>Wix</highlight>. Ho anche esperienza nello sviluppo di <highlight>applicazioni mobile native</highlight> in <highlight>Kotlin</highlight> e <highlight>Java</highlight>.',
+        paragraph3: 'Per me, il codice va ben oltre la sintassi; si tratta di <highlight>risolvere problemi reali</highlight>. Per questo cerco costantemente di espandere i miei limiti, esplorando dalla precisione logica della programmazione con <highlight>C/C++</highlight>, fino all\'analisi dei dati.',
+        paragraph4: 'La tecnologia è il mio mestiere, ma sono le <highlight>storie e le persone</highlight> a muovermi. Quando non sto programmando, probabilmente mi troverete immerso nello sport, ad ascoltare musica, suonare strumenti o persino a partecipare a competizioni.',
+        readMore: 'Puoi saperne di più su di me cliccando qui! ; )',
       },
       education: {
         title: 'Formazione e Titoli',
@@ -1050,9 +1383,27 @@ export const resources = {
           hackatonMinerva: '3° Posto Hackathon Bruto Hacka & InovAgro (Minerva Foods) - 2023',
           obmep: 'Menzione d\'Onore 16ª OBMEP - 2021'
         },
+        languages2: {
+          title: 'Corsi extra',
+          wizard: {
+            date: 'FEB 2026 - Attualmente',
+            title: 'Wizard By Pearson',
+            desc: 'Corso di inglese focalizzato sul vocabolario e la conversazione.'
+          },
+          cel: {
+            date: 'FEB 2026 - Attualmente',
+            title: 'Centro di Insegnamento delle Lingue dell\'Unicamp',
+            desc: 'Inglese focalizzato su produzione orale, scrittura, comprensione orale e lettura, con temi accademici.'
+          },
+          usp: {
+            date: 'Completato',
+            title: 'USP (Università di San Paolo)',
+            desc: 'Corso di estensione universitaria in lingua inglese, focalizzato su lettura e scrittura.'
+          }
+        },
         lattes: {
           title: 'Storia Completa',
-          description: 'Accedi al mio Curriculum Lattes per visualizzare l\'elenco completo dei premi, decine di medaglie sportive, progetti di ricerca e corsi complementari.',
+          description: 'Puoi anche accedere al mio Curriculum Lattes per visualizzare l\'elenco completo di premi, medaglie, progetti di ricerca e corsi complementari.',
           button: 'Accedi a Lattes'
         }
       },
@@ -1237,6 +1588,151 @@ export const resources = {
           { id: 15, date: "26/06", type: "Encerramento", title: "Lezione 13: Revisione e Medie", description: "Consegna voti e revisione assenze.", lessons: [] },
           { id: 16, date: "17/07", type: "Avaliação", highlight: true, title: "ESAME FINALE", description: "Per studenti con media >= 2.5 e < 5.0 e Frequenza >= 75%.", lessons: [] }
         ]
+      },
+      aboutPage: {
+        audio: {
+          playing: 'Colonna Sonora in Riproduzione',
+          paused: 'Colonna Sonora in Pausa',
+          ariaLabel: 'Controlla musica di sottofondo',
+        },
+        hero: {
+          badge: 'RETROSPETTIVA DEGLI ANNI',
+          title: 'Chi è Digo?',
+          subtitle: 'Questa non è una semplice pagina "Su di Me". È una raccolta non filtrata di ricordi, accordi, sport e alcune situazioni divertenti che mi hanno portato fino a qui. Prendi un caffè, avvia la colonna sonora e goditi il viaggio.',
+        },
+        chapters: {
+          origins: {
+            num: '01',
+            title: 'Il bambino birichino e curioso',
+            p1: 'Se mi vedi concentrato su VS Code oggi, forse non immagini che il mio viaggio sia iniziato smontando cose da bambino. Ero quel bambino a cui piaceva vedere cosa c\'era dentro le cose, e non ci è voluto molto prima che iniziassi a smontare e rimontare giocattoli, computer, videogiochi e persino un ventilatore (che non ha mai più funzionato).',
+            p2: 'Cresciuto in una fattoria, uno dei miei momenti più indimenticabili (e forse esilaranti) è stato quando i miei genitori allevavano maiali nel cortile, e io, con tutta la mia genialità, decisi di prendere un maialino per mostrarlo a mio padre. Il risultato? Il maialino si spaventò così tanto che iniziò a strillare e sua madre mi corse dietro (spoiler: mi morse, e questa è la ragione della cicatrice sul mio mento).',
+          },
+          math: {
+            num: '02',
+            title: 'Matematica e scuola',
+            p1: 'Nell\'infanzia, confesso che non mi piaceva studiare, ma oltre a smontare cose, avevo anche una curiosità per i numeri. La matematica era una delle mie materie preferite e adoravo risolvere problemi e sfide, il che mi portò a partecipare a competizioni di conoscenza della regione, dove vinsi alcuni premi.',
+            p2: 'La mia prima medaglia fu legata a questo!',
+          },
+          soccer: {
+            num: '03',
+            title: 'Il mio primo sport: Il Calcio',
+            text: {
+              desc1: 'Il mio rapporto con lo sport iniziò presto, e curiosamente con il calcio, grazie a mio padre che mi portava alle partite della squadra che allenava.',
+              desc2: 'Purtroppo la mia abilità con la palla non era delle migliori, quindi questa parte della vita non durò a lungo.',
+              descImg: 'Squadra unita prima della partita.'
+            }
+          },
+          martial1: {
+            num: '04',
+            title: 'Le arti marziali: Kung Fu',
+            p1: 'Durante la mia infanzia, ebbi l\'opportunità di praticare la mia prima arte marziale, in un progetto della mia scuola di allora. Fu lì che conobbi il Kung Fu.',
+            p2: 'Il breve passaggio nel Kung Fu mi insegnò disciplina, concentrazione e l\'importanza di fare tutto con eccellenza (o almeno provarci). Fu un\'esperienza incredibile che mi segnò profondamente, e ancora oggi porto con me alcuni insegnamenti di quel periodo.',
+          },
+          martial2: {
+            num: '05',
+            title: 'Le arti marziali: Muay Thai',
+            p1: 'Nella mia preadolescenza, ebbi l\'opportunità di praticare un\'altra arte marziale, il Muay Thai, in un progetto sociale di una chiesa locale della mia città.',
+            p2: 'Col tempo, diventai uno degli allievi più dedicati e ricevetti una borsa di studio dal maestro Júnior Shaolin per allenarmi nella sua palestra.',
+            descImg: 'Allenamento di Muay Thai con il maestro Júnior Shaolin'
+          },
+          surprise: {
+            num: '06',
+            title: 'Il giorno in cui mi fecero una festa a sorpresa a scuola',
+            p1: 'Non ho mai dato molta importanza ai miei compleanni, ma un giorno, ancora durante le scuole medie, i miei amici si unirono, senza che io sapessi nulla, e mi fecero una festa di compleanno a sorpresa a scuola.',
+            p2: 'Fu un momento così significativo che ancora oggi, quando lo ricordo, mi sento molto grato per avere amici così incredibili. E naturalmente la festa fu fantastica, con torta, brigadeiro e tanto divertimento. Un ringraziamento speciale alla mia classe di prima media, che rese quel giorno così speciale per me.',
+            descImg: 'Tagliando la torta per gli amici'
+          },
+          formatura1: {
+            num: '07',
+            title: 'Il mio diploma di scuola media',
+            p1: 'E forse il momento più atteso dai bambini arrivò per me, il diploma. Fu certamente una delle cose più gratificanti che abbia mai vissuto. Insieme ad alcuni insegnanti, organizzammo sagre, lotterie e altre attività per raccogliere fondi per la festa di diploma.',
+            p2: 'Quando arrivò il grande giorno, fu semplicemente incredibile. Grazie al professor Paulo Bernardo, scrissi i primi brani di un libro, che fu scritto anche da ciascuno dei miei compagni di classe, stampato e consegnato a ognuno di noi come ricordo di quella fase così importante. E naturalmente la festa fu incredibile.',
+            descImg: 'Ricevendo il libro e il diploma dalle mani del professor Paulo Bernardo'
+          },
+          etec1: {
+            num: '08',
+            title: 'Fui ammesso al Liceo e Tecnico all\'Etec!',
+            diary: {
+              title: 'Le mie prime lezioni di sistemi embedded',
+              desc: 'Una registrazione del giorno in cui affrontammo la sfida di montare un circuito di un semaforo usando Arduino.'
+            },
+            tests: {
+              title: 'I miei primi esami di programmazione',
+              desc: 'E gli esami erano così, con un mucchio di codici scritti a mano, e io che cercavo di capire cosa stesse succedendo. Fu una sfida, ma anche parte dell\'insieme di inneschi per il mio amore per la programmazione.'
+            },
+            first: {
+              title: 'Il mio primo giorno di lezione all\'ETEC',
+              desc: 'Ricordo che arrivai e tutto era nuovo, nuovi insegnanti, nuovi compagni, nuove aule e laboratori, tutto fu magico!',
+            },
+            codes: {
+              title: 'I miei primi codici scritti',
+              desc: 'Qui iniziò il mio viaggio con i codici. Tutto molto ambiguo e nuovo per un ragazzo di 15 anni. Fu un processo di tentativi ed errori, ma ogni riga di codice scritta era una piccola vittoria.',
+            }
+          },
+          coral: {
+            num: '9',
+            title: 'Primi accordi',
+            music: {
+              desc1: 'Durante la pandemia di covid-19, restando mesi a casa, emerse di nuovo la curiosità di imparare cose nuove. Tra queste, suonare strumenti musicali. E così iniziai a imparare chitarra e ukulele.',
+              desc2: 'Avevo YouTube, una vecchia chitarra e la voglia di imparare. Dopo un po\', pubblicando alcuni video mentre suonavo, fui invitato a suonare nel Coro dell\'Etec, dove ebbi l\'opportunità di suonare in alcune esibizioni.',
+              descImg: 'Una registrazione del giorno della mia prima esibizione alla chitarra, nel coro di cui facevo parte all\'Etec.'
+            }
+          },
+          martial3: {
+            num: '10',
+            title: 'Le arti marziali: Il Jiu-Jitsu',
+            p1: 'Qui iniziò il mio rapporto con il Jiu-Jitsu, che è lo sport che più mi ha segnato e che più mi ha insegnato nel corso della mia vita. Iniziai a praticarlo come hobby, ma in meno di un mese, il mio maestro, Huelder Motta, mi iscrisse già per competere. Senza aspettarmelo, fui campione in tutti i campionati in cui combattei nella cintura bianca. Fu allora che tutto ebbe inizio.',
+            p2: 'Essendo un caso atipico, fui promosso cintura blu in 3 mesi, pur senza sapere bene cosa stessi facendo. Ciò nonostante, continuai a migliorare, vincendo le competizioni a cui partecipavo, e in poco tempo iniziai a ricevere sponsorizzazioni, borse di studio e inviti ad allenarmi in altre palestre.',
+            descImg: 'Prima Esperienza di Jiu-Jitsu.'
+          },
+          firstHacka: {
+            num: '11',
+            title: '1º Congresso Inovagro & Bruto Hacka',
+            text: {
+              desc1: 'Nella foto, Maria Eduarda Ayres, Leona do Nascimento ed io, mentre elaboravamo il progetto per la presentazione finale dell\'Hackathon.',
+              desc2: 'Senza alcun dubbio, questo fu sicuramente il punto di svolta per la scelta della mia carriera. Fu la prima volta che partecipai a un hackathon, e in mezzo a tante incertezze, nervosismo e inesperienza, fu qui che mi resi conto che ero davvero sulla strada giusta. Vidi che potevo davvero risolvere problemi reali della società, facendo ciò che amavo fare, anche se con poca esperienza all\'epoca.',
+              descImg: 'Ricevemmo il premio del 3º posto, con il progetto Inova Chat, un sistema di chatbot intelligente sviluppato per filtrare e selezionare feedback e segnalazioni dei dipendenti di Minerva Foods, rendendo la comunicazione aziendale altamente assertiva. Soluzione integrata con le API di OpenAI.',
+              descImg2: 'Vincitori del 3º Posto'
+            }
+          },
+          diary: {
+            num: '12',
+            title: 'Primo articolo su un giornale',
+            diary: {
+              title: 'L\'inizio di un\'eredità',
+              desc: 'Una registrazione del giorno del mio primo articolo su un giornale, dove fu documentato uno dei miei primi titoli nel Jiu-Jitsu.'
+            },
+            tv: {
+              title: 'Primi esami di programmazione',
+              desc: 'Nel corso di vari eventi, ebbi l\'opportunità di apparire in programmi televisivi.'
+            },
+            teach: {
+              title: 'Apparizioni su riviste',
+              desc: 'Sono sempre stato una persona molto timida. Espormi, come modello nell\'adolescenza, fu uno dei modi che trovai per superarlo. Senza aspettarmelo, ricevetti alcuni premi, alcuni contratti, e piano piano persi la paura del pubblico.'
+            }
+          },
+          utfpr: {
+            num: '13',
+            title: 'Prima ammissione a un test di ammissione all\'università',
+            p1: 'E arrivò uno dei momenti più stressanti nella vita di un giovane delle superiori, la scelta dell\'università. E per me, fu un processo molto difficile, pieno di dubbi e incertezze. All\'epoca ero stato ammesso in diverse università, ma alla fine scelsi di studiare Informatica all\'UTFPR.',
+            p2: 'Ovviamente, tutto fu magico, la gioia di passare, l\'ansia di iniziare, il cambiamento di stato, l\'aspettativa di come sarebbe stata l\'università, tutto ciò fu un mix di emozioni che, quando vedo altri attraversarlo, mi ricorda come fu per me, e mi sento genuinamente felice.',
+            descImg: 'Prima Esperienza di Jiu-Jitsu.'
+          },
+          ideathon: {
+            num: '14',
+            title: 'Ideathon Sistema FAEP/SENAR',
+            text: {
+              desc1: 'Già all\'università, ma ancora nel contesto della formazione tecnica, ebbi l\'opportunità di partecipare all\'Ideathon del Sistema FAEP/SENAR, un hackathon dove potei sviluppare in gruppo un modello di business per il settore agricolo.',
+              desc2: 'La soluzione ci valse il premio del 3º posto, e più importante di questo, la certezza di essere sulla strada giusta e di poter davvero fare la differenza.',
+              descImg: 'Ricevendo il premio dalle mani di Ricardo Ost e Jefrey kleine Albers',
+              descImg2: 'Presentando il progetto'
+            }
+          },
+        },
+        labels: {
+          liveChildhood: 'Infanzia Vivace',
+          mediaHighlight: 'In Primo Piano sui Media',
+        }
       }
     }
   }
