@@ -66,15 +66,6 @@ const { t } = useTranslation();
           </div>
         )}
 
-        {/* 2. Links da página About para o Menu Hambúrguer no Mobile */}
-        {isAboutPage && (
-          <div className={`${styles.navLinks} ${isMenuOpen ? styles.navLinksOpen : ''}`}>
-            <Link href="/" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>
-              {t('navbar.portfolio2')}
-            </Link>
-          </div>
-        )}
-
         <div className={styles.rightControls}>
           {/* Botão de Ação Principal Dinâmico (Desktop & Fallback) */}
           {isTutoringPage &&(
