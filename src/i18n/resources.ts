@@ -89,7 +89,7 @@ export const resources = {
           hackatonMinerva: '3º Lugar Hackathon Bruto Hacka & InovAgro (Minerva Foods) - 2023',
           obmep: 'Menção Honrosa 16ª OBMEP - 2021'
         },
-        languages2:{
+        languages2: {
           title: 'Cursos extras',
           wizard: {
             date: 'FEV 2026 - Atualmente',
@@ -294,6 +294,151 @@ export const resources = {
           { id: 15, date: "26/06", type: "Encerramento", title: "Aula 13: Revisão e Médias", description: "Entrega de notas e revisão de faltas.", lessons: [] },
           { id: 16, date: "17/07", type: "Avaliação", highlight: true, title: "EXAME FINAL", description: "Para alunos com média >= 2.5 e < 5.0 e Frequência >= 75%.", lessons: [] }
         ]
+      },
+      aboutPage: {
+        audio: {
+          playing: 'Trilha Sonora Ativa',
+          paused: 'Trilha Sonora Pausada',
+          ariaLabel: 'Controlar música de fundo', 
+        },
+        hero: {
+          badge: 'RETROSPECTIVA DOS ANOS',
+          title: 'Quem é o Digo?',
+          subtitle: 'Esta não é uma simples página "Sobre Mim". É uma coleção não filtrada de memórias, acordes, esportes, e algumas situações engraçadas que me trouxeram até aqui. Pegue um café, dê play na trilha sonora e aproveite a jornada.',
+        },
+        chapters: {
+          origins: {
+            num: '01',
+            title: 'A Criança arteira e curiosa',
+            p1: 'Se você me vê focado no VS Code hoje, talvez não imagine que minha jornada começou desmontando coisas quando criança. Fui aquela criança que gostava de ver o que tinha dentro das coisas, e não demorou muito para que eu começasse a desmontar e montar brinquedos, computadores, videogames e até um ventilador (que nunca mais funcionou).',
+            p2: 'Criado em fazenda, um dos meus momentos mais inesquecíveis (e talvez hilários) foi quando meus pais criavam porcos no quintal, e eu, com toda a minha genialidade, resolvi pegar um filhote e levar pra mostrar pro meu pai. O resultado? O porquinho ficou tão assustado que começou a gritar e a mãe dele correr atrás de mim (spoiler: ela me mordeu, e esse é o motivo da minha cicatriz no queixo).',
+          },
+          math: {
+            num: '02',
+            title: 'Matemática e a escola',
+            p1: 'Na infância, eu confesso que não gostava de estudar, mas, além de desmontar coisas, eu também tinha uma curiosidade por números. A matemática foi uma das minhas matérias favoritas, e eu adorava resolver problemas e desafios, o que me levou a participar de competições de conhecimentos da região, onde ganhei alguns prêmios.',
+            p2: 'A minha primeira medalha foi relacionada a isso!',
+          },
+          soccer: {
+            num: '03',
+            title: 'Meu primeiro esporte: O Futebol',
+            text: {
+              desc1: 'Minha relação com os esportes começou cedo, e curiosamente, com o futebol, graças ao meu pai, me levando para os jogos do time que ele era treinador.',
+              desc2: 'Infelizmente, minha habilidade com a bola não era das melhores, então essa parte da vida não durou muito tempo.',
+              descImg: 'Time unido pré jogo.'
+            }
+          },
+          martial1: {
+            num: '04',
+            title: 'As artes marciais: Kung Fu',
+            p1: 'Durante minha infância, tive a oportunidade de praticar minha primeira arte marcial, em um projeto da minha escola na época. Foi lá que eu conheci o Kung Fu.',
+            p2: 'A breve passagem pelo Kung Fu, me ensinou disciplina, foco e a importância de fazer tudo com excelência (ou ao menos, tentar). Foi uma experiência incrível que me marcou profundamente, e até hoje carrego alguns ensinamentos dessa época.',
+          },
+          martial2: {
+            num: '05',
+            title: 'As artes marciais: Muay Thai',
+            p1: 'Na minha pré adolescência, tive a oportunidade de praticar outra arte marcial, o Muay Thai, em um projeto social de uma igreja local da minha cidade',
+            p2: 'Com o tempo, me tornei um dos alunos mais dedicados e recebi uma bolsa do professor Júnior Shaolin, para treinar em sua academia.',
+            descImg: 'Treino de Muay Thai com o professor Júnior Shaolin'
+          },
+          surprise: {
+            num: '06',
+            title: 'O dia em que me fizeram uma festa surpresa na escola',
+            p1: 'Nunca dei tanta significancia aos meus aniversários, mas, um dia, ainda durante meu ensino fundamental, meus amigos se uniram, sem eu saber da nada, e me fizeram uma festa de aniversário surpresa na escola.',
+            p2: 'Foi um momento tão marcante que até hoje, quando lembro, me sinto muito grato por ter amigos tão incríveis. E claro, a festa foi incrível, com direito a bolo, brigadeiro e muita diversão. Agradecimento especiais à minha turma do 9º ano, que fez esse dia tão especial para mim.',
+            descImg: 'Cortando o bolo para os amigos'
+          },
+          formatura1: {
+            num: '07',
+            title: 'Minha formatura do Fundamental',
+            p1: 'E talvez o momento mais esperado pelas crianças chegou pra mim, a formatura. E Com toda certeza, foi uma das coisas mais gratificates que já vivi. Juntamente com alguns professores, organizamos quermesses, rifas, e outras atividades para arrecadar fundos para a festa de formatura.',
+            p2: 'Quando o grande dia chegou, foi simplesmente incrível. Graças ao professor Paulo Bernardo, escrevi meus primeiros trechos de um livro, que também foi escrito por cada um dos meus colegas de turma, impresso e entregue para cada um de nós como uma lembrança dessa fase tão importante. E claro, a festa foi incrível.',
+            descImg: 'Recebendo o livro e o diploma de formatura das mãos do professor Paulo Bernardo'
+          },
+          etec1: {
+            num: '08',
+            title: 'Fui aprovado para cursar o Ensino Médio e Técnico na Etec!',
+            diary: {
+              title: 'Minhas primeiras aulas de sistemas embarcados',
+              desc: 'Um registro do dia em que tivemos um desafio de montar um circuito de um semáforo utilizando o arduíno.'
+            },
+            tests: {
+              title: 'Minhas primeiras provas de programação',
+              desc: 'E as provas eram assim, com um monte de códigos escritos à mão, e eu tentando entender o que estava acontecendo. Foi um desafio, mas também parte do conjunto de gatilhos para o meu amor pela programação.'
+            },
+            first: {
+              title: 'Meu primeiro dia de aula na ETEC',
+              desc: 'Lembro que cheguei, e tudo era novo, novos professores, novos colegas, novas salas e laboratóriso, tudo foi mágico!',
+            },
+            codes: {
+              title: 'Meus primeiros códigos escritos',
+              desc: 'Aqui começou a minha jornada com códigos. Tudo muito ambíguo e novo pra um garoto de 15 anos. Foi um processo de tentativas e erros, mas cada linha de código escrita era uma pequena vitória.',
+            }
+          },
+          coral: {
+            num: '9',
+            title: 'Primeiros acordes',
+            music: {
+              desc1: 'Durante a pandemia do covid-19, ficando meses em casa, surgiu novamente a curiosidade aprender novas coisas. Entre uma delas, tocar instrumentos musicais. E foi assim que comecei a aprender violão e ukulele.',
+              desc2: 'Eu tinha o youtube, um vioão velho e a vontade de aprender. Depois de um tempo, postando alguns vídeos tocando, fui convidado para tocar no Coral da Etec, onde tive a oportunidade de tocar em algumas apresentações.',
+              descImg: 'Um registro do dia da minha primeira apresentação tocando violão, no coral que participava na Etec.'
+            }
+          },
+          martial3: {
+            num: '10',
+            title: 'As artes marciais: O Jiu Jítsu',
+            p1: 'Aqui começou a minha relação com o Jiu Jítsu, que é o esporte que mais me marcou e que mais me ensinou ao longo da minha vida. Comecei a praticar como um hobby, mas, em menos de um mês, meu professor, Huelder Motta, já me inscreveu para competir. Sem esperar, fui campeão em todos os campeonatos que lutei na faixa branca. Foi aí que tudo começou. ',
+            p2: 'Sendo um caso atípico, fui promovido à faixa azul em 3 meses, mesmo sem saber direito o que estava fazendo. Mesmo assim, fui melhorando, vencendo as competições que participava, e em pouco tempo, fui começando a receber patrocínios, bolsas e convites para treinar em outras academias. ',
+            descImg: 'Prime Jiu Jítsu Experience.'
+          },
+          firstHacka: {
+            num: '11',
+            title: '1º Congresso Inovagro & Bruto Hacka',
+            text: {
+              desc1: 'Na foto, Maria Eduarda Ayres, Leona do Nascimento e eu, elaborando o projeto para a apresentação final do Hackathon.',
+              desc2: 'Sem qualquer sombra de dúvidas, esse foi com certeza, o divisor de águas para a escolha da minha carreira. Foi a primeira vez que participei de um hackathon, e em meio a tantas incertezas, nervosismo e inexperiência, foi aqui que eu percebi que realmente estava no caminho certo. Vi que eu poderia realmente resolver problemas reais da sociedade, fazendo o que eu amava fazer, mesmo que com pouca experiência na época.',
+              descImg: 'Recebemos a premiação de 3º lugar, com o projeto Inova Chat, um sistema de chatbot inteligente desenvolvido para filtrar e selecionar feedbacks e relatos de funcionários da Minerva Foods, tornando a comunicação empresarial altamente assertiva. Solução integrada com as APIs da OpenAI.',
+              descImg2: 'Premiados do 3º Lugar'
+            }
+          },
+          diary: {
+            num: '12',
+            title: 'Primeira matéria em um jornal',
+            diary: {
+              title: 'O começo de um legado',
+              desc: 'Um registro do dia da minha primeira matéria em um jornal, onde ficou documentado um dos meus primeiros títulos no Jiu-Jítsu.'
+            },
+            tv: {
+              title: 'Primeiras provas de programação',
+              desc: 'Ao longo de vários acontecimentos, tive a oportunidade de aparecer em programas de televisão.'
+            },
+            teach: {
+              title: 'Aparições em revistas',
+              desc: 'Sempre fui uma pessoa muito tímida. Me expor, como modelo na adolescencia, foi uma das formas que encontrei pra superar isso. Sem esperar, recebi alguns prêmios, alguns contratos, e aos poucos fui perdendo o medo do público.'
+            }
+          },
+          utfpr: {
+            num: '13',
+            title: 'Primeira aprovação em um vestibular',
+            p1: 'E o um dos momentos mais cobrados na vida de um jovem do ensino médio chegou, a escolha da faculdade. E para mim, foi um processo muito difícil, cheio de dúvidas e incertezas. Na época havia sido aprovadao em diversas univerisdades, mas acabei escolhendo cursar Ciência da Computação na UTFPR.',
+            p2: 'Obviamente, tudo foi mágico, a alegria de passar, a ansiedade de começar, a mudança de estado, a expectativa de como seria a faculdade, tudo isso foi uma mistura de emoções que, quando vejo outros passando por isso, me lembro de como foi para mim, e fico genuínamente feliz.',
+            descImg: 'Prime Jiu Jítsu Experience.'
+          },
+          ideathon: {
+            num: '14',
+            title: 'Ideathon Sistema FAEP/SENAR',
+            text: {
+              desc1: 'Já na faculdade, mas ainda no contexto da formação técnica, tive a oportunidade de participar do Ideathon do Sistema FAEP/SENAR, um hackathon onde pude desenvolver em grupo, um modelo de negócio para o setor agropecuário.',
+              desc2: 'A solução nos rendeu a premiação de 3º lugar, e mais importante do que isso, a certeza de que eu estava no caminho certo, e que eu poderia realmente fazer a diferença.',
+              descImg: 'Recebendo a premiação das mãos do Ricardo Ost e Jefrey kleine Albers ',
+              descImg2: 'Apresentando o projeto'
+            }
+          },
+        },
+        labels: {
+          liveChildhood: 'Infância Viva',
+          mediaHighlight: 'Destaque na Mídia',
+        }
       }
     }
   },
