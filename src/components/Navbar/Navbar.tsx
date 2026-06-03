@@ -13,12 +13,12 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher/LanguageSwitcher
 import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle';
 
 export function Navbar() {
-  const { t } = useTranslation();
+const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // Verifica se o usuário está na página de monitoria
   const isTutoringPage = pathname === '/tutoring';
+  const isAboutPage = pathname === '/about';
 
   const scrollTo = (id: string) => {
     setIsMenuOpen(false);
@@ -40,7 +40,7 @@ export function Navbar() {
     <header className={styles.navbarContainer}>
       <nav className={styles.navbar}>
         <div className={styles.leftBadge}>
-          <Link href="/" onClick={handleHomeClick} style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: 'inherit' }}>
+          <Link href="/" onClick={handleHomeClick} className={styles.homeLink}>
             <Image 
               src={Digo} 
               alt="Rodrigo Dias" 
@@ -50,13 +50,12 @@ export function Navbar() {
             <span style={{ fontWeight: 600, fontSize: '14px' }}>Rodrigo Dias</span>
           </Link>
           <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '12px', color: 'var(--text-muted)' }}>
-            <FaMapMarkerAlt size={12} style={{ color: 'var(--primary)' }} />
-            <span>{t('navbar.location')}</span>
+            <FaMapMarkerAlt size={12} style={{ color: 'var(--primary)' }} className={styles.local}/>
+            <span className={styles.local}>{t('navbar.location')}</span>
           </div>
         </div>
-
-        {/* Exibe os links de navegação apenas se NÃO estiver na página de monitoria */}
-        {!isTutoringPage && (
+        {/* 1. Links da Home (Somente se não for Monitoria E não for About) */}
+        {!isTutoringPage && !isAboutPage && (
           <div className={`${styles.navLinks} ${isMenuOpen ? styles.navLinksOpen : ''}`}>
             <a href="#inicio" onClick={(e) => { e.preventDefault(); scrollTo('inicio'); }} className={styles.navLink}>{t('navbar.home')}</a>
             <a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about'); }} className={styles.navLink}>{t('navbar.about')}</a>
@@ -67,25 +66,53 @@ export function Navbar() {
           </div>
         )}
 
-        <div className={styles.rightControls}>
-          {/* Altera o link e o nome do botão dinamicamente com base na rota */}
-          {isTutoringPage ? (
-            <Link href="/" className={styles.rightButton} onClick={() => setIsMenuOpen(false)}>
-              {t('navbar.portfolio')} <span style={{ fontSize: '16px', lineHeight: 1 }}>↗</span>
+        {/* 2. Links da página About para o Menu Hambúrguer no Mobile */}
+        {isAboutPage && (
+          <div className={`${styles.navLinks} ${isMenuOpen ? styles.navLinksOpen : ''}`}>
+            <Link href="/" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>
+              {t('navbar.portfolio2')}
             </Link>
-          ) : (
+          </div>
+        )}
+
+        <div className={styles.rightControls}>
+          {/* Botão de Ação Principal Dinâmico (Desktop & Fallback) */}
+          {isTutoringPage &&(
+            <Link 
+              href="/" 
+              className={styles.rightButton} 
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t('navbar.portfolio')} <span style={{ fontSize: '16px', lineHeight: 1 }}>↖</span>
+            </Link>
+          )}
+
+          {!isTutoringPage && !isAboutPage && (
             <Link href="/tutoring" className={styles.rightButton}>
               {t('navbar.tutoring')} <span style={{ fontSize: '16px', lineHeight: 1 }}>↗</span>
             </Link>
           )}
+          
+          {isAboutPage && !isTutoringPage &&(
+            <Link 
+              href="/" 
+              className={styles.rightButton} 
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t('navbar.portfolio2')} <span style={{ fontSize: '16px', lineHeight: 1 }}>↖</span>
+            </Link>
+          )}
 
-          <button
-            className={styles.menuToggle}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Menu Hambúrguer: Não aparece na Monitoria, mas aparece na Home e no About */}
+          {!isTutoringPage && !isAboutPage && (
+            <button
+              className={styles.menuToggle}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          )}
         </div>
       </nav>
       
