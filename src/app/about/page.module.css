@@ -538,5 +538,8 @@
   .contentWrapper {
     gap: 100px; 
   }
-
+  .audioDock { 
+    bottom: 16px; 
+    right: 24px; 
+  }
 }
