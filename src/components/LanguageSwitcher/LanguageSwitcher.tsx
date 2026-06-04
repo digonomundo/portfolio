@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Globe } from 'lucide-react';
 import { LANGUAGE_STORAGE_KEY, type AppLanguage } from '@/i18n/resources';

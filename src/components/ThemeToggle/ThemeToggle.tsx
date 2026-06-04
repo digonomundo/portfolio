@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@/theme/ThemeProvider';
@@ -11,9 +11,7 @@ export function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
   const { t } = useTranslation();
 
-  
   useEffect(() => {
-
     const id = requestAnimationFrame(() => setMounted(true));
     return () => cancelAnimationFrame(id);
   }, []);
