@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { FaMapMarkerAlt } from 'react-icons/fa';
-import { Menu, X } from 'lucide-react';
+import { Menu, MoveUpLeft, MoveUpRight, X,  } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from './Navbar.module.css';
 import Digo from '@/assets/images/Digo.jpg';
@@ -54,7 +54,6 @@ const { t } = useTranslation();
             <span className={styles.local}>{t('navbar.location')}</span>
           </div>
         </div>
-        {/* 1. Links da Home (Somente se não for Monitoria E não for About) */}
         {!isTutoringPage && !isAboutPage && (
           <div className={`${styles.navLinks} ${isMenuOpen ? styles.navLinksOpen : ''}`}>
             <a href="#inicio" onClick={(e) => { e.preventDefault(); scrollTo('inicio'); }} className={styles.navLink}>{t('navbar.home')}</a>
@@ -67,20 +66,19 @@ const { t } = useTranslation();
         )}
 
         <div className={styles.rightControls}>
-          {/* Botão de Ação Principal Dinâmico (Desktop & Fallback) */}
           {isTutoringPage &&(
             <Link 
-              href="/" 
-              className={styles.rightButton} 
-              onClick={() => setIsMenuOpen(false)}
+            href="/" 
+            className={styles.rightButton} 
+            onClick={() => setIsMenuOpen(false)}
             >
-              {t('navbar.portfolio')} <span style={{ fontSize: '16px', lineHeight: 1 }}>↖</span>
+              {t('navbar.portfolio')} <MoveUpLeft size={16}/>
             </Link>
           )}
 
           {!isTutoringPage && !isAboutPage && (
             <Link href="/tutoring" className={styles.rightButton}>
-              {t('navbar.tutoring')} <span style={{ fontSize: '16px', lineHeight: 1 }}>↗</span>
+              {t('navbar.tutoring')} <MoveUpRight size={16}/>
             </Link>
           )}
           
@@ -90,11 +88,10 @@ const { t } = useTranslation();
               className={styles.rightButton} 
               onClick={() => setIsMenuOpen(false)}
             >
-              {t('navbar.portfolio2')} <span style={{ fontSize: '16px', lineHeight: 1 }}>↖</span>
+              {t('navbar.portfolio2')} <MoveUpLeft size={16}/>
             </Link>
           )}
 
-          {/* Menu Hambúrguer: Não aparece na Monitoria, mas aparece na Home e no About */}
           {!isTutoringPage && !isAboutPage && (
             <button
               className={styles.menuToggle}
