@@ -29,7 +29,8 @@ export const resources = {
         contact: 'Contato',
         tutoring: 'Monitoria',
         portfolio: 'Ir para o portfólio',
-        portfolio2: 'Voltar ao portfólio'
+        portfolio2: 'Voltar ao portfólio',
+        language: 'Idioma'
       },
       hero: {
         titleLine1: 'Futuro',
@@ -460,7 +461,8 @@ export const resources = {
         contact: 'Contact',
         tutoring: 'Tutoring',
         portfolio: 'Go to portfolio',
-        portfolio2: 'Back to portfolio'
+        portfolio2: 'Back to portfolio',
+        language: 'Language'
       },
       hero: {
         titleLine1: 'Future',
@@ -891,7 +893,8 @@ export const resources = {
         contact: 'Contacto',
         tutoring: 'Tutoría',
         portfolio: 'Ir al portafolio',
-        portfolio2: 'Volver al portafolio'
+        portfolio2: 'Volver al portafolio',
+        language: 'Idioma'
       },
       hero: {
         titleLine1: 'Futuro',
@@ -1322,7 +1325,8 @@ export const resources = {
         contact: 'Contatti',
         tutoring: 'Tutoraggio',
         portfolio: 'Vai al portfolio',
-        portfolio2: 'Torna al portfolio'
+        portfolio2: 'Torna al portfolio',
+        language: 'Lingua'
       },
       hero: {
         titleLine1: 'Futuro',

@@ -1,30 +1,31 @@
 .navbarContainer {
   position: fixed;
   top: 24px;
-  left: 0;
-  right: 0;
+  left: 6px;
+  right: 6px;
   z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
-  pointer-events: none; 
+  gap: 14px;
+  pointer-events: none;
 }
 
 .navbar {
-  pointer-events: auto; 
+  pointer-events: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--bg-elevated);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 6px 12px;
-  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+  border-radius: 60px;
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--border-subtle);
   width: 95%;
-  max-width: 1100px;
+  max-width: 1200px;
+  transition: all 0.2s ease;
 }
 
 .themeDock {
@@ -33,20 +34,20 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  gap: 8px;
+  gap: 10px;
 }
 
 .leftBadge {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   flex-wrap: wrap;
   background-color: transparent;
-  padding: 4px 14px 4px 4px;
-  border-radius: var(--radius-pill);
+  padding: 4px 16px 4px 6px;
+  border-radius: 60px;
   border: 1px solid var(--border-default);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .homeLink {
@@ -56,7 +57,7 @@
   color: var(--text-main);
   text-decoration: none;
   cursor: pointer;
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 .homeLink:hover {
@@ -64,137 +65,123 @@
 }
 
 .avatar {
-  width: 32px;       
-  height: auto;        
-  flex-shrink: 0;      
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid var(--border-default);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   object-fit: cover;
+  border: 1px solid var(--border-default);
   filter: grayscale(100%) contrast(105%) brightness(95%);
-  transition: 
-    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: filter;
+  transition: filter 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.avatar:hover {
-  filter: grayscale(0%) contrast(100%) brightness(100%);
-}
-
+.avatar:hover,
 .homeLink:hover .avatar {
   filter: grayscale(0%) contrast(100%) brightness(100%);
 }
 
-.navLinks {
-  display: none;
+.locationWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--text-muted);
 }
 
-@media (min-width: 768px) {
-  .navLinks {
-    display: flex;
-    align-items: center;
-    gap: var(--space-4);
-  }
+.locationIcon {
+  color: var(--primary);
+}
+
+/* ========== LINKS DE NAVEGAÇÃO (DESKTOP) ========== */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .navLink {
   color: var(--text-main);
   font-weight: 500;
   font-size: 14px;
-  transition: color var(--transition-fast);
+  transition: color 0.2s;
+  padding: 6px 0;
+  border-radius: 8px;
+  outline: none;
 }
 
 .navLink:hover {
   color: var(--text-muted);
 }
 
+.navLink:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* ========== BOTÃO DE AÇÃO (MONITORIA / PORTFOLIO) ========== */
 .rightControls {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .rightButton {
   background-color: var(--primary);
   color: var(--text-inverse);
   border: none;
-  border-radius: var(--radius-pill);
-  padding: 10px 20px;
+  border-radius: 60px;
+  padding: 10px 22px;
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
-  transition:
-    transform var(--transition-fast),
-    background-color var(--transition-fast),
-    color var(--transition-fast),
-    box-shadow var(--transition-fast);
+  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  text-decoration: none;
 }
 
 .rightButton:hover {
   background-color: var(--primary-hover);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-soft);
 }
 
-@media (max-width: 767px) {
-  .navbarContainer {
-    gap: 8px;
-  }
-
-  .navbar {
-    gap: 10px;
-    width: calc(100% - 74px);
-  }
-
-  .rightControls {
-    margin-left: auto;
-  }
-
-  .leftBadge {
-    flex-wrap: nowrap;
-    gap: 8px;
-    padding: 4px 4px 4px 4px;
-  }
-
-  .locationButton {
-    font-size: 11px;
-    gap: 4px;
-  }
-
-  .rightButton {
-    padding: 10px 18px;
-  }
-  .homeLink {
-    gap: 8px; 
-  }
+.rightButton:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
-.mobileOnlyLink {
-  display: none !important;
-}
-
+/* ========== MENU TOGGLE (HAMBÚRGUER) ========== */
 .menuToggle {
-  display: none;
+  display: none; /* escondido por padrão em desktop */
   background: transparent;
   border: none;
   color: var(--text-main);
   cursor: pointer;
-  padding: 4px;
-  align-items: center;
-  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.2s;
 }
 
-/* --- Responsividade Extrema --- */
+.menuToggle:hover {
+  background-color: var(--bg-elevated-soft);
+}
+
+.menuToggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.mobileLanguageSwitcher {
+  display: none; /* escondido por padrão, só aparece no menu mobile */
+}
+
+/* ========== RESPONSIVIDADE ========== */
 @media (max-width: 1024px) {
   .menuToggle {
-    display: flex;
+    display: flex; /* aparece apenas em mobile/tablet */
+    align-items: center;
+    justify-content: center;
   }
 
   .navLinks {
@@ -205,14 +192,12 @@
     right: 20px;
     background-color: var(--bg-elevated-strong);
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--border-default);
-    border-radius: var(--radius-card);
+    border-radius: 28px;
     flex-direction: column;
-    padding: var(--space-4);
-    gap: var(--space-4);
+    padding: 24px 20px;
+    gap: 16px;
     box-shadow: var(--shadow-strong);
-    pointer-events: auto;
     z-index: 1000;
   }
 
@@ -221,65 +206,146 @@
     animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .navLink, .dropdownItem {
+  .navLink {
     font-size: 16px;
     width: 100%;
-    padding: 12px;
     text-align: center;
+    padding: 12px;
   }
 
-  .dropdownContainer {
-    width: 100%;
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 998;
+    animation: fadeIn 0.2s ease;
   }
 
-  .dropdownMenu {
-    position: static;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    box-shadow: none;
-    border: none;
-    background: transparent;
-    padding: 0 16px;
-    gap: 0;
+  /* Esconde o LanguageSwitcher desktop */
+  .desktopOnly {
+    display: none;
+  }
+
+  /* Language Switcher mobile dentro do menu */
+  .mobileLanguageSwitcher {
+    margin-top: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .mobileLanguageLabel {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+  }
+
+  .mobileLanguageButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .mobileLangButton {
+    background: var(--bg-elevated-soft);
+    border: 1px solid var(--border-default);
+    border-radius: 40px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 56px;
+    text-transform: uppercase;
+  }
+
+  .mobileLangButton:hover,
+  .mobileLangButton:focus-visible {
+    background: var(--bg-elevated);
+    border-color: var(--border-strong);
+    transform: translateY(-1px);
+  }
+
+  .mobileLangActive {
+    background: var(--primary);
+    color: var(--text-inverse);
+    border-color: var(--primary);
   }
 }
 
+/* Ajustes para telas médias (tablet) */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 6px 14px;
+  }
+  .leftBadge {
+    gap: 12px;
+    padding: 4px 12px 4px 6px;
+  }
+  .rightButton {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+}
+
+/* Ajustes para mobile pequeno */
 @media (max-width: 767px) {
   .navbarContainer {
     top: 16px;
-    gap: 8px;
+    gap: 10px;
   }
-
   .navbar {
     width: calc(100% - 32px);
-    padding: 6px;
-    gap: 8px;
+    padding: 6px 12px;
   }
-
   .avatar {
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
   }
-
   .nameText {
-    font-size: 13px;
+    font-size: 14px;
   }
-
   .leftBadge {
     padding: 4px 10px 4px 4px;
-    gap: 8px;
+    gap: 10px;
   }
-
+  .locationText {
+    font-size: 11px;
+  }
   .rightButton {
     padding: 8px 14px;
+    font-size: 12px;
+  }
+  .rightButton svg {
+    width: 14px;
+    height: 14px;
+  }
+  .navLinks {
+    top: 80px;
+    left: 16px;
+    right: 16px;
+    padding: 20px 16px;
+  }
+  .mobileLangButton {
+    padding: 6px 14px;
     font-size: 13px;
+    min-width: 48px;
   }
 }
 
-@media (max-width: 640px) {
-  .leftBadge .local {
-    display: none; 
+@media (max-width: 550px) {
+  .leftBadge .locationText {
+    display: none;
   }
 }
 
@@ -287,14 +353,34 @@
   .nameText {
     display: none;
   }
-  
   .rightButton {
-    padding: 8px 12px;
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+  .mobileLangButton {
+    padding: 5px 12px;
     font-size: 12px;
+    min-width: 44px;
   }
 }
 
+/* Animações */
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
