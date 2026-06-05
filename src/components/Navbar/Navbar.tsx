@@ -47,7 +47,7 @@ const { t } = useTranslation();
               className={styles.avatar}
               unoptimized
             />
-            <span style={{ fontWeight: 600, fontSize: '14px' }}>Rodrigo Dias</span>
+            <span style={{ fontWeight: 600}}>Rodrigo <span className={styles.nameText}>Dias</span></span>
           </Link>
           <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '12px', color: 'var(--text-muted)' }}>
             <FaMapMarkerAlt size={12} style={{ color: 'var(--primary)' }} className={styles.local}/>
