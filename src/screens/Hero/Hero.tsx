@@ -20,7 +20,7 @@ export function Hero() {
     <section id="inicio" className={styles.heroSection}>
       
       {/* Background Typography */}
-      <div className={styles.bgTypography}>
+      <div className={styles.bgTypography} aria-hidden="true">
         <motion.span 
           className={styles.solidText}
           initial={{ opacity: 0, scale: 0.95 }}
@@ -81,14 +81,14 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <a href="https://github.com/digonomundo" target="_blank" rel="noreferrer" className={styles.socialPill}>
-              <FaGithub size={16} /> GitHub
+            <a href="https://github.com/digonomundo" target="_blank" rel="noreferrer" className={styles.socialPill} aria-label="Visit my GitHub profile">
+              <FaGithub size={16} aria-hidden="true" /> GitHub
             </a>
-            <a href="https://linkedin.com/in/digonomundo" target="_blank" rel="noreferrer" className={styles.socialPill}>
-              <FaLinkedin size={16} /> LinkedIn
+            <a href="https://linkedin.com/in/digonomundo" target="_blank" rel="noreferrer" className={styles.socialPill} aria-label="Visit my LinkedIn profile">
+              <FaLinkedin size={16} aria-hidden="true" /> LinkedIn
             </a>
-            <a href="https://instagram.com/digonomundo" target="_blank" rel="noreferrer" className={styles.socialPill}>
-              <FaInstagram size={16} /> Instagram
+            <a href="https://instagram.com/digonomundo" target="_blank" rel="noreferrer" className={styles.socialPill} aria-label="Visit my Instagram profile">
+              <FaInstagram size={16} aria-hidden="true" /> Instagram
             </a>
           </motion.div>
         </div>

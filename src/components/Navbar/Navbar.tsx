@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { Menu, MoveUpLeft, MoveUpRight, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -17,12 +17,13 @@ export function Navbar() {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
 
-  const isTutoringPage = pathname === '/tutoring';
-  const isAboutPage = pathname === '/about';
+  const isTutoringPage = pathname ? pathname.endsWith('/tutoring') : false;
+  const isAboutPage = pathname ? pathname.endsWith('/about') : false;
 
   // Gerenciar foco e scroll do body
   useEffect(() => {
@@ -58,17 +59,31 @@ export function Navbar() {
   };
 
   const handleHomeClick = (e: React.MouseEvent) => {
-    if (pathname === '/') {
+    if (pathname === '/' || availableLanguages.some(lang => pathname === `/${lang}`)) {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setIsMenuOpen(false);
     }
   };
 
-  // Troca de idioma no menu mobile
   const handleMobileLanguageChange = (language: AppLanguage) => {
     window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+    document.cookie = `app_language=${language}; path=/; max-age=31536000; SameSite=Lax`;
     void i18n.changeLanguage(language);
+    setIsMenuOpen(false);
+
+    if (pathname) {
+      const segments = pathname.split('/');
+      // Remove empty first segment
+      const cleanSegments = segments.filter(Boolean);
+      
+      if (cleanSegments.length > 0 && availableLanguages.includes(cleanSegments[0] as AppLanguage)) {
+        cleanSegments[0] = language;
+        window.location.href = `/${cleanSegments.join('/')}`;
+      } else {
+        window.location.href = `/${language}${pathname === '/' ? '' : pathname}`;
+      }
+    }
   };
 
   const availableLanguages: AppLanguage[] = ['pt', 'en', 'es', 'it'];
@@ -82,7 +97,7 @@ export function Navbar() {
   return (
     <>
       <header className={styles.navbarContainer}>
-        <nav className={styles.navbar}>
+        <nav className={styles.navbar} role="navigation" aria-label="Main Navigation">
           {/* Logo + Localização */}
           <div className={styles.leftBadge}>
             <Link href="/" onClick={handleHomeClick} className={styles.homeLink}>
@@ -90,7 +105,6 @@ export function Navbar() {
                 src={Digo}
                 alt="Rodrigo Dias"
                 className={styles.avatar}
-                unoptimized
               />
               <span style={{ fontWeight: 600 }}>
                 Rodrigo <span className={styles.nameText}>Dias</span>
@@ -176,22 +190,21 @@ export function Navbar() {
             </div>
           )}
 
-          {/* Controles laterais (botão de ação + menu toggle) */}
           <div className={styles.rightControls}>
             {isTutoringPage && (
-              <Link href="/" className={styles.rightButton} onClick={() => setIsMenuOpen(false)}>
+              <Link href={`/${currentLanguage}`} className={styles.rightButton} onClick={() => setIsMenuOpen(false)}>
                 {t('navbar.portfolio')} <MoveUpLeft size={16} />
               </Link>
             )}
 
             {!isTutoringPage && !isAboutPage && (
-              <Link href="/tutoring" className={styles.rightButton}>
+              <Link href={`/${currentLanguage}/tutoring`} className={styles.rightButton}>
                 {t('navbar.tutoring')} <MoveUpRight size={16} />
               </Link>
             )}
 
             {isAboutPage && !isTutoringPage && (
-              <Link href="/" className={styles.rightButton} onClick={() => setIsMenuOpen(false)}>
+              <Link href={`/${currentLanguage}`} className={styles.rightButton} onClick={() => setIsMenuOpen(false)}>
                 {t('navbar.portfolio2')} <MoveUpLeft size={16} />
               </Link>
             )}

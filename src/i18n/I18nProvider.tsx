@@ -6,7 +6,15 @@ import { i18n } from './config';
 import { defaultLanguage, LANGUAGE_STORAGE_KEY, languageOptions, type AppLanguage } from './resources';
 import { getLocaleCode, getLocaleLanguageTag } from '@/lib/locales';
 
-function resolveLanguage(): AppLanguage {
+interface I18nProviderProps {
+  children: React.ReactNode;
+  initialLocale?: AppLanguage;
+}
+
+function resolveLanguage(initialLocale?: AppLanguage): AppLanguage {
+  if (initialLocale) {
+    return initialLocale;
+  }
   const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
 
   if (storedLanguage && languageOptions.some(({ code }) => code === storedLanguage)) {
@@ -84,9 +92,9 @@ function updateAlternateLanguageLinks() {
   document.head.appendChild(defaultLink);
 }
 
-export function I18nProvider({ children }: { children: React.ReactNode }) {
+export function I18nProvider({ children, initialLocale }: I18nProviderProps) {
   useEffect(() => {
-    const language = resolveLanguage();
+    const language = resolveLanguage(initialLocale);
 
     void i18n.changeLanguage(language);
     document.documentElement.lang = getLocaleLanguageTag(language);

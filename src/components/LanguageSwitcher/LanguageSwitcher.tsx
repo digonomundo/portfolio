@@ -5,12 +5,15 @@ import { useTranslation } from 'react-i18next';
 import { Globe } from 'lucide-react';
 import { LANGUAGE_STORAGE_KEY, type AppLanguage } from '@/i18n/resources';
 import styles from './LanguageSwitcher.module.css';
+import { useRouter, usePathname } from 'next/navigation';
 
 export function LanguageSwitcher() {
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownId = useId();
   const containerRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+  const pathname = usePathname();
   const availableLanguages: AppLanguage[] = ['pt', 'en', 'es', 'it'];
   const languageLabels: Record<AppLanguage, string> = {
     pt: 'Português',
@@ -25,8 +28,22 @@ export function LanguageSwitcher() {
 
   const handleLanguageChange = (language: AppLanguage) => {
     window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+    document.cookie = `app_language=${language}; path=/; max-age=31536000; SameSite=Lax`;
     void i18n.changeLanguage(language);
     setIsOpen(false);
+    
+    // Redirect logic
+    if (pathname) {
+      const segments = pathname.split('/');
+      const cleanSegments = segments.filter(Boolean);
+      
+      if (cleanSegments.length > 0 && availableLanguages.includes(cleanSegments[0] as AppLanguage)) {
+        cleanSegments[0] = language;
+        window.location.href = `/${cleanSegments.join('/')}`;
+      } else {
+        window.location.href = `/${language}${pathname === '/' ? '' : pathname}`;
+      }
+    }
   };
 
   useEffect(() => {

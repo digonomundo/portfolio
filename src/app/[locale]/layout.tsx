@@ -1,11 +1,10 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 import { Navbar } from '@/components/Navbar/Navbar';
 import { ScrollProgress } from '@/components/ScrollProgress/ScrollProgress';
 import { StructuredData } from '@/components/StructuredData/StructuredData';
 import { I18nProvider } from '@/i18n/I18nProvider';
-import { defaultLanguage } from '@/i18n/resources';
 import { ThemeProvider } from '@/theme/ThemeProvider';
 import { THEME_STORAGE_KEY } from '@/theme/theme';
 import { Analytics } from "@vercel/analytics/next";
@@ -13,6 +12,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { generatePageMetadata, generateCanonicalMetaTag, generateAlternateLanguageLinks } from '@/lib/metadata';
 import { getLocaleLanguageTag } from '@/lib/locales';
 import { generateOrganizationSchema, generatePersonSchema } from '@/lib/schema';
+import type { AppLanguage } from '@/i18n/resources';
+import { resources } from '@/i18n/resources';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,25 +27,36 @@ const jetBrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
 });
 
-const homeCanonical = generateCanonicalMetaTag('/');
-const homeAlternateLanguages = Object.fromEntries(
-  generateAlternateLanguageLinks('/').map(({ hrefLang, href }) => [hrefLang, href])
-);
-
-export const metadata: Metadata = {
-  ...generatePageMetadata({
-    title: 'Rodrigo Dias - Full Stack Developer',
-    description: 'Portfolio of Rodrigo Dias, Full Stack Developer focused on Apple Developer Academy, accessible interfaces, full-stack projects and human-centered technology.',
-    keywords: 'Rodrigo Dias, Apple Developer Academy, full-stack developer, Next.js, TypeScript, React, accessibility, i18n, portfolio',
-    pathname: '/',
-    twitterHandle: '@digonomundo',
-  }),
-  alternates: {
-    canonical: homeCanonical.href,
-    languages: homeAlternateLanguages,
-  },
-  manifest: '/manifest.json',
+type LayoutProps = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: LayoutProps): Promise<Metadata> {
+  const { locale } = await params;
+  const typedLocale = locale as AppLanguage;
+  const translation = resources[typedLocale]?.translation || resources['en'].translation;
+
+  const homeCanonical = generateCanonicalMetaTag('/');
+  const homeAlternateLanguages = Object.fromEntries(
+    generateAlternateLanguageLinks('/').map(({ hrefLang, href }) => [hrefLang, href])
+  );
+
+  return {
+    ...generatePageMetadata({
+      title: translation.meta?.title || 'Rodrigo Dias - Full Stack Developer',
+      description: translation.meta?.description || 'Portfolio of Rodrigo Dias, Full Stack Developer focused on Apple Developer Academy.',
+      keywords: translation.meta?.keywords || 'Rodrigo Dias, Apple Developer Academy, full-stack developer',
+      pathname: '/',
+      twitterHandle: '@digonomundo',
+    }, typedLocale),
+    alternates: {
+      canonical: homeCanonical.href,
+      languages: homeAlternateLanguages,
+    },
+    manifest: '/manifest.json',
+  };
+}
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -80,11 +92,13 @@ const rootStructuredData = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+  params,
+}: LayoutProps) {
+  const { locale } = await params;
+  const typedLocale = locale as AppLanguage;
+
   const themeInitScript = `
     (function() {
       try {
@@ -100,16 +114,18 @@ export default function RootLayout({
 
   return (
     <html
-      lang={getLocaleLanguageTag(defaultLanguage)}
+      lang={getLocaleLanguageTag(typedLocale)}
       suppressHydrationWarning
       className={`${inter.variable} ${jetBrainsMono.variable}`}
       data-scroll-behavior="smooth"
     >
-      <body>
+      <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <StructuredData data={rootStructuredData} />
+      </head>
+      <body>
         <ThemeProvider>
-          <I18nProvider>
+          <I18nProvider initialLocale={typedLocale}>
             <SpeedInsights />
             <Analytics />
             <ScrollProgress />
