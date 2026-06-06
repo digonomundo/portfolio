@@ -347,6 +347,9 @@
   .leftBadge .locationText {
     display: none;
   }
+  .locationIcon{
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
