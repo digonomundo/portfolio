@@ -8,6 +8,7 @@ import { ThemeProvider } from '@/theme/ThemeProvider';
 import { THEME_STORAGE_KEY } from '@/theme/theme';
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { generatePageMetadata, generateCanonicalMetaTag, generateAlternateLanguageLinks } from '@/lib/metadata';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,8 +23,17 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Rodrigo Dias - Desenvolvedor Full Stack',
-  description: 'Portfólio de Rodrigo Dias, Desenvolvedor Full Stack. Veja meus projetos, experiência e habilidades.',
+  ...generatePageMetadata({
+    title: 'Rodrigo Dias - Full Stack Developer',
+    description: 'Portfolio of Rodrigo Dias, Full Stack Developer. Explore my projects, experience, and expertise in modern web technologies.',
+    keywords: 'full-stack developer, next.js, typescript, react, web development',
+    twitterHandle: '@digonomundo',
+  }),
+  manifest: '/manifest.json',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#020202' },
+  ],
 };
 
 export default function RootLayout({

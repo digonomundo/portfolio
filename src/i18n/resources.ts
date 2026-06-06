@@ -16,7 +16,10 @@ export const resources = {
     translation: {
       meta: {
         title: 'Rodrigo Dias - Desenvolvedor Full Stack',
-        description: 'Portfólio de Rodrigo Dias, Desenvolvedor Full Stack'
+        description: 'Portfólio de Rodrigo Dias, Desenvolvedor Full Stack',
+        keywords: 'desenvolvedor, full-stack, next.js, typescript, react, web development, portfólio',
+        ogDescription: 'Conheça meus projetos, experiência e expertise em desenvolvimento full-stack com tecnologias modernas.',
+        twitterHandle: '@digonomundo'
       },
       navbar: {
         location: 'Limeira - SP',
@@ -448,7 +451,10 @@ export const resources = {
     translation: {
       meta: {
         title: 'Rodrigo Dias - Full Stack Developer',
-        description: 'Portfolio of Rodrigo Dias, Full Stack Developer'
+        description: 'Portfolio of Rodrigo Dias, Full Stack Developer',
+        keywords: 'full-stack developer, next.js, typescript, react, web development, portfolio',
+        ogDescription: 'Explore my projects, experience, and expertise in full-stack development with modern technologies.',
+        twitterHandle: '@digonomundo'
       },
       navbar: {
         location: 'Campinas-SP',
@@ -880,7 +886,10 @@ export const resources = {
     translation: {
       meta: {
         title: 'Rodrigo Dias - Desarrollador Full Stack',
-        description: 'Portafolio de Rodrigo Dias, Desarrollador Full Stack'
+        description: 'Portafolio de Rodrigo Dias, Desarrollador Full Stack',
+        keywords: 'desarrollador full-stack, next.js, typescript, react, desarrollo web, portafolio',
+        ogDescription: 'Explora mis proyectos, experiencia y expertise en desarrollo full-stack con tecnologías modernas.',
+        twitterHandle: '@digonomundo'
       },
       navbar: {
         location: 'Campinas-SP',
@@ -1312,7 +1321,10 @@ export const resources = {
     translation: {
       meta: {
         title: 'Rodrigo Dias - Sviluppatore Full Stack',
-        description: 'Portfolio di Rodrigo Dias, Sviluppatore Full Stack'
+        description: 'Portfolio di Rodrigo Dias, Sviluppatore Full Stack',
+        keywords: 'sviluppatore full-stack, next.js, typescript, react, sviluppo web, portfolio',
+        ogDescription: 'Esplora i miei progetti, esperienza ed expertise nello sviluppo full-stack con tecnologie moderne.',
+        twitterHandle: '@digonomundo'
       },
       navbar: {
         location: 'Campinas-SP',

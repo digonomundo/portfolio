@@ -172,6 +172,11 @@
   transform: translateY(0) scale(1); /* Slide-up sutil do botão */
 }
 
+.imageInteractiveWrapper:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .imageInteractiveWrapper:hover .overlayGlassButton:hover {
   background-color: var(--primary);
   border-color: var(--primary);

@@ -45,6 +45,13 @@ export default function TutoringPage() {
     );
   };
 
+  const handleModuleKeyDown = (id: number, e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleModule(id);
+    }
+  };
+
   if (!mounted) {
     return <div className={`${isDarkMode ? styles.darkMode : styles.lightMode}`} />;
   }
@@ -193,9 +200,10 @@ export default function TutoringPage() {
         {/* Campo de Busca */}
         <div className={styles.searchSection}>
           <div className={styles.searchIcon}><Search size={20} /></div>
-          <input 
-            type="text" 
+          <input
+            type="text"
             placeholder={t('tutoring.searchPlaceholder')}
+            aria-label="Search course modules and lessons"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className={styles.searchInput}
@@ -220,9 +228,12 @@ export default function TutoringPage() {
                     {module.highlight ? <Calendar size={16}/> : <BookOpen size={16} />}
                   </div>
 
-                  <div 
+                  <div
                     className={`${styles.moduleCard} ${module.highlight ? styles.cardHighlight : ''} ${expandedModules.includes(module.id) && !module.highlight ? styles.moduleCardExpanded : ''}`}
                     onClick={() => toggleModule(module.id)}
+                    onKeyDown={(e) => handleModuleKeyDown(module.id, e)}
+                    aria-expanded={expandedModules.includes(module.id)}
+                    aria-controls={`module-content-${module.id}`}
                   >
                     <div className={styles.moduleHeader}>
                       <div>

@@ -22,7 +22,7 @@
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.05em;
-  color: #3b82f6;
+  color: var(--accent-blue);
   background-color: rgba(59, 130, 246, 0.1);
   border-radius: 9999px;
   text-transform: uppercase;
@@ -122,10 +122,10 @@
   gap: 8px;
 }
 
-.iconBlue { color: #3b82f6; }
-.iconPurple { color: #a855f7; }
-.iconGreen { color: #22c55e; }
-.iconOrange { color: #f97316; }
+.iconBlue { color: var(--accent-blue); }
+.iconPurple { color: var(--accent-purple); }
+.iconGreen { color: var(--accent-green); }
+.iconOrange { color: var(--accent-orange); }
 
 .formulaBox {
   padding: 12px;
@@ -401,14 +401,14 @@
 .lightMode .timelineDot { background-color: #F5F5F7; border-color: #d4d4d8; color: #a1a1aa; }
 
 .dotHighlight {
-  background-color: #ef4444 !important;
-  border-color: #ef4444 !important;
+  background-color: var(--accent-red) !important;
+  border-color: var(--accent-red) !important;
   color: white !important;
 }
 
 .dotActive {
-  background-color: #3b82f6 !important;
-  border-color: #3b82f6 !important;
+  background-color: var(--accent-blue) !important;
+  border-color: var(--accent-blue) !important;
   color: white !important;
 }
 
@@ -424,6 +424,11 @@
 .darkMode .moduleCard:hover { border-color: rgba(255, 255, 255, 0.2); }
 .lightMode .moduleCard { background-color: white; border-color: rgba(0, 0, 0, 0.08); }
 .lightMode .moduleCard:hover { border-color: rgba(59, 130, 246, 0.3); }
+
+.moduleCard:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
 
 .cardHighlight {
   border-color: rgba(239, 68, 68, 0.3) !important;
@@ -451,8 +456,8 @@
   margin-bottom: 4px;
 }
 
-.metaHighlight { color: #ef4444; }
-.textBlue { color: #3b82f6; }
+.metaHighlight { color: var(--accent-red); }
+.textBlue { color: var(--accent-blue); }
 
 .moduleTitle {
   font-size: 18px;
@@ -514,7 +519,7 @@
 .lessonIconBox {
   padding: 8px;
   border-radius: 8px;
-  color: #3b82f6;
+  color: var(--accent-blue);
   display: flex;
   align-items: center;
 }
@@ -597,7 +602,7 @@
 }
 
 .heart {
-  color: #ef4444;
+  color: var(--accent-red);
   display: inline-block;
   animation: pulse 1.5s infinite ease-in-out;
 }
@@ -663,7 +668,7 @@
 .lightMode .fIcon { background-color: white; color: #1d1d1f; border: 1px solid rgba(0, 0, 0, 0.05); }
 
 .fLink:hover .fIcon {
-  background-color: #3b82f6;
+  background-color: var(--accent-blue);
   color: white;
 }
 

@@ -40,7 +40,7 @@
 
 .heartAnimation {
   display: inline-block;
-  color: #ff3b30; /* Red Apple Standard */
+  color: var(--accent-red);
   animation: pulse 2s infinite ease-in-out;
 }
 
@@ -109,6 +109,12 @@
 
 .linkItem:hover .linkLabel {
   color: var(--text-main);
+}
+
+.linkItem:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: 6px;
 }
 
 /* Barra Inferior */
