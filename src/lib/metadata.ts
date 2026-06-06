@@ -8,6 +8,7 @@ interface PageMetadataConfig {
   ogImage?: string;
   twitterHandle?: string;
   keywords?: string;
+  pathname?: string;
 }
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://digonomundo.com';
@@ -23,13 +24,18 @@ export function generatePageMetadata(
   language: AppLanguage = 'en'
 ): Metadata {
   const locale = getLocaleCode(language);
-  const langTag = getLocaleLanguageTag(language);
+  const pathname = config.pathname || '';
+  const canonicalUrl = generateCanonicalUrl(pathname);
 
   const title = config.title || SITE_NAME;
   const description = config.description || 'Portfolio showcasing projects, experience and expertise in full-stack development';
   const ogImage = config.ogImage ? `${SITE_URL}${config.ogImage}` : `${SITE_URL}/presentation-2.jpeg`;
   const twitterHandle = config.twitterHandle || '@digonomundo';
   const keywords = config.keywords || 'full-stack, developer, typescript, react, next.js';
+  const alternateLanguageLinks = generateAlternateLanguageLinks(pathname);
+  const languages = Object.fromEntries(
+    alternateLanguageLinks.map(({ hrefLang, href }) => [hrefLang, href])
+  );
 
   return {
     title,
@@ -37,18 +43,13 @@ export function generatePageMetadata(
     keywords,
     metadataBase: new URL(SITE_URL),
     alternates: {
-      canonical: generateCanonicalUrl(),
-      languages: {
-        'pt-BR': generateCanonicalUrl(),
-        'en-US': generateCanonicalUrl(),
-        'es-ES': generateCanonicalUrl(),
-        'it-IT': generateCanonicalUrl(),
-      },
+      canonical: canonicalUrl,
+      languages,
     },
     openGraph: {
       type: 'website',
       locale,
-      url: generateCanonicalUrl(),
+      url: canonicalUrl,
       title,
       description,
       siteName: SITE_NAME,
@@ -68,11 +69,6 @@ export function generatePageMetadata(
       description,
       creator: twitterHandle,
       images: [ogImage],
-    },
-    viewport: {
-      width: 'device-width',
-      initialScale: 1,
-      maximumScale: 1,
     },
     appleWebApp: {
       capable: true,

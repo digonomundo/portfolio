@@ -22,20 +22,43 @@ function resolveLanguage(): AppLanguage {
   return defaultLanguage;
 }
 
-function updateMetaTag(name: string, content: string) {
-  let element = document.querySelector(`meta[name="${name}"]`) ||
-                 document.querySelector(`meta[property="${name}"]`);
+function normalizeLanguage(language: string): AppLanguage {
+  const languageCode = language.slice(0, 2).toLowerCase();
+
+  if (languageOptions.some(({ code }) => code === languageCode)) {
+    return languageCode as AppLanguage;
+  }
+
+  return defaultLanguage;
+}
+
+function updateMetaTag(name: string, content: string, attribute: 'name' | 'property' = 'name') {
+  let element = document.querySelector<HTMLMetaElement>(`meta[${attribute}="${name}"]`);
 
   if (!element) {
     element = document.createElement('meta');
-    element.setAttribute('name', name);
+    element.setAttribute(attribute, name);
     document.head.appendChild(element);
   }
 
   element.setAttribute('content', content);
 }
 
-function updateAlternateLanguageLinks(currentLanguage: AppLanguage) {
+function updateCanonicalLink() {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://digonomundo.com';
+  const href = `${baseUrl}${window.location.pathname}`;
+  let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+
+  if (!link) {
+    link = document.createElement('link');
+    link.rel = 'canonical';
+    document.head.appendChild(link);
+  }
+
+  link.href = href;
+}
+
+function updateAlternateLanguageLinks() {
   const pathname = window.location.pathname;
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://digonomundo.com';
 
@@ -48,7 +71,7 @@ function updateAlternateLanguageLinks(currentLanguage: AppLanguage) {
   languageCodes.forEach(lang => {
     const link = document.createElement('link');
     link.rel = 'alternate';
-    (link as any).hreflang = getLocaleLanguageTag(lang);
+    link.hreflang = getLocaleLanguageTag(lang);
     link.href = `${baseUrl}${pathname}`;
     document.head.appendChild(link);
   });
@@ -56,7 +79,7 @@ function updateAlternateLanguageLinks(currentLanguage: AppLanguage) {
   // Add x-default hreflang
   const defaultLink = document.createElement('link');
   defaultLink.rel = 'alternate';
-  (defaultLink as any).hreflang = 'x-default';
+  defaultLink.hreflang = 'x-default';
   defaultLink.href = `${baseUrl}${pathname}`;
   document.head.appendChild(defaultLink);
 }
@@ -69,24 +92,31 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     document.documentElement.lang = getLocaleLanguageTag(language);
 
     const handleLanguageChanged = (nextLanguage: string) => {
-      const nextLang = nextLanguage as AppLanguage;
+      const nextLang = normalizeLanguage(nextLanguage);
 
       document.documentElement.lang = getLocaleLanguageTag(nextLang);
-      window.localStorage.setItem(LANGUAGE_STORAGE_KEY, nextLanguage);
+      document.documentElement.dir = 'ltr';
+      window.localStorage.setItem(LANGUAGE_STORAGE_KEY, nextLang);
 
       // Update title
       document.title = i18n.t('meta.title');
 
       // Update description meta tag
       updateMetaTag('description', i18n.t('meta.description'));
+      updateMetaTag('keywords', i18n.t('meta.keywords'));
 
       // Update OpenGraph tags
-      updateMetaTag('og:title', i18n.t('meta.title'));
-      updateMetaTag('og:description', i18n.t('meta.ogDescription'));
-      updateMetaTag('og:locale', getLocaleCode(nextLang));
+      updateMetaTag('og:title', i18n.t('meta.title'), 'property');
+      updateMetaTag('og:description', i18n.t('meta.ogDescription'), 'property');
+      updateMetaTag('og:locale', getLocaleCode(nextLang), 'property');
+
+      // Update Twitter Card tags
+      updateMetaTag('twitter:title', i18n.t('meta.title'));
+      updateMetaTag('twitter:description', i18n.t('meta.ogDescription'));
 
       // Update hreflang links
-      updateAlternateLanguageLinks(nextLang);
+      updateCanonicalLink();
+      updateAlternateLanguageLinks();
     };
 
     i18n.on('languageChanged', handleLanguageChanged);

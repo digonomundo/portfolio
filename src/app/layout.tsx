@@ -1,14 +1,18 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/Navbar/Navbar';
 import { ScrollProgress } from '@/components/ScrollProgress/ScrollProgress';
+import { StructuredData } from '@/components/StructuredData/StructuredData';
 import { I18nProvider } from '@/i18n/I18nProvider';
+import { defaultLanguage } from '@/i18n/resources';
 import { ThemeProvider } from '@/theme/ThemeProvider';
 import { THEME_STORAGE_KEY } from '@/theme/theme';
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { generatePageMetadata, generateCanonicalMetaTag, generateAlternateLanguageLinks } from '@/lib/metadata';
+import { getLocaleLanguageTag } from '@/lib/locales';
+import { generateOrganizationSchema, generatePersonSchema } from '@/lib/schema';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,17 +26,57 @@ const jetBrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
 });
 
+const homeCanonical = generateCanonicalMetaTag('/');
+const homeAlternateLanguages = Object.fromEntries(
+  generateAlternateLanguageLinks('/').map(({ hrefLang, href }) => [hrefLang, href])
+);
+
 export const metadata: Metadata = {
   ...generatePageMetadata({
     title: 'Rodrigo Dias - Full Stack Developer',
-    description: 'Portfolio of Rodrigo Dias, Full Stack Developer. Explore my projects, experience, and expertise in modern web technologies.',
-    keywords: 'full-stack developer, next.js, typescript, react, web development',
+    description: 'Portfolio of Rodrigo Dias, Full Stack Developer focused on Apple Developer Academy, accessible interfaces, full-stack projects and human-centered technology.',
+    keywords: 'Rodrigo Dias, Apple Developer Academy, full-stack developer, Next.js, TypeScript, React, accessibility, i18n, portfolio',
+    pathname: '/',
     twitterHandle: '@digonomundo',
   }),
+  alternates: {
+    canonical: homeCanonical.href,
+    languages: homeAlternateLanguages,
+  },
   manifest: '/manifest.json',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#ffffff' },
     { media: '(prefers-color-scheme: dark)', color: '#020202' },
+  ],
+  colorScheme: 'light dark',
+};
+
+const rootStructuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    generatePersonSchema({
+      name: 'Rodrigo Dias',
+      jobTitle: 'Full Stack Developer',
+      description: 'Full Stack Developer and Telecommunications Engineering student building accessible, internationalized and performance-conscious web experiences.',
+      email: 'rodrigo@digonomundo.com',
+      image: 'https://digonomundo.com/presentation-2.jpeg',
+      location: {
+        city: 'Campinas',
+        region: 'SP',
+        country: 'BR',
+      },
+      sameAs: [
+        'https://github.com/digonomundo',
+        'https://linkedin.com/in/digonomundo',
+        'https://instagram.com/digonomundo',
+      ],
+    }),
+    generateOrganizationSchema(),
   ],
 };
 
@@ -56,13 +100,14 @@ export default function RootLayout({
 
   return (
     <html
-      lang="pt-BR"
+      lang={getLocaleLanguageTag(defaultLanguage)}
       suppressHydrationWarning
       className={`${inter.variable} ${jetBrainsMono.variable}`}
       data-scroll-behavior="smooth"
     >
       <body>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <StructuredData data={rootStructuredData} />
         <ThemeProvider>
           <I18nProvider>
             <SpeedInsights />

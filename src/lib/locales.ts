@@ -12,5 +12,12 @@ export function getLocaleCode(language: AppLanguage): string {
 }
 
 export function getLocaleLanguageTag(language: AppLanguage): string {
-  return language === 'pt' ? 'pt-BR' : language;
+  const languageTagMap: Record<AppLanguage, string> = {
+    pt: 'pt-BR',
+    en: 'en-US',
+    es: 'es-ES',
+    it: 'it-IT',
+  };
+
+  return languageTagMap[language] || 'en-US';
 }

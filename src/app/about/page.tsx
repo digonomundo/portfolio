@@ -1,12 +1,16 @@
 import { Metadata } from 'next';
 import AboutContent from './AboutContent';
 import { generateCanonicalUrl } from '@/lib/metadata';
+import { StructuredData } from '@/components/StructuredData/StructuredData';
+import { generateBreadcrumbSchema, generateProfilePageSchema } from '@/lib/schema';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://digonomundo.com';
+const aboutTitle = 'About Rodrigo Dias | Full Stack Developer';
+const aboutDescription = 'An unfiltered retrospective of memories, technology, martial arts and the journey that brought me here.';
 
 export const metadata: Metadata = {
-  title: 'About Rodrigo Dias | Full Stack Developer',
-  description: 'An unfiltered retrospective of memories, technology, martial arts and the journey that brought me here.',
+  title: aboutTitle,
+  description: aboutDescription,
   keywords: 'about, portfolio, developer, full-stack, story, journey',
   alternates: {
     canonical: generateCanonicalUrl('/about'),
@@ -15,11 +19,12 @@ export const metadata: Metadata = {
       'en-US': generateCanonicalUrl('/about'),
       'es-ES': generateCanonicalUrl('/about'),
       'it-IT': generateCanonicalUrl('/about'),
+      'x-default': generateCanonicalUrl('/about'),
     },
   },
   openGraph: {
-    title: 'About Rodrigo Dias | Full Stack Developer',
-    description: 'An unfiltered retrospective of memories, technology, martial arts and the journey that brought me here.',
+    title: aboutTitle,
+    description: aboutDescription,
     type: 'profile',
     url: generateCanonicalUrl('/about'),
     locale: 'en_US',
@@ -35,13 +40,26 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Rodrigo Dias | Full Stack Developer',
-    description: 'An unfiltered retrospective of memories, technology, martial arts and the journey that brought me here.',
+    title: aboutTitle,
+    description: aboutDescription,
     creator: '@digonomundo',
     images: [`${SITE_URL}/presentation-2.jpeg`],
   },
 };
 
 export default function AboutPage() {
-  return <AboutContent />;
+  return (
+    <>
+      <StructuredData
+        data={[
+          generateProfilePageSchema(aboutTitle, aboutDescription, `${SITE_URL}/presentation-2.jpeg`, 'en'),
+          generateBreadcrumbSchema([
+            { name: 'Portfolio', url: SITE_URL },
+            { name: 'About', url: generateCanonicalUrl('/about') },
+          ]),
+        ]}
+      />
+      <AboutContent />
+    </>
+  );
 }

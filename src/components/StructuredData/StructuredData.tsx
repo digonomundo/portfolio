@@ -1,7 +1,5 @@
-'use client';
-
 interface StructuredDataProps {
-  data: Record<string, unknown>;
+  data: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
 export function StructuredData({ data }: StructuredDataProps) {

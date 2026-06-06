@@ -101,7 +101,7 @@ export function generateOrganizationSchema() {
     '@type': 'Organization',
     name: 'Rodrigo Dias',
     url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
+    logo: `${SITE_URL}/presentation-2.jpeg`,
     sameAs: [
       'https://github.com/digonomundo',
       'https://linkedin.com/in/digonomundo',
