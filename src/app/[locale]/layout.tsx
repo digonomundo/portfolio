@@ -54,7 +54,6 @@ export async function generateMetadata({ params }: LayoutProps): Promise<Metadat
       canonical: homeCanonical.href,
       languages: homeAlternateLanguages,
     },
-    manifest: '/manifest.json',
   };
 }
 
