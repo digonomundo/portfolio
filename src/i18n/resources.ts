@@ -411,7 +411,7 @@ export const resources = {
               desc: 'Um registro do dia da minha primeira matéria em um jornal, onde ficou documentado um dos meus primeiros títulos no Jiu-Jítsu.'
             },
             tv: {
-              title: 'Primeiras provas de programação',
+              title: 'Primeira aparição na TV',
               desc: 'Ao longo de vários acontecimentos, tive a oportunidade de aparecer em programas de televisão.'
             },
             teach: {
@@ -843,7 +843,7 @@ export const resources = {
               desc: 'A record of the day of my first newspaper article, where one of my first Jiu-Jitsu titles was documented.'
             },
             tv: {
-              title: 'First programming tests',
+              title: 'First TV appearance',
               desc: 'Over several events, I had the opportunity to appear on television programs.'
             },
             teach: {
@@ -1275,7 +1275,7 @@ export const resources = {
               desc: 'Un registro del día de mi primera nota en un periódico, donde quedó documentado uno de mis primeros títulos en Jiu-Jitsu.'
             },
             tv: {
-              title: 'Primeras pruebas de programación',
+              title: 'Primera aparición en televisión',
               desc: 'A lo largo de varios acontecimientos, tuve la oportunidad de aparecer en programas de televisión.'
             },
             teach: {
@@ -1707,7 +1707,7 @@ export const resources = {
               desc: 'Una registrazione del giorno del mio primo articolo su un giornale, dove fu documentato uno dei miei primi titoli nel Jiu-Jitsu.'
             },
             tv: {
-              title: 'Primi esami di programmazione',
+              title: 'Prima apparizione televisiva',
               desc: 'Nel corso di vari eventi, ebbi l\'opportunità di apparire in programmi televisivi.'
             },
             teach: {
