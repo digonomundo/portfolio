@@ -17,13 +17,16 @@ export async function generateMetadata({ params }: Omit<Props, 'children'>): Pro
   const typedLocale = locale as AppLanguage;
   const translation = resources[typedLocale]?.translation || resources['en'].translation;
 
-  const tutoringTitle = translation.navbar?.tutoring ? `${translation.navbar.tutoring} | Rodrigo Dias` : 'SI100 Tutoring | Rodrigo Dias';
-  const tutoringDescription = 'Algorithms and Computer Programming I tutoring hub with schedule, assessment criteria, bibliography and support materials for Unicamp students.';
+  const tutoringTitle = translation.navbar?.tutoring 
+    ? `${translation.navbar.tutoring} Hub | Rodrigo Dias` 
+    : 'Portal de Monitorias | Rodrigo Dias';
+    
+  const tutoringDescription = 'Portal acadêmico de monitoria feito para os alunos da Unicamp. Acesse nossos horários, materiais de apoio, listas de exercícios e cronogramas para SI100 (C) e TT314 (Java). Bem-vindos!';
 
   return {
     title: tutoringTitle,
     description: tutoringDescription,
-    keywords: 'SI100, Unicamp, algorithms, programming, tutoring, C language, Rodrigo Dias',
+    keywords: 'Unicamp, tutoring, monitoria, SI100, TT314, algoritmos, orientação a objetos, Rodrigo Dias, FT',
     alternates: {
       canonical: generateCanonicalUrl(`/${locale}/tutoring`),
       languages: {
@@ -31,7 +34,7 @@ export async function generateMetadata({ params }: Omit<Props, 'children'>): Pro
         'en-US': generateCanonicalUrl('/en/tutoring'),
         'es-ES': generateCanonicalUrl('/es/tutoring'),
         'it-IT': generateCanonicalUrl('/it/tutoring'),
-        'x-default': generateCanonicalUrl('/en/tutoring'),
+        'x-default': generateCanonicalUrl('/pt/tutoring'),
       },
     },
     openGraph: {
@@ -45,7 +48,7 @@ export async function generateMetadata({ params }: Omit<Props, 'children'>): Pro
           url: `${SITE_URL}/presentation-2.jpeg`,
           width: 1200,
           height: 630,
-          alt: 'Rodrigo Dias SI100 tutoring hub',
+          alt: 'Portal de Monitorias - Rodrigo Dias',
           type: 'image/jpeg',
         },
       ],
@@ -68,7 +71,7 @@ export default async function TutoringLayout({ children, params }: Props) {
       <StructuredData
         data={generateBreadcrumbSchema([
           { name: 'Portfolio', url: SITE_URL },
-          { name: 'SI100 Tutoring', url: generateCanonicalUrl(`/${locale}/tutoring`) },
+          { name: 'Tutoring Hub', url: generateCanonicalUrl(`/${locale}/tutoring`) },
         ])}
       />
       {children}

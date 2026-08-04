@@ -1,0 +1,43 @@
+.linksColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform var(--transition-fast) ease, color var(--transition-fast) ease;
+}
+
+.fLink:hover {
+  transform: translateX(4px);
+  color: var(--text-main);
+}
+
+.fIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  color: var(--text-muted);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.fLink:hover .fIcon {
+  background-color: var(--text-main);
+  border-color: var(--text-main);
+  color: var(--bg-elevated);
+}

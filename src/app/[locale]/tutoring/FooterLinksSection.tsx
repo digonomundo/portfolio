@@ -1,8 +1,7 @@
 'use client';
 
-
 import { Code2, Globe, } from "lucide-react";
-import styles from "./page.module.css";
+import styles from "./FooterLinksSection.module.css";
 
 import {
   FaLinkedinIn,
