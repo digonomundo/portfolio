@@ -32,6 +32,15 @@ type LayoutProps = {
   params: Promise<{ locale: string }>;
 };
 
+// ✅ Pré-renderiza páginas estáticas para cada idioma suportado
+export async function generateStaticParams() {
+  const locales: AppLanguage[] = ['pt', 'en', 'es', 'it'];
+
+  return locales.map((locale) => ({
+    locale,
+  }));
+}
+
 export async function generateMetadata({ params }: LayoutProps): Promise<Metadata> {
   const { locale } = await params;
   const typedLocale = locale as AppLanguage;
@@ -119,19 +128,20 @@ export default async function RootLayout({
       data-scroll-behavior="smooth"
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <StructuredData data={rootStructuredData} />
       </head>
       <body>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        
         <ThemeProvider>
           <I18nProvider initialLocale={typedLocale}>
-            <SpeedInsights />
-            <Analytics />
             <ScrollProgress />
             <Navbar />
             <main className="container">
               {children}
             </main>
+            <SpeedInsights />
+            <Analytics />
           </I18nProvider>
         </ThemeProvider>
       </body>
