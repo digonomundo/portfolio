@@ -73,23 +73,23 @@ export function Experience() {
 
             <div className={styles.streamList}>
               
-              {/* Unicamp - Monitoria */}
+              {/* Unicamp - Monitoria 2 */}
               <motion.div variants={fadeInUp} className={styles.experienceItem}>
                 <div className={styles.timelineDot} />
                 <div className={styles.itemMeta}>
-                  <span className={styles.itemDuration}>{t('experience.unicampMonitor.date')}</span>
+                  <span className={styles.itemDuration}>{t('experience.unicampMonitor2.date')}</span>
                   <span className={styles.itemLocation}>
                     <MapPin size={12} /> Campinas, SP
                   </span>
                 </div>
                 <h4 className={styles.itemRole}>
-                  {t('experience.unicampMonitor.role')} 
+                  {t('experience.unicampMonitor2.role')} 
                   <span className={styles.companyDivider}>·</span> 
                   <a href="https://www.unicamp.br" target="_blank" rel="noopener noreferrer" className={styles.companyLink}>
                     UNICAMP <ExternalLink size={12} />
                   </a>
                 </h4>
-                <p className={styles.itemDescription}>{t('experience.unicampMonitor.desc')}</p>
+                <p className={styles.itemDescription}>{t('experience.unicampMonitor2.desc')}</p>
               </motion.div>
 
               {/* Unicamp - IoT Research */}
@@ -113,6 +113,26 @@ export function Experience() {
                   <Zap size={12} /> Orientação: Prof. Dr. Leonardo Lorenzo Bravo Roger
                 </div>
               </motion.div>
+
+              {/* Unicamp - Monitoria 1 */}
+              <motion.div variants={fadeInUp} className={styles.experienceItem}>
+                <div className={styles.timelineDot} />
+                <div className={styles.itemMeta}>
+                  <span className={styles.itemDuration}>{t('experience.unicampMonitor1.date')}</span>
+                  <span className={styles.itemLocation}>
+                    <MapPin size={12} /> Campinas, SP
+                  </span>
+                </div>
+                <h4 className={styles.itemRole}>
+                  {t('experience.unicampMonitor1.role')} 
+                  <span className={styles.companyDivider}>·</span> 
+                  <a href="https://www.unicamp.br" target="_blank" rel="noopener noreferrer" className={styles.companyLink}>
+                    UNICAMP <ExternalLink size={12} />
+                  </a>
+                </h4>
+                <p className={styles.itemDescription}>{t('experience.unicampMonitor1.desc')}</p>
+              </motion.div>
+
 
               {/* Haken - Diretor / Assistente */}
               <motion.div variants={fadeInUp} className={styles.experienceItem}>
