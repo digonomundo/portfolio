@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { Menu, MoveUpLeft, MoveUpRight, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -13,19 +13,42 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher/LanguageSwitcher
 import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle';
 import { LANGUAGE_STORAGE_KEY, type AppLanguage } from '@/i18n/resources';
 
+// Constantes
+const SUPPORTED_LANGUAGES: AppLanguage[] = ['pt', 'en', 'es', 'it'];
+
+// Funções utilitárias (fora do componente)
+const persistLanguageCookie = (language: AppLanguage) => {
+  document.cookie = `app_language=${language}; path=/; max-age=31536000; SameSite=Lax`;
+};
+
+const getNextLanguagePath = (language: AppLanguage, pathname: string) => {
+  const segments = pathname.split('/').filter(Boolean);
+  
+  if (segments.length > 0 && SUPPORTED_LANGUAGES.includes(segments[0] as AppLanguage)) {
+    return `/${[language, ...segments.slice(1)].join('/')}`;
+  }
+  
+  return `/${language}${pathname === '/' ? '' : pathname}`;
+};
+
 export function Navbar() {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
 
-  const isTutoringPage = pathname ? pathname.endsWith('/tutoring') : false;
+  const isTutoringPage = pathname
+    ? pathname === '/tutoring' ||
+      pathname.endsWith('/tutoring') ||
+      pathname.endsWith('/tutoring/si100') ||
+      pathname.endsWith('/tutoring/tt314') ||
+      pathname.includes('/tutoring/')
+    : false;
+    
   const isAboutPage = pathname ? pathname.endsWith('/about') : false;
 
-  // Gerenciar foco e scroll do body
   useEffect(() => {
     if (isMenuOpen) {
       firstLinkRef.current?.focus();
@@ -39,7 +62,6 @@ export function Navbar() {
     };
   }, [isMenuOpen]);
 
-  // Fechar com ESC
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isMenuOpen) {
@@ -59,7 +81,7 @@ export function Navbar() {
   };
 
   const handleHomeClick = (e: React.MouseEvent) => {
-    if (pathname === '/' || availableLanguages.some(lang => pathname === `/${lang}`)) {
+    if (pathname === '/' || SUPPORTED_LANGUAGES.some(lang => pathname === `/${lang}`)) {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setIsMenuOpen(false);
@@ -68,31 +90,32 @@ export function Navbar() {
 
   const handleMobileLanguageChange = (language: AppLanguage) => {
     window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
-    document.cookie = `app_language=${language}; path=/; max-age=31536000; SameSite=Lax`;
+    persistLanguageCookie(language);
     void i18n.changeLanguage(language);
     setIsMenuOpen(false);
 
     if (pathname) {
-      const segments = pathname.split('/');
-      // Remove empty first segment
-      const cleanSegments = segments.filter(Boolean);
-      
-      if (cleanSegments.length > 0 && availableLanguages.includes(cleanSegments[0] as AppLanguage)) {
-        cleanSegments[0] = language;
-        window.location.href = `/${cleanSegments.join('/')}`;
-      } else {
-        window.location.href = `/${language}${pathname === '/' ? '' : pathname}`;
-      }
+      const nextPath = getNextLanguagePath(language, pathname);
+      window.location.assign(nextPath);
     }
   };
 
-  const availableLanguages: AppLanguage[] = ['pt', 'en', 'es', 'it'];
-  const currentLanguage = availableLanguages.includes(i18n.language as AppLanguage)
+  const currentLanguage = SUPPORTED_LANGUAGES.includes(i18n.language as AppLanguage)
     ? (i18n.language as AppLanguage)
-    : ((i18n.language || 'pt').slice(0, 2) as AppLanguage);
+    : (SUPPORTED_LANGUAGES.includes((i18n.language || 'pt').slice(0, 2) as AppLanguage)
+      ? (i18n.language || 'pt').slice(0, 2) as AppLanguage
+      : 'pt');
 
-  // Determina se a navegação padrão (com links) deve ser exibida
   const showDefaultNav = !isTutoringPage && !isAboutPage;
+
+  const navLinks = [
+    { href: '#inicio', id: 'inicio', label: t('navbar.home') },
+    { href: '#about', id: 'about', label: t('navbar.about') },
+    { href: '#education', id: 'education', label: t('navbar.education') },
+    { href: '#experience', id: 'experience', label: t('navbar.experience') },
+    { href: '#projects', id: 'projects', label: t('navbar.projects') },
+    { href: '#contact', id: 'contact', label: t('navbar.contact') },
+  ];
 
   return (
     <>
@@ -123,57 +146,28 @@ export function Navbar() {
               ref={menuRef}
               aria-hidden={!isMenuOpen}
             >
-              <a
-                href="#inicio"
-                onClick={(e) => { e.preventDefault(); scrollTo('inicio'); }}
-                className={styles.navLink}
-                ref={firstLinkRef}
-              >
-                {t('navbar.home')}
-              </a>
-              <a
-                href="#about"
-                onClick={(e) => { e.preventDefault(); scrollTo('about'); }}
-                className={styles.navLink}
-              >
-                {t('navbar.about')}
-              </a>
-              <a
-                href="#education"
-                onClick={(e) => { e.preventDefault(); scrollTo('education'); }}
-                className={styles.navLink}
-              >
-                {t('navbar.education')}
-              </a>
-              <a
-                href="#experience"
-                onClick={(e) => { e.preventDefault(); scrollTo('experience'); }}
-                className={styles.navLink}
-              >
-                {t('navbar.experience')}
-              </a>
-              <a
-                href="#projects"
-                onClick={(e) => { e.preventDefault(); scrollTo('projects'); }}
-                className={styles.navLink}
-              >
-                {t('navbar.projects')}
-              </a>
-              <a
-                href="#contact"
-                onClick={(e) => { e.preventDefault(); scrollTo('contact'); }}
-                className={styles.navLink}
-              >
-                {t('navbar.contact')}
-              </a>
+              {navLinks.map((link, index) => (
+                <a
+                  key={link.id}
+                  href={link.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollTo(link.id);
+                  }}
+                  className={styles.navLink}
+                  ref={index === 0 ? firstLinkRef : undefined}
+                >
+                  {link.label}
+                </a>
+              ))}
 
               {/* Language Switcher MOBILE (aparece apenas dentro do menu hambúrguer) */}
               <div className={styles.mobileLanguageSwitcher}>
-                <span className={styles.mobileLanguageLabel} suppressHydrationWarning >
+                <span className={styles.mobileLanguageLabel}>
                   {t('navbar.language')}
                 </span>
                 <div className={styles.mobileLanguageButtons}>
-                  {availableLanguages.map((lang) => (
+                  {SUPPORTED_LANGUAGES.map((lang) => (
                     <button
                       key={lang}
                       onClick={() => handleMobileLanguageChange(lang)}
@@ -190,22 +184,27 @@ export function Navbar() {
             </div>
           )}
 
+          {/* Botões de ação (lado direito) */}
           <div className={styles.rightControls}>
-            {isTutoringPage && (
-              <Link href={`/${currentLanguage}`} className={styles.rightButton} onClick={() => setIsMenuOpen(false)}>
+            {isTutoringPage ? (
+              <Link
+                href={`/${currentLanguage}`}
+                className={styles.rightButton}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 {t('navbar.portfolio')} <MoveUpLeft size={16} />
               </Link>
-            )}
-
-            {!isTutoringPage && !isAboutPage && (
+            ) : isAboutPage ? (
+              <Link
+                href={`/${currentLanguage}`}
+                className={styles.rightButton}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('navbar.portfolio2')} <MoveUpLeft size={16} />
+              </Link>
+            ) : (
               <Link href={`/${currentLanguage}/tutoring`} className={styles.rightButton}>
                 {t('navbar.tutoring')} <MoveUpRight size={16} />
-              </Link>
-            )}
-
-            {isAboutPage && !isTutoringPage && (
-              <Link href={`/${currentLanguage}`} className={styles.rightButton} onClick={() => setIsMenuOpen(false)}>
-                {t('navbar.portfolio2')} <MoveUpLeft size={16} />
               </Link>
             )}
 
@@ -227,7 +226,6 @@ export function Navbar() {
         {/* Dock de temas e idioma (desktop) */}
         <div className={styles.themeDock}>
           <ThemeToggle />
-          {/* LanguageSwitcher desktop - escondido em mobile */}
           <div className={styles.desktopOnly}>
             <LanguageSwitcher />
           </div>
