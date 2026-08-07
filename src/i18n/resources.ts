@@ -799,10 +799,10 @@ export const resources = {
       },
       about: {
         title: 'About Me',
-        paragraph1: 'Also known as <highlight>Digo</highlight>, I\'m a Systems Development Technician from Etec and currently study Telecommunications Engineering at Unicamp.',
+        paragraph1: 'Also known as <highlight>Digo</highlight>, I\'m a Systems Development Technician from Etec, I study Telecommunications Engineering at Unicamp and I <highlight>intend</highlight> to join and graduate from the <highlight>Apple Developer Academy</highlight>.',
         paragraph2: 'I have experience developing <highlight>web applications</highlight> with <highlight>Next.js, TypeScript</highlight> and <highlight>React.js</highlight>, as well as knowing how to use <highlight>no-code tools</highlight> like <highlight>WordPress (Elementor)</highlight> and <highlight>Wix</highlight>. I also have experience developing <highlight>native mobile apps</highlight> in <highlight>Kotlin</highlight> and <highlight>Java</highlight>.',
         paragraph3: 'For me, code goes far beyond syntax; it\'s about <highlight>solving real problems</highlight>. That\'s why I constantly seek to push my limits, exploring everything from the logical precision of <highlight>C/C++</highlight> programming to data analysis.',
-        paragraph4: 'Technology is my craft, but it\'s the <highlight>stories and people</highlight> that drive me. When I\'m not coding, you\'ll probably find me immersed in sports, listening to music, playing instruments, or even participating in competitions.',
+        paragraph4: 'Technology is my craft, but it\'s the <highlight>stories and people</highlight> that drive me. When I\'m not coding, you\'ll probably find me immersed in <highlight>sports</highlight>, <highlight>listening to music</highlight>, <highlight>playing instruments</highlight> or even <highlight>participating in competitions</highlight>.',
         readMore: 'You can learn more about me by clicking here! ; )',
       },
       education: {
@@ -1553,10 +1553,10 @@ export const resources = {
       },
       about: {
         title: 'Sobre Mí',
-        paragraph1: 'También conocido como <highlight>Digo</highlight>, soy Técnico en Desarrollo de Sistemas por Etec y actualmente estudio Ingeniería de Telecomunicaciones en Unicamp.',
+        paragraph1: 'También conocido como <highlight>Digo</highlight>, soy Técnico en Desarrollo de Sistemas por Etec, estudio Ingeniería de Telecomunicaciones en Unicamp y <highlight>pretendo</highlight> ingresar y graduarme en la <highlight>Apple Developer Academy</highlight>.',
         paragraph2: 'Tengo experiencia en desarrollo de <highlight>aplicaciones web</highlight> con <highlight>Next.js, TypeScript</highlight> y <highlight>React.js</highlight>, además de saber utilizar <highlight>herramientas no-code</highlight> como <highlight>WordPress (Elementor)</highlight> y <highlight>Wix</highlight>. También tengo experiencia en desarrollo de <highlight>aplicaciones móviles nativas</highlight> en <highlight>Kotlin</highlight> y <highlight>Java</highlight>.',
-        paragraph3: 'Para mí, el código va mucho más allá de la sintaxis; se trata de <highlight>resolver problemas reales</highlight>. Por eso, busco constantemente expandir mis límites, explorando desde la precisión lógica de la programación con <highlight>C/C++</highlight>, hasta el análisis de datos.',
-        paragraph4: 'La tecnología es mi oficio, pero son las <highlight>historias y las personas</highlight> las que me mueven. Cuando no estoy programando, probablemente me encontrarás inmerso en deportes, escuchando música, tocando instrumentos o incluso participando en competiciones.',
+        paragraph3: 'Para mí, el código va mucho más allá de la sintaxis; se trata de <highlight>resolver problemas reales</highlight>. Por eso busco constantemente expandir mis límites, explorando desde la precisión lógica de la programación con <highlight>C/C++</highlight>, hasta el análisis de datos.',
+        paragraph4: 'La tecnología es mi oficio, pero son las <highlight>historias y las personas</highlight> las que me mueven. Cuando no estoy programando, probablemente me encontrarás inmerso en <highlight>deportes</highlight>, <highlight>escuchando música</highlight>, <highlight>tocando instrumentos</highlight> o incluso <highlight>participando en competiciones</highlight>.',
         readMore: '¡Puedes saber más sobre mí haciendo clic aquí! ; )',
       },
       education: {
@@ -2088,10 +2088,10 @@ export const resources = {
       },
       about: {
         title: 'Chi Sono',
-        paragraph1: 'Conosciuto anche come <highlight>Digo</highlight>, sono Tecnico in Sviluppo di Sistemi presso Etec e attualmente studio Ingegneria delle Telecomunicazioni all\'Unicamp.',
+        paragraph1: 'Conosciuto anche come <highlight>Digo</highlight>, sono Tecnico in Sviluppo di Sistemi presso Etec, studio Ingegneria delle Telecomunicazioni all\'Unicamp e <highlight>intendo</highlight> entrare e diplomarmi alla <highlight>Apple Developer Academy</highlight>.',
         paragraph2: 'Ho esperienza nello sviluppo di <highlight>applicazioni web</highlight> con <highlight>Next.js, TypeScript</highlight> e <highlight>React.js</highlight>, oltre a saper utilizzare <highlight>strumenti no-code</highlight> come <highlight>WordPress (Elementor)</highlight> e <highlight>Wix</highlight>. Ho anche esperienza nello sviluppo di <highlight>app mobile native</highlight> in <highlight>Kotlin</highlight> e <highlight>Java</highlight>.',
         paragraph3: 'Per me, il codice va ben oltre la sintassi; si tratta di <highlight>risolvere problemi reali</highlight>. Per questo cerco costantemente di espandere i miei limiti, esplorando dalla precisione logica della programmazione con <highlight>C/C++</highlight>, fino all\'analisi dei dati.',
-        paragraph4: 'La tecnologia è il mio mestiere, ma sono le <highlight>storie e le persone</highlight> a motivarmi. Quando non sto programmando, probabilmente mi troverai immerso nello sport, ad ascoltare musica, suonare strumenti o persino a partecipare a competizioni.',
+        paragraph4: 'La tecnologia è il mio mestiere, ma sono le <highlight>storie e le persone</highlight> a motivarmi. Quando non sto programmando, probabilmente mi troverai immerso negli <highlight>sport</highlight>, ad <highlight>ascoltare musica</highlight>, a <highlight>suonare strumenti</highlight> o persino a <highlight>partecipare a competizioni</highlight>.',
         readMore: 'Puoi saperne di più su di me cliccando qui! ; )',
       },
       education: {
