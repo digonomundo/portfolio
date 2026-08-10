@@ -414,7 +414,7 @@ export const resources = {
         courseData: [
           { 
             id: 1, 
-            date: "04/08", 
+            date: "10/08", 
             type: "Teoria", 
             title: "Aula 01: Apresentação da Disciplina", 
             description: "Apresentação da disciplina, critérios de avaliação e introdução ao plano de ensino.",
@@ -425,7 +425,7 @@ export const resources = {
           },
           { 
             id: 2, 
-            date: "11/08", 
+            date: "17/08", 
             type: "Teoria", 
             title: "Aula 02: Introdução à Orientação a Objetos", 
             description: "Paradigmas de programação, histórico e comparação entre linguagens procedurais e orientadas a objetos.",
@@ -437,7 +437,7 @@ export const resources = {
           },
           { 
             id: 3, 
-            date: "18/08", 
+            date: "24/08", 
             type: "Laboratório", 
             title: "Aula 03: Classes e Objetos", 
             description: "Conceitos fundamentais de classes, objetos, atributos, métodos e construtores.",
@@ -450,7 +450,7 @@ export const resources = {
           },
           { 
             id: 4, 
-            date: "25/08", 
+            date: "31/08", 
             type: "Teoria", 
             title: "Aula 04: Herança", 
             description: "Mecanismo de herança, palavra-chave extends, superclasse e subclasse, reutilização de código.",
@@ -462,7 +462,23 @@ export const resources = {
           },
           { 
             id: 5, 
-            date: "01/09", 
+            date: "07/09", 
+            type: "Recurso", 
+            title: "Sem Atividades (Recesso)", 
+            description: "Não haverá atividades nesta data conforme cronograma oficial. Período para preparação dos seminários restantes.",
+            lessons: [] 
+          },
+          { 
+            id: 6, 
+            date: "14/09", 
+            type: "Recurso", 
+            title: "Sem Atividades (Recesso)", 
+            description: "Não haverá atividades nesta data conforme cronograma oficial. Período para preparação dos seminários restantes.",
+            lessons: [] 
+          },
+          { 
+            id: 7, 
+            date: "21/09", 
             type: "Laboratório", 
             title: "Aula 05: Polimorfismo – Parte 1", 
             description: "Conceito de polimorfismo, classes abstratas e métodos abstratos, upcasting.",
@@ -473,8 +489,8 @@ export const resources = {
             ] 
           },
           { 
-            id: 6, 
-            date: "08/09", 
+            id: 8, 
+            date: "28/09", 
             type: "Avaliação", 
             highlight: true, 
             title: "P1 - PROVA 1", 
@@ -485,16 +501,8 @@ export const resources = {
             ] 
           },
           { 
-            id: 7, 
-            date: "15/09", 
-            type: "Recurso", 
-            title: "Sem Atividades (Recesso)", 
-            description: "Não haverá atividades nesta data conforme cronograma oficial.",
-            lessons: [] 
-          },
-          { 
-            id: 8, 
-            date: "22/09", 
+            id: 9, 
+            date: "05/10", 
             type: "Teoria", 
             title: "Aula 07: Atividade Mentor-Aprendiz", 
             description: "Correção comentada da P1. Revisão de conceitos com maior índice de erros. Atividade em pares (mentoria entre alunos).",
@@ -505,8 +513,28 @@ export const resources = {
             ] 
           },
           { 
-            id: 9, 
-            date: "29/09", 
+            id: 10, 
+            date: "12/10", 
+            type: "Recurso", 
+            title: "Sem Atividades (Recesso)", 
+            description: "Não haverá atividades nesta data conforme cronograma oficial. Período para preparação dos seminários restantes.",
+            lessons: [] 
+          },
+          { 
+            id: 11, 
+            date: "19/10", 
+            type: "Laboratório", 
+            title: "Aula 08: Tratamento de Exceções", 
+            description: "Hierarquia de exceções, try-catch-finally, throw e throws, exceções verificadas vs não verificadas.",
+            lessons: [
+              { title: "Interfaces em Java", type: "slide" },
+              { title: "Implementando Múltiplas Interfaces", type: "code" },
+              { title: "Atividade de Lab 02", type: "code" }
+            ] 
+          },
+          { 
+            id: 12, 
+            date: "26/10", 
             type: "Laboratório", 
             title: "Aula 08: Polimorfismo – Parte 2", 
             description: "Interfaces, implementação múltipla de comportamentos, diferenças entre interface e classe abstrata.",
@@ -517,45 +545,8 @@ export const resources = {
             ] 
           },
           { 
-            id: 10, 
-            date: "06/10", 
-            type: "Teoria", 
-            title: "Aula 09: Casting, Final e Static", 
-            description: "Casting implícito e explícito de objetos, operador instanceof, modificadores final e static, membros de classe vs instância.",
-            lessons: [
-              { title: "Casting de Objetos e instanceof", type: "slide" },
-              { title: "Palavras-chave final e static", type: "code" },
-              { title: "Exercícios Práticos", type: "doc", document: "ExercicioCasting.pdf" }
-            ] 
-          },
-          { 
-            id: 11, 
-            date: "13/10", 
-            type: "Laboratório", 
-            title: "Aula 10: Tratamento de Exceções", 
-            description: "Hierarquia de exceções, try-catch-finally, throw e throws, exceções verificadas vs não verificadas.",
-            lessons: [
-              { title: "Hierarquia de Exceções em Java", type: "slide" },
-              { title: "Try-Catch-Finally na prática", type: "code" },
-              { title: "Criando Exceções Personalizadas", type: "code" },
-              { title: "Atividade de Lab 03", type: "code" }
-            ] 
-          },
-          { 
-            id: 12, 
-            date: "20/10", 
-            type: "Avaliação", 
-            highlight: true, 
-            title: "Aula 11: Seminários – Parte 1", 
-            description: "Apresentação de seminários em dupla sobre temas pré-estabelecidos do paradigma OO. Avaliação dos grupos 1 a 4.",
-            lessons: [
-              { title: "Orientações para Seminário", type: "doc", document: "OrientacoesSeminario.pdf" },
-              { title: "Critérios de Avaliação", type: "slide" }
-            ] 
-          },
-          { 
             id: 13, 
-            date: "27/10", 
+            date: "02/11", 
             type: "Recurso", 
             title: "Sem Atividades (Recesso)", 
             description: "Não haverá atividades nesta data conforme cronograma oficial. Período para preparação dos seminários restantes.",
@@ -563,30 +554,30 @@ export const resources = {
           },
           { 
             id: 14, 
-            date: "03/11", 
+            date: "09/11", 
+            type: "Avaliação", 
+            highlight: true, 
+            title: "Aula 11: Seminários – Parte 1", 
+            description: "Apresentação de seminários em dupla sobre temas pré-estabelecidos do paradigma OO. Avaliação dos grupos.",
+            lessons: [
+              { title: "Orientações para Seminário", type: "doc", document: "OrientacoesSeminario.pdf" },
+              { title: "Critérios de Avaliação", type: "slide" }
+            ] 
+          },
+          { 
+            id: 15, 
+            date: "16/11", 
             type: "Avaliação", 
             highlight: true, 
             title: "Aula 12: Seminários – Parte 2", 
-            description: "Continuação das apresentações de seminários. Avaliação dos grupos 5 a 8.",
+            description: "Continuação das apresentações de seminários. Avaliação dos grupos.",
             lessons: [
               { title: "Cronograma de Apresentações", type: "doc", document: "CronogramaSeminarios.pdf" }
             ] 
           },
           { 
-            id: 15, 
-            date: "10/11", 
-            type: "Teoria", 
-            title: "Aula 13: Refatoração e Código Limpo", 
-            description: "Princípios de código limpo (Clean Code), boas práticas em Java, princípios SOLID introdutórios e técnicas de refatoração.",
-            lessons: [
-              { title: "Princípios de Clean Code", type: "slide" },
-              { title: "Refatoração na Prática", type: "code" },
-              { title: "Checklist de Código Limpo", type: "doc", document: "ChecklistCleanCode.pdf" }
-            ] 
-          },
-          { 
             id: 16, 
-            date: "17/11", 
+            date: "23/11", 
             type: "Avaliação", 
             highlight: true, 
             title: "P2 - PROVA 2", 
@@ -598,7 +589,7 @@ export const resources = {
           },
           { 
             id: 17, 
-            date: "24/11", 
+            date: "30/11", 
             type: "Encerramento", 
             title: "Aula 15: Entrega da P2 – Encerramento", 
             description: "Devolutiva da P2, revisão de notas, faltas e encerramento oficial da disciplina.",
@@ -608,7 +599,7 @@ export const resources = {
           },
           { 
             id: 18, 
-            date: "01/12", 
+            date: "14/12", 
             type: "Avaliação", 
             highlight: true, 
             title: "EXAME FINAL", 
@@ -1168,30 +1159,30 @@ export const resources = {
         courseData: [
           { 
             id: 1, 
-            date: "08/04", 
+            date: "08/10", 
             type: "Theory", 
             title: "Class 01: Course Introduction", 
-            description: "Course presentation, assessment criteria, and introduction to the teaching plan.",
+            description: "Course introduction, evaluation criteria, and an overview of the syllabus.",
             lessons: [
-              { title: "Teaching Plan and Criteria", type: "doc", document: "planoEnsinoTT314.pdf" },
+              { title: "Syllabus and Evaluation Criteria", type: "doc", document: "planoEnsinoTT314.pdf" },
               { title: "Why Java?", type: "slide" }
             ] 
           },
           { 
             id: 2, 
-            date: "08/11", 
+            date: "08/17", 
             type: "Theory", 
             title: "Class 02: Introduction to Object-Oriented Programming", 
-            description: "Programming paradigms, history, and comparison between procedural and object-oriented languages.",
+            description: "Programming paradigms, history, and a comparison between procedural and object-oriented languages.",
             lessons: [
               { title: "Programming Paradigms", type: "slide" },
               { title: "Environment Setup (JDK + IntelliJ/Eclipse)", type: "video" },
-              { title: "First Java Program", type: "code" }
+              { title: "First Program in Java", type: "code" }
             ] 
           },
           { 
             id: 3, 
-            date: "08/18", 
+            date: "08/24", 
             type: "Lab", 
             title: "Class 03: Classes and Objects", 
             description: "Fundamental concepts of classes, objects, attributes, methods, and constructors.",
@@ -1204,10 +1195,10 @@ export const resources = {
           },
           { 
             id: 4, 
-            date: "08/25", 
+            date: "08/31", 
             type: "Theory", 
             title: "Class 04: Inheritance", 
-            description: "Inheritance mechanism, extends keyword, superclass and subclass, code reuse.",
+            description: "The inheritance mechanism, the extends keyword, superclass and subclass, and code reuse.",
             lessons: [
               { title: "Inheritance in Java: extends", type: "slide" },
               { title: "Super and Method Overriding", type: "code" },
@@ -1216,10 +1207,26 @@ export const resources = {
           },
           { 
             id: 5, 
-            date: "09/01", 
+            date: "09/07", 
+            type: "Break", 
+            title: "No Activities (Break)", 
+            description: "There will be no activities on this date as per the official schedule. Time to prepare for the remaining seminars.",
+            lessons: [] 
+          },
+          { 
+            id: 6, 
+            date: "09/14", 
+            type: "Break", 
+            title: "No Activities (Break)", 
+            description: "There will be no activities on this date as per the official schedule. Time to prepare for the remaining seminars.",
+            lessons: [] 
+          },
+          { 
+            id: 7, 
+            date: "09/21", 
             type: "Lab", 
             title: "Class 05: Polymorphism – Part 1", 
-            description: "Polymorphism concept, abstract classes and methods, upcasting.",
+            description: "The concept of polymorphism, abstract classes and abstract methods, and upcasting.",
             lessons: [
               { title: "Abstract Classes and Abstract Methods", type: "slide" },
               { title: "Upcasting and Dynamic Binding", type: "code" },
@@ -1227,43 +1234,43 @@ export const resources = {
             ] 
           },
           { 
-            id: 6, 
-            date: "09/08", 
-            type: "Exam", 
+            id: 8, 
+            date: "09/28", 
+            type: "Assessment", 
             highlight: true, 
-            title: "P1 - EXAM 1", 
-            description: "Exam covering content from classes 1 to 5. Introduction to OO, classes, objects, inheritance, and polymorphism (part 1).",
+            title: "P1 - TEST 1", 
+            description: "Assessment covering the content taught in classes 1 through 5. Intro to OOP, classes, objects, inheritance, and polymorphism (part 1).",
             lessons: [
-              { title: "P1 General Review", type: "video" },
+              { title: "General Review for P1", type: "video" },
               { title: "P1 Review List", type: "doc", document: "RevisaoP1.pdf" }
             ] 
           },
           { 
-            id: 7, 
-            date: "09/15", 
-            type: "Break", 
-            title: "No Activities (Recess)", 
-            description: "No activities on this date according to the official schedule.",
-            lessons: [] 
-          },
-          { 
-            id: 8, 
-            date: "09/22", 
+            id: 9, 
+            date: "10/05", 
             type: "Theory", 
             title: "Class 07: Mentor-Apprentice Activity", 
-            description: "Commented P1 correction. Review of concepts with the highest error rate. Activity in pairs (peer mentoring).",
+            description: "Annotated P1 correction. Review of concepts with the highest error rate. Pair activity (peer mentoring among students).",
             lessons: [
-              { title: "Commented P1 Answer Key", type: "doc", document: "GabaritoP1.pdf" },
+              { title: "P1 Annotated Answer Key", type: "doc", document: "GabaritoP1.pdf" },
               { title: "Main Errors and Solutions", type: "slide" },
               { title: "Mentor-Apprentice Activity", type: "doc", document: "AtividadeMentoria.pdf" }
             ] 
           },
           { 
-            id: 9, 
-            date: "09/29", 
+            id: 10, 
+            date: "10/12", 
+            type: "Break", 
+            title: "No Activities (Break)", 
+            description: "There will be no activities on this date as per the official schedule. Time to prepare for the remaining seminars.",
+            lessons: [] 
+          },
+          { 
+            id: 11, 
+            date: "10/19", 
             type: "Lab", 
-            title: "Class 08: Polymorphism – Part 2", 
-            description: "Interfaces, multiple behavior implementation, differences between interface and abstract class.",
+            title: "Class 08: Exception Handling", 
+            description: "Exception hierarchy, try-catch-finally, throw and throws, checked vs unchecked exceptions.",
             lessons: [
               { title: "Interfaces in Java", type: "slide" },
               { title: "Implementing Multiple Interfaces", type: "code" },
@@ -1271,104 +1278,79 @@ export const resources = {
             ] 
           },
           { 
-            id: 10, 
-            date: "10/06", 
-            type: "Theory", 
-            title: "Class 09: Casting, Final, and Static", 
-            description: "Implicit and explicit object casting, instanceof operator, final and static modifiers, class vs instance members.",
-            lessons: [
-              { title: "Object Casting and instanceof", type: "slide" },
-              { title: "Keywords final and static", type: "code" },
-              { title: "Practical Exercises", type: "doc", document: "ExercicioCasting.pdf" }
-            ] 
-          },
-          { 
-            id: 11, 
-            date: "10/13", 
-            type: "Lab", 
-            title: "Class 10: Exception Handling", 
-            description: "Exception hierarchy, try-catch-finally, throw and throws, checked vs unchecked exceptions.",
-            lessons: [
-              { title: "Exception Hierarchy in Java", type: "slide" },
-              { title: "Try-Catch-Finally in Practice", type: "code" },
-              { title: "Creating Custom Exceptions", type: "code" },
-              { title: "Lab Activity 03", type: "code" }
-            ] 
-          },
-          { 
             id: 12, 
-            date: "10/20", 
-            type: "Exam", 
-            highlight: true, 
-            title: "Class 11: Seminars – Part 1", 
-            description: "Seminar presentations in pairs on pre-established OO paradigm themes. Assessment of groups 1 to 4.",
+            date: "10/26", 
+            type: "Lab", 
+            title: "Class 08: Polymorphism – Part 2", 
+            description: "Interfaces, multiple behavior implementation, differences between interfaces and abstract classes.",
             lessons: [
-              { title: "Seminar Guidelines", type: "doc", document: "OrientacoesSeminario.pdf" },
-              { title: "Assessment Criteria", type: "slide" }
+              { title: "Interfaces in Java", type: "slide" },
+              { title: "Implementing Multiple Interfaces", type: "code" },
+              { title: "Lab Activity 02", type: "code" }
             ] 
           },
           { 
             id: 13, 
-            date: "10/27", 
+            date: "11/02", 
             type: "Break", 
-            title: "No Activities (Recess)", 
-            description: "No activities on this date according to the official schedule. Period for preparing remaining seminars.",
+            title: "No Activities (Break)", 
+            description: "There will be no activities on this date as per the official schedule. Time to prepare for the remaining seminars.",
             lessons: [] 
           },
           { 
             id: 14, 
-            date: "11/03", 
-            type: "Exam", 
+            date: "11/09", 
+            type: "Assessment", 
+            highlight: true, 
+            title: "Class 11: Seminars – Part 1", 
+            description: "Pair presentations on pre-established OO paradigm topics. Group evaluation.",
+            lessons: [
+              { title: "Seminar Guidelines", type: "doc", document: "OrientacoesSeminario.pdf" },
+              { title: "Evaluation Criteria", type: "slide" }
+            ] 
+          },
+          { 
+            id: 15, 
+            date: "11/16", 
+            type: "Assessment", 
             highlight: true, 
             title: "Class 12: Seminars – Part 2", 
-            description: "Continuation of seminar presentations. Assessment of groups 5 to 8.",
+            description: "Continuation of seminar presentations. Group evaluation.",
             lessons: [
               { title: "Presentation Schedule", type: "doc", document: "CronogramaSeminarios.pdf" }
             ] 
           },
           { 
-            id: 15, 
-            date: "11/10", 
-            type: "Theory", 
-            title: "Class 13: Refactoring and Clean Code", 
-            description: "Clean Code principles, Java best practices, introductory SOLID principles, and refactoring techniques.",
-            lessons: [
-              { title: "Clean Code Principles", type: "slide" },
-              { title: "Refactoring in Practice", type: "code" },
-              { title: "Clean Code Checklist", type: "doc", document: "ChecklistCleanCode.pdf" }
-            ] 
-          },
-          { 
             id: 16, 
-            date: "11/17", 
-            type: "Exam", 
+            date: "11/23", 
+            type: "Assessment", 
             highlight: true, 
-            title: "P2 - EXAM 2", 
-            description: "Final exam covering all semester content with emphasis on polymorphism, exceptions, modifiers, and refactoring.",
+            title: "P2 - TEST 2", 
+            description: "Final assessment covering all semester content with emphasis on polymorphism, exceptions, modifiers, and refactoring.",
             lessons: [
-              { title: "P2 General Review", type: "video" },
+              { title: "General Review for P2", type: "video" },
               { title: "P2 Review List", type: "doc", document: "RevisaoP2.pdf" }
             ] 
           },
           { 
             id: 17, 
-            date: "11/24", 
+            date: "11/30", 
             type: "Closing", 
-            title: "Class 15: P2 Return – Course Closing", 
-            description: "P2 feedback, grade and absence review, and official course closing.",
+            title: "Class 15: P2 Submission – Closing", 
+            description: "P2 feedback, grade review, absences, and official course closing.",
             lessons: [
               { title: "P2 Answer Key", type: "doc", document: "GabaritoP2.pdf" }
             ] 
           },
           { 
             id: 18, 
-            date: "12/01", 
-            type: "Exam", 
+            date: "12/14", 
+            type: "Assessment", 
             highlight: true, 
             title: "FINAL EXAM", 
-            description: "For students with average >= 2.5 and < 5.0 and Attendance >= 75%. Cumulative content from the entire semester.",
+            description: "For students with average grade >= 2.5 and < 5.0 and attendance >= 75%. Cumulative content from the entire semester.",
             lessons: [
-              { title: "Final Exam Study Guide", type: "doc", document: "GuiaExame.pdf" }
+              { title: "Exam Study Guide", type: "doc", document: "GuiaExame.pdf" }
             ] 
           }
         ]
@@ -1821,7 +1803,22 @@ export const resources = {
           subject: 'con el asunto "SI100"'
         },
         courseData: [
-          // Mantener el mismo courseData del portugués (no traducir títulos técnicos)
+          { id: 1, date: "27/02", type: "Teoría", title: "Clase 01: Presentación & Introducción", description: "Presentación de la asignatura, criterios de evaluación e introducción a los algoritmos.", lessons: [{ title: "Plan de Estudios y Criterios", type: "doc", document: "planoEnsino.pdf" }, { title: "Concepto de Algoritmo", type: "slide", document: "planoEnsino.pdf" }, { title: "Configuración del Entorno (VS Code + GCC)", type: "video" }] },
+          { id: 2, date: "06/03", type: "Laboratorio", title: "Clase 02: Conceptos Básicos", description: "Constantes, variables, tipos primitivos y comandos de entrada/salida.", lessons: [{ title: "Tipos de datos en C (int, float, char)", type: "slide" }, { title: "Lista 1", type: "doc", document: "Lista01.pdf" }] },
+          { id: 3, date: "13/03", type: "Teoría", title: "Clase 03: Asignaciones y Operadores", description: "Expresiones aritméticas, precedencia y operadores relacionales.", lessons: [{ title: "Operadores Aritméticos y Relacionales", type: "slide" }, { title: "Lista 2", type: "doc", document: "Lista02.pdf" }] },
+          { id: 4, date: "20/03", type: "Laboratorio", title: "Clase 04: Estructura Secuencial y Condicional", description: "Comandos de decisión simple y compuesta (if/else).", lessons: [{ title: "Lógica booleana en C", type: "video" }, { title: "Estructuras if y else", type: "code" }, { title: "Lista 3", type: "doc", document: "Lista03.pdf" }] },
+          { id: 5, date: "27/03", type: "Teoría", title: "Clase 05: Selección Múltiple & Op. Lógicos", description: "Comando switch-case y operadores lógicos (AND, OR, NOT).", lessons: [{ title: "El comando switch", type: "code" }, { title: "Tabla de verdad y operadores &&, ||, !", type: "slide" }, { title: "Ejercicios de fijación", type: "doc" }] },
+          { id: 6, date: "10/04", type: "Laboratorio", title: "Clase 06: Repetición (Prueba al Inicio/Final)", description: "Estructuras de repetición while y do-while.", lessons: [{ title: "Bucle While: Sintaxis y uso", type: "video" }, { title: "Bucle Do-While: Diferencias", type: "code" }, { title: "Actividad de Lab 03", type: "code" }] },
+          { id: 7, date: "17/04", type: "Teoría", title: "Clase 07: Repetición (Variable de Control)", description: "Estructura de repetición for y bucles anidados.", lessons: [{ title: "El bucle For", type: "slide" }, { title: "Bucles dentro de bucles", type: "code" }, { title: "Lista de repetición", type: "doc" }] },
+          { id: 8, date: "24/04", type: "Evaluación", highlight: true, title: "P1 - PRUEBA TEÓRICA 1", description: "Evaluación correspondiente al contenido impartido en las clases 1 a 7.", lessons: [{ title: "Revisión General P1", type: "video" }] },
+          { id: 9, date: "08/05", type: "Laboratorio", title: "Clase 08: Vectores (Arreglos Unidimensionales)", description: "Declaración, inicialización y manipulación de vectores.", lessons: [{ title: "Concepto de Arreglo", type: "slide" }, { title: "Recorriendo vectores con bucles", type: "code" }, { title: "Actividad de Lab 04", type: "code" }] },
+          { id: 10, date: "15/05", type: "Teoría", title: "Clase 09: Matrices y Cadenas", description: "Arreglos multidimensionales y manipulación de cadenas de caracteres.", lessons: [{ title: "Matrices en C", type: "slide" }, { title: "Cadenas: Arreglos de char", type: "code" }, { title: "Biblioteca string.h", type: "doc" }] },
+          { id: 11, date: "22/05", type: "Laboratorio", title: "Clase 10: Modularización (Funciones)", description: "Funciones, ámbito de variables y paso de parámetros.", lessons: [{ title: "Creando tus propias funciones", type: "video" }, { title: "Parámetros por valor vs referencia", type: "code" }, { title: "Actividad de Lab 05", type: "code" }] },
+          { id: 12, date: "29/05", type: "Teoría", title: "Clase 11: Punteros", description: "Concepto de dirección de memoria, punteros y aritmética de punteros.", lessons: [{ title: "¿Qué es un puntero?", type: "slide" }, { title: "Operadores & y *", type: "code" }, { title: "Punteros y Arreglos", type: "doc" }] },
+          { id: 13, date: "12/06", type: "Laboratorio", title: "Clase 12: Asignación Dinámica & Structs", description: "Malloc, free y estructuras de datos heterogéneas (registros).", lessons: [{ title: "Asignación Dinámica de Memoria", type: "video" }, { title: "Structs (Registros)", type: "code" }, { title: "Actividad de Lab 06", type: "code" }] },
+          { id: 14, date: "19/06", type: "Evaluación", highlight: true, title: "P2 - PRUEBA TEÓRICA 2", description: "Evaluación acumulativa (enfoque clases 8 a 13).", lessons: [{ title: "Revisión P2", type: "video" }] },
+          { id: 15, date: "26/06", type: "Cierre", title: "Clase 13: Revisión y Promedios", description: "Entrega de notas y revisión de faltas.", lessons: [] },
+          { id: 16, date: "17/07", type: "Evaluación", highlight: true, title: "EXAMEN FINAL", description: "Para alumnos con promedio >= 2.5 y < 5.0 y Asistencia >= 75%.", lessons: [] }
         ],
         footer: {
           builtWith: 'Construido con',
@@ -1905,7 +1902,202 @@ export const resources = {
           disclaimer: 'Esta es una página personal y no una página oficial de la universidad. Su contenido es de mi autoría y responsabilidad. Fue desarrollada para auxiliar a los alumnos en la asignatura de Programación Orientada a Objetos I, impartida en FT - Unicamp.'
         },
         courseData: [
-          // Mantener el mismo courseData del portugués (no traducir títulos técnicos)
+          { 
+            id: 1, 
+            date: "10/08", 
+            type: "Teoría", 
+            title: "Clase 01: Presentación de la Asignatura", 
+            description: "Presentación de la asignatura, criterios de evaluación e introducción al plan de estudios.",
+            lessons: [
+              { title: "Plan de Estudios y Criterios", type: "doc", document: "planoEnsinoTT314.pdf" },
+              { title: "¿Por qué Java?", type: "slide" }
+            ] 
+          },
+          { 
+            id: 2, 
+            date: "17/08", 
+            type: "Teoría", 
+            title: "Clase 02: Introducción a la Programación Orientada a Objetos", 
+            description: "Paradigmas de programación, historia y comparación entre lenguajes procedurales y orientados a objetos.",
+            lessons: [
+              { title: "Paradigmas de Programación", type: "slide" },
+              { title: "Configuración del Entorno (JDK + IntelliJ/Eclipse)", type: "video" },
+              { title: "Primer Programa en Java", type: "code" }
+            ] 
+          },
+          { 
+            id: 3, 
+            date: "24/08", 
+            type: "Laboratorio", 
+            title: "Clase 03: Clases y Objetos", 
+            description: "Conceptos fundamentales de clases, objetos, atributos, métodos y constructores.",
+            lessons: [
+              { title: "Definiendo Clases e Instanciando Objetos", type: "slide" },
+              { title: "Atributos y Métodos", type: "code" },
+              { title: "Constructores en Java", type: "code" },
+              { title: "Ejercicio Práctico 01", type: "doc", document: "Exercicio01.pdf" }
+            ] 
+          },
+          { 
+            id: 4, 
+            date: "31/08", 
+            type: "Teoría", 
+            title: "Clase 04: Herencia", 
+            description: "Mecanismo de herencia, palabra clave extends, superclase y subclase, reutilización de código.",
+            lessons: [
+              { title: "Herencia en Java: extends", type: "slide" },
+              { title: "Super y Sobrescritura de Métodos", type: "code" },
+              { title: "Modificadores de Acceso: protected", type: "doc" }
+            ] 
+          },
+          { 
+            id: 5, 
+            date: "07/09", 
+            type: "Receso", 
+            title: "Sin Actividades (Receso)", 
+            description: "No habrá actividades en esta fecha según el cronograma oficial. Período para preparación de los seminarios restantes.",
+            lessons: [] 
+          },
+          { 
+            id: 6, 
+            date: "14/09", 
+            type: "Receso", 
+            title: "Sin Actividades (Receso)", 
+            description: "No habrá actividades en esta fecha según el cronograma oficial. Período para preparación de los seminarios restantes.",
+            lessons: [] 
+          },
+          { 
+            id: 7, 
+            date: "21/09", 
+            type: "Laboratorio", 
+            title: "Clase 05: Polimorfismo – Parte 1", 
+            description: "Concepto de polimorfismo, clases abstractas y métodos abstractos, upcasting.",
+            lessons: [
+              { title: "Clases Abstractas y Métodos Abstractos", type: "slide" },
+              { title: "Upcasting y Enlace Dinámico", type: "code" },
+              { title: "Actividad de Lab 01", type: "code" }
+            ] 
+          },
+          { 
+            id: 8, 
+            date: "28/09", 
+            type: "Evaluación", 
+            highlight: true, 
+            title: "P1 - PRUEBA 1", 
+            description: "Evaluación correspondiente al contenido impartido en las clases 1 a 5. Introducción a POO, clases, objetos, herencia y polimorfismo (parte 1).",
+            lessons: [
+              { title: "Revisión General P1", type: "video" },
+              { title: "Lista de Revisión P1", type: "doc", document: "RevisaoP1.pdf" }
+            ] 
+          },
+          { 
+            id: 9, 
+            date: "05/10", 
+            type: "Teoría", 
+            title: "Clase 07: Actividad Mentor-Aprendiz", 
+            description: "Corrección comentada de la P1. Revisión de conceptos con mayor índice de errores. Actividad en pares (mentoría entre alumnos).",
+            lessons: [
+              { title: "Clave de Respuestas Comentada P1", type: "doc", document: "GabaritoP1.pdf" },
+              { title: "Principales Errores y Soluciones", type: "slide" },
+              { title: "Actividad Mentor-Aprendiz", type: "doc", document: "AtividadeMentoria.pdf" }
+            ] 
+          },
+          { 
+            id: 10, 
+            date: "12/10", 
+            type: "Receso", 
+            title: "Sin Actividades (Receso)", 
+            description: "No habrá actividades en esta fecha según el cronograma oficial. Período para preparación de los seminarios restantes.",
+            lessons: [] 
+          },
+          { 
+            id: 11, 
+            date: "19/10", 
+            type: "Laboratorio", 
+            title: "Clase 08: Manejo de Excepciones", 
+            description: "Jerarquía de excepciones, try-catch-finally, throw y throws, excepciones verificadas vs no verificadas.",
+            lessons: [
+              { title: "Interfaces en Java", type: "slide" },
+              { title: "Implementando Múltiples Interfaces", type: "code" },
+              { title: "Actividad de Lab 02", type: "code" }
+            ] 
+          },
+          { 
+            id: 12, 
+            date: "26/10", 
+            type: "Laboratorio", 
+            title: "Clase 08: Polimorfismo – Parte 2", 
+            description: "Interfaces, implementación múltiple de comportamientos, diferencias entre interface y clase abstracta.",
+            lessons: [
+              { title: "Interfaces en Java", type: "slide" },
+              { title: "Implementando Múltiples Interfaces", type: "code" },
+              { title: "Actividad de Lab 02", type: "code" }
+            ] 
+          },
+          { 
+            id: 13, 
+            date: "02/11", 
+            type: "Receso", 
+            title: "Sin Actividades (Receso)", 
+            description: "No habrá actividades en esta fecha según el cronograma oficial. Período para preparación de los seminarios restantes.",
+            lessons: [] 
+          },
+          { 
+            id: 14, 
+            date: "09/11", 
+            type: "Evaluación", 
+            highlight: true, 
+            title: "Clase 11: Seminarios – Parte 1", 
+            description: "Presentación de seminarios en pareja sobre temas preestablecidos del paradigma OO. Evaluación de los grupos.",
+            lessons: [
+              { title: "Orientaciones para Seminario", type: "doc", document: "OrientacoesSeminario.pdf" },
+              { title: "Criterios de Evaluación", type: "slide" }
+            ] 
+          },
+          { 
+            id: 15, 
+            date: "16/11", 
+            type: "Evaluación", 
+            highlight: true, 
+            title: "Clase 12: Seminarios – Parte 2", 
+            description: "Continuación de las presentaciones de seminarios. Evaluación de los grupos.",
+            lessons: [
+              { title: "Cronograma de Presentaciones", type: "doc", document: "CronogramaSeminarios.pdf" }
+            ] 
+          },
+          { 
+            id: 16, 
+            date: "23/11", 
+            type: "Evaluación", 
+            highlight: true, 
+            title: "P2 - PRUEBA 2", 
+            description: "Evaluación final que abarca todo el contenido del semestre con énfasis en polimorfismo, excepciones, modificadores y refactorización.",
+            lessons: [
+              { title: "Revisión General P2", type: "video" },
+              { title: "Lista de Revisión P2", type: "doc", document: "RevisaoP2.pdf" }
+            ] 
+          },
+          { 
+            id: 17, 
+            date: "30/11", 
+            type: "Cierre", 
+            title: "Clase 15: Entrega de la P2 – Cierre", 
+            description: "Devolución de la P2, revisión de notas, faltas y cierre oficial de la asignatura.",
+            lessons: [
+              { title: "Clave de Respuestas P2", type: "doc", document: "GabaritoP2.pdf" }
+            ] 
+          },
+          { 
+            id: 18, 
+            date: "14/12", 
+            type: "Evaluación", 
+            highlight: true, 
+            title: "EXAMEN FINAL", 
+            description: "Para alumnos con promedio >= 2.5 y < 5.0 y Asistencia >= 75%. Contenido acumulativo de todo el semestre.",
+            lessons: [
+              { title: "Guía de Estudio para Examen", type: "doc", document: "GuiaExame.pdf" }
+            ] 
+          }
         ]
       },
       aboutPage: {
@@ -2356,7 +2548,22 @@ export const resources = {
           subject: 'con oggetto "SI100"'
         },
         courseData: [
-          // Mantenere lo stesso courseData del portoghese
+          { id: 1, date: "27/02", type: "Teoria", title: "Lezione 01: Presentazione & Introduzione", description: "Presentazione del corso, criteri di valutazione e introduzione agli algoritmi.", lessons: [{ title: "Piano di Studi e Criteri", type: "doc", document: "planoEnsino.pdf" }, { title: "Concetto di Algoritmo", type: "slide", document: "planoEnsino.pdf" }, { title: "Configurazione dell'Ambiente (VS Code + GCC)", type: "video" }] },
+          { id: 2, date: "06/03", type: "Laboratorio", title: "Lezione 02: Concetti di Base", description: "Costanti, variabili, tipi primitivi e comandi di input/output.", lessons: [{ title: "Tipi di dati in C (int, float, char)", type: "slide" }, { title: "Lista 1", type: "doc", document: "Lista01.pdf" }] },
+          { id: 3, date: "13/03", type: "Teoria", title: "Lezione 03: Assegnazioni e Operatori", description: "Espressioni aritmetiche, precedenza e operatori relazionali.", lessons: [{ title: "Operatori Aritmetici e Relazionali", type: "slide" }, { title: "Lista 2", type: "doc", document: "Lista02.pdf" }] },
+          { id: 4, date: "20/03", type: "Laboratorio", title: "Lezione 04: Struttura Sequenziale e Condizionale", description: "Comandi di decisione semplice e composta (if/else).", lessons: [{ title: "Logica booleana in C", type: "video" }, { title: "Strutture if e else", type: "code" }, { title: "Lista 3", type: "doc", document: "Lista03.pdf" }] },
+          { id: 5, date: "27/03", type: "Teoria", title: "Lezione 05: Selezione Multipla & Op. Logici", description: "Comando switch-case e operatori logici (AND, OR, NOT).", lessons: [{ title: "Il comando switch", type: "code" }, { title: "Tabella di verità e operatori &&, ||, !", type: "slide" }, { title: "Esercizi di fissaggio", type: "doc" }] },
+          { id: 6, date: "10/04", type: "Laboratorio", title: "Lezione 06: Ripetizione (Test all'Inizio/Fine)", description: "Strutture di ripetizione while e do-while.", lessons: [{ title: "Ciclo While: Sintassi e uso", type: "video" }, { title: "Ciclo Do-While: Differenze", type: "code" }, { title: "Attività di Lab 03", type: "code" }] },
+          { id: 7, date: "17/04", type: "Teoria", title: "Lezione 07: Ripetizione (Variabile di Controllo)", description: "Struttura di ripetizione for e cicli annidati.", lessons: [{ title: "Il ciclo For", type: "slide" }, { title: "Cicli dentro cicli", type: "code" }, { title: "Lista di ripetizione", type: "doc" }] },
+          { id: 8, date: "24/04", type: "Valutazione", highlight: true, title: "P1 - PROVA TEORICA 1", description: "Valutazione relativa al contenuto impartito nelle lezioni 1 a 7.", lessons: [{ title: "Ripasso Generale P1", type: "video" }] },
+          { id: 9, date: "08/05", type: "Laboratorio", title: "Lezione 08: Vettori (Array Unidimensionali)", description: "Dichiarazione, inizializzazione e manipolazione di vettori.", lessons: [{ title: "Concetto di Array", type: "slide" }, { title: "Percorrendo vettori con cicli", type: "code" }, { title: "Attività di Lab 04", type: "code" }] },
+          { id: 10, date: "15/05", type: "Teoria", title: "Lezione 09: Matrici e Stringhe", description: "Array multidimensionali e manipolazione di stringhe di caratteri.", lessons: [{ title: "Matrici in C", type: "slide" }, { title: "Stringhe: Array di char", type: "code" }, { title: "Libreria string.h", type: "doc" }] },
+          { id: 11, date: "22/05", type: "Laboratorio", title: "Lezione 10: Modularizzazione (Funzioni)", description: "Funzioni, ambito delle variabili e passaggio di parametri.", lessons: [{ title: "Creando le tue funzioni", type: "video" }, { title: "Parametri per valore vs riferimento", type: "code" }, { title: "Attività di Lab 05", type: "code" }] },
+          { id: 12, date: "29/05", type: "Teoria", title: "Lezione 11: Puntatori", description: "Concetto di indirizzo di memoria, puntatori e aritmetica dei puntatori.", lessons: [{ title: "Cos'è un puntatore?", type: "slide" }, { title: "Operatori & e *", type: "code" }, { title: "Puntatori e Array", type: "doc" }] },
+          { id: 13, date: "12/06", type: "Laboratorio", title: "Lezione 12: Allocazione Dinamica & Struct", description: "Malloc, free e strutture dati eterogenee (record).", lessons: [{ title: "Allocazione Dinamica della Memoria", type: "video" }, { title: "Struct (Record)", type: "code" }, { title: "Attività di Lab 06", type: "code" }] },
+          { id: 14, date: "19/06", type: "Valutazione", highlight: true, title: "P2 - PROVA TEORICA 2", description: "Valutazione cumulativa (focus lezioni 8 a 13).", lessons: [{ title: "Ripasso P2", type: "video" }] },
+          { id: 15, date: "26/06", type: "Chiusura", title: "Lezione 13: Ripasso e Medie", description: "Consegna dei voti e revisione delle assenze.", lessons: [] },
+          { id: 16, date: "17/07", type: "Valutazione", highlight: true, title: "ESAME FINALE", description: "Per studenti con media >= 2.5 e < 5.0 e Frequenza >= 75%.", lessons: [] }
         ],
         footer: {
           builtWith: 'Costruito con',
@@ -2440,7 +2647,202 @@ export const resources = {
           disclaimer: 'Questa è una pagina personale e non una pagina ufficiale dell\'università. Il suo contenuto è di mia paternità e responsabilità. È stata sviluppata per assistere gli studenti nel corso di Programmazione Orientata agli Oggetti I, tenuto presso FT - Unicamp.'
         },
         courseData: [
-          // Mantenere lo stesso courseData del portoghese
+          { 
+            id: 1, 
+            date: "10/08", 
+            type: "Teoria", 
+            title: "Lezione 01: Presentazione del Corso", 
+            description: "Presentazione del corso, criteri di valutazione e introduzione al piano di studi.",
+            lessons: [
+              { title: "Piano di Studi e Criteri", type: "doc", document: "planoEnsinoTT314.pdf" },
+              { title: "Perché Java?", type: "slide" }
+            ] 
+          },
+          { 
+            id: 2, 
+            date: "17/08", 
+            type: "Teoria", 
+            title: "Lezione 02: Introduzione alla Programmazione Orientata agli Oggetti", 
+            description: "Paradigmi di programmazione, storia e confronto tra linguaggi procedurali e orientati agli oggetti.",
+            lessons: [
+              { title: "Paradigmi di Programmazione", type: "slide" },
+              { title: "Configurazione dell'Ambiente (JDK + IntelliJ/Eclipse)", type: "video" },
+              { title: "Primo Programma in Java", type: "code" }
+            ] 
+          },
+          { 
+            id: 3, 
+            date: "24/08", 
+            type: "Laboratorio", 
+            title: "Lezione 03: Classi e Oggetti", 
+            description: "Concetti fondamentali di classi, oggetti, attributi, metodi e costruttori.",
+            lessons: [
+              { title: "Definire Classi e Istanziazione di Oggetti", type: "slide" },
+              { title: "Attributi e Metodi", type: "code" },
+              { title: "Costruttori in Java", type: "code" },
+              { title: "Esercizio Pratico 01", type: "doc", document: "Exercicio01.pdf" }
+            ] 
+          },
+          { 
+            id: 4, 
+            date: "31/08", 
+            type: "Teoria", 
+            title: "Lezione 04: Ereditarietà", 
+            description: "Meccanismo di ereditarietà, parola chiave extends, superclasse e sottoclasse, riutilizzo del codice.",
+            lessons: [
+              { title: "Ereditarietà in Java: extends", type: "slide" },
+              { title: "Super e Override dei Metodi", type: "code" },
+              { title: "Modificatori di Accesso: protected", type: "doc" }
+            ] 
+          },
+          { 
+            id: 5, 
+            date: "07/09", 
+            type: "Pausa", 
+            title: "Nessuna Attività (Pausa)", 
+            description: "Non ci saranno attività in questa data secondo il calendario ufficiale. Periodo per la preparazione dei seminari rimanenti.",
+            lessons: [] 
+          },
+          { 
+            id: 6, 
+            date: "14/09", 
+            type: "Pausa", 
+            title: "Nessuna Attività (Pausa)", 
+            description: "Non ci saranno attività in questa data secondo il calendario ufficiale. Periodo per la preparazione dei seminari rimanenti.",
+            lessons: [] 
+          },
+          { 
+            id: 7, 
+            date: "21/09", 
+            type: "Laboratorio", 
+            title: "Lezione 05: Polimorfismo – Parte 1", 
+            description: "Concetto di polimorfismo, classi astratte e metodi astratti, upcasting.",
+            lessons: [
+              { title: "Classi Astratte e Metodi Astratti", type: "slide" },
+              { title: "Upcasting e Legame Dinamico", type: "code" },
+              { title: "Attività di Lab 01", type: "code" }
+            ] 
+          },
+          { 
+            id: 8, 
+            date: "28/09", 
+            type: "Valutazione", 
+            highlight: true, 
+            title: "P1 - PROVA 1", 
+            description: "Valutazione relativa al contenuto impartito nelle lezioni 1 a 5. Introduzione alla OOP, classi, oggetti, ereditarietà e polimorfismo (parte 1).",
+            lessons: [
+              { title: "Ripasso Generale P1", type: "video" },
+              { title: "Lista di Ripasso P1", type: "doc", document: "RevisaoP1.pdf" }
+            ] 
+          },
+          { 
+            id: 9, 
+            date: "05/10", 
+            type: "Teoria", 
+            title: "Lezione 07: Attività Mentore-Apprendista", 
+            description: "Correzione commentata della P1. Ripasso dei concetti con il più alto tasso di errori. Attività in coppia (mentoraggio tra studenti).",
+            lessons: [
+              { title: "Soluzione Commentata P1", type: "doc", document: "GabaritoP1.pdf" },
+              { title: "Errori Principali e Soluzioni", type: "slide" },
+              { title: "Attività Mentore-Apprendista", type: "doc", document: "AtividadeMentoria.pdf" }
+            ] 
+          },
+          { 
+            id: 10, 
+            date: "12/10", 
+            type: "Pausa", 
+            title: "Nessuna Attività (Pausa)", 
+            description: "Non ci saranno attività in questa data secondo il calendario ufficiale. Periodo per la preparazione dei seminari rimanenti.",
+            lessons: [] 
+          },
+          { 
+            id: 11, 
+            date: "19/10", 
+            type: "Laboratorio", 
+            title: "Lezione 08: Gestione delle Eccezioni", 
+            description: "Gerarchia delle eccezioni, try-catch-finally, throw e throws, eccezioni verificate vs non verificate.",
+            lessons: [
+              { title: "Interfacce in Java", type: "slide" },
+              { title: "Implementazione di Interfacce Multiple", type: "code" },
+              { title: "Attività di Lab 02", type: "code" }
+            ] 
+          },
+          { 
+            id: 12, 
+            date: "26/10", 
+            type: "Laboratorio", 
+            title: "Lezione 08: Polimorfismo – Parte 2", 
+            description: "Interfacce, implementazione multipla di comportamenti, differenze tra interfaccia e classe astratta.",
+            lessons: [
+              { title: "Interfacce in Java", type: "slide" },
+              { title: "Implementazione di Interfacce Multiple", type: "code" },
+              { title: "Attività di Lab 02", type: "code" }
+            ] 
+          },
+          { 
+            id: 13, 
+            date: "02/11", 
+            type: "Pausa", 
+            title: "Nessuna Attività (Pausa)", 
+            description: "Non ci saranno attività in questa data secondo il calendario ufficiale. Periodo per la preparazione dei seminari rimanenti.",
+            lessons: [] 
+          },
+          { 
+            id: 14, 
+            date: "09/11", 
+            type: "Valutazione", 
+            highlight: true, 
+            title: "Lezione 11: Seminari – Parte 1", 
+            description: "Presentazione di seminari in coppia su temi predefiniti del paradigma OO. Valutazione dei gruppi.",
+            lessons: [
+              { title: "Linee Guida per il Seminario", type: "doc", document: "OrientacoesSeminario.pdf" },
+              { title: "Criteri di Valutazione", type: "slide" }
+            ] 
+          },
+          { 
+            id: 15, 
+            date: "16/11", 
+            type: "Valutazione", 
+            highlight: true, 
+            title: "Lezione 12: Seminari – Parte 2", 
+            description: "Continuazione delle presentazioni dei seminari. Valutazione dei gruppi.",
+            lessons: [
+              { title: "Calendario delle Presentazioni", type: "doc", document: "CronogramaSeminarios.pdf" }
+            ] 
+          },
+          { 
+            id: 16, 
+            date: "23/11", 
+            type: "Valutazione", 
+            highlight: true, 
+            title: "P2 - PROVA 2", 
+            description: "Valutazione finale che copre tutto il contenuto del semestre con enfasi su polimorfismo, eccezioni, modificatori e refactoring.",
+            lessons: [
+              { title: "Ripasso Generale P2", type: "video" },
+              { title: "Lista di Ripasso P2", type: "doc", document: "RevisaoP2.pdf" }
+            ] 
+          },
+          { 
+            id: 17, 
+            date: "30/11", 
+            type: "Chiusura", 
+            title: "Lezione 15: Consegna della P2 – Chiusura", 
+            description: "Restituzione della P2, revisione dei voti, assenze e chiusura ufficiale del corso.",
+            lessons: [
+              { title: "Soluzione P2", type: "doc", document: "GabaritoP2.pdf" }
+            ] 
+          },
+          { 
+            id: 18, 
+            date: "14/12", 
+            type: "Valutazione", 
+            highlight: true, 
+            title: "ESAME FINALE", 
+            description: "Per studenti con media >= 2.5 e < 5.0 e Frequenza >= 75%. Contenuto cumulativo dell'intero semestre.",
+            lessons: [
+              { title: "Guida allo Studio per l'Esame", type: "doc", document: "GuiaExame.pdf" }
+            ] 
+          }
         ]
       },
       aboutPage: {
