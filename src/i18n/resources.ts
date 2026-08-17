@@ -430,9 +430,11 @@ export const resources = {
             title: "Aula 02: Introdução à Orientação a Objetos", 
             description: "Paradigmas de programação, histórico e comparação entre linguagens procedurais e orientadas a objetos.",
             lessons: [
-              { title: "Paradigmas de Programação", type: "slide" },
-              { title: "Configuração do Ambiente (JDK + IntelliJ/Eclipse)", type: "video" },
-              { title: "Primeiro Programa em Java", type: "code" }
+              { title: "Paradigmas de Programação - entre em contato", type: "slide" },
+              { title: "Manual de instalação do Java e VS Code para Windows", type: "doc", document: "ManualInstalacaoJavaWindowsTT314.pdf" },
+              { title: "Manual de configuração do VS Code", type: "doc", document: "ManualConfiguracaoVSCodeTT314.pdf" },
+              { title: "Configuração do Ambiente (JDK + VSCODE) - entre em contato", type: "video" },
+              { title: "Primeiro Programa em Java", type: "code", document: "App.java" }
             ] 
           },
           { 
@@ -1175,10 +1177,12 @@ export const resources = {
             title: "Class 02: Introduction to Object-Oriented Programming", 
             description: "Programming paradigms, history, and a comparison between procedural and object-oriented languages.",
             lessons: [
-              { title: "Programming Paradigms", type: "slide" },
-              { title: "Environment Setup (JDK + IntelliJ/Eclipse)", type: "video" },
-              { title: "First Program in Java", type: "code" }
-            ] 
+              { title: "Programming Paradigms - contact us", type: "slide" },
+              { title: "Java and VS Code Installation Manual for Windows", type: "doc", document: "ManualInstalacaoJavaWindowsTT314.pdf" },
+              { title: "VS Code Configuration Manual", type: "doc", document: "ManualConfiguracaoVSCodeTT314.pdf" },
+              { title: "Environment Setup (JDK + VSCODE) - contact us", type: "video" },
+              { title: "First Program in Java", type: "code", document: "App.java" }
+            ]
           },
           { 
             id: 3, 
@@ -1920,10 +1924,12 @@ export const resources = {
             title: "Clase 02: Introducción a la Programación Orientada a Objetos", 
             description: "Paradigmas de programación, historia y comparación entre lenguajes procedurales y orientados a objetos.",
             lessons: [
-              { title: "Paradigmas de Programación", type: "slide" },
-              { title: "Configuración del Entorno (JDK + IntelliJ/Eclipse)", type: "video" },
-              { title: "Primer Programa en Java", type: "code" }
-            ] 
+              { title: "Paradigmas de Programación - contáctenos", type: "slide" },
+              { title: "Manual de instalación de Java y VS Code para Windows", type: "doc", document: "ManualInstalacaoJavaWindowsTT314.pdf" },
+              { title: "Manual de configuración de VS Code", type: "doc", document: "ManualConfiguracaoVSCodeTT314.pdf" },
+              { title: "Configuración del Entorno (JDK + VSCODE) - contáctenos", type: "video" },
+              { title: "Primer Programa en Java", type: "code", document: "App.java" }
+            ]
           },
           { 
             id: 3, 
@@ -2665,10 +2671,12 @@ export const resources = {
             title: "Lezione 02: Introduzione alla Programmazione Orientata agli Oggetti", 
             description: "Paradigmi di programmazione, storia e confronto tra linguaggi procedurali e orientati agli oggetti.",
             lessons: [
-              { title: "Paradigmi di Programmazione", type: "slide" },
-              { title: "Configurazione dell'Ambiente (JDK + IntelliJ/Eclipse)", type: "video" },
-              { title: "Primo Programma in Java", type: "code" }
-            ] 
+              { title: "Paradigmi di Programmazione - contattaci", type: "slide" },
+              { title: "Manuale di installazione di Java e VS Code per Windows", type: "doc", document: "ManualInstalacaoJavaWindowsTT314.pdf" },
+              { title: "Manuale di configurazione di VS Code", type: "doc", document: "ManualConfiguracaoVSCodeTT314.pdf" },
+              { title: "Configurazione dell'Ambiente (JDK + VSCODE) - contattaci", type: "video" },
+              { title: "Primo Programma in Java", type: "code", document: "App.java" }
+            ]
           },
           { 
             id: 3, 
