@@ -48,8 +48,8 @@ Disponibilizar um **portfólio online, organizado e responsivo**, onde visitante
 
 ### Requisitos
 
-* [Node.js](https://nodejs.org/) (v14 ou superior)
-* [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/) ou [pnpm](https://pnpm.io/)
+* [Node.js](https://nodejs.org/) (v20.9 ou superior)
+* [npm](https://www.npmjs.com/) 11.14.1 ou compatível
 
 ### Passos
 
@@ -60,17 +60,9 @@ cd seu-repositorio
 
 # Instale as dependências
 npm install
-# ou
-yarn install
-# ou
-pnpm install
 
 # Inicie o servidor de desenvolvimento
 npm run dev
-# ou
-yarn dev
-# ou
-pnpm dev
 ```
 
 Acesse [http://localhost:3000](http://localhost:3000) no navegador.
@@ -79,10 +71,6 @@ Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
 ```bash
 npm run build && npm start
-# ou
-yarn build && yarn start
-# ou
-pnpm build && pnpm start
 ```
 
 ---
