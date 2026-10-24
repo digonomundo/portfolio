@@ -35,7 +35,6 @@ import PhotoCoral from '@/assets/images/Coral.jpeg';
 import PhotoEuUtf from '@/assets/images/AceptUtfpr.jpeg';
 import PhotoIdeathonPresentation from '@/assets/images/presentation.jpg';
 import PhotoIdeathonAward from '@/assets/images/IedathonAward.jpg';
-import PhotoSuaNovaImagem from '@/assets/images/jubs1.jpg'; 
 
 export default function AboutContent() {
     const { t } = useTranslation();
