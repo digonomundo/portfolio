@@ -14,6 +14,8 @@ import { getLocaleLanguageTag } from '@/lib/locales';
 import { generateOrganizationSchema, generatePersonSchema } from '@/lib/schema';
 import type { AppLanguage } from '@/i18n/resources';
 import { resources } from '@/i18n/resources';
+import { MotionConfig } from 'framer-motion';
+import Script from 'next/script';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -127,18 +129,24 @@ export default async function RootLayout({
         <StructuredData data={rootStructuredData} />
       </head>
       <body>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: themeInitScript }}
+        />
         
         <ThemeProvider>
-          <I18nProvider initialLocale={typedLocale}>
-            <ScrollProgress />
-            <Navbar />
-            <main className="container">
-              {children}
-            </main>
-            <SpeedInsights />
-            <Analytics />
-          </I18nProvider>
+          <MotionConfig reducedMotion="user">
+            <I18nProvider initialLocale={typedLocale}>
+              <ScrollProgress />
+              <Navbar />
+              <main className="container">
+                {children}
+              </main>
+              <SpeedInsights />
+              <Analytics />
+            </I18nProvider>
+          </MotionConfig>
         </ThemeProvider>
       </body>
     </html>

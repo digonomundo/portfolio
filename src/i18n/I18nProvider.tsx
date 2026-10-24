@@ -62,7 +62,7 @@ export function I18nProvider({ children, initialLocale }: I18nProviderProps) {
     return () => {
       i18n.off('languageChanged', handleLanguageChanged);
     };
-  }, []);
+  }, [initialLocale]);
 
   return <I18nextProvider i18n={i18n}>{children}</I18nextProvider>;
 }

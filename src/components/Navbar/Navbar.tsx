@@ -38,6 +38,7 @@ export function Navbar() {
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
+  const wasMenuOpenRef = useRef(false);
 
   const isTutoringPage = pathname
     ? pathname === '/tutoring' ||
@@ -55,8 +56,11 @@ export function Navbar() {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
-      toggleButtonRef.current?.focus();
+      if (wasMenuOpenRef.current) {
+        toggleButtonRef.current?.focus();
+      }
     }
+    wasMenuOpenRef.current = isMenuOpen;
     return () => {
       document.body.style.overflow = '';
     };
@@ -153,7 +157,7 @@ export function Navbar() {
   return (
     <>
       <header className={styles.navbarContainer}>
-        <nav className={styles.navbar} role="navigation" aria-label="Main Navigation">
+        <nav className={styles.navbar} aria-label={t('navbar.navigation')}>
           {/* Logo + Localização */}
           <div className={styles.leftBadge}>
             <Link
@@ -179,9 +183,9 @@ export function Navbar() {
           {/* Links de navegação (apenas nas páginas principais) */}
           {showDefaultNav && (
             <div
+              id="mobile-navigation"
               className={`${styles.navLinks} ${isMenuOpen ? styles.navLinksOpen : ''}`}
               ref={menuRef}
-              aria-hidden={!isMenuOpen}
             >
               {navLinks.map((link, index) => (
                 <Link
@@ -205,7 +209,7 @@ export function Navbar() {
                 aria-current={isJournalPage ? 'page' : undefined}
                 onClick={() => setIsMenuOpen(false)}
               >
-                Journal
+                {t('navbar.journal')}
               </Link>
 
               {/* Language Switcher MOBILE (aparece apenas dentro do menu hambúrguer) */}
@@ -221,7 +225,7 @@ export function Navbar() {
                       className={`${styles.mobileLangButton} ${
                         currentLanguage === lang ? styles.mobileLangActive : ''
                       }`}
-                      aria-label={`Mudar para ${lang.toUpperCase()}`}
+                      aria-label={t('navbar.switchLanguage', { language: lang.toUpperCase() })}
                     >
                       {lang.toUpperCase()}
                     </button>
@@ -261,8 +265,9 @@ export function Navbar() {
                 ref={toggleButtonRef}
                 className={styles.menuToggle}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+                aria-label={isMenuOpen ? t('navbar.closeMenu') : t('navbar.openMenu')}
                 aria-expanded={isMenuOpen}
+                aria-controls="mobile-navigation"
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>

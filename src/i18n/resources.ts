@@ -33,7 +33,12 @@ export const resources = {
         tutoring: 'Monitoria',
         portfolio: 'Ir para o portfólio',
         portfolio2: 'Voltar ao portfólio',
-        language: 'Idioma'
+        language: 'Idioma',
+        navigation: 'Navegação principal',
+        journal: 'Journal',
+        openMenu: 'Abrir menu',
+        closeMenu: 'Fechar menu',
+        switchLanguage: 'Mudar para {{language}}'
       },
       hero: {
         titleLine1: 'Futuro',
@@ -41,7 +46,18 @@ export const resources = {
         summary: 'Técnico em Desenvolvimento de Sistemas e estudante de Engenharia de Telecomunicações',
         email: 'E-mail',
         contactCta: 'Entre em contato',
-        downloadCv: 'Baixar CV'
+        downloadCv: 'Baixar CV',
+        githubLabel: 'Visitar meu perfil no GitHub',
+        linkedinLabel: 'Visitar meu perfil no LinkedIn',
+        instagramLabel: 'Visitar meu perfil no Instagram'
+      },
+      journal: {
+        readStory: 'Ler história',
+        description: 'Engenharia, desenvolvimento, projetos e conquistas.',
+        archive: 'Arquivo',
+        newestFirst: 'mais recentes primeiro',
+        categories: 'Categorias',
+        empty: 'Nenhuma publicação disponível.',
       },
       about: {
         title: 'Sobre Mim',
@@ -783,7 +799,12 @@ export const resources = {
         tutoring: 'Tutoring',
         portfolio: 'Go to portfolio',
         portfolio2: 'Back to portfolio',
-        language: 'Language'
+        language: 'Language',
+        navigation: 'Main navigation',
+        journal: 'Journal',
+        openMenu: 'Open menu',
+        closeMenu: 'Close menu',
+        switchLanguage: 'Switch to {{language}}'
       },
       hero: {
         titleLine1: 'Future',
@@ -791,7 +812,18 @@ export const resources = {
         summary: 'Systems Development Technician and Telecommunications Engineering student',
         email: 'E-mail',
         contactCta: 'Get in touch',
-        downloadCv: 'Download CV'
+        downloadCv: 'Download CV',
+        githubLabel: 'Visit my GitHub profile',
+        linkedinLabel: 'Visit my LinkedIn profile',
+        instagramLabel: 'Visit my Instagram profile'
+      },
+      journal: {
+        readStory: 'Read story',
+        description: 'Engineering, development, projects and milestones.',
+        archive: 'Archive',
+        newestFirst: 'newest first',
+        categories: 'Categories',
+        empty: 'No publications available.',
       },
       about: {
         title: 'About Me',
@@ -1533,7 +1565,12 @@ export const resources = {
         tutoring: 'Monitoría',
         portfolio: 'Ir al portafolio',
         portfolio2: 'Volver al portafolio',
-        language: 'Idioma'
+        language: 'Idioma',
+        navigation: 'Navegación principal',
+        journal: 'Journal',
+        openMenu: 'Abrir menú',
+        closeMenu: 'Cerrar menú',
+        switchLanguage: 'Cambiar a {{language}}'
       },
       hero: {
         titleLine1: 'Futuro',
@@ -1541,7 +1578,18 @@ export const resources = {
         summary: 'Técnico en Desarrollo de Sistemas y estudiante de Ingeniería de Telecomunicaciones',
         email: 'Correo electrónico',
         contactCta: 'Ponte en contacto',
-        downloadCv: 'Descargar CV'
+        downloadCv: 'Descargar CV',
+        githubLabel: 'Visitar mi perfil de GitHub',
+        linkedinLabel: 'Visitar mi perfil de LinkedIn',
+        instagramLabel: 'Visitar mi perfil de Instagram'
+      },
+      journal: {
+        readStory: 'Leer historia',
+        description: 'Ingeniería, desarrollo, proyectos y logros.',
+        archive: 'Archivo',
+        newestFirst: 'más recientes primero',
+        categories: 'Categorías',
+        empty: 'No hay publicaciones disponibles.',
       },
       about: {
         title: 'Sobre Mí',
@@ -2283,7 +2331,12 @@ export const resources = {
         tutoring: 'Tutorato',
         portfolio: 'Vai al portfolio',
         portfolio2: 'Torna al portfolio',
-        language: 'Lingua'
+        language: 'Lingua',
+        navigation: 'Navigazione principale',
+        journal: 'Journal',
+        openMenu: 'Apri menu',
+        closeMenu: 'Chiudi menu',
+        switchLanguage: 'Passa a {{language}}'
       },
       hero: {
         titleLine1: 'Futuro',
@@ -2291,7 +2344,18 @@ export const resources = {
         summary: 'Tecnico in Sviluppo di Sistemi e studente di Ingegneria delle Telecomunicazioni',
         email: 'E-mail',
         contactCta: 'Contattami',
-        downloadCv: 'Scarica CV'
+        downloadCv: 'Scarica CV',
+        githubLabel: 'Visita il mio profilo GitHub',
+        linkedinLabel: 'Visita il mio profilo LinkedIn',
+        instagramLabel: 'Visita il mio profilo Instagram'
+      },
+      journal: {
+        readStory: 'Leggi la storia',
+        description: 'Ingegneria, sviluppo, progetti e traguardi.',
+        archive: 'Archivio',
+        newestFirst: 'più recenti prima',
+        categories: 'Categorie',
+        empty: 'Nessuna pubblicazione disponibile.',
       },
       about: {
         title: 'Chi Sono',

@@ -3,16 +3,11 @@ import { notFound } from 'next/navigation';
 import { JournalGrid } from '@/components/journal/JournalGrid';
 import { getCategoryLabel, getPosts, isJournalLocale, journalLocales, getLocaleHref, type JournalCategory } from '@/lib/journal';
 import { getLocaleLanguageTag } from '@/lib/locales';
+import { resources } from '@/i18n/resources';
 import styles from './page.module.css';
 
 type Props = { params: Promise<{ locale: string }> };
 
-const copy = {
-  pt: { title: 'Journal', description: 'Engenharia, desenvolvimento, projetos e conquistas.', archive: 'Arquivo' },
-  en: { title: 'Journal', description: 'Engineering, development, projects and milestones.', archive: 'Archive' },
-  es: { title: 'Journal', description: 'Ingeniería, desarrollo, proyectos y logros.', archive: 'Archivo' },
-  it: { title: 'Journal', description: 'Ingegneria, sviluppo, progetti e traguardi.', archive: 'Archivio' },
-} as const;
 const visibleCategories: JournalCategory[] = ['milestones', 'learning-experiences', 'in-the-press'];
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://digonomundo.com';
 
@@ -23,18 +18,19 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!isJournalLocale(locale)) return {};
+  const translation = resources[locale].translation;
   const languages = Object.fromEntries(
     journalLocales.map((language) => [getLocaleLanguageTag(language), `${siteUrl}${getLocaleHref(language)}`]),
   );
   return {
-    title: `${copy[locale].title} — Journal`,
-    description: copy[locale].description,
+    title: 'Journal',
+    description: translation.journal.description,
     alternates: {
       canonical: `${siteUrl}${getLocaleHref(locale)}`,
       languages: { ...languages, 'x-default': languages['en-US'] },
     },
-    openGraph: { type: 'website', title: copy[locale].title, description: copy[locale].description, url: `${siteUrl}${getLocaleHref(locale)}` },
-    twitter: { card: 'summary', title: copy[locale].title, description: copy[locale].description },
+    openGraph: { type: 'website', title: 'Journal', description: translation.journal.description, url: `${siteUrl}${getLocaleHref(locale)}` },
+    twitter: { card: 'summary', title: 'Journal', description: translation.journal.description },
   };
 }
 
@@ -42,14 +38,15 @@ export default async function JournalPage({ params }: Props) {
   const { locale } = await params;
   if (!isJournalLocale(locale)) notFound();
   const posts = getPosts(locale);
+  const translation = resources[locale].translation;
   return <div className={styles.page}>
     <header className={styles.intro}>
-      <h1>{copy[locale].title}</h1>
-      <p>{copy[locale].description}</p>
-      <nav className={styles.categoryNav} aria-label={locale === 'pt' ? 'Categorias' : locale === 'es' ? 'Categorías' : locale === 'it' ? 'Categorie' : 'Categories'}>
+      <h1>Journal</h1>
+      <p>{translation.journal.description}</p>
+      <nav className={styles.categoryNav} aria-label={translation.journal.categories}>
         {visibleCategories.map((category) => <a className={styles.categoryLink} href={`${getLocaleHref(locale)}/category/${category}`} key={category}>{getCategoryLabel(category, locale)}</a>)}
       </nav>
     </header>
-    {posts.length ? <><section className={styles.archive} aria-labelledby="archive-title"><span id="archive-title" className={styles.archiveTitle}>{copy[locale].archive}</span><span>{new Date(posts[0].publishedAt).getFullYear()} — {locale === 'pt' ? 'mais recentes primeiro' : locale === 'es' ? 'más recientes primero' : locale === 'it' ? 'più recenti prima' : 'newest first'}</span></section><JournalGrid posts={posts} locale={locale} /></> : <p className={styles.empty}>{locale === 'pt' ? 'Nenhuma publicação disponível.' : locale === 'es' ? 'No hay publicaciones disponibles.' : locale === 'it' ? 'Nessuna pubblicazione disponibile.' : 'No publications available.'}</p>}
+    {posts.length ? <><section className={styles.archive} aria-labelledby="archive-title"><span id="archive-title" className={styles.archiveTitle}>{translation.journal.archive}</span><span>{new Date(posts[0].publishedAt).getFullYear()} — {translation.journal.newestFirst}</span></section><JournalGrid posts={posts} locale={locale} /></> : <p className={styles.empty}>{translation.journal.empty}</p>}
   </div>;
 }

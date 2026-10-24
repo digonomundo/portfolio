@@ -1,5 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { Download } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -8,6 +8,7 @@ import { HeroImage } from '@/components/HeroImage/HeroImage';
 
 export function Hero() {
   const { t } = useTranslation();
+  const prefersReducedMotion = useReducedMotion();
 
     const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -23,17 +24,17 @@ export function Hero() {
       <div className={styles.bgTypography} aria-hidden="true">
         <motion.span 
           className={styles.solidText}
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: prefersReducedMotion ? 0 : 0.8, ease: "easeOut" }}
         >
           RODRIGO
         </motion.span>
         <motion.span 
           className={styles.outlineText}
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+          transition={{ duration: prefersReducedMotion ? 0 : 0.8, ease: "easeOut", delay: prefersReducedMotion ? 0 : 0.1 }}
         >
           DIAS
         </motion.span>
@@ -51,9 +52,9 @@ export function Hero() {
           {/* Left Column */}
           <motion.div 
             className={styles.leftCol}
-            initial={{ opacity: 0, x: -30 }}
+            initial={prefersReducedMotion ? false : { opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: prefersReducedMotion ? 0 : 0.6, delay: prefersReducedMotion ? 0 : 0.4 }}
           >
             <h1 className={styles.jobTitle}>{t('hero.titleLine1')} <br/>{t('hero.titleLine2')}</h1>
             <p className={styles.summary}>
@@ -77,17 +78,17 @@ export function Hero() {
           {/* Right Column */}
           <motion.div 
             className={styles.rightCol}
-            initial={{ opacity: 0, x: 30 }}
+            initial={prefersReducedMotion ? false : { opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: prefersReducedMotion ? 0 : 0.6, delay: prefersReducedMotion ? 0 : 0.5 }}
           >
-            <a href="https://github.com/digonomundo" target="_blank" rel="noreferrer" className={styles.socialPill} aria-label="Visit my GitHub profile">
+            <a href="https://github.com/digonomundo" target="_blank" rel="noreferrer" className={styles.socialPill} aria-label={t('hero.githubLabel')}>
               <FaGithub size={16} aria-hidden="true" /> GitHub
             </a>
-            <a href="https://linkedin.com/in/digonomundo" target="_blank" rel="noreferrer" className={styles.socialPill} aria-label="Visit my LinkedIn profile">
+            <a href="https://linkedin.com/in/digonomundo" target="_blank" rel="noreferrer" className={styles.socialPill} aria-label={t('hero.linkedinLabel')}>
               <FaLinkedin size={16} aria-hidden="true" /> LinkedIn
             </a>
-            <a href="https://instagram.com/digonomundo" target="_blank" rel="noreferrer" className={styles.socialPill} aria-label="Visit my Instagram profile">
+            <a href="https://instagram.com/digonomundo" target="_blank" rel="noreferrer" className={styles.socialPill} aria-label={t('hero.instagramLabel')}>
               <FaInstagram size={16} aria-hidden="true" /> Instagram
             </a>
           </motion.div>

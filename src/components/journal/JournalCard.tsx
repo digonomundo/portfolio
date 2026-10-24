@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { JournalPost, JournalLocale } from '@/lib/journal';
 import { getCategoryLabel, getLocaleHref } from '@/lib/journal';
+import { resources } from '@/i18n/resources';
 import styles from './JournalCard.module.css';
 
 export function JournalCard({ post, locale, variant = 'standard' }: { post: JournalPost; locale: JournalLocale; variant?: 'featured' | 'standard' | 'compact' }) {
@@ -16,7 +17,7 @@ export function JournalCard({ post, locale, variant = 'standard' }: { post: Jour
         <h2><Link href={getLocaleHref(locale, post.slug)}>{post.title}</Link></h2>
         {variant !== 'compact' && <p>{post.excerpt}</p>}
         <Link className={styles.readMore} href={getLocaleHref(locale, post.slug)}>
-          {locale === 'pt' ? 'Ler história' : locale === 'es' ? 'Leer historia' : locale === 'it' ? 'Leggi la storia' : 'Read story'}
+          {resources[locale].translation.journal.readStory}
         </Link>
       </div>
     </article>

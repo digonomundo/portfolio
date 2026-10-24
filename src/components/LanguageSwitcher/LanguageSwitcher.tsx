@@ -5,44 +5,45 @@ import { useTranslation } from 'react-i18next';
 import { Globe } from 'lucide-react';
 import { LANGUAGE_STORAGE_KEY, type AppLanguage } from '@/i18n/resources';
 import styles from './LanguageSwitcher.module.css';
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
+
+const AVAILABLE_LANGUAGES: AppLanguage[] = ['pt', 'en', 'es', 'it'];
+const LANGUAGE_LABELS: Record<AppLanguage, string> = {
+  pt: 'Português',
+  en: 'English',
+  es: 'Español',
+  it: 'Italiano',
+};
+
+const persistLanguageCookie = (language: AppLanguage) => {
+  document.cookie = `app_language=${language}; path=/; max-age=31536000; SameSite=Lax`;
+};
 
 export function LanguageSwitcher() {
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownId = useId();
   const containerRef = useRef<HTMLDivElement>(null);
-  const router = useRouter();
   const pathname = usePathname();
-  const availableLanguages: AppLanguage[] = ['pt', 'en', 'es', 'it'];
-  const languageLabels: Record<AppLanguage, string> = {
-    pt: 'Português',
-    en: 'English',
-    es: 'Español',
-    it: 'Italiano',
-  };
 
-  const currentLanguage = availableLanguages.includes(i18n.language as AppLanguage)
+  const currentLanguage = AVAILABLE_LANGUAGES.includes(i18n.language as AppLanguage)
     ? (i18n.language as AppLanguage)
-    : ((i18n.language || 'pt').slice(0, 2) as AppLanguage);
+    : (AVAILABLE_LANGUAGES.includes((i18n.language || 'pt').slice(0, 2) as AppLanguage)
+      ? (i18n.language || 'pt').slice(0, 2) as AppLanguage
+      : 'pt');
 
   const handleLanguageChange = (language: AppLanguage) => {
     window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
-    document.cookie = `app_language=${language}; path=/; max-age=31536000; SameSite=Lax`;
-    void i18n.changeLanguage(language);
+    persistLanguageCookie(language);
     setIsOpen(false);
-    
-    // Redirect logic
-    if (pathname) {
-      const segments = pathname.split('/');
-      const cleanSegments = segments.filter(Boolean);
-      
-      if (cleanSegments.length > 0 && availableLanguages.includes(cleanSegments[0] as AppLanguage)) {
-        cleanSegments[0] = language;
-        window.location.href = `/${cleanSegments.join('/')}`;
-      } else {
-        window.location.href = `/${language}${pathname === '/' ? '' : pathname}`;
-      }
+
+    const segments = (pathname || '/').split('/').filter(Boolean);
+    const nextPath = segments.length > 0 && AVAILABLE_LANGUAGES.includes(segments[0] as AppLanguage)
+      ? `/${[language, ...segments.slice(1)].join('/')}`
+      : `/${language}${pathname === '/' ? '' : pathname || ''}`;
+
+    if (nextPath !== pathname) {
+      window.location.assign(nextPath);
     }
   };
 
@@ -91,7 +92,7 @@ export function LanguageSwitcher() {
         role="menu"
         aria-label={t('navbar.language')}
       >
-        {availableLanguages.map((code) => {
+        {AVAILABLE_LANGUAGES.map((code) => {
           const isActive = currentLanguage === code;
 
           return (
@@ -102,7 +103,7 @@ export function LanguageSwitcher() {
               className={`${styles.langButton} ${isActive ? styles.active : ''}`}
               role="menuitemradio"
               aria-checked={isActive}
-              aria-label={languageLabels[code]}
+              aria-label={LANGUAGE_LABELS[code]}
             >
               {code.toUpperCase()}
             </button>

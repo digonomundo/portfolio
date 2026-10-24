@@ -46,6 +46,22 @@ function parseValue(value: string): string | string[] {
   return trimmed.replace(/^['"]|['"]$/g, '');
 }
 
+function requiredField(fields: Record<string, string | string[]>, field: string, file: string): string {
+  const value = fields[field];
+  if (typeof value !== 'string' || !value.trim()) {
+    throw new Error(`Invalid Journal frontmatter in ${file}: "${field}" is required`);
+  }
+  return value;
+}
+
+function parseJsonField<T>(value: string, field: string, file: string): T {
+  try {
+    return JSON.parse(value) as T;
+  } catch (error) {
+    throw new Error(`Invalid Journal frontmatter in ${file}: "${field}" must be valid JSON`, { cause: error });
+  }
+}
+
 function parseFrontmatter(file: string, locale: JournalLocale): JournalPost {
   const raw = fs.readFileSync(file, 'utf8');
   const match = raw.match(frontmatterPattern);
@@ -54,34 +70,63 @@ function parseFrontmatter(file: string, locale: JournalLocale): JournalPost {
   const fields = Object.fromEntries(
     match[1].split('\n').filter(Boolean).map((line) => {
       const separator = line.indexOf(':');
+      if (separator < 1) {
+        throw new Error(`Invalid Journal frontmatter in ${file}: expected "key: value"`);
+      }
       return [line.slice(0, separator).trim(), parseValue(line.slice(separator + 1))];
     }),
   );
-  const slug = String(fields.slug);
+  const slug = requiredField(fields, 'slug', file);
+  const category = requiredField(fields, 'category', file);
+  if (!['milestones', 'engineering-development', 'projects-apps', 'learning-experiences', 'in-the-press'].includes(category)) {
+    throw new Error(`Invalid Journal frontmatter in ${file}: unsupported category "${category}"`);
+  }
+  const publishedAt = requiredField(fields, 'publishedAt', file);
+  if (Number.isNaN(Date.parse(publishedAt))) {
+    throw new Error(`Invalid Journal frontmatter in ${file}: "publishedAt" must be an ISO date`);
+  }
+  if (fields.updatedAt && Number.isNaN(Date.parse(String(fields.updatedAt)))) {
+    throw new Error(`Invalid Journal frontmatter in ${file}: "updatedAt" must be an ISO date`);
+  }
+  const readingTimeValue = fields.readingTime ? Number(fields.readingTime) : 4;
+  const width = fields.heroWidth ? Number(fields.heroWidth) : 1600;
+  const height = fields.heroHeight ? Number(fields.heroHeight) : 900;
+  if (!Number.isFinite(readingTimeValue) || readingTimeValue <= 0 || !Number.isFinite(width) || width <= 0 || !Number.isFinite(height) || height <= 0) {
+    throw new Error(`Invalid Journal frontmatter in ${file}: readingTime and hero dimensions must be positive numbers`);
+  }
+  const tags = fields.tags;
+  if (tags !== undefined && !Array.isArray(tags)) {
+    throw new Error(`Invalid Journal frontmatter in ${file}: "tags" must be an array`);
+  }
+
+  const body = match[2].trim();
+  if (!body) {
+    throw new Error(`Invalid Journal content in ${file}: article body is required`);
+  }
 
   return {
     slug,
     locale,
-    category: String(fields.category) as JournalCategory,
-    title: String(fields.title),
-    excerpt: String(fields.excerpt),
+    category: category as JournalCategory,
+    title: requiredField(fields, 'title', file),
+    excerpt: requiredField(fields, 'excerpt', file),
     heroImage: {
-      src: String(fields.heroImage),
-      alt: String(fields.heroAlt),
+      src: requiredField(fields, 'heroImage', file),
+      alt: requiredField(fields, 'heroAlt', file),
       credit: fields.heroCredit ? String(fields.heroCredit) : undefined,
       caption: fields.heroCaption ? String(fields.heroCaption) : undefined,
-      width: Number(fields.heroWidth || 1600),
-      height: Number(fields.heroHeight || 900),
+      width,
+      height,
     },
-    publishedAt: String(fields.publishedAt),
+    publishedAt,
     updatedAt: fields.updatedAt ? String(fields.updatedAt) : undefined,
-    author: String(fields.author),
-    readingTime: Number(fields.readingTime || 4),
-    tags: Array.isArray(fields.tags) ? fields.tags : [],
-    sources: fields.sources ? JSON.parse(String(fields.sources)) : [],
-    attachments: fields.attachments ? JSON.parse(String(fields.attachments)) : undefined,
-    translations: fields.translations ? JSON.parse(String(fields.translations)) : {},
-    body: match[2].trim(),
+    author: requiredField(fields, 'author', file),
+    readingTime: readingTimeValue,
+    tags: tags ?? [],
+    sources: fields.sources ? parseJsonField<JournalSource[]>(String(fields.sources), 'sources', file) : [],
+    attachments: fields.attachments ? parseJsonField<JournalPost['attachments']>(String(fields.attachments), 'attachments', file) : undefined,
+    translations: fields.translations ? parseJsonField<Partial<Record<JournalLocale, string>>>(String(fields.translations), 'translations', file) : {},
+    body,
   };
 }
 
