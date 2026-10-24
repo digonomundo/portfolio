@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { getAllPosts, getLocaleHref, getPostsByCategory, journalLocales, type JournalCategory } from '@/lib/journal';
+import { getLocaleHref, getPosts, getPostsByCategory, journalLocales, type JournalCategory } from '@/lib/journal';
 
 const LANGUAGES = journalLocales;
 const JOURNAL_CATEGORIES: JournalCategory[] = ['milestones', 'engineering-development', 'projects-apps', 'learning-experiences', 'in-the-press'];
@@ -14,14 +14,13 @@ const ROUTES = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://digonomundo.com';
-  const sitemapEntries: MetadataRoute.Sitemap = [];
+  const sitemapEntries = new Map<string, MetadataRoute.Sitemap[number]>();
 
   LANGUAGES.forEach((lang) => {
-    const prefix = lang === 'pt' ? '' : `/${lang}`;
-
     ROUTES.forEach((route) => {
-      sitemapEntries.push({
-        url: `${baseUrl}${prefix}${route.path}`,
+      const url = `${baseUrl}/${lang}${route.path}`;
+      sitemapEntries.set(url, {
+        url,
         lastModified: new Date(),
         changeFrequency: route.changefreq,
         priority: route.priority,
@@ -29,31 +28,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  getAllPosts().forEach((post) => {
-    sitemapEntries.push({
-      url: `${baseUrl}${getLocaleHref(post.locale, post.slug)}`,
+  LANGUAGES.forEach((locale) => {
+    const journalUrl = `${baseUrl}${getLocaleHref(locale)}`;
+    sitemapEntries.set(journalUrl, {
+    url: journalUrl,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+    });
+
+    JOURNAL_CATEGORIES.filter((category) => getPostsByCategory(locale, category).length > 0).forEach((category) => {
+    const categoryUrl = `${baseUrl}/${locale}/journal/category/${category}`;
+    sitemapEntries.set(categoryUrl, {
+      url: categoryUrl,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    });
+    });
+
+    getPosts(locale).forEach((post) => {
+    const url = `${baseUrl}${getLocaleHref(post.locale, post.slug)}`;
+    sitemapEntries.set(url, {
+      url,
       lastModified: new Date(post.updatedAt ?? post.publishedAt),
       changeFrequency: 'monthly',
       priority: 0.7,
     });
-
-    LANGUAGES.forEach((locale) => {
-      sitemapEntries.push({
-        url: `${baseUrl}${getLocaleHref(locale)}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.8,
-      });
-      JOURNAL_CATEGORIES.filter((category) => getPostsByCategory(locale, category).length > 0).forEach((category) => {
-        sitemapEntries.push({
-          url: `${baseUrl}/${locale}/journal/category/${category}`,
-          lastModified: new Date(),
-          changeFrequency: 'monthly',
-          priority: 0.6,
-        });
-      });
     });
   });
 
-  return sitemapEntries;
+  return [...sitemapEntries.values()];
 }

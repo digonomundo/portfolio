@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { JournalGrid } from '@/components/journal/JournalGrid';
 import { getCategoryLabel, getPosts, isJournalLocale, journalLocales, getLocaleHref, type JournalCategory } from '@/lib/journal';
+import { getLocaleLanguageTag } from '@/lib/locales';
 import styles from './page.module.css';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -22,11 +23,16 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!isJournalLocale(locale)) return {};
-  const languages = Object.fromEntries(journalLocales.map((language) => [language, `${siteUrl}${getLocaleHref(language)}`]));
+  const languages = Object.fromEntries(
+    journalLocales.map((language) => [getLocaleLanguageTag(language), `${siteUrl}${getLocaleHref(language)}`]),
+  );
   return {
     title: `${copy[locale].title} — Journal`,
     description: copy[locale].description,
-    alternates: { canonical: `${siteUrl}${getLocaleHref(locale)}`, languages: { ...languages, 'x-default': languages.en } },
+    alternates: {
+      canonical: `${siteUrl}${getLocaleHref(locale)}`,
+      languages: { ...languages, 'x-default': languages['en-US'] },
+    },
     openGraph: { type: 'website', title: copy[locale].title, description: copy[locale].description, url: `${siteUrl}${getLocaleHref(locale)}` },
     twitter: { card: 'summary', title: copy[locale].title, description: copy[locale].description },
   };

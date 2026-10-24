@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: aboutDescription,
     keywords: 'about, portfolio, developer, full-stack, story, journey',
     alternates: {
-      canonical: generateCanonicalUrl('/about'),
+      canonical: generateCanonicalUrl(`/${locale}/about`),
       languages: {
         'pt-BR': generateCanonicalUrl('/pt/about'),
         'en-US': generateCanonicalUrl('/en/about'),

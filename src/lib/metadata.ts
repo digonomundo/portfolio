@@ -13,6 +13,16 @@ interface PageMetadataConfig {
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://digonomundo.com';
 const SITE_NAME = 'Rodrigo Dias - Full Stack Developer';
+const SUPPORTED_LANGUAGES: AppLanguage[] = ['pt', 'en', 'es', 'it'];
+
+function normalizePath(pathname: string): string {
+  const path = pathname.startsWith('/') ? pathname : `/${pathname}`;
+  return path === '/' ? '' : path.replace(/\/+$/, '');
+}
+
+export function generateLocalizedPath(language: AppLanguage, pathname: string = ''): string {
+  return `/${language}${normalizePath(pathname)}`;
+}
 
 export function generateCanonicalUrl(pathname: string = ''): string {
   const path = pathname.startsWith('/') ? pathname : `/${pathname}`;
@@ -25,7 +35,7 @@ export function generatePageMetadata(
 ): Metadata {
   const locale = getLocaleCode(language);
   const pathname = config.pathname || '';
-  const canonicalUrl = generateCanonicalUrl(pathname);
+  const canonicalUrl = generateCanonicalUrl(generateLocalizedPath(language, pathname));
 
   const title = config.title || SITE_NAME;
   const description = config.description || 'Portfolio showcasing projects, experience and expertise in full-stack development';
@@ -95,14 +105,17 @@ export function generatePageMetadata(
 }
 
 export function generateAlternateLanguageLinks(pathname: string = ''): Array<{ rel: string; hrefLang: string; href: string }> {
-  const path = pathname.startsWith('/') ? pathname : `/${pathname}`;
-
   return [
-    { rel: 'alternate', hrefLang: 'pt-BR', href: generateCanonicalUrl(path) },
-    { rel: 'alternate', hrefLang: 'en-US', href: generateCanonicalUrl(path) },
-    { rel: 'alternate', hrefLang: 'es-ES', href: generateCanonicalUrl(path) },
-    { rel: 'alternate', hrefLang: 'it-IT', href: generateCanonicalUrl(path) },
-    { rel: 'alternate', hrefLang: 'x-default', href: generateCanonicalUrl(path) },
+    ...SUPPORTED_LANGUAGES.map((language) => ({
+      rel: 'alternate',
+      hrefLang: getLocaleLanguageTag(language),
+      href: generateCanonicalUrl(generateLocalizedPath(language, pathname)),
+    })),
+    {
+      rel: 'alternate',
+      hrefLang: 'x-default',
+      href: generateCanonicalUrl(generateLocalizedPath('en', pathname)),
+    },
   ];
 }
 

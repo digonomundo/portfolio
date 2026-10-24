@@ -9,7 +9,7 @@ import { ThemeProvider } from '@/theme/ThemeProvider';
 import { THEME_STORAGE_KEY } from '@/theme/theme';
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { generatePageMetadata, generateCanonicalMetaTag, generateAlternateLanguageLinks } from '@/lib/metadata';
+import { generatePageMetadata } from '@/lib/metadata';
 import { getLocaleLanguageTag } from '@/lib/locales';
 import { generateOrganizationSchema, generatePersonSchema } from '@/lib/schema';
 import type { AppLanguage } from '@/i18n/resources';
@@ -46,11 +46,6 @@ export async function generateMetadata({ params }: LayoutProps): Promise<Metadat
   const typedLocale = locale as AppLanguage;
   const translation = resources[typedLocale]?.translation || resources['en'].translation;
 
-  const homeCanonical = generateCanonicalMetaTag('/');
-  const homeAlternateLanguages = Object.fromEntries(
-    generateAlternateLanguageLinks('/').map(({ hrefLang, href }) => [hrefLang, href])
-  );
-
   return {
     ...generatePageMetadata({
       title: translation.meta?.title || 'Rodrigo Dias - Full Stack Developer',
@@ -59,10 +54,6 @@ export async function generateMetadata({ params }: LayoutProps): Promise<Metadat
       pathname: '/',
       twitterHandle: '@digonomundo',
     }, typedLocale),
-    alternates: {
-      canonical: homeCanonical.href,
-      languages: homeAlternateLanguages,
-    },
   };
 }
 

@@ -109,12 +109,15 @@ export function getPost(locale: JournalLocale, slug: string): JournalPost | unde
   return getPosts(locale).find((post) => post.slug === slug);
 }
 
-export function getTranslationSlugs(slug: string): Record<JournalLocale, string> {
+export function getTranslationSlugs(slug: string): Partial<Record<JournalLocale, string>> {
   const source = getPost('pt', slug) ?? getAllPosts().find((post) => post.slug === slug);
   return journalLocales.reduce((result, locale) => {
-    result[locale] = source?.translations[locale] ?? slug;
+    const translatedSlug = source?.translations[locale];
+    if (translatedSlug && getPost(locale, translatedSlug)) {
+      result[locale] = translatedSlug;
+    }
     return result;
-  }, {} as Record<JournalLocale, string>);
+  }, {} as Partial<Record<JournalLocale, string>>);
 }
 
 export function getPostsByCategory(locale: JournalLocale, category: JournalCategory): JournalPost[] {

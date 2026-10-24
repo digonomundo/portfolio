@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { StructuredData } from '@/components/StructuredData/StructuredData';
 import { RichContent } from '@/components/journal/RichContent';
 import { getAllPosts, getCategoryLabel, getLocaleHref, getPost, getTranslationSlugs, isJournalLocale, journalLocales } from '@/lib/journal';
+import { getLocaleLanguageTag } from '@/lib/locales';
 import styles from './page.module.css';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -19,11 +20,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isJournalLocale(locale)) return {};
   const post = getPost(locale, slug);
   if (!post) return {};
-  const languages = Object.fromEntries(journalLocales.map((language) => [language, `${siteUrl}${getLocaleHref(language, getTranslationSlugs(slug)[language])}`]));
+  const translationSlugs = getTranslationSlugs(slug);
+  const languages = Object.fromEntries(
+    journalLocales.flatMap((language) => {
+      const translatedSlug = translationSlugs[language];
+      return translatedSlug
+        ? [[getLocaleLanguageTag(language), `${siteUrl}${getLocaleHref(language, translatedSlug)}`]]
+        : [];
+    }),
+  );
+  const defaultLanguageUrl = languages['en-US'];
   return {
     title: post.title,
     description: post.excerpt,
-    alternates: { canonical: `${siteUrl}${getLocaleHref(locale, slug)}`, languages: { ...languages, 'x-default': languages.en } },
+    alternates: {
+      canonical: `${siteUrl}${getLocaleHref(locale, slug)}`,
+      languages: {
+        ...languages,
+        ...(defaultLanguageUrl ? { 'x-default': defaultLanguageUrl } : {}),
+      },
+    },
     openGraph: { type: 'article', title: post.title, description: post.excerpt, url: `${siteUrl}${getLocaleHref(locale, slug)}`, images: [{ url: `${siteUrl}${post.heroImage.src}`, alt: post.heroImage.alt }] },
     twitter: { card: 'summary_large_image', title: post.title, description: post.excerpt, images: [`${siteUrl}${post.heroImage.src}`] },
   };

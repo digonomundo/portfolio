@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { StructuredData } from '@/components/StructuredData/StructuredData';
 import { JournalGrid } from '@/components/journal/JournalGrid';
 import { getCategoryLabel, getPostsByCategory, isJournalLocale, journalLocales, type JournalCategory } from '@/lib/journal';
+import { getLocaleLanguageTag } from '@/lib/locales';
 import styles from '../../page.module.css';
 
 type Props = { params: Promise<{ locale: string; cat: string }> };
@@ -16,9 +17,20 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, cat } = await params;
   if (!isJournalLocale(locale) || !categories.includes(cat as JournalCategory)) return {};
-  const languages = Object.fromEntries(journalLocales.map((language) => [language, `${siteUrl}/${language}/journal/category/${cat}`]));
+  const languages = Object.fromEntries(
+    journalLocales
+      .filter((language) => getPostsByCategory(language, cat as JournalCategory).length > 0)
+      .map((language) => [getLocaleLanguageTag(language), `${siteUrl}/${language}/journal/category/${cat}`]),
+  );
   const title = `${getCategoryLabel(cat as JournalCategory, locale)} — Journal`;
-  return { title, alternates: { canonical: `${siteUrl}/${locale}/journal/category/${cat}`, languages: { ...languages, 'x-default': languages.en } }, openGraph: { type: 'website', title, url: `${siteUrl}/${locale}/journal/category/${cat}` } };
+  return {
+    title,
+    alternates: {
+      canonical: `${siteUrl}/${locale}/journal/category/${cat}`,
+      languages: { ...languages, ...(languages['en-US'] ? { 'x-default': languages['en-US'] } : {}) },
+    },
+    openGraph: { type: 'website', title, url: `${siteUrl}/${locale}/journal/category/${cat}` },
+  };
 }
 
 export default async function CategoryPage({ params }: Props) {
