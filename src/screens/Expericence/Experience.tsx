@@ -242,6 +242,10 @@ export function Experience() {
                     <Award size={14} className={styles.bulletIcon} /> 
                     <strong>{t('experience.lau.bullet1_bold')}</strong> {t('experience.lau.bullet1_text')}
                   </li>
+                  <li className={styles.premiumBullet}>
+                    <Award size={14} className={styles.bulletIcon} /> 
+                    <strong>{t('experience.lau.bullet2_bold')}</strong> {t('experience.lau.bullet2_text')}
+                  </li>
                   <li>{t('experience.lau.bullet2')}</li>
                 </ul>
               </motion.div>

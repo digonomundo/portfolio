@@ -115,6 +115,20 @@ Para mais informações ou dúvidas, entre em contato:
 * **LinkedIn**: [https://www.linkedin.com/in/digonomundo/](https://www.linkedin.com/in/digonomundo/)
 * **Email**: [rodrigo@digonomundo.com](mailto:rodrigo@digonomundo.com)
 
+## ✦ Journal
+
+O Journal está disponível em `/pt/journal`, `/en/journal`, `/es/journal` e `/it/journal`.
+Os artigos vivem em `src/content/journal/<locale>/*.mdx`. Para adicionar um artigo:
+
+1. Escolha uma categoria editorial estável: `milestones`, `engineering-development`, `projects-apps`, `learning-experiences` ou `in-the-press`.
+2. Copie o artigo para os quatro diretórios de idioma, mantendo o mesmo identificador estável e preenchendo `translations`.
+3. Escreva traduções reais para `title`, `excerpt`, headings e corpo; não declare uma tradução que não exista.
+4. Use uma imagem local correspondente ao conteúdo em `public/`, informando `heroAlt`, `heroWidth`, `heroHeight`, caption e crédito somente quando forem confirmados.
+5. Adicione as fontes originais em `sources` com `label`, `url` e `fetchedAt`. Não reproduza o texto integral da fonte.
+6. Para anexos editoriais, inclua `attachments` no frontmatter; imagens internas podem usar o formato `![[/caminho|largura|altura|legenda]]`.
+
+O carregador editorial em `src/lib/journal.ts` alimenta a listagem, artigos, categorias, metadata, dados estruturados e sitemap.
+
 ---
 
 💙 Obrigado por visitar meu portfólio!

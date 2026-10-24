@@ -72,22 +72,6 @@ export function Navbar() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isMenuOpen]);
 
-  const scrollTo = (id: string) => {
-    setIsMenuOpen(false);
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleHomeClick = (e: React.MouseEvent) => {
-    if (pathname === '/' || SUPPORTED_LANGUAGES.some(lang => pathname === `/${lang}`)) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
-  };
-
   const handleMobileLanguageChange = (language: AppLanguage) => {
     window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
     persistLanguageCookie(language);
@@ -106,16 +90,65 @@ export function Navbar() {
       ? (i18n.language || 'pt').slice(0, 2) as AppLanguage
       : 'pt');
 
+  const homePath = `/${currentLanguage}`;
+  const isHomePage = pathname === homePath || pathname === `${homePath}/`;
+  const [activeSection, setActiveSection] = useState<string | null>(
+    isHomePage ? 'inicio' : null,
+  );
+
+  useEffect(() => {
+    if (!isHomePage) {
+      return;
+    }
+
+    const sectionIds = ['inicio', 'about', 'education', 'experience', 'projects', 'contact'];
+    const updateActiveSection = () => {
+      const marker = window.innerHeight * 0.35;
+      let currentSection = 'inicio';
+
+      for (const id of sectionIds) {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top <= marker) {
+          currentSection = id;
+        }
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    window.addEventListener('resize', updateActiveSection);
+
+    return () => {
+      window.removeEventListener('scroll', updateActiveSection);
+      window.removeEventListener('resize', updateActiveSection);
+    };
+  }, [isHomePage]);
+
+  const handleSectionClick = (id: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+    setIsMenuOpen(false);
+
+    if (isHomePage) {
+      e.preventDefault();
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   const showDefaultNav = !isTutoringPage && !isAboutPage;
 
   const navLinks = [
-    { href: '#inicio', id: 'inicio', label: t('navbar.home') },
-    { href: '#about', id: 'about', label: t('navbar.about') },
-    { href: '#education', id: 'education', label: t('navbar.education') },
-    { href: '#experience', id: 'experience', label: t('navbar.experience') },
-    { href: '#projects', id: 'projects', label: t('navbar.projects') },
-    { href: '#contact', id: 'contact', label: t('navbar.contact') },
+    { href: `${homePath}#inicio`, id: 'inicio', label: t('navbar.home') },
+    { href: `${homePath}#about`, id: 'about', label: t('navbar.about') },
+    { href: `${homePath}#education`, id: 'education', label: t('navbar.education') },
+    { href: `${homePath}#experience`, id: 'experience', label: t('navbar.experience') },
+    { href: `${homePath}#projects`, id: 'projects', label: t('navbar.projects') },
+    { href: `${homePath}#contact`, id: 'contact', label: t('navbar.contact') },
   ];
+  const isJournalPage = pathname?.includes('/journal') ?? false;
 
   return (
     <>
@@ -123,7 +156,11 @@ export function Navbar() {
         <nav className={styles.navbar} role="navigation" aria-label="Main Navigation">
           {/* Logo + Localização */}
           <div className={styles.leftBadge}>
-            <Link href="/" onClick={handleHomeClick} className={styles.homeLink}>
+            <Link
+              href={homePath}
+              onClick={() => setIsMenuOpen(false)}
+              className={styles.homeLink}
+            >
               <Image
                 src={Digo}
                 alt="Rodrigo Dias"
@@ -147,19 +184,29 @@ export function Navbar() {
               aria-hidden={!isMenuOpen}
             >
               {navLinks.map((link, index) => (
-                <a
+                <Link
                   key={link.id}
                   href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollTo(link.id);
-                  }}
-                  className={styles.navLink}
+                  onClick={(e) => handleSectionClick(link.id, e)}
+                  className={`${styles.navLink} ${
+                    isHomePage && activeSection === link.id ? styles.navLinkActive : ''
+                  }`}
+                  aria-current={
+                    isHomePage && activeSection === link.id ? 'location' : undefined
+                  }
                   ref={index === 0 ? firstLinkRef : undefined}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
+              <Link
+                href={`/${currentLanguage}/journal`}
+                className={`${styles.navLink} ${isJournalPage ? styles.navLinkActive : ''}`}
+                aria-current={isJournalPage ? 'page' : undefined}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Journal
+              </Link>
 
               {/* Language Switcher MOBILE (aparece apenas dentro do menu hambúrguer) */}
               <div className={styles.mobileLanguageSwitcher}>

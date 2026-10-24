@@ -112,6 +112,11 @@
   color: var(--text-muted);
 }
 
+.navLinkActive {
+  font-weight: 700;
+  color: var(--primary);
+}
+
 .navLink:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 3px;

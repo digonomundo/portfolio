@@ -1,0 +1,8 @@
+.content { display: grid; gap: var(--space-4); color: var(--text-main); font-size: clamp(1.0625rem, 1.5vw, 1.2rem); line-height: 1.8; }
+.content h2 { margin-top: var(--space-4); font-size: clamp(1.75rem, 3vw, 2.5rem); }
+.content ul { display: grid; gap: var(--space-2); padding-left: 1.4rem; }
+.content blockquote { border-left: 3px solid var(--border-strong); padding-left: var(--space-4); color: var(--text-muted); font-style: italic; }
+.content a { text-decoration: underline; text-underline-offset: 4px; }
+.content figure { display: grid; gap: var(--space-2); margin-block: var(--space-3); }
+.content figure img { width: 100%; height: auto; border-radius: 20px; }
+.content figcaption { color: var(--text-muted); font-size: var(--font-size-sm); }

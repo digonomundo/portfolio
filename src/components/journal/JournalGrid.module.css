@@ -1,0 +1,1 @@
+.grid { display: grid; gap: clamp(48px, 8vw, 112px); }

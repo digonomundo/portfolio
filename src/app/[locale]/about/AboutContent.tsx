@@ -35,6 +35,7 @@ import PhotoCoral from '@/assets/images/Coral.jpeg';
 import PhotoEuUtf from '@/assets/images/AceptUtfpr.jpeg';
 import PhotoIdeathonPresentation from '@/assets/images/presentation.jpg';
 import PhotoIdeathonAward from '@/assets/images/IedathonAward.jpg';
+import PhotoSuaNovaImagem from '@/assets/images/jubs1.jpg'; 
 
 export default function AboutContent() {
     const { t } = useTranslation();
@@ -474,6 +475,40 @@ export default function AboutContent() {
                             </div>
                         </div>
                     </motion.section>
+
+{/* Nova Seção - Imagem no tamanho e proporção originais */}
+<motion.section 
+    initial="hidden" 
+    whileInView="visible" 
+    viewport={{ once: true, margin: "-100px" }} 
+    variants={fadeInUp} 
+    className={styles.chapter}
+>
+    <div className={styles.chapterFullWidth}>
+        {/* Cabeçalho opcional (caso queira número e título) */}
+        <div className={styles.chapterFullHeader}>
+            <span className={styles.chapterNum}>15</span>
+            <h2>{t('aboutPage.chapters.novaSecao.title', 'Jogos Universitários Brasileiros 2026')}</h2>
+            <p>{t('aboutPage.chapters.novaSecao.desc', 'Descrição opcional para contextualizar a imagem.')}</p>
+        </div>
+
+        {/* Frame da Imagem mantendo proporção e dimensões originais */}
+        <div className={styles.mediaFrameFullOriginal}>
+            <Image 
+                src={PhotoSuaNovaImagem} 
+                alt={t('aboutPage.chapters.novaSecao.title', 'Paticipação no Jubs 2026')} 
+                className={styles.imgOriginalAspect} 
+                sizes="(max-width: 1140px) 100vw, 1140px"
+                priority={false}
+            />
+            
+            {/* Tag/Selo flutuante opcional (estilo do design atual) */}
+            <div className={styles.mediaCardFloatingTag}>
+                {t('aboutPage.labels.novaSecaoTag', 'Participação nos Jubs 2026')}
+            </div>
+        </div>
+    </div>
+</motion.section>
                 </div>
             </div>
             <Footer />

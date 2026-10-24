@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
+import { getAllPosts, getLocaleHref, getPostsByCategory, journalLocales, type JournalCategory } from '@/lib/journal';
 
-const LANGUAGES = ['pt', 'en', 'es', 'it'] as const;
+const LANGUAGES = journalLocales;
+const JOURNAL_CATEGORIES: JournalCategory[] = ['milestones', 'engineering-development', 'projects-apps', 'learning-experiences', 'in-the-press'];
 
 const ROUTES = [
   { path: '', changefreq: 'weekly' as const, priority: 1.0 },
@@ -23,6 +25,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: route.changefreq,
         priority: route.priority,
+      });
+    });
+  });
+
+  getAllPosts().forEach((post) => {
+    sitemapEntries.push({
+      url: `${baseUrl}${getLocaleHref(post.locale, post.slug)}`,
+      lastModified: new Date(post.updatedAt ?? post.publishedAt),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+
+    LANGUAGES.forEach((locale) => {
+      sitemapEntries.push({
+        url: `${baseUrl}${getLocaleHref(locale)}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      });
+      JOURNAL_CATEGORIES.filter((category) => getPostsByCategory(locale, category).length > 0).forEach((category) => {
+        sitemapEntries.push({
+          url: `${baseUrl}/${locale}/journal/category/${category}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.6,
+        });
       });
     });
   });

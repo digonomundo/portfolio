@@ -37,6 +37,7 @@ export function Education() {
 
   // Seleção estratégica das suas premiações de maior impacto
   const topAwards = [
+    { year: '2026', title: t('education.awards.meritoUnicamp'), icon: <Award size={16} /> },
     { year: '2026', title: t('education.awards.jubs'), icon: <Medal size={16} /> },
     { year: '2024', title: t('education.awards.hackathonPhp'), icon: <Code size={16} /> },
     { year: '2024', title: t('education.awards.ideathon'), icon: <Award size={16} /> },

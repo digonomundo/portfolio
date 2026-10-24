@@ -214,6 +214,42 @@
   align-items: center;
 }
 
+/* Nova Seção Full Width (Proporção e Dimensões Originais da Imagem) */
+.chapterFullWidth {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.chapterFullHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mediaFrameFullOriginal {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-strong);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Garante que a imagem mantenha a largura e altura com a proporção original */
+.imgOriginalAspect {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 24px;
+}
+
 @media (min-width: 968px) {
   .chapterLayout { grid-template-columns: 11fr 13fr; gap: 90px; }
   .reverse { direction: rtl; }

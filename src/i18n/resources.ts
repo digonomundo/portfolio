@@ -88,7 +88,8 @@ export const resources = {
         },
         awards: {
           title: 'Destaques & Competições',
-          jubs: '1º Lugar JUBs SP (Jiu jítsu) - 2026',
+          meritoUnicamp: 'Reconhecimento de Mérito Esportivo - Unicamp',
+          jubs: '1º Lugar JUBs Nacional (Jiu jítsu) - 2026',
           hackathonPhp: '1º Lugar Hackathon PHP (Rem Soft) - 2024',
           ideathon: '3º Lugar IDEATHON (FAEP/SENAR) - 2024',
           hackatonMinerva: '3º Lugar Hackathon Bruto Hacka & InovAgro (Minerva Foods) - 2023',
@@ -170,8 +171,10 @@ export const resources = {
         lau: {
           date: 'Mai 2026 — Presente',
           role: 'Atleta Titular (Jiu-Jitsu)',
-          bullet1_bold: 'Campeão Estadual JUBs 2026',
-          bullet1_text: 'e Vice-Campeão Absoluto na Fase SP dos Jogos Universitários Brasileiros, convocado para representar o Estado de São Paulo na Etapa Nacional.',
+          bullet1_bold: 'Campeão Nacional JUBs 2026.',
+          bullet1_text: 'Os Jogos Universitários Brasileiros (JUBs) são a maior competição poliesportiva universitária da América Latina, organizada pela CBDU.',
+          bullet2_bold: 'Campeão Estadual JUBs 2026',
+          bullet2_text: 'e Vice-Campeão Absoluto na Fase SP dos Jogos Universitários Brasileiros, convocado pela FUPE para representar o Estado de São Paulo na Etapa Nacional.',
           bullet2: 'Atleta titular representativo de toda a delegação da Unicamp. Representando todos os cursos da universidade.'
         },
         leu: {
@@ -835,7 +838,8 @@ export const resources = {
         },
         awards: {
           title: 'Highlights & Competitions',
-          jubs: '1st Place JUBs SP (Jiu-Jitsu) - 2026',
+          meritoUnicamp: 'Unicamp Sports Merit Recognition',
+          jubs: '1st Place at the National JUBs (Jiu-Jitsu) - 2026',
           hackathonPhp: '1st Place PHP Hackathon (Rem Soft) - 2024',
           ideathon: '3rd Place IDEATHON (FAEP/SENAR) - 2024',
           hackatonMinerva: '3rd Place Bruto Hacka & InovAgro Hackathon (Minerva Foods) - 2023',
@@ -917,8 +921,10 @@ export const resources = {
         lau: {
           date: 'May 2026 — Present',
           role: 'Starting Athlete (Jiu-Jitsu)',
-          bullet1_bold: 'JUBs 2026 State Champion',
-          bullet1_text: 'and Absolute Runner-Up in the SP Phase of the Brazilian University Games, called up to represent the State of São Paulo in the National Stage.',
+          bullet1_bold: 'JUBs 2026 National Champion.',
+          bullet1_text: 'The Brazilian University Games (JUBs) are the largest university multi-sport competition in Latin America, organized by CBDU.',
+          bullet2_bold: 'JUBs 2026 State Champion',
+          bullet2_text: 'and Absolute Runner-Up in the SP Phase of the Brazilian University Games, called up by FUPE to represent the State of São Paulo in the National Stage.',
           bullet2: 'Representative starting athlete for the entire Unicamp delegation. Representing all university courses.'
         },
         leu: {
@@ -1582,7 +1588,8 @@ export const resources = {
         },
         awards: {
           title: 'Destacados y Competiciones',
-          jubs: '1er Lugar JUBs SP (Jiu-jitsu) - 2026',
+          meritoUnicamp: 'Reconocimiento al Mérito Deportivo - Unicamp',
+          jubs: '1er Lugar en los JUBs Nacionales (Jiu-jitsu) - 2026',
           hackathonPhp: '1er Lugar Hackathon PHP (Rem Soft) - 2024',
           ideathon: '3er Lugar IDEATHON (FAEP/SENAR) - 2024',
           hackatonMinerva: '3er Lugar Hackathon Bruto Hacka & InovAgro (Minerva Foods) - 2023',
@@ -1664,8 +1671,10 @@ export const resources = {
         lau: {
           date: 'May 2026 — Presente',
           role: 'Atleta Titular (Jiu-Jitsu)',
-          bullet1_bold: 'Campeón Estatal JUBs 2026',
-          bullet1_text: 'y Subcampeón Absoluto en la Fase SP de los Juegos Universitarios Brasileños, convocado para representar al Estado de São Paulo en la Etapa Nacional.',
+          bullet1_bold: 'Campeón Nacional de los JUBs 2026.',
+          bullet1_text: 'Los Juegos Universitarios Brasileños (JUBs) son la mayor competición multideportiva universitaria de América Latina, organizada por la CBDU.',
+          bullet2_bold: 'Campeón Estatal de los JUBs 2026',
+          bullet2_text: 'y Subcampeón Absoluto en la Fase SP de los Juegos Universitarios Brasileños, convocado por la FUPE para representar al Estado de São Paulo en la Etapa Nacional.',
           bullet2: 'Atleta titular representativo de toda la delegación de Unicamp. Representando a todos los cursos de la universidad.'
         },
         leu: {
@@ -2329,7 +2338,8 @@ export const resources = {
         },
         awards: {
           title: 'Riconoscimenti e Competizioni',
-          jubs: '1º Posto JUBs SP (Jiu-jitsu) - 2026',
+          meritoUnicamp: 'Riconoscimento al Merito Sportivo - Unicamp',
+          jubs: '1º Posto ai JUBs Nazionali (Jiu-jitsu) - 2026',
           hackathonPhp: '1º Posto Hackathon PHP (Rem Soft) - 2024',
           ideathon: '3º Posto IDEATHON (FAEP/SENAR) - 2024',
           hackatonMinerva: '3º Posto Hackathon Bruto Hacka & InovAgro (Minerva Foods) - 2023',
@@ -2411,8 +2421,10 @@ export const resources = {
         lau: {
           date: 'Mag 2026 — Presente',
           role: 'Atleta Titolare (Jiu-Jitsu)',
-          bullet1_bold: 'Campione Statale JUBs 2026',
-          bullet1_text: 'e Vice-Campione Assoluto nella Fase SP dei Giochi Universitari Brasiliani, convocato per rappresentare lo Stato di São Paulo nella Fase Nazionale.',
+          bullet1_bold: 'Campione Nazionale JUBs 2026.',
+          bullet1_text: 'I Giochi Universitari Brasiliani (JUBs) sono la più grande competizione multisportiva universitaria dell’America Latina, organizzata dalla CBDU.',
+          bullet2_bold: 'Campione Statale JUBs 2026',
+          bullet2_text: 'e Vice-Campione Assoluto nella Fase SP dei Giochi Universitari Brasiliani, convocato dalla FUPE per rappresentare lo Stato di São Paulo nella Fase Nazionale.',
           bullet2: 'Atleta titolare rappresentativo dell\'intera delegazione Unicamp. Rappresentante di tutti i corsi universitari.'
         },
         leu: {

@@ -97,6 +97,11 @@ const rootStructuredData = {
       ],
     }),
     generateOrganizationSchema(),
+    {
+      '@type': 'WebSite',
+      name: 'Rodrigo Dias',
+      url: 'https://digonomundo.com',
+    },
   ],
 };
 
