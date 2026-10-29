@@ -5,10 +5,16 @@ import { Download } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from './Hero.module.css';
 import { HeroImage } from '@/components/HeroImage/HeroImage'; 
+import { GreetingAudioButton } from '@/components/GreetingAudioButton/GreetingAudioButton';
+import { languageOptions, type AppLanguage } from '@/i18n/resources';
 
 export function Hero() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const prefersReducedMotion = useReducedMotion();
+  const languageCode = i18n.language.slice(0, 2);
+  const language: AppLanguage = languageOptions.some(({ code }) => code === languageCode)
+    ? languageCode as AppLanguage
+    : 'en';
 
     const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -82,6 +88,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: prefersReducedMotion ? 0 : 0.6, delay: prefersReducedMotion ? 0 : 0.5 }}
           >
+            {language === 'pt' && <GreetingAudioButton language={language} variant="accent" />}
             <a href="https://github.com/digonomundo" target="_blank" rel="noreferrer" className={styles.socialPill} aria-label={t('hero.githubLabel')}>
               <FaGithub size={16} aria-hidden="true" /> GitHub
             </a>

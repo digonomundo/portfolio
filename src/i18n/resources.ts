@@ -49,7 +49,19 @@ export const resources = {
         downloadCv: 'Baixar CV',
         githubLabel: 'Visitar meu perfil no GitHub',
         linkedinLabel: 'Visitar meu perfil no LinkedIn',
-        instagramLabel: 'Visitar meu perfil no Instagram'
+        instagramLabel: 'Visitar meu perfil no Instagram',
+        greetingAudio: {
+          button: 'Ouvir saudação.',
+          label: 'Ouvir saudação em áudio',
+          pauseLabel: 'Pausar saudação em áudio',
+          resumeLabel: 'Retomar saudação em áudio',
+          idle: 'Saudação pronta para tocar',
+          playing: 'Saudação tocando',
+          playingLabel: 'Reproduzindo',
+          paused: 'Saudação pausada',
+          error: 'Não foi possível carregar a saudação',
+          retry: 'Tentar novamente'
+        }
       },
       journal: {
         readStory: 'Ler história',
@@ -815,7 +827,19 @@ export const resources = {
         downloadCv: 'Download CV',
         githubLabel: 'Visit my GitHub profile',
         linkedinLabel: 'Visit my LinkedIn profile',
-        instagramLabel: 'Visit my Instagram profile'
+        instagramLabel: 'Visit my Instagram profile',
+        greetingAudio: {
+          button: 'Listen to my greeting',
+          label: 'Listen to greeting audio',
+          pauseLabel: 'Pause greeting audio',
+          resumeLabel: 'Resume greeting audio',
+          idle: 'Greeting ready to play',
+          playing: 'Greeting playing',
+          playingLabel: 'Playing...',
+          paused: 'Greeting paused',
+          error: 'Could not load the greeting',
+          retry: 'Try again'
+        }
       },
       journal: {
         readStory: 'Read story',
@@ -1581,7 +1605,19 @@ export const resources = {
         downloadCv: 'Descargar CV',
         githubLabel: 'Visitar mi perfil de GitHub',
         linkedinLabel: 'Visitar mi perfil de LinkedIn',
-        instagramLabel: 'Visitar mi perfil de Instagram'
+        instagramLabel: 'Visitar mi perfil de Instagram',
+        greetingAudio: {
+          button: 'Escuchar mi saludo',
+          label: 'Escuchar saludo en audio',
+          pauseLabel: 'Pausar saludo en audio',
+          resumeLabel: 'Reanudar saludo en audio',
+          idle: 'Saludo listo para reproducir',
+          playing: 'Saludo reproduciéndose',
+          playingLabel: 'Reproduciendo...',
+          paused: 'Saludo pausado',
+          error: 'No se pudo cargar el saludo',
+          retry: 'Intentar de nuevo'
+        }
       },
       journal: {
         readStory: 'Leer historia',
@@ -2347,7 +2383,19 @@ export const resources = {
         downloadCv: 'Scarica CV',
         githubLabel: 'Visita il mio profilo GitHub',
         linkedinLabel: 'Visita il mio profilo LinkedIn',
-        instagramLabel: 'Visita il mio profilo Instagram'
+        instagramLabel: 'Visita il mio profilo Instagram',
+        greetingAudio: {
+          button: 'Ascolta il mio saluto',
+          label: 'Ascolta il saluto audio',
+          pauseLabel: 'Metti in pausa il saluto audio',
+          resumeLabel: 'Riprendi il saluto audio',
+          idle: 'Saluto pronto per la riproduzione',
+          playing: 'Saluto in riproduzione',
+          playingLabel: 'In riproduzione...',
+          paused: 'Saluto in pausa',
+          error: 'Impossibile caricare il saluto',
+          retry: 'Riprova'
+        }
       },
       journal: {
         readStory: 'Leggi la storia',

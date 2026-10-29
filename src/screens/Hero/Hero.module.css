@@ -207,7 +207,7 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   .bgTypography {
     flex-direction: column;
     gap: 0;
@@ -299,4 +299,5 @@
     justify-content: center;
     padding: 10px 16px;
   }
+
 }
