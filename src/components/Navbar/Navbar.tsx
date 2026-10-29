@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { Menu, MoveUpLeft, MoveUpRight, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -35,10 +35,12 @@ export function Navbar() {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
   const wasMenuOpenRef = useRef(false);
+  const pendingSectionRef = useRef<string | null>(null);
 
   const isTutoringPage = pathname
     ? pathname === '/tutoring' ||
@@ -101,6 +103,20 @@ export function Navbar() {
   );
 
   useEffect(() => {
+    if (!isHomePage || !pendingSectionRef.current) {
+      return;
+    }
+
+    const sectionId = pendingSectionRef.current;
+    pendingSectionRef.current = null;
+    const frame = window.requestAnimationFrame(() => {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [isHomePage]);
+
+  useEffect(() => {
     if (!isHomePage) {
       return;
     }
@@ -139,7 +155,12 @@ export function Navbar() {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
+      return;
     }
+
+    e.preventDefault();
+    pendingSectionRef.current = id;
+    router.push(homePath);
   };
 
   const showDefaultNav = !isTutoringPage && !isAboutPage;

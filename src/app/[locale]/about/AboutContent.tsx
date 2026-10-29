@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion'; 
 import { useTranslation } from 'react-i18next';
@@ -44,6 +44,10 @@ export default function AboutContent() {
     const { scrollYProgress } = useScroll();
     const yHero = useTransform(scrollYProgress, [0, 0.4], [0, -120]);
     const opacityHero = useTransform(scrollYProgress, [0, 0.35], [1, 0]);
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     useEffect(() => {
         audioRef.current = new Audio('/audio/RememberYou.mp3');
