@@ -12,6 +12,7 @@ import Digo from '@/assets/images/Digo.jpg';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher/LanguageSwitcher';
 import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle';
 import { LANGUAGE_STORAGE_KEY, type AppLanguage } from '@/i18n/resources';
+import { AboutStoryIndicator } from './AboutStoryIndicator';
 
 // Constantes
 const SUPPORTED_LANGUAGES: AppLanguage[] = ['pt', 'en', 'es', 'it'];
@@ -101,6 +102,30 @@ export function Navbar() {
   const [activeSection, setActiveSection] = useState<string | null>(
     isHomePage ? 'inicio' : null,
   );
+  const [isAboutVisible, setIsAboutVisible] = useState(false);
+
+  useEffect(() => {
+    if (!isHomePage) {
+      return;
+    }
+
+    const aboutSection = document.getElementById('about');
+    if (!aboutSection) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsAboutVisible((isVisible) => (
+          isVisible === entry.isIntersecting ? isVisible : entry.isIntersecting
+        ));
+      },
+      { threshold: 0.2, rootMargin: '-80px 0px -20% 0px' },
+    );
+
+    observer.observe(aboutSection);
+    return () => observer.disconnect();
+  }, [isHomePage]);
 
   useEffect(() => {
     if (!isHomePage || !pendingSectionRef.current) {
@@ -209,20 +234,46 @@ export function Navbar() {
               ref={menuRef}
             >
               {navLinks.map((link, index) => (
-                <Link
-                  key={link.id}
-                  href={link.href}
-                  onClick={(e) => handleSectionClick(link.id, e)}
-                  className={`${styles.navLink} ${
-                    isHomePage && activeSection === link.id ? styles.navLinkActive : ''
-                  }`}
-                  aria-current={
-                    isHomePage && activeSection === link.id ? 'location' : undefined
-                  }
-                  ref={index === 0 ? firstLinkRef : undefined}
-                >
-                  {link.label}
-                </Link>
+                link.id === 'about' ? (
+                  <div className={styles.aboutNavItem} key={link.id}>
+                    <Link
+                      href={link.href}
+                      onClick={(e) => handleSectionClick(link.id, e)}
+                      className={`${styles.navLink} ${
+                        isHomePage && activeSection === link.id ? styles.navLinkActive : ''
+                      }`}
+                      aria-current={
+                        isHomePage && activeSection === link.id ? 'location' : undefined
+                      }
+                      ref={index === 0 ? firstLinkRef : undefined}
+                    >
+                      {link.label}
+                    </Link>
+                    <AboutStoryIndicator
+                      href={`/${currentLanguage}/about`}
+                      label={t('navbar.fullStory')}
+                      ariaLabel={t('navbar.fullStoryAria')}
+                      isVisible={isHomePage && isAboutVisible}
+                      isMobileVisible={isMenuOpen}
+                      onClick={() => setIsMenuOpen(false)}
+                    />
+                  </div>
+                ) : (
+                  <Link
+                    key={link.id}
+                    href={link.href}
+                    onClick={(e) => handleSectionClick(link.id, e)}
+                    className={`${styles.navLink} ${
+                      isHomePage && activeSection === link.id ? styles.navLinkActive : ''
+                    }`}
+                    aria-current={
+                      isHomePage && activeSection === link.id ? 'location' : undefined
+                    }
+                    ref={index === 0 ? firstLinkRef : undefined}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
               <Link
                 href={`/${currentLanguage}/journal`}

@@ -36,6 +36,8 @@ export const resources = {
         language: 'Idioma',
         navigation: 'Navegação principal',
         journal: 'Journal',
+        fullStory: 'História',
+        fullStoryAria: 'Ler a história completa sobre mim',
         openMenu: 'Abrir menu',
         closeMenu: 'Fechar menu',
         switchLanguage: 'Mudar para {{language}}'
@@ -814,6 +816,8 @@ export const resources = {
         language: 'Language',
         navigation: 'Main navigation',
         journal: 'Journal',
+        fullStory: 'My story',
+        fullStoryAria: 'Read the full story about me',
         openMenu: 'Open menu',
         closeMenu: 'Close menu',
         switchLanguage: 'Switch to {{language}}'
@@ -1592,6 +1596,8 @@ export const resources = {
         language: 'Idioma',
         navigation: 'Navegación principal',
         journal: 'Journal',
+        fullStory: 'Historia',
+        fullStoryAria: 'Leer la historia completa sobre mí',
         openMenu: 'Abrir menú',
         closeMenu: 'Cerrar menú',
         switchLanguage: 'Cambiar a {{language}}'
@@ -2370,6 +2376,8 @@ export const resources = {
         language: 'Lingua',
         navigation: 'Navigazione principale',
         journal: 'Journal',
+        fullStory: 'Storia',
+        fullStoryAria: 'Leggi la storia completa su di me',
         openMenu: 'Apri menu',
         closeMenu: 'Chiudi menu',
         switchLanguage: 'Passa a {{language}}'
