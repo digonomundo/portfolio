@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { generateCanonicalUrl } from '@/lib/metadata';
+import { generateCanonicalUrl, getTutoringDescription } from '@/lib/metadata';
 import { StructuredData } from '@/components/StructuredData/StructuredData';
 import { generateBreadcrumbSchema } from '@/lib/schema';
 import type { AppLanguage } from '@/i18n/resources';
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Omit<Props, 'children'>): Pro
     ? `${translation.navbar.tutoring} Hub | Rodrigo Dias` 
     : 'Portal de Monitorias | Rodrigo Dias';
     
-  const tutoringDescription = 'Portal acadêmico de monitoria feito para os alunos da Unicamp. Acesse nossos horários, materiais de apoio, listas de exercícios e cronogramas para SI100 (C) e TT314 (Java). Bem-vindos!';
+  const tutoringDescription = getTutoringDescription('hub', typedLocale);
 
   return {
     title: tutoringTitle,

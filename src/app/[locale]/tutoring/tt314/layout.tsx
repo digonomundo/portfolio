@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { generateCanonicalUrl } from '@/lib/metadata';
+import { generateCanonicalUrl, getTutoringDescription } from '@/lib/metadata';
 import { StructuredData } from '@/components/StructuredData/StructuredData';
 import { generateBreadcrumbSchema } from '@/lib/schema';
 import type { AppLanguage } from '@/i18n/resources';
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Omit<Props, 'children'>): Pro
   const translation = resources[typedLocale]?.translation || resources['en'].translation;
 
   const tutoringTitle = translation.navbar?.tutoring ? `${translation.navbar.tutoring} | Rodrigo Dias` : 'TT314 Tutoring | Rodrigo Dias';
-  const tutoringDescription = 'Object oriented programming I tutoring hub with schedule, assessment criteria, bibliography and support materials for Unicamp students.';
+  const tutoringDescription = getTutoringDescription('tt314', typedLocale);
 
   return {
     title: tutoringTitle,

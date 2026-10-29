@@ -19,18 +19,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!isJournalLocale(locale)) return {};
   const translation = resources[locale].translation;
+  const journalTitle = translation.navbar.journal;
   const languages = Object.fromEntries(
     journalLocales.map((language) => [getLocaleLanguageTag(language), `${siteUrl}${getLocaleHref(language)}`]),
   );
   return {
-    title: 'Journal',
+    title: journalTitle,
     description: translation.journal.description,
     alternates: {
       canonical: `${siteUrl}${getLocaleHref(locale)}`,
       languages: { ...languages, 'x-default': languages['en-US'] },
     },
-    openGraph: { type: 'website', title: 'Journal', description: translation.journal.description, url: `${siteUrl}${getLocaleHref(locale)}` },
-    twitter: { card: 'summary', title: 'Journal', description: translation.journal.description },
+    openGraph: { type: 'website', title: journalTitle, description: translation.journal.description, url: `${siteUrl}${getLocaleHref(locale)}` },
+    twitter: { card: 'summary', title: journalTitle, description: translation.journal.description },
   };
 }
 

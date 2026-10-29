@@ -38,6 +38,10 @@ function getLocale(request: NextRequest): string {
 export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
+  if (pathname === '/sitemap.xml') {
+    return NextResponse.rewrite(new URL('/api/sitemap-index', request.url));
+  }
+
   // Skip api routes, static files, and images
   if (
     pathname.startsWith('/_next') ||

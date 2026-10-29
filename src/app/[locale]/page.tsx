@@ -7,7 +7,7 @@ import styles from './page.module.css';
 import { AboutMe } from '@/screens/AboutMe/AboutMe';
 import { Footer } from '@/screens/Footer/Footer';
 import { Education } from '@/screens/Education/Education';
-import { Experience } from '@/screens/Expericence/Experience';
+import { Experience } from '@/screens/Experience/Experience';
 import { Projects } from '@/screens/Projects/Projects';
 
 export default function Home() {

@@ -8,6 +8,7 @@ interface PersonSchemaProps {
   jobTitle: string;
   description: string;
   email: string;
+  language?: AppLanguage;
   image?: string;
   location?: {
     city: string;
@@ -24,6 +25,7 @@ export function generatePersonSchema(props: PersonSchemaProps) {
     name: props.name,
     jobTitle: props.jobTitle,
     description: props.description,
+    ...(props.language && { inLanguage: getLocaleCode(props.language).replace('_', '-') }),
     email: props.email,
     image: props.image || `${SITE_URL}/presentation-2.jpeg`,
     url: SITE_URL,
@@ -36,32 +38,6 @@ export function generatePersonSchema(props: PersonSchemaProps) {
         addressCountry: props.location.country,
       },
     }),
-  };
-}
-
-interface ProjectSchemaProps {
-  name: string;
-  description: string;
-  image?: string;
-  url?: string;
-  dateCreated?: string;
-  creator?: {
-    name: string;
-    url?: string;
-  };
-}
-
-export function generateProjectSchema(props: ProjectSchemaProps) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: props.name,
-    description: props.description,
-    image: props.image,
-    url: props.url || SITE_URL,
-    applicationCategory: 'Utility',
-    ...(props.dateCreated && { dateCreated: props.dateCreated }),
-    ...(props.creator && { creator: props.creator }),
   };
 }
 
@@ -78,7 +54,7 @@ export function generateProfilePageSchema(
     description,
     inLanguage: getLocaleCode(language).replace('_', '-'),
     image: image || `${SITE_URL}/presentation-2.jpeg`,
-    url: `${SITE_URL}/about`,
+    url: `${SITE_URL}/${language}/about`,
   };
 }
 

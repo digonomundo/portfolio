@@ -69,34 +69,40 @@ export const viewport: Viewport = {
   colorScheme: 'light dark',
 };
 
-const rootStructuredData = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    generatePersonSchema({
-      name: 'Rodrigo Dias',
-      jobTitle: 'Full Stack Developer',
-      description: 'Full Stack Developer and Telecommunications Engineering student building accessible, internationalized and performance-conscious web experiences.',
-      email: 'rodrigo@digonomundo.com',
-      image: 'https://digonomundo.com/presentation-2.jpeg',
-      location: {
-        city: 'Campinas',
-        region: 'SP',
-        country: 'BR',
+function getRootStructuredData(language: AppLanguage) {
+  const localizedUrl = `https://digonomundo.com/${language}`;
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      generatePersonSchema({
+        name: 'Rodrigo Dias',
+        jobTitle: 'Full Stack Developer',
+        description: 'Full Stack Developer and Telecommunications Engineering student building accessible, internationalized and performance-conscious web experiences.',
+        email: 'rodrigo@digonomundo.com',
+        language,
+        image: 'https://digonomundo.com/presentation-2.jpeg',
+        location: {
+          city: 'Campinas',
+          region: 'SP',
+          country: 'BR',
+        },
+        sameAs: [
+          'https://github.com/digonomundo',
+          'https://linkedin.com/in/digonomundo',
+          'https://instagram.com/digonomundo',
+        ],
+      }),
+      generateOrganizationSchema(),
+      {
+        '@type': 'WebSite',
+        name: 'Rodrigo Dias',
+        url: localizedUrl,
+        inLanguage: getLocaleLanguageTag(language),
       },
-      sameAs: [
-        'https://github.com/digonomundo',
-        'https://linkedin.com/in/digonomundo',
-        'https://instagram.com/digonomundo',
-      ],
-    }),
-    generateOrganizationSchema(),
-    {
-      '@type': 'WebSite',
-      name: 'Rodrigo Dias',
-      url: 'https://digonomundo.com',
-    },
-  ],
-};
+    ],
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -126,7 +132,7 @@ export default async function RootLayout({
       data-scroll-behavior="smooth"
     >
       <head>
-        <StructuredData data={rootStructuredData} />
+        <StructuredData data={getRootStructuredData(typedLocale)} />
       </head>
       <body>
         <Script

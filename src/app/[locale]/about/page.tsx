@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         'en-US': generateCanonicalUrl('/en/about'),
         'es-ES': generateCanonicalUrl('/es/about'),
         'it-IT': generateCanonicalUrl('/it/about'),
-        'x-default': generateCanonicalUrl('/en/about'),
+        'x-default': generateCanonicalUrl('/pt/about'),
       },
     },
     openGraph: {
