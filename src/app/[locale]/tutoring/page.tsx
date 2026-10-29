@@ -192,7 +192,7 @@ if (!isMounted) {
             {/* Barra Inferior Corporativa / Minimalista */}
             <div className={styles.bottomBar}>
               <p className={styles.copyright}>
-                © {new Date().getFullYear()} Rodrigo Dias.
+                © {new Date().getFullYear()} Rodrigo Dias. {t('footer.designedIn')} 🇧🇷
               </p>
               
               <div className={styles.techStack}>

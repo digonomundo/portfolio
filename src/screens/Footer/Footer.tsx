@@ -88,7 +88,7 @@ export function Footer() {
         {/* Barra Inferior Corporativa / Minimalista */}
         <div className={styles.bottomBar}>
           <p className={styles.copyright}>
-            © {currentYear} Rodrigo Dias. {t('footer.designedIn')}
+            © {currentYear} Rodrigo Dias. {t('footer.designedIn')} 🇧🇷
           </p>
           
           <div className={styles.techStack}>

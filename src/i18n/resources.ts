@@ -256,7 +256,7 @@ export const resources = {
         builtWith: 'Feito com',
         andPurpose: 'e propósito.',
         disclaimer: 'Este portfólio não é apenas uma vitrine de códigos. Ele foi desenhado pixel a pixel com um objetivo singular: demonstrar minha paixão, minhas skills e minha vontade genuína de integrar o Apple Developer Academy. É a materialização do meu objetivo..',
-        designedIn: 'Designed in Brazil 🇧🇷'
+        designedIn: 'Designed in Brazil'
       },
       tutoring: {
         badge: "Monitoria / Unicamp",
@@ -1034,7 +1034,7 @@ export const resources = {
         builtWith: 'Built with',
         andPurpose: 'and purpose.',
         disclaimer: 'This portfolio is not just a showcase of code. It was designed pixel by pixel with a singular goal: to demonstrate my passion, my skills, and my genuine desire to join the Apple Developer Academy. It is the materialization of my goal.',
-        designedIn: 'Designed in Brazil 🇧🇷'
+        designedIn: 'Designed in Brazil'
       },
       tutoring: {
         badge: "Tutoring / Unicamp",
@@ -1812,7 +1812,7 @@ export const resources = {
         builtWith: 'Hecho con',
         andPurpose: 'y propósito.',
         disclaimer: 'Este portafolio no es solo una vitrina de códigos. Fue diseñado píxel a píxel con un objetivo singular: demostrar mi pasión, mis habilidades y mi voluntad genuina de integrar el Apple Developer Academy. Es la materialización de mi objetivo.',
-        designedIn: 'Diseñado en Brasil 🇧🇷'
+        designedIn: 'Diseñado en Brasil'
       },
       tutoring: {
         badge: "Monitoría / Unicamp",
@@ -2590,7 +2590,7 @@ export const resources = {
         builtWith: 'Fatto con',
         andPurpose: 'e proposito.',
         disclaimer: 'Questo portfolio non è solo una vetrina di codici. È stato progettato pixel per pixel con un obiettivo singolare: dimostrare la mia passione, le mie competenze e la mia genuina volontà di entrare nell\'Apple Developer Academy. È la materializzazione del mio obiettivo.',
-        designedIn: 'Progettato in Brasile 🇧🇷'
+        designedIn: 'Progettato in Brasile'
       },
       tutoring: {
         badge: "Tutorato / Unicamp",
