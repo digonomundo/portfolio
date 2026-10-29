@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { useTranslation, Trans } from 'react-i18next';
 import { ArrowRight, ExternalLink } from 'lucide-react';
@@ -15,6 +16,8 @@ const Highlight = ({ children }: { children?: React.ReactNode }) => (
 
 export function AboutMe() {
   const { t } = useTranslation();
+  const pathname = usePathname();
+  const locale = pathname?.split('/')[1] || 'pt';
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
@@ -123,7 +126,7 @@ export function AboutMe() {
 
             {/* Nova Action Row Minimalista */}
             <motion.div className={styles.actionRow} variants={fadeInUp}>
-              <Link href="/about" className={styles.aboutLink}>
+              <Link href={`/${locale}/about`} className={styles.aboutLink}>
                 <span className={styles.linkText}>{t('about.readMore')}</span>
                 <span className={styles.linkIconWrapper}>
                   <ArrowRight size={18} className={styles.linkIcon} />
