@@ -89,7 +89,7 @@ export function Projects() {
       icon: <Sparkles size={16} />,
       imageSrc: MockImgInovaChat
     },
-    {
+/*    {
       id: 'meu-treino',
       category: t('projects.meuTreino.category'),
       title: t('projects.meuTreino.title'),
@@ -98,7 +98,7 @@ export function Projects() {
       link: 'https://github.com/digonomundo/MeuTreino-TCC',
       icon: <Smartphone size={16} />,
       imageSrc: MockImgMeuTreino
-    }
+    }*/
   ];
 
   return (
