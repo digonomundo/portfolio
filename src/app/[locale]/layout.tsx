@@ -140,6 +140,13 @@ export default async function RootLayout({
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: themeInitScript }}
         />
+        {typedLocale === 'pt' && (
+          <Script
+            id="vlibras-widget"
+            src="https://vlibras.gov.br/app/vlibras-plugin.js"
+            strategy="afterInteractive"
+          />
+        )}
         
         <ThemeProvider>
           <MotionConfig reducedMotion="user">
